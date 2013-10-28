@@ -1,0 +1,57 @@
+package MQCloud.Transport.Protocol;
+
+message Event {
+}
+message EventPingRequest {
+}
+message Message {
+   // the following represent sub-types; at most 1 should have a value
+   optional Operation Operation = 1;
+   optional Event Event = 2;
+}
+message Operation {
+   // the following represent sub-types; at most 1 should have a value
+   optional OperationRequest OperationRequest = 1;
+   optional OperationResponse OperationResponse = 2;
+}
+message OperationGetEventsPublisherRequest {
+   optional string Topic = 1;
+}
+message OperationGetEventsPublisherResponse {
+   optional string Address = 1;
+}
+message OperationGetOperationsPublisherRequest {
+   optional string Topic = 1;
+}
+message OperationGetOperationsPublisherResponse {
+   optional string Address = 1;
+}
+message OperationPongRequest {
+}
+message OperationRequest {
+   // the following represent sub-types; at most 1 should have a value
+   optional OperationPongRequest OperationPongRequest = 10;
+   optional OperationGetEventsPublisherRequest OperationGetEventsPublisherRequest = 100;
+   optional OperationGetOperationsPublisherRequest OperationGetOperationsPublisherRequest = 101;
+   optional OperationSetEventsPublisherRequest OperationSetEventsPublisherRequest = 200;
+   optional OperationSetOperationsPublisherRequest OperationSetOperationsPublisherRequest = 201;
+}
+message OperationResponse {
+   optional OperationStatusCode State = 1 [default = OperationStatusCodeOk];
+   optional string Error = 2;
+   // the following represent sub-types; at most 1 should have a value
+   optional OperationGetEventsPublisherResponse OperationGetEventsPublisherResponse = 100;
+   optional OperationGetOperationsPublisherResponse OperationGetOperationsPublisherResponse = 101;
+}
+message OperationSetEventsPublisherRequest {
+   optional string Address = 1;
+   optional string Topic = 2;
+}
+message OperationSetOperationsPublisherRequest {
+   optional string Address = 1;
+   optional string Topic = 2;
+}
+enum OperationStatusCode {
+   OperationStatusCodeOk = 0;
+   OperationStatusCodeError = 1;
+}
