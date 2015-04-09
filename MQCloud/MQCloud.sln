@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQCloud", "MQCloud\MQCloud.vcxproj", "{70DB0C46-6471-44E6-9DDF-C611A86C52DE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExchangeNode", "ExchangeNode\ExchangeNode.vcxproj", "{D66BDCFF-69C3-42C3-A414-A7D64E3E91BB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQCloudTest", "MQCloudTest\MQCloudTest.vcxproj", "{5502AB82-8155-4F44-9AEC-06D9C3C80437}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70DB0C46-6471-44E6-9DDF-C611A86C52DE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{70DB0C46-6471-44E6-9DDF-C611A86C52DE}.Debug|Win32.Build.0 = Debug|Win32
+		{70DB0C46-6471-44E6-9DDF-C611A86C52DE}.Release|Win32.ActiveCfg = Release|Win32
+		{70DB0C46-6471-44E6-9DDF-C611A86C52DE}.Release|Win32.Build.0 = Release|Win32
+		{D66BDCFF-69C3-42C3-A414-A7D64E3E91BB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D66BDCFF-69C3-42C3-A414-A7D64E3E91BB}.Debug|Win32.Build.0 = Debug|Win32
+		{D66BDCFF-69C3-42C3-A414-A7D64E3E91BB}.Release|Win32.ActiveCfg = Release|Win32
+		{D66BDCFF-69C3-42C3-A414-A7D64E3E91BB}.Release|Win32.Build.0 = Release|Win32
+		{5502AB82-8155-4F44-9AEC-06D9C3C80437}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5502AB82-8155-4F44-9AEC-06D9C3C80437}.Debug|Win32.Build.0 = Debug|Win32
+		{5502AB82-8155-4F44-9AEC-06D9C3C80437}.Release|Win32.ActiveCfg = Release|Win32
+		{5502AB82-8155-4F44-9AEC-06D9C3C80437}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
