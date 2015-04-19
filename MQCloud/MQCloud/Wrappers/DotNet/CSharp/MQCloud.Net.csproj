@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{AB8872AF-12DD-4F82-B9DE-D727F4D2E931}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>MQCloud.Net</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoreConfiguration.cs" />
+    <Compile Include="CoreMessage.cs" />
+    <Compile Include="CorePublishingSocketInterface.cs" />
+    <Compile Include="CoreSubscriberSocketInterface.cs" />
+    <Compile Include="CoreThreadManagementInterface.cs" />
+    <Compile Include="CString.cs" />
+    <Compile Include="EventsHandler.cs" />
+    <Compile Include="ExtensiabiletyEventsHandler.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="MQCloud.cs" />
+    <Compile Include="MQCloudPINVOKE.cs" />
+    <Compile Include="SWIGTYPE_p_f_int_int__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_int_p_f___void_p_f___void__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_int_p_q_const__CoreMessage__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_int_p_q_const__CString__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_int__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_CString_p_ServiceId__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_f_p_q_const__CoreMessage__void__int.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_Message__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_q_const__CoreMessage__p_ServiceId.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_q_const__CoreMessage__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_q_const__Message_int__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_q_const__Message__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_q_const__ServiceId_int__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_q_const__ServiceId__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_ServiceId__void.cs" />
+    <Compile Include="SWIGTYPE_p_f_p_void__void.cs" />
+    <Compile Include="SWIGTYPE_p_f___int.cs" />
+    <Compile Include="SWIGTYPE_p_f___p_void.cs" />
+    <Compile Include="SWIGTYPE_p_f___void.cs" />
+    <Compile Include="SWIGTYPE_p_ServiceId.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
