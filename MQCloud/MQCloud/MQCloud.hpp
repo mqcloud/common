@@ -3,26 +3,31 @@
 #include <string>
 #include "MQCloud.h"
 
-struct String {
+// Here RAII will do CString cleaning for you!
+struct String : CString {
 	String(std::string && data);
+	String(CString * other);
 
 	explicit String(const std::string & data);
-
-	operator CString();
+	operator std::string();
 private:
-	CString native_string;
 	std::string base;
 };
 
 
-////
-struct Messsage {
-	Messsage(std::string topic, std::string data) {
-		message = MQCloud.MessageUtilities.GetNewMessage();
-		MQCloud.MessageUtilities.SetMessageData(message, String(data));
-		MQCloud.MessageUtilities.SetMessageTopic(message, String(topic));
+struct MesssageCXX {
+
+	MesssageCXX(std::string topic, std::string data) {
+
+	}
+
+	std::string GetData() {
+
 	}
 
 private:
-	Message * message;
+	int id;
+	String data;
+	String topic;
+	String sender;
 };
