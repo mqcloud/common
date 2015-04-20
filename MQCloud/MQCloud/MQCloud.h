@@ -33,6 +33,7 @@ extern "C" {
 	typedef struct CoreMessage CoreMessage;
 
 	typedef void * Identifier;
+
 	//// Core ////
 	// operations will de treated as sync thus after CorePublishMessage call CoreMessage message deallocation will begin
 	// calls will be performed from one thread per socket
@@ -85,8 +86,8 @@ extern "C" {
 	typedef struct Message Message;
 
 	struct MessageUtilities {
-		void (*SetMessageTopic)(Message *, const CString &); // all CString data will destroyed on message send!
-		void (*SetMessageData)(Message *, const CString &); // all CString data will destroyed on message send!
+		void (*SetMessageTopic)(Message *, const CString *, void(*OnTopicRemoval)() ); // Clear CString datain OnTopicRemoval
+		void (*SetMessageData)(Message *, const CString *, void(*OnDataRemoval)()); // Clear CString datain OnTopicRemoval
 		void (*SetFreeMessage)(Message *);
 		Message * (*GetNewMessage)();
 		CString * (*GetMessageTopic)(Message *);
@@ -143,9 +144,9 @@ extern "C" {
 
 		// Request-Reply, Request-Reply continuos *(nonblocking)
 		void (*Request)(const CoreConfiguration * ctx, const Message * out, void (*OnSent)(), void (*OnReply)(const Message * in));
-		void (*RequestTarget)(const CoreConfiguration * ctx, const Message * out, const ServiceId * target,  void (*OnSent)(), void (*OnReply)(const Message * in));
+		void (*RequestTarget)(const CoreConfiguration * ctx, const Message * out, const ServiceId * target, void (*OnSent)(), void (*OnReply)(const Message * in));
 
-		void (*AdvertizeReplysOnTopic)(const CoreConfiguration * ctx, const Topic * topic,  void (*OnSent)(), void (*OnRequest)(const Message * in));
+		void (*AdvertizeReplysOnTopic)(const CoreConfiguration * ctx, const Topic * topic, void (*OnSent)(), void (*OnRequest)(const Message * in));
 		void (*CloseReplysOnTopic)(const CoreConfiguration * ctx, const Topic * topic, void (*OnSent)());
 
 		// Publish-Subscribe *(nonblocking)
@@ -158,7 +159,7 @@ extern "C" {
 		void (*UnSubscribe)(const CoreConfiguration * ctx, const Topic * topic, void (*OnSent)());
 
 		// Survey-Respondent *(nonblocking, nonforcing)
-		void (*RequestMany)(const CoreConfiguration * ctx, int MaxRespondents, int timeout, const Message * out,  void (*OnSent)(), void (*OnReplyFromMany)(const Message * replys, int replysCount));
+		void (*RequestMany)(const CoreConfiguration * ctx, int MaxRespondents, int timeout, const Message * out, void (*OnSent)(), void (*OnReplyFromMany)(const Message * replys, int replysCount));
 	};
 
 	typedef struct API API;
