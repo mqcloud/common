@@ -86,14 +86,14 @@ extern "C" {
 	typedef struct Message Message;
 
 	struct MessageUtilities {
-		void (*SetMessageTopic)(Message *, const CString *, void(*OnTopicRemoval)() ); // Clear CString datain OnTopicRemoval
-		void (*SetMessageData)(Message *, const CString *, void(*OnDataRemoval)()); // Clear CString datain OnTopicRemoval
+		void (*SetMessageTopic)(Message *, const CString *, void (*OnTopicRemoval)()); // Clear CString datain OnTopicRemoval
+		void (*SetMessageData)(Message *, const CString *, void (*OnDataRemoval)()); // Clear CString datain OnTopicRemoval
 		void (*SetFreeMessage)(Message *);
 		Message * (*GetNewMessage)();
-		CString * (*GetMessageTopic)(Message *);
-		CString * (*GetMessageData)(Message *);
+		const CString * (*GetMessageTopic)(Message *);
+		const CString * (*GetMessageData)(Message *);
 		int (*GetMessageId)(Message *);
-		int (*GetMessageSenderServiceId)(Message *);
+		const CString * (*GetMessageSenderServiceId)(Message *);
 	};
 
 	typedef struct MessageUtilities MessageUtilities;

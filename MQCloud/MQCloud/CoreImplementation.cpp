@@ -4,14 +4,14 @@
 
 //// MessageUtilities ////
 
-void SetMessageTopic(Message *, const CString *, void(*OnTopicRemoval)());
-void SetMessageData(Message *, const CString *, void(*OnTopicRemoval)());
+void SetMessageTopic(Message *, const CString *, void (*OnTopicRemoval)());
+void SetMessageData(Message *, const CString *, void (*OnTopicRemoval)());
 void SetFreeMessage(Message *);
 Message * GetNewMessage();
 const CString * GetMessageTopic(Message *);
 const CString * GetMessageData(Message *);
 int GetMessageId(Message *);
-int GetMessageSenderServiceId(Message *);
+const CString * GetMessageSenderServiceId(Message *);
 
 const struct MessageUtilities _MessageUtilities = {
 	                                                  SetMessageTopic, SetMessageData, SetFreeMessage, GetNewMessage, GetMessageTopic, GetMessageData, GetMessageId, GetMessageSenderServiceId
