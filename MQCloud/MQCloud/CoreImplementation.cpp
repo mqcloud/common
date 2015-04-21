@@ -1,17 +1,41 @@
-#include "MQCloud.h"
+#include "MQCloud.hpp"
 
 //// CORE C INTERFACE WRAPPER
 
 //// MessageUtilities ////
 
-void SetMessageTopic(Message *, const CString *, void (*OnTopicRemoval)());
-void SetMessageData(Message *, const CString *, void (*OnTopicRemoval)());
-void SetFreeMessage(Message *);
-Message * GetNewMessage();
-const CString * GetMessageTopic(Message *);
-const CString * GetMessageData(Message *);
-int GetMessageId(Message *);
-const CString * GetMessageSenderServiceId(Message *);
+
+void SetMessageTopic(Message * m, const CString * s, void (*OnTopicRemoval)()) {
+	m->data.SetData(s, OnTopicRemoval);
+}
+
+void SetMessageData(Message * m, const CString * s, void (*OnDataRemoval)()) {
+	m->data.SetData(s, OnDataRemoval);
+}
+
+void SetFreeMessage(Message * m) {
+	delete m;
+}
+
+Message * GetNewMessage() {
+	return new Message();
+}
+
+const CString * GetMessageTopic(Message * m) {
+	return m->topic.GetData();
+}
+
+const CString * GetMessageData(Message * m) {
+	return m->data.GetData();
+}
+
+int GetMessageId(Message * m) {
+	return m->GetMessageId();
+}
+
+const CString * GetMessageSenderServiceId(Message * m) {
+	return m->serviceId.GetData();
+}
 
 const struct MessageUtilities _MessageUtilities = {
 	                                                  SetMessageTopic, SetMessageData, SetFreeMessage, GetNewMessage, GetMessageTopic, GetMessageData, GetMessageId, GetMessageSenderServiceId

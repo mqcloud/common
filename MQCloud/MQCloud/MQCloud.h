@@ -2,12 +2,14 @@
 //A way to create communication system that is not dependent on MQ socket provider!
 //Requires Exchange node to be online!
 //If X is given as const to a function - all memory obligations are on caller
+//To help memory management we provide callbacks when we stop
+//In C API we provide only zero-copy based approach
 
 extern "C" {
 
 	//Warning: use brains to deduce who will clean each string up - library does not do cleaning for you!
 	struct CString {
-		char * data;
+		const void * data;
 		int length;
 	};
 
@@ -83,6 +85,7 @@ extern "C" {
 		void (*OnNewSubscriber)(struct Topic * topic, ServiceId * subscriber);
 	};
 
+	struct Message;
 	typedef struct Message Message;
 
 	struct MessageUtilities {
