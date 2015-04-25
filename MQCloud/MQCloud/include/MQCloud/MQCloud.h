@@ -6,6 +6,7 @@
 //In C API we provide only zero-copy based approach
 #ifndef MQCloudC
 #define MQCloudC
+
 extern "C" {
 
 	//Warning: use brains to deduce who will clean each string up - library does not do cleaning for you!
@@ -174,3 +175,4 @@ extern "C" {
 
 }
 #endif // MQCloudC
+
