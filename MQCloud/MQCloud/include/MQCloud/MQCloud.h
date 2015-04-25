@@ -4,7 +4,8 @@
 //If X is given as const to a function - all memory obligations are on caller
 //To help memory management we provide callbacks when we stop
 //In C API we provide only zero-copy based approach
-
+#ifndef MQCloudC
+#define MQCloudC
 extern "C" {
 
 	//Warning: use brains to deduce who will clean each string up - library does not do cleaning for you!
@@ -20,15 +21,10 @@ extern "C" {
 
 	struct CoreMessage {
 		int messaageId;
-
 		Topic topic;
-
 		CString data;
-
 		CString serviceId;
-
 		CString PatternName;
-
 		CString PatternData;
 	};
 
@@ -103,6 +99,7 @@ extern "C" {
 
 	struct BackEnd {
 		CoreConfiguration * (*CreateContext)();
+		void (*RemoveContext)(CoreConfiguration *);
 	};
 
 	typedef struct BackEnd BackEnd;
@@ -176,3 +173,4 @@ extern "C" {
 	extern const struct _MQCloud MQCloud;
 
 }
+#endif // MQCloudC

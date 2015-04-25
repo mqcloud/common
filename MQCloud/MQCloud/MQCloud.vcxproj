@@ -10,6 +10,17 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\CXX\CoreImplementation.cpp" />
+    <ClCompile Include="src\CXX\CXXWrapperImplementation.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\MQCloud\CXX\CStringAdaptor.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\Message.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\UserMessage.hpp" />
+    <ClInclude Include="include\MQCloud\MQCloud.h" />
+    <ClInclude Include="include\MQCloud\MQCloud.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{70DB0C46-6471-44E6-9DDF-C611A86C52DE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -53,6 +64,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MQCLOUD_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./../../include;./include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -77,14 +89,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="MQCloud.h" />
-    <ClInclude Include="MQCloud.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="CoreImplementation.cpp" />
-    <ClCompile Include="CXXWrapperImplementation.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

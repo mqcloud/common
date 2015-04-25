@@ -1,9 +1,8 @@
-#include "MQCloud.hpp"
+#include <MQCloud/MQCloud.hpp>
 
 //// CORE C INTERFACE WRAPPER
 
 //// MessageUtilities ////
-
 
 void SetMessageTopic(Message * m, const CString * s, void (*OnTopicRemoval)()) {
 	m->data.SetData(s, OnTopicRemoval);
@@ -38,7 +37,14 @@ const CString * GetMessageSenderServiceId(Message * m) {
 }
 
 const struct MessageUtilities _MessageUtilities = {
-	                                                  SetMessageTopic, SetMessageData, SetFreeMessage, GetNewMessage, GetMessageTopic, GetMessageData, GetMessageId, GetMessageSenderServiceId
+	                                                  SetMessageTopic,
+	                                                  SetMessageData,
+	                                                  SetFreeMessage,
+	                                                  GetNewMessage,
+	                                                  GetMessageTopic,
+	                                                  GetMessageData,
+	                                                  GetMessageId,
+	                                                  GetMessageSenderServiceId
                                                   };
 
 //// API ////
@@ -68,8 +74,20 @@ void RequestMany(const CoreConfiguration * ctx, int MaxRespondents, int timeout,
 
 // API 
 const struct API _API = {
-	                        CreateContext, SetEventsHandler, SetServiceName, SetExchengeAdress, Request, RequestTarget, AdvertizeReplysOnTopic, CloseReplysOnTopic,
-	                        AdvertizePublishingOnTopic, PublishMessage, ClosePublishingOnTopic, Subscribe, UnSubscribe, RequestMany
+	                        CreateContext,
+	                        SetEventsHandler,
+	                        SetServiceName,
+	                        SetExchengeAdress,
+	                        Request,
+	                        RequestTarget,
+	                        AdvertizeReplysOnTopic,
+	                        CloseReplysOnTopic,
+	                        AdvertizePublishingOnTopic,
+	                        PublishMessage,
+	                        ClosePublishingOnTopic,
+	                        Subscribe,
+	                        UnSubscribe,
+	                        RequestMany
                         };
 
 //// FrontEnd ////
@@ -92,12 +110,23 @@ int SetGeneralNodeIdSelectionAlgorithm(const CoreConfiguration * ctx, const Serv
 int SetTopicNodeIdSelectionAlgorithm(const CoreConfiguration * ctx, const Topic * topic, ServiceId * (*algorithm)(const CoreMessage * in));
 
 const struct FrontEnd _FrontEnd = {
-	                                  AddExtensiabiletyEventsHandler, RemoveExtensiabiletyEventsHandler, AdvertiseTopic, SubscribeToTopic, PublishMessageToAnyNode, PublishMessageToNode, PublishMessageToNodes,
-	                                  GetAllSubscribedNodes, GetAllPublishingNodes, SetGeneralNodeIdSelectionAlgorithm, SetTopicNodeIdSelectionAlgorithm
+	                                  AddExtensiabiletyEventsHandler,
+	                                  RemoveExtensiabiletyEventsHandler,
+	                                  AdvertiseTopic,
+	                                  SubscribeToTopic,
+	                                  PublishMessageToAnyNode,
+	                                  PublishMessageToNode,
+	                                  PublishMessageToNodes,
+	                                  GetAllSubscribedNodes,
+	                                  GetAllPublishingNodes,
+	                                  SetGeneralNodeIdSelectionAlgorithm,
+	                                  SetTopicNodeIdSelectionAlgorithm
                                   };
 
 //// MQCloud ////
 
 const struct _MQCloud MQCloud = {
-	                                _MessageUtilities, _API, _FrontEnd
+	                                _MessageUtilities,
+	                                _API,
+	                                _FrontEnd
                                 };
