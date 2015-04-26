@@ -40,28 +40,28 @@ extern "C" {
 	// Publish socket (one to many)
 	struct CorePublishingSocketInterface {
 		void * (*CoreCreatePublishingSocket)();
-		void (*CoreBindPublishingSocket)(int socketId, const CoreNodeAddress * addr);
-		void (*CorePublishMessage)(int socketId, const CoreMessage * msg);
-		void (*CoreDeletePublishingSocket)(void * socketPtr);
+		void (*CoreBindPublishingSocket)(CorePublishingSocketInterface * instance, int socketId, const CoreNodeAddress * addr);
+		void (*CorePublishMessage)(CorePublishingSocketInterface * instance, int socketId, const CoreMessage * msg);
+		void (*CoreDeletePublishingSocket)(CorePublishingSocketInterface * instance);
 	};
 
 	typedef struct CorePublishingSocketInterface CorePublishingSocketInterface;
 
 	// Subscribe socket (one to many)
 	struct CoreSubscriberSocketInterface {
-		int (*CoreCreateSubscribingSocket)(void (*callback)(const CoreMessage * msg));
-		void (*CoreConnectSubscribingSocket)(int socketId, const CoreNodeAddress * addr);
-		void (*CoreDeleteSubscribingSocket)(int socketId);
+		CoreSubscriberSocketInterface * (*CoreCreateSubscribingSocket)(void (*callback)(const CoreMessage * msg));
+		void (*CoreConnectSubscribingSocket)(CoreSubscriberSocketInterface * instance, int socketId, const CoreNodeAddress * addr);
+		void (*CoreDeleteSubscribingSocket)(CoreSubscriberSocketInterface * instance);
 	};
 
 	typedef struct CoreSubscriberSocketInterface CoreSubscriberSocketInterface;
 
 	// Threading (for callbacks execution and core logic)
 	struct CoreThreadManagementInterface {
-		int (*CoreGetAllowedThreadPoolMaxSize)();
-		int (*CoreCreateThread)();
-		void (*CoreDeleteThread)(int threadId);
-		void (*AddTask)(int threadId, void (*task)(), void (*callback)());
+		int (*CoreGetAllowedThreadPoolMaxSize)(CoreThreadManagementInterface *);
+		int (*CoreCreateThread)(CoreThreadManagementInterface *);
+		void (*CoreDeleteThread)(CoreThreadManagementInterface *, int threadId);
+		void (*AddTask)(CoreThreadManagementInterface *, int threadId, void (*task)(), void (*callback)());
 	};
 
 	struct CoreConfiguration {
