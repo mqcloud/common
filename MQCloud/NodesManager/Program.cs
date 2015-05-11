@@ -73,7 +73,7 @@ internal class Program {
         File.WriteAllText(fileName, schema);
     }
 
-    private static void Main() {}
-}
-
+    private static void Main() {
+        Save();
+    }
 }
