@@ -14,7 +14,7 @@ namespace NodesManager {
         private static readonly RuntimeTypeModel Model = RuntimeTypeModel.Default;
 
         private static List<Type> GetTypes() {
-            var assembly = Assembly.GetAssembly(typeof (ConnectRequest));
+            var assembly = Assembly.GetAssembly(typeof (ConnectRequest)); 
             var types = assembly.GetTypes();
             return
                 (from t in types
@@ -73,7 +73,7 @@ internal class Program {
         File.WriteAllText(fileName, schema);
     }
 
-    private static void Main() {}
-}
-
+    private static void Main() {
+        Save();
+    }
 }

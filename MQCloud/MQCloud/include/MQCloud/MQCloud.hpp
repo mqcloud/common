@@ -79,7 +79,7 @@ struct FrontEndBase {
 	virtual int AddExtensiabiletyEventsHandler(const CoreConfiguration * ctx, ExtensiabiletyEventsHandler * handler);
 	virtual void RemoveExtensiabiletyEventsHandler(const CoreConfiguration * ctx, int handlerId);
 
-	virtual void AdvertiseTopic(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, std::function<void(const Message *)> OnMessage);
+	virtual void AdvertiseTopic(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, std::function<void(const Message *)> OnMessage); // TODO: create expandable functional objects with lambda as constructor
 	virtual void RejectTopic(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic);
 
 	virtual void Subscribe(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, void (*OnSubscribed)(const ServiceId * nodes, int count), void (*OnMessage)(const Message * in));
@@ -98,7 +98,7 @@ struct FrontEndBase {
 	int SetTopicNodeIdSelectionAlgorithm(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, ServiceId * (*algorithm)(const CoreMessage * in));
 
 	virtual ~FrontEndBase() {}
-
+	 
 };
 
 #endif // MQCloudCXX
