@@ -44,5 +44,8 @@
     <ClInclude Include="include\MQCloud\CXX\UserMessage.hpp">
       <Filter>include\MQCloud\CXX</Filter>
     </ClInclude>
+    <ClInclude Include="MQCloudImpl.h">
+      <Filter>include\MQCloud</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -18,6 +18,7 @@ extern "C" {
 	typedef struct CString CString;
 	typedef struct CString CoreNodeAddress;
 	typedef struct CString Topic;
+	typedef struct CString Pattern;
 	typedef struct CString ServiceId;
 
 	struct CoreMessage {
@@ -101,6 +102,7 @@ extern "C" {
 	struct BackEnd {
 		CoreConfiguration * (*CreateContext)();
 		void (*RemoveContext)(CoreConfiguration *);
+		const CString BackEndName;
 	};
 
 	typedef struct BackEnd BackEnd;
@@ -109,6 +111,8 @@ extern "C" {
 		void (*OnNodeConnectedToOther)(const ServiceId * node);
 		void (*OnNodeConnectedToThis)(const ServiceId * node);
 		void (*OnMessage)(const CoreMessage * in);
+		void (*OnAdvertisedTopic)(const Pattern * pattern, const Topic * topic, const ServiceId * node);
+		void (*OnNodeRejectedTopic)(const Pattern * pattern, const Topic * topic, const ServiceId * node);
 	};
 
 	// Extensiabilety //
@@ -118,19 +122,23 @@ extern "C" {
 		int (*AddExtensiabiletyEventsHandler)(const CoreConfiguration * ctx, ExtensiabiletyEventsHandler * handler);
 		void (*RemoveExtensiabiletyEventsHandler)(const CoreConfiguration * ctx, int handlerId);
 
-		void (*AdvertiseTopic)(const CoreConfiguration * ctx, const Topic * topic, void (*OnMessage)(const CoreMessage * in));
-		void (*SubscribeToTopic)(const CoreConfiguration * ctx, const Topic * topic, void (*OnSubscribed)(const ServiceId * nodes, int count), void (*OnMessage)(const Message * in));
+		void (*AdvertiseTopic)(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, void (*OnMessage)(const CoreMessage * in));
+		void (*RejectTopic)(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic);
 
-		void (*PublishMessageToAnyNode)(const CoreConfiguration * ctx, const Topic * topic, const CoreMessage * out);
+		void (*Subscribe)(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, void (*OnSubscribed)(const ServiceId * nodes, int count), void (*OnMessage)(const Message * in));
+		void (*Unsubscribe)(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic);
+
+		void (*PublishMessageToAnyNode)(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, const CoreMessage * out);
+		void (*PublishMessageToAllNodes)(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, const CoreMessage * out);
 		void (*PublishMessageToNode)(const CoreConfiguration * ctx, const ServiceId * node, const CoreMessage * out);
 		void (*PublishMessageToNodes)(const CoreConfiguration * ctx, const ServiceId * nodes, int nodesCount, const CoreMessage * out);
 
-		void (*GetAllSubscribedNodes)(const CoreConfiguration * ctx, const Topic * topic, void (*OnResult)(const ServiceId * nodes, int count));
-		void (*GetAllPublishingNodes)(const CoreConfiguration * ctx, const Topic * topic, void (*OnResult)(const ServiceId * nodes, int count));
+		void (*GetAllSubscribedNodes)(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, void (*OnResult)(const ServiceId * nodes, int count));
+		void (*GetAllPublishingNodes)(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, void (*OnResult)(const ServiceId * nodes, int count));
 
 		//Load balancing
 		int (*SetGeneralNodeIdSelectionAlgorithm)(const CoreConfiguration * ctx, const ServiceId * (*algorithm)(const CoreMessage * in));
-		int (*SetTopicNodeIdSelectionAlgorithm)(const CoreConfiguration * ctx, const Topic * topic, ServiceId * (*algorithm)(const CoreMessage * in));
+		int (*SetTopicNodeIdSelectionAlgorithm)(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, ServiceId * (*algorithm)(const CoreMessage * in));
 	};
 
 	typedef struct FrontEnd FrontEnd;
@@ -139,9 +147,11 @@ extern "C" {
 	// Use OnSent to clean up resources\mesure send times
 	struct API {
 		CoreConfiguration * (*CreateContext)(BackEnd *);
+		void (*SetNodesManagerContext)(const CoreConfiguration * ctx, BackEnd *);
 		void (*SetEventsHandler)(const CoreConfiguration * ctx, EventsHandler * handler);
 		void (*SetServiceName)(const CoreConfiguration * ctx, const CString * name);
 		void (*SetExchengeAdress)(const CoreConfiguration * ctx, const CoreNodeAddress * addr);
+		void (*Connect)();
 
 		// Request-Reply, Request-Reply continuos *(nonblocking)
 		void (*Request)(const CoreConfiguration * ctx, const Message * out, void (*OnSent)(), void (*OnReply)(const Message * in));

@@ -20,6 +20,7 @@
     <ClInclude Include="include\MQCloud\CXX\UserMessage.hpp" />
     <ClInclude Include="include\MQCloud\MQCloud.h" />
     <ClInclude Include="include\MQCloud\MQCloud.hpp" />
+    <ClInclude Include="MQCloudImpl.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{70DB0C46-6471-44E6-9DDF-C611A86C52DE}</ProjectGuid>
