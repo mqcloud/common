@@ -11,6 +11,7 @@
 #ifndef MQCloudCXX
 #define MQCloudCXX
 #include <memory>
+#include <utility>
 
 // Publish socket (one to many)
 struct CorePublishingSocketBase {
@@ -75,30 +76,113 @@ struct ExtensiabiletyEventsHandlerBase {
 	virtual ~ExtensiabiletyEventsHandlerBase() {}
 };
 
+
+struct OnMessageAction {
+	explicit OnMessageAction(const OnMessageAction & other)
+		: _action(other._action) {}
+
+	explicit OnMessageAction(const std::function<void(const Message *)> & action) : _action(action) {}
+
+	OnMessageAction(OnMessageAction && other)
+		: _action(std::move(other._action)) {}
+
+	OnMessageAction() {}
+
+	OnMessageAction(std::function<void(const Message *)> && action) : _action(action) {}
+
+	virtual void OnMessage(const Message * msg) {
+		if(_action) {
+			_action(msg);
+		}
+	}
+
+	virtual ~OnMessageAction() {}
+
+private:
+	std::function<void(const Message *)> _action;
+};
+
+struct OnNodesAction {
+	explicit OnNodesAction(const OnNodesAction & other)
+		: _action(other._action) {}
+
+	explicit OnNodesAction(const std::function<void (const ServiceId * nodes, int count)> & action) : _action(action) {}
+
+
+	OnNodesAction(OnNodesAction && other)
+		: _action(std::move(other._action)) {}
+
+	OnNodesAction() {}
+
+	OnNodesAction(std::function<void(const ServiceId * nodes, int count)> && action) : _action(action) {}
+
+	virtual void OnMessage(const ServiceId * nodes, int count) {
+		if(_action) {
+			_action(nodes, count);
+		}
+	}
+
+	virtual ~OnNodesAction() {}
+
+private:
+	std::function<void (const ServiceId * nodes, int count)> _action;
+};
+
+struct OnMessageAlgorithmAction {
+	explicit OnMessageAlgorithmAction(const OnMessageAlgorithmAction & other)
+		: _action(other._action) {}
+
+	explicit OnMessageAlgorithmAction(const std::function<std::string(const Message *)> & action) : _action(action) {}
+
+	OnMessageAlgorithmAction(OnMessageAlgorithmAction && other)
+		: _action(std::move(other._action)) {}
+
+	OnMessageAlgorithmAction() {}
+
+	OnMessageAlgorithmAction(std::function<std::string(const Message *)> && action) : _action(action) {}
+
+	virtual void OnMessage(const Message * msg) {
+		if(_action) {
+			_action(msg);
+		}
+	}
+
+	virtual ~OnMessageAlgorithmAction() {}
+
+private:
+	std::function<std::string(const Message *)> _action;
+};
+
 struct FrontEndBase {
-	virtual int AddExtensiabiletyEventsHandler(const CoreConfiguration * ctx, ExtensiabiletyEventsHandler * handler);
-	virtual void RemoveExtensiabiletyEventsHandler(const CoreConfiguration * ctx, int handlerId);
+	FrontEndBase(std::shared_ptr<CoreConfiguration> ctx);
+	virtual int AddExtensiabiletyEventsHandler(std::shared_ptr<ExtensiabiletyEventsHandler> handler);
+	virtual void RemoveExtensiabiletyEventsHandler(int handlerId);
 
-	virtual void AdvertiseTopic(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, std::function<void(const Message *)> OnMessage); // TODO: create expandable functional objects with lambda as constructor
-	virtual void RejectTopic(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic);
+	virtual void AdvertiseTopic(const std::string & pattern, const std::string & topic, std::shared_ptr<OnMessageAction> OnMessage);
+	virtual void AdvertiseTopic(const std::string & pattern, const std::string & topic, std::function<void (const ServiceId * nodes, int count)> OnMessage);
+	virtual void RejectTopic(const std::string & pattern, const std::string & topic);
 
-	virtual void Subscribe(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, void (*OnSubscribed)(const ServiceId * nodes, int count), void (*OnMessage)(const Message * in));
-	virtual void Unsubscribe(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic);
+	virtual void Subscribe(const std::string & pattern, const std::string & topic, std::shared_ptr<OnNodesAction> OnSubscribed, std::shared_ptr<OnMessageAction> OnMessage);
+	virtual void Subscribe(const std::string & pattern, const std::string & topic, std::shared_ptr<OnNodesAction> OnSubscribed, std::function<void (const ServiceId * nodes, int count)> OnMessage);
+	virtual void Unsubscribe(const std::string & pattern, const std::string & topic);
 
-	virtual void PublishMessageToAnyNode(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, const CoreMessage * out);
-	virtual void PublishMessageToAllNodes(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, const CoreMessage * out);
-	virtual void PublishMessageToNode(const CoreConfiguration * ctx, const ServiceId * node, const CoreMessage * out);
-	virtual void PublishMessageToNodes(const CoreConfiguration * ctx, const ServiceId * nodes, int nodesCount, const CoreMessage * out);
+	virtual void PublishMessageToAnyNode(const std::string & pattern, const std::string & topic, std::shared_ptr<CoreMessage> out);
+	virtual void PublishMessageToAllNodes(const std::string & pattern, const std::string & topic, std::shared_ptr<CoreMessage> out);
+	virtual void PublishMessageToNode(const std::string & node, std::shared_ptr<CoreMessage> out);
+	virtual void PublishMessageToNodes(const std::string & nodes, int nodesCount, std::shared_ptr<CoreMessage> out);
 
-	virtual void GetAllSubscribedNodes(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, void (*OnResult)(const ServiceId * nodes, int count));
-	virtual void GetAllPublishingNodes(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, void (*OnResult)(const ServiceId * nodes, int count));
+	virtual void GetAllSubscribedNodes(const std::string & pattern, const std::string & topic, std::shared_ptr<OnNodesAction> OnResult);
+	virtual void GetAllSubscribedNodes(const std::string & pattern, const std::string & topic, std::function<void (const ServiceId * nodes, int count)> OnResult);
+	virtual void GetAllPublishingNodes(const std::string & pattern, const std::string & topic, std::shared_ptr<OnNodesAction> OnResult);
+	virtual void GetAllPublishingNodes(const std::string & pattern, const std::string & topic, std::function<void (const ServiceId * nodes, int count)> OnResult);
 
 	//Load balancing
-	int SetGeneralNodeIdSelectionAlgorithm(const CoreConfiguration * ctx, const ServiceId * (*algorithm)(const CoreMessage * in));
-	int SetTopicNodeIdSelectionAlgorithm(const CoreConfiguration * ctx, const Pattern * pattern, const Topic * topic, ServiceId * (*algorithm)(const CoreMessage * in));
+	int SetGeneralNodeIdSelectionAlgorithm(std::shared_ptr<OnMessageAlgorithmAction> algorithm);
+	int SetGeneralNodeIdSelectionAlgorithm(std::function<std::string(const Message *)> algorithm);
+	int SetTopicNodeIdSelectionAlgorithm(const std::string & pattern, const std::string & topic, std::shared_ptr<OnMessageAlgorithmAction> algorithm);
+	int SetTopicNodeIdSelectionAlgorithm(const std::string & pattern, const std::string & topic, std::function<std::string(const Message *)> algorithm);
 
 	virtual ~FrontEndBase() {}
-	 
 };
 
 #endif // MQCloudCXX

@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZeroMQBackEnd", "ZeroMQBack
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodesManager", "NodesManager\NodesManager.csproj", "{FD0D318C-5FB8-4409-B587-365937ED79AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroMQBackEndCSharp", "ZeroMQBack\Sharp\ZeroMQBackEndCSharp\ZeroMQBackEndCSharp.csproj", "{145515AE-E478-4564-B24E-3AC116CDECA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,16 @@ Global
 		{FD0D318C-5FB8-4409-B587-365937ED79AB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{FD0D318C-5FB8-4409-B587-365937ED79AB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{FD0D318C-5FB8-4409-B587-365937ED79AB}.Release|Win32.ActiveCfg = Release|Any CPU
+		{145515AE-E478-4564-B24E-3AC116CDECA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145515AE-E478-4564-B24E-3AC116CDECA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145515AE-E478-4564-B24E-3AC116CDECA6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{145515AE-E478-4564-B24E-3AC116CDECA6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{145515AE-E478-4564-B24E-3AC116CDECA6}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{145515AE-E478-4564-B24E-3AC116CDECA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145515AE-E478-4564-B24E-3AC116CDECA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145515AE-E478-4564-B24E-3AC116CDECA6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{145515AE-E478-4564-B24E-3AC116CDECA6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{145515AE-E478-4564-B24E-3AC116CDECA6}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

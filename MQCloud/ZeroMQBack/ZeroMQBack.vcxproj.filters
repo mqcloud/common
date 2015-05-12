@@ -18,9 +18,15 @@
     <ClInclude Include="SimplifiedAPI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SimpleAPIWrapperSharp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SimplifiedAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleAPIWrapperSharp.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

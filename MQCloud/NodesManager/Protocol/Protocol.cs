@@ -14,7 +14,7 @@ namespace NodesManager.Protocol {
         public string RealNodeName;
     }
 
-    [ProtoContract] 
+    [ProtoContract]
     public class HeartBeat {}
 
     [ProtoContract]

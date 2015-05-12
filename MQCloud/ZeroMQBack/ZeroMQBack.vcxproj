@@ -43,6 +43,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\MQCloud\include;$(IncludePath)</IncludePath>
+    <OutDir>.\Sharp\ZeroMQBackEndCSharp\bin\Debug</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -80,9 +81,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="SimpleAPIWrapperSharp.h" />
     <ClInclude Include="SimplifiedAPI.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="SimpleAPIWrapperSharp.cxx" />
     <ClCompile Include="SimplifiedAPI.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
