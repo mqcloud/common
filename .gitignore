@@ -181,3 +181,7 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+# MQCloud depends
+MQCloud/MQCloud/external/lib/*
+MQCloud/MQCloud/external/include/*

@@ -21,22 +21,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\CXX\CXXWrapperImplementation.cpp">
-      <Filter>src\CXX</Filter>
-    </ClCompile>
-    <ClCompile Include="src\CXX\CoreImplementation.cpp">
-      <Filter>src\CXX</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="include\MQCloud\MQCloud.h">
-      <Filter>include\MQCloud</Filter>
-    </ClInclude>
     <ClInclude Include="include\MQCloud\MQCloud.hpp">
       <Filter>include\MQCloud</Filter>
-    </ClInclude>
-    <ClInclude Include="include\MQCloud\CXX\CStringAdaptor.hpp">
-      <Filter>include\MQCloud\CXX</Filter>
     </ClInclude>
     <ClInclude Include="include\MQCloud\CXX\Message.hpp">
       <Filter>include\MQCloud\CXX</Filter>
@@ -44,8 +30,16 @@
     <ClInclude Include="include\MQCloud\CXX\UserMessage.hpp">
       <Filter>include\MQCloud\CXX</Filter>
     </ClInclude>
-    <ClInclude Include="MQCloudImpl.h">
-      <Filter>include\MQCloud</Filter>
+    <ClInclude Include="include\MQCloud\CXX\NodeManagerProtocol.pb.h">
+      <Filter>include\MQCloud\CXX</Filter>
     </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\GenericFunc.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\CXX\NodeManagerProtocol.pb.cc">
+      <Filter>src\CXX</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

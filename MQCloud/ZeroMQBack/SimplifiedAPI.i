@@ -16,5 +16,6 @@
 %shared_ptr(A)
 %shared_ptr(B)
 
-%include "SimplifiedAPI.h"
 
+%include "SimplifiedAPI.h"
+%template(GenericActionB) GenericAction<B>;

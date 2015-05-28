@@ -4,19 +4,21 @@
 #ifndef MessageHpp
 #define MessageHpp
 
-struct Message : protected CoreMessage {
-	CStringAdaptor topic;
-	CStringAdaptor data;
-	CStringAdaptor serviceId;
-	CStringAdaptor PatternName;
-	CStringAdaptor PatternData;
-	Message();
-	int GetMessageId();
-	void SetMessageId(const int &);
-
-private:
-	std::function<void ()> clearTopic;
-};
-
+namespace MQCloud {
+	struct Message {
+		std::string topic;
+		std::string data;
+		std::string serviceId;
+		std::string PatternName;
+		std::string PatternData;
+		Message();
+		Message(const std::string & data, const std::string & topic, const std::string & pattern, const std::string & patternData);
+		int GetMessageId();
+		void SetMessageId(const int &);
+	
+	private:
+		std::function<void ()> clearTopic;
+	};
+}
 #endif // MessageHpp
 

@@ -3,6 +3,8 @@
 //// CORE C INTERFACE WRAPPER
 
 //// MessageUtilities ////
+typedef MQCloud::Message Message;
+//using namespace MQCloud;
 
 void SetMessageTopic(Message * m, const CString * s, void (*OnTopicRemoval)()) {
 	m->data.SetData(s, OnTopicRemoval);

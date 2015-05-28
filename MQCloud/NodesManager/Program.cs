@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -71,6 +72,7 @@ internal class Program {
         var schema = SchemaPrinter.Print();
         Console.WriteLine(schema);
         File.WriteAllText(fileName, schema);
+        Process.Start( string.Format( "{0}/protoc.exe", AppDomain.CurrentDomain.BaseDirectory ), string.Format( "--cpp_out=\"./\" {0}", fileName ) );
     }
 
     private static void Main() {

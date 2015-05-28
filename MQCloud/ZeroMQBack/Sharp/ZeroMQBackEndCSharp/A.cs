@@ -8,99 +8,83 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-using System;
-using System.Reflection;
-using System.Runtime.InteropServices;
-
 namespace ZeroMQBackEnd {
-    public class A : IDisposable {
-        public delegate void SwigDelegateA_0(string n);
 
-        public delegate string SwigDelegateA_1();
+public class A : global::System.IDisposable {
+  private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+  private bool swigCMemOwnBase;
 
-        private static readonly Type[] swigMethodTypes0 = {typeof (string)};
-        private static readonly Type[] swigMethodTypes1 = {};
-        private bool swigCMemOwnBase;
-        private HandleRef swigCPtr;
-        private SwigDelegateA_0 swigDelegate0;
-        private SwigDelegateA_1 swigDelegate1;
+  internal A(global::System.IntPtr cPtr, bool cMemoryOwn) {
+    swigCMemOwnBase = cMemoryOwn;
+    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+  }
 
-        internal A(IntPtr cPtr, bool cMemoryOwn) {
-            swigCMemOwnBase = cMemoryOwn;
-            swigCPtr = new HandleRef(this, cPtr);
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(A obj) {
+    return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+  }
+
+  ~A() {
+    Dispose();
+  }
+
+  public virtual void Dispose() {
+    lock(this) {
+      if (swigCPtr.Handle != global::System.IntPtr.Zero) {
+        if (swigCMemOwnBase) {
+          swigCMemOwnBase = false;
+          ZeroMQBackEndPINVOKE.delete_A(swigCPtr);
         }
-
-        public A() : this(ZeroMQBackEndPINVOKE.new_A(), true) {
-            SwigDirectorConnect();
-        }
-
-        public virtual void Dispose() {
-            lock (this) {
-                if (swigCPtr.Handle != IntPtr.Zero) {
-                    if (swigCMemOwnBase) {
-                        swigCMemOwnBase = false;
-                        ZeroMQBackEndPINVOKE.delete_A(swigCPtr);
-                    }
-                    swigCPtr = new HandleRef(null, IntPtr.Zero);
-                }
-                GC.SuppressFinalize(this);
-            }
-        }
-
-        internal static HandleRef getCPtr(A obj) {
-            return (obj == null) ? new HandleRef(null, IntPtr.Zero) : obj.swigCPtr;
-        }
-
-        ~A() {
-            Dispose();
-        }
-
-        public virtual void SetName(string n) {
-            if (SwigDerivedClassHasMethod("SetName", swigMethodTypes0)) {
-                ZeroMQBackEndPINVOKE.A_SetNameSwigExplicitA(swigCPtr, n);
-            }
-            else {
-                ZeroMQBackEndPINVOKE.A_SetName(swigCPtr, n);
-            }
-            if (ZeroMQBackEndPINVOKE.SWIGPendingException.Pending) {
-                throw ZeroMQBackEndPINVOKE.SWIGPendingException.Retrieve();
-            }
-        }
-
-        public virtual string SayHello() {
-            var ret = (SwigDerivedClassHasMethod("SayHello", swigMethodTypes1)
-                ? ZeroMQBackEndPINVOKE.A_SayHelloSwigExplicitA(swigCPtr)
-                : ZeroMQBackEndPINVOKE.A_SayHello(swigCPtr));
-            if (ZeroMQBackEndPINVOKE.SWIGPendingException.Pending) {
-                throw ZeroMQBackEndPINVOKE.SWIGPendingException.Retrieve();
-            }
-            return ret;
-        }
-
-        private void SwigDirectorConnect() {
-            if (SwigDerivedClassHasMethod("SetName", swigMethodTypes0)) {
-                swigDelegate0 = SwigDirectorSetName;
-            }
-            if (SwigDerivedClassHasMethod("SayHello", swigMethodTypes1)) {
-                swigDelegate1 = SwigDirectorSayHello;
-            }
-            ZeroMQBackEndPINVOKE.A_director_connect(swigCPtr, swigDelegate0, swigDelegate1);
-        }
-
-        private bool SwigDerivedClassHasMethod(string methodName, Type[] methodTypes) {
-            var methodInfo = GetType()
-                .GetMethod(methodName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance, null,
-                    methodTypes, null);
-            var hasDerivedMethod = methodInfo.DeclaringType.IsSubclassOf(typeof (A));
-            return hasDerivedMethod;
-        }
-
-        private void SwigDirectorSetName(string n) {
-            SetName(n);
-        }
-
-        private string SwigDirectorSayHello() {
-            return SayHello();
-        }
+        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+      }
+      global::System.GC.SuppressFinalize(this);
     }
+  }
+
+  public virtual void SetName(string n) {
+    if (SwigDerivedClassHasMethod("SetName", swigMethodTypes0)) ZeroMQBackEndPINVOKE.A_SetNameSwigExplicitA(swigCPtr, n); else ZeroMQBackEndPINVOKE.A_SetName(swigCPtr, n);
+    if (ZeroMQBackEndPINVOKE.SWIGPendingException.Pending) throw ZeroMQBackEndPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public virtual string SayHello() {
+    string ret = (SwigDerivedClassHasMethod("SayHello", swigMethodTypes1) ? ZeroMQBackEndPINVOKE.A_SayHelloSwigExplicitA(swigCPtr) : ZeroMQBackEndPINVOKE.A_SayHello(swigCPtr));
+    if (ZeroMQBackEndPINVOKE.SWIGPendingException.Pending) throw ZeroMQBackEndPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public A() : this(ZeroMQBackEndPINVOKE.new_A(), true) {
+    SwigDirectorConnect();
+  }
+
+  private void SwigDirectorConnect() {
+    if (SwigDerivedClassHasMethod("SetName", swigMethodTypes0))
+      swigDelegate0 = new SwigDelegateA_0(SwigDirectorSetName);
+    if (SwigDerivedClassHasMethod("SayHello", swigMethodTypes1))
+      swigDelegate1 = new SwigDelegateA_1(SwigDirectorSayHello);
+    ZeroMQBackEndPINVOKE.A_director_connect(swigCPtr, swigDelegate0, swigDelegate1);
+  }
+
+  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
+    global::System.Reflection.MethodInfo methodInfo = this.GetType().GetMethod(methodName, global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance, null, methodTypes, null);
+    bool hasDerivedMethod = methodInfo.DeclaringType.IsSubclassOf(typeof(A));
+    return hasDerivedMethod;
+  }
+
+  private void SwigDirectorSetName(string n) {
+    SetName(n);
+  }
+
+  private string SwigDirectorSayHello() {
+    return SayHello();
+  }
+
+  public delegate void SwigDelegateA_0(string n);
+  public delegate string SwigDelegateA_1();
+
+  private SwigDelegateA_0 swigDelegate0;
+  private SwigDelegateA_1 swigDelegate1;
+
+  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] { typeof(string) };
+  private static global::System.Type[] swigMethodTypes1 = new global::System.Type[] {  };
+}
+
 }

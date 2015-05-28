@@ -14,37 +14,55 @@
 class SwigDirector_A : public A, public Swig::Director {
 
 public:
-	SwigDirector_A();
-	virtual void SetName(std::string const & n);
-	virtual std::string SayHello();
-	virtual ~SwigDirector_A();
+    SwigDirector_A();
+    virtual void SetName(std::string const &n);
+    virtual std::string SayHello();
+    virtual ~SwigDirector_A();
 
-	typedef void (SWIGSTDCALL* SWIG_Callback0_t)(char *);
-	typedef char * (SWIGSTDCALL* SWIG_Callback1_t)();
-	void swig_connect_director(SWIG_Callback0_t callbackSetName, SWIG_Callback1_t callbackSayHello);
+    typedef void (SWIGSTDCALL* SWIG_Callback0_t)(char *);
+    typedef char * (SWIGSTDCALL* SWIG_Callback1_t)();
+    void swig_connect_director(SWIG_Callback0_t callbackSetName, SWIG_Callback1_t callbackSayHello);
 
 private:
-	SWIG_Callback0_t swig_callbackSetName;
-	SWIG_Callback1_t swig_callbackSayHello;
-	void swig_init_callbacks();
+    SWIG_Callback0_t swig_callbackSetName;
+    SWIG_Callback1_t swig_callbackSayHello;
+    void swig_init_callbacks();
 };
 
 class SwigDirector_B : public B, public Swig::Director {
 
 public:
-	SwigDirector_B();
-	virtual void SetA(std::shared_ptr<A> p);
-	virtual void CallA();
-	virtual ~SwigDirector_B();
+    SwigDirector_B();
+    virtual void SetA(std::shared_ptr< A > p);
+    virtual void SetSF(std::function< void (int) > f);
+    virtual void CallA();
+    virtual ~SwigDirector_B();
 
-	typedef void (SWIGSTDCALL* SWIG_Callback0_t)(void *);
-	typedef void (SWIGSTDCALL* SWIG_Callback1_t)();
-	void swig_connect_director(SWIG_Callback0_t callbackSetA, SWIG_Callback1_t callbackCallA);
+    typedef void (SWIGSTDCALL* SWIG_Callback0_t)(void *);
+    typedef void (SWIGSTDCALL* SWIG_Callback1_t)(void *);
+    typedef void (SWIGSTDCALL* SWIG_Callback2_t)();
+    void swig_connect_director(SWIG_Callback0_t callbackSetA, SWIG_Callback1_t callbackSetSF, SWIG_Callback2_t callbackCallA);
 
 private:
-	SWIG_Callback0_t swig_callbackSetA;
-	SWIG_Callback1_t swig_callbackCallA;
-	void swig_init_callbacks();
+    SWIG_Callback0_t swig_callbackSetA;
+    SWIG_Callback1_t swig_callbackSetSF;
+    SWIG_Callback2_t swig_callbackCallA;
+    void swig_init_callbacks();
+};
+
+struct SwigDirector_GenericActionB : public GenericAction< B >, public Swig::Director {
+
+public:
+    SwigDirector_GenericActionB();
+    virtual void OnAction(B r1);
+    virtual ~SwigDirector_GenericActionB();
+
+    typedef void (SWIGSTDCALL* SWIG_Callback0_t)(void *);
+    void swig_connect_director(SWIG_Callback0_t callbackOnAction);
+
+private:
+    SWIG_Callback0_t swig_callbackOnAction;
+    void swig_init_callbacks();
 };
 
 

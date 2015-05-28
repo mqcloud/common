@@ -12,6 +12,8 @@ namespace NodesManager.Protocol {
     public class ConnectResponse {
         [ProtoMember(1)]
         public string RealNodeName;
+        [ProtoMember( 2 )]
+        public int HeartBeatRateMs;
     }
 
     [ProtoContract]
@@ -23,6 +25,9 @@ namespace NodesManager.Protocol {
     //Out
     [ProtoContract]
     public class AdvertizeTopic {
+        [ProtoMember( 4 )]
+        public string BackEndName;
+
         [ProtoMember(1)]
         public string Pattern;
 
@@ -80,6 +85,9 @@ namespace NodesManager.Protocol {
 
     [ProtoContract]
     public class RejectTopic {
+        [ProtoMember( 3 )]
+        public string BackEndName;
+
         [ProtoMember(1)]
         public string Pattern;
 
@@ -90,6 +98,9 @@ namespace NodesManager.Protocol {
     //In
     [ProtoContract]
     public class Subscribe {
+        [ProtoMember( 3 )]
+        public string BackEndName;
+
         [ProtoMember(1)]
         public string Pattern;
 
@@ -147,6 +158,9 @@ namespace NodesManager.Protocol {
 
     [ProtoContract]
     public class UnSubscribe {
+        [ProtoMember( 3 )]
+        public string BackEndName;
+
         [ProtoMember(1)]
         public string Pattern;
 
@@ -157,6 +171,9 @@ namespace NodesManager.Protocol {
     //events
     [ProtoContract]
     public class OnAdvertisedTopic {
+        [ProtoMember( 4 )]
+        public string BackEndName;
+
         [ProtoMember(1)]
         public string Node;
 
@@ -169,6 +186,9 @@ namespace NodesManager.Protocol {
 
     [ProtoContract]
     public class OnNodeRejectedTopic {
+        [ProtoMember( 4 )]
+        public string BackEndName;
+
         [ProtoMember(1)]
         public string Node;
 
@@ -178,4 +198,20 @@ namespace NodesManager.Protocol {
         [ProtoMember(3)]
         public string Topic;
     }
+
+    [ProtoContract]
+    public class OnNodeUnavaliable {
+        [ProtoMember( 4 )]
+        public string BackEndName;
+
+        [ProtoMember( 1 )]
+        public string Node;
+
+        [ProtoMember( 2 )]
+        public string Pattern;
+
+        [ProtoMember( 3 )]
+        public string Topic;
+    }
+
 }
