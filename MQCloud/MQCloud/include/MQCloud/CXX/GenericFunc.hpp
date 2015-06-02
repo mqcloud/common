@@ -86,6 +86,27 @@ struct GenericAction
 	virtual ~GenericAction(){}
 };
 
+template <>
+struct GenericAction <_VS_EmptyType, _VS_EmptyType, _VS_EmptyType> 
+#ifndef SWIG
+	: std::function<void ()> 
+#endif
+{
+	GenericAction() {}
+
+#ifndef SWIG
+	GenericAction(const std::function<void ()> & Action) : std::function<void ()>(Action) {}
+#endif
+
+	virtual void OnAction() {
+		if(*this) {
+			(*this)();
+		}
+	}
+
+	virtual ~GenericAction(){}
+};
+
 template <typename  T1>
 struct GenericAction <T1, _VS_EmptyType, _VS_EmptyType> 
 #ifndef SWIG

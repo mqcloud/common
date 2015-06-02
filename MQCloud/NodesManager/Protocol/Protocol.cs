@@ -17,7 +17,8 @@ namespace NodesManager.Protocol {
     }
 
     [ProtoContract]
-    public class HeartBeat {}
+    public class HeartBeat {
+    }
 
     [ProtoContract]
     public class Disconnect {}
@@ -25,7 +26,7 @@ namespace NodesManager.Protocol {
     //Out
     [ProtoContract]
     public class AdvertizeTopic {
-        [ProtoMember( 4 )]
+        [ProtoMember( 3 )]
         public string BackEndName;
 
         [ProtoMember(1)]
