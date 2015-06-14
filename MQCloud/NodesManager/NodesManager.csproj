@@ -47,11 +47,45 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Protocol\Protocol.cs" />
+    <Compile Include="Protocol\Events\AdvertizeTopic.cs" />
+    <Compile Include="Protocol\Events\OutgoingEvent.cs" />
+    <Compile Include="Protocol\Events\OutgoingEventType.cs" />
+    <Compile Include="Protocol\Events\OnConnectionEstablished.cs" />
+    <Compile Include="Protocol\Events\OnConnectionClosed.cs" />
+    <Compile Include="Protocol\Events\IncomingEvent.cs" />
+    <Compile Include="Protocol\Events\IncomingEventType.cs" />
+    <Compile Include="Protocol\Operations\ConnectRequest.cs" />
+    <Compile Include="Protocol\Operations\ConnectResponse.cs" />
+    <Compile Include="Protocol\Events\Disconnect.cs" />
+    <Compile Include="Protocol\Operations\GetAllPublishersRequest.cs" />
+    <Compile Include="Protocol\Operations\GetAllPublishersResponse.cs" />
+    <Compile Include="Protocol\Operations\GetAllSubscribersRequest.cs" />
+    <Compile Include="Protocol\Operations\GetAllSubscribersResponse.cs" />
+    <Compile Include="Protocol\Operations\GetPublisherRequest.cs" />
+    <Compile Include="Protocol\Operations\GetPublisherResponse.cs" />
+    <Compile Include="Protocol\Operations\GetSubscriberRequest.cs" />
+    <Compile Include="Protocol\Events\HeartBeat.cs" />
+    <Compile Include="Protocol\Events\OnNodeAdvertisedTopic.cs" />
+    <Compile Include="Protocol\Events\OnNodeRejectedTopic.cs" />
+    <Compile Include="Protocol\Events\OnNodeSubscribedToTopic.cs" />
+    <Compile Include="Protocol\Events\OnNodeUnavaliable.cs" />
+    <Compile Include="Protocol\Events\OnNodeUnsubscribedFromTopic.cs" />
+    <Compile Include="Protocol\Operations\GetSubscriberResponse.cs" />
+    <Compile Include="Protocol\Events\RejectTopic.cs" />
+    <Compile Include="Protocol\Events\ReportNodeUnavaliable.cs" />
+    <Compile Include="Protocol\Events\Subscribe.cs" />
+    <Compile Include="Protocol\Events\UnSubscribe.cs" />
+    <Compile Include="Protocol\Operations\OutgoingOperation.cs" />
+    <Compile Include="Protocol\Operations\IncomingOperationType.cs" />
+    <Compile Include="Protocol\Operations\IncomingOperation.cs" />
+    <Compile Include="Protocol\Operations\OutgoingOperationType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Protocol\Protocol workflow.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

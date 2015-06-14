@@ -13,12 +13,12 @@
   <ItemGroup>
     <ClInclude Include="include\MQCloud\CXX\GenericFunc.hpp" />
     <ClInclude Include="include\MQCloud\CXX\Message.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\NodeManagerProtocol.pb.h" />
+    <ClInclude Include="include\MQCloud\CXX\Protocol.pb.h" />
     <ClInclude Include="include\MQCloud\CXX\UserMessage.hpp" />
     <ClInclude Include="include\MQCloud\MQCloud.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\CXX\NodeManagerProtocol.pb.cc" />
+    <ClCompile Include="src\CXX\Protocol.pb.cc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{70DB0C46-6471-44E6-9DDF-C611A86C52DE}</ProjectGuid>
