@@ -8,22 +8,23 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+using System;
+using System.Runtime.InteropServices;
+
 namespace ZeroMQBackEnd {
+    public class SWIGTYPE_p_std__shared_ptrT_A_t {
+        private readonly HandleRef swigCPtr;
 
-public class SWIGTYPE_p_std__shared_ptrT_A_t {
-  private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+        internal SWIGTYPE_p_std__shared_ptrT_A_t(IntPtr cPtr, bool futureUse) {
+            swigCPtr = new HandleRef(this, cPtr);
+        }
 
-  internal SWIGTYPE_p_std__shared_ptrT_A_t(global::System.IntPtr cPtr, bool futureUse) {
-    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
-  }
+        protected SWIGTYPE_p_std__shared_ptrT_A_t() {
+            swigCPtr = new HandleRef(null, IntPtr.Zero);
+        }
 
-  protected SWIGTYPE_p_std__shared_ptrT_A_t() {
-    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
-  }
-
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_std__shared_ptrT_A_t obj) {
-    return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-  }
-}
-
+        internal static HandleRef getCPtr(SWIGTYPE_p_std__shared_ptrT_A_t obj) {
+            return (obj == null) ? new HandleRef(null, IntPtr.Zero) : obj.swigCPtr;
+        }
+    }
 }

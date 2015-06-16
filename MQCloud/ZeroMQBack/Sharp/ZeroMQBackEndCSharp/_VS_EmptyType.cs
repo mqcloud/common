@@ -8,41 +8,40 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+using System;
+using System.Runtime.InteropServices;
+
 namespace ZeroMQBackEnd {
+    public class _VS_EmptyType : IDisposable {
+        protected bool swigCMemOwn;
+        private HandleRef swigCPtr;
 
-public class _VS_EmptyType : global::System.IDisposable {
-  private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  protected bool swigCMemOwn;
-
-  internal _VS_EmptyType(global::System.IntPtr cPtr, bool cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
-    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
-  }
-
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(_VS_EmptyType obj) {
-    return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
-  }
-
-  ~_VS_EmptyType() {
-    Dispose();
-  }
-
-  public virtual void Dispose() {
-    lock(this) {
-      if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
-          ZeroMQBackEndPINVOKE.delete__VS_EmptyType(swigCPtr);
+        internal _VS_EmptyType(IntPtr cPtr, bool cMemoryOwn) {
+            swigCMemOwn = cMemoryOwn;
+            swigCPtr = new HandleRef(this, cPtr);
         }
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
-      }
-      global::System.GC.SuppressFinalize(this);
+
+        public _VS_EmptyType() : this(ZeroMQBackEndPINVOKE.new__VS_EmptyType(), true) {}
+
+        public virtual void Dispose() {
+            lock (this) {
+                if (swigCPtr.Handle != IntPtr.Zero) {
+                    if (swigCMemOwn) {
+                        swigCMemOwn = false;
+                        ZeroMQBackEndPINVOKE.delete__VS_EmptyType(swigCPtr);
+                    }
+                    swigCPtr = new HandleRef(null, IntPtr.Zero);
+                }
+                GC.SuppressFinalize(this);
+            }
+        }
+
+        internal static HandleRef getCPtr(_VS_EmptyType obj) {
+            return (obj == null) ? new HandleRef(null, IntPtr.Zero) : obj.swigCPtr;
+        }
+
+        ~_VS_EmptyType() {
+            Dispose();
+        }
     }
-  }
-
-  public _VS_EmptyType() : this(ZeroMQBackEndPINVOKE.new__VS_EmptyType(), true) {
-  }
-
-}
-
 }

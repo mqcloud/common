@@ -7,6 +7,6 @@ namespace NodesManager.Protocol.Operations {
         GetPublisherRequest,
         GetAllPublishersRequest,
         GetSubscriberRequest,
-        GetAllSubscribersRequest,
+        GetAllSubscribersRequest
     }
 }

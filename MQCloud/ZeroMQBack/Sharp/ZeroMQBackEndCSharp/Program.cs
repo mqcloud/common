@@ -74,7 +74,6 @@ namespace ZeroMQBackEndCSharp {
             var aaa = new GenericActionB();
             aaa.OnAction(b);
 
-
             Console.WriteLine("A test");
             a.SetName("Bla-Bla");
             a.SayHello();

@@ -5,20 +5,19 @@
 
 //Note: all std::map can be replaced with folly or tbb analogs in future, current implementatiuon has only one dependency on protocol buffers. This topic shall be researched!
 
-#include <MQCloud/CXX/CStringAdaptor.hpp>
-#include <MQCloud/CXX/Message.hpp>
-#include <MQCloud/CXX/UserMessage.hpp>
-#include <MQCloud/CXX/Protocol.pb.h>
-
-#ifndef MQCloudCXX
-#define MQCloudCXX
 #include <memory>
 #include <utility>
 #include <vector>
 #include <unordered_map>
 #include <mutex>
-#include "CXX/GenericFunc.hpp"
-#include "CXX/Protocol.pb.h"
+
+#include <MQCloud/CXX/Message.hpp>
+#include <MQCloud/CXX/UserMessage.hpp>
+#include <MQCloud/CXX/Protocol.pb.h>
+#include <MQCloud/CXX/GenericFunc.hpp>
+
+#ifndef MQCloudCXX
+#define MQCloudCXX
 
 namespace MQCloud
 {
@@ -153,40 +152,6 @@ namespace MQCloud
 
 	namespace Internal
 	{
-		//TODO: Node manager!
-		/*
-	struct OutgoingConnectionsManager {
-		void AddNode(const std::string & topic, std::shared_ptr<Socket> connection) {
-			std::weak_ptr<Socket> weekConnectionPtr = connection;
-			auto handler = std::make_shared<OnError>([&, weekConnectionPtr]{
-				if(auto weekConnectionSrc = weekConnectionPtr.lock()) {
-					std::lock_guard<std::mutex> lock_map(topicsMutex);
-					auto topicIterator = topics.find(topic);
-					if(topicIterator != topics.end()) {
-						auto & vecRef (topicIterator->second);
-						auto connectionIterator = find(vecRef.begin(), vecRef.end(), weekConnectionSrc);
-						if(connectionIterator  != vecRef.end()) {
-							vecRef.erase(connectionIterator);
-						}
-					}
-				}
-			});
-
-			std::lock_guard<std::mutex> lock_map(topicsMutex);
-			connection->AddDisconnectHandler(handler);
-			topics[topic].push_back(connection);
-		}
-
-		void RemoveTopic(const std::string & topic) {
-			std::lock_guard<std::mutex> l(topicsMutex);
-			topics.erase(topic);
-		}
-	private:
-		std::mutex topicsMutex;
-		std::map<std::string, std::vector<std::shared_ptr<Socket>>> topics;
-	};
-	*/
-
 		// For user on response handling
 		struct ResponseHandler : std::enable_shared_from_this<ResponseHandler>, OnUserMessageAction {
 			std::map<int, std::shared_ptr<OnUserMessageAction>> handlers;
@@ -257,7 +222,7 @@ namespace MQCloud
 			}
 		};
 
-		template<typename Targ = void>
+		template<typename Targ = int>
 		struct GenericSignalHandler : std::enable_shared_from_this<GenericSignalHandler<Targ>>, GenericAction<Targ> {
 
 			std::vector<std::shared_ptr<GenericAction<Targ>>> handlers;
@@ -277,7 +242,7 @@ namespace MQCloud
 		};
 
 		template<>
-		struct GenericSignalHandler<void> : std::enable_shared_from_this<GenericSignalHandler<>>, GenericAction<> {
+		struct GenericSignalHandler<void> : std::enable_shared_from_this<GenericSignalHandler<void>>, GenericAction<> {
 
 			std::vector<std::shared_ptr<GenericAction<>>> handlers;
 			std::mutex mutex;
@@ -298,6 +263,8 @@ namespace MQCloud
 		struct GeneralMessageHandler : GenericSignalHandler<const Message &> {};
 
 		struct GeneralStringHandler : GenericSignalHandler<const std::string &> {};
+
+		struct GeneralStringStringHandler : GenericSignalHandler<const std::string &, const std::string &> {};
 
 		struct GeneralTaskHandler : GenericSignalHandler<void> {};
 
@@ -412,31 +379,75 @@ namespace MQCloud
 
 
 		struct StaticEventsHandler : std::enable_shared_from_this<StaticEventsHandler>, OnMessageAction {
-			std::shared_ptr<GeneralMessageHandler> generalMessageHandler;
-
-			StaticEventsHandler() {
-				generalMessageHandler = std::make_shared<GeneralMessageHandler>();
-			}
+			// this functions can be turned into signals
+			std::function<void (const std::string &)> OnNodeUnavaliable;
+			std::function<void (const std::string &, const std::string &)> OnConnectionClosed;
+			std::function<void (const std::string &, const std::string &)> OnConnectionEstablished;
+			std::function<void (const std::string &, const std::string &, const std::string &)> OnNodeAdvertisedTopic;
+			std::function<void (const std::string &, const std::string &, const std::string &)> OnNodeRejectedTopic;
+			std::function<void (const std::string &, const std::string &, const std::string &)> OnNodeSubscribedToTopic;
+			std::function<void (const std::string &, const std::string &, const std::string &)> OnNodeUnsubscribedFromTopic;
 
 			virtual void OnAction(const Message & m) {
 				Protocol::IncomingEvent event;
 				event.ParseFromString(m.data);
 
-				//TODO: fill the gaps
 				switch(event.typecode()) {
-					case Protocol::IncomingEventTypeOnConnectionClosed: break;
-					case Protocol::IncomingEventTypeOnConnectionEstablished: break;
-					case Protocol::IncomingEventTypeOnNodeAdvertisedTopic: break;
-					case Protocol::IncomingEventTypeOnNodeRejectedTopic: break;
-					case Protocol::IncomingEventTypeOnNodeSubscribedToTopic: break;
-					case Protocol::IncomingEventTypeOnNodeUnavaliable: break;
-					case Protocol::IncomingEventTypeOnNodeUnsubscribedFromTopic: break;
+					case Protocol::IncomingEventTypeOnConnectionClosed: {
+						auto data = event.onconnectionclosed();
+						auto from = data.fromnode();
+						auto to = data.tonode();
+						OnConnectionClosed(from, to);
+						break;
+
+					}
+					case Protocol::IncomingEventTypeOnConnectionEstablished: {
+						auto data = event.onconnectionestablished();
+						auto from = data.fromnode();
+						auto to = data.tonode();
+						OnConnectionEstablished(from, to);
+						break;
+					}
+					case Protocol::IncomingEventTypeOnNodeAdvertisedTopic: {
+						auto data = event.onnodeadvertisedtopic();
+						auto node = data.node();
+						auto pattern = data.pattern();
+						auto topic = data.topic();
+						OnNodeAdvertisedTopic(node, pattern, topic);
+						break;
+					}
+					case Protocol::IncomingEventTypeOnNodeRejectedTopic: {
+						auto data = event.onnoderejectedtopic();
+						auto node = data.node();
+						auto pattern = data.pattern();
+						auto topic = data.topic();
+						OnNodeRejectedTopic(node, pattern, topic);
+						break;
+					}
+					case Protocol::IncomingEventTypeOnNodeSubscribedToTopic: {
+						auto data = event.onnodesubscribedtotopic();
+						auto node = data.node();
+						auto pattern = data.pattern();
+						auto topic = data.topic();
+						OnNodeSubscribedToTopic(node, pattern, topic);
+						break;
+					}
+					case Protocol::IncomingEventTypeOnNodeUnavaliable: {
+						auto data = event.onnodeunavaliable();
+						auto node = data.node();
+						OnNodeUnavaliable(node);
+						break;
+					}
+					case Protocol::IncomingEventTypeOnNodeUnsubscribedFromTopic: {
+						auto data = event.onnodeunsubscribedfromtopic();
+						auto node = data.node();
+						auto pattern = data.pattern();
+						auto topic = data.topic();
+						OnNodeUnsubscribedFromTopic(node, pattern, topic);
+						break;
+					}
 					default: break;
-
-
 				}
-
-
 			}
 		};
 

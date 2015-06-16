@@ -8852,6 +8852,7 @@ namespace google
 #endif // SWIG
 
 
+
 // @@protoc_insertion_point(global_scope)
 
 #endif // PROTOBUF_MQCloud_2eInternal_2eProtocol_2eproto__INCLUDED

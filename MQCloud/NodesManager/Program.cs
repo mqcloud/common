@@ -6,8 +6,6 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using NodesManager;
-using NodesManager.Protocol;
-using NodesManager.Protocol.Operations;
 using ProtoBuf;
 using ProtoBuf.Meta;
 
@@ -69,14 +67,15 @@ namespace NodesManager {
 }
 
 internal class Program {
-    public static void Save( string fileName = "MQCloud.Internal.Protocol.proto" ) {
+    public static void Save(string fileName = "MQCloud.Internal.Protocol.proto") {
         var schema = SchemaPrinter.Print();
-        schema= schema.Insert( 0, "package MQCloud.Internal.Protocol;\n" );
+        schema = schema.Insert(0, "package MQCloud.Internal.Protocol;\n");
 
         Console.WriteLine(schema);
         File.WriteAllText(fileName, schema);
 
-        Process.Start( string.Format( "{0}/protoc.exe", AppDomain.CurrentDomain.BaseDirectory ), string.Format( "--cpp_out=\"./\" {0}", fileName ) );
+        Process.Start(string.Format("{0}/protoc.exe", AppDomain.CurrentDomain.BaseDirectory),
+            string.Format("--cpp_out=\"./\" {0}", fileName));
     }
 
     private static void Main() {

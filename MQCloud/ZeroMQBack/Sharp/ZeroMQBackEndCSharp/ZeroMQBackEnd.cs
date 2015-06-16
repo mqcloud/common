@@ -9,8 +9,5 @@
 //------------------------------------------------------------------------------
 
 namespace ZeroMQBackEnd {
-
-public class ZeroMQBackEnd {
-}
-
+    public class ZeroMQBackEnd {}
 }

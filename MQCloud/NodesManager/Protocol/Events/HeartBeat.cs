@@ -2,6 +2,5 @@
 
 namespace NodesManager.Protocol.Events {
     [ProtoContract]
-    public class HeartBeat {
-    }
+    public class HeartBeat {}
 }
