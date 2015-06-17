@@ -11,9 +11,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\MQCloud\CXX\API.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\BackEndConfiguration.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\BackEndFactory.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\Delegates.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\EventsHandler.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\ExtensiabiletyEventsHandler.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\FrontEnd.hpp" />
     <ClInclude Include="include\MQCloud\CXX\GenericFunc.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\GenericSignal.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\Internal\ConnectionsHandler.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\Internal\ExchangeEventsHandler.h" />
+    <ClInclude Include="include\MQCloud\CXX\Internal\ExchangeEventsManager.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\Internal\ExchangeOperationsManager.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\Internal\MessagesManager.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\Internal\PatternTopicResponseHandler.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\Internal\ResponseHandler.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\Internal\Signals.hpp" />
     <ClInclude Include="include\MQCloud\CXX\Message.hpp" />
     <ClInclude Include="include\MQCloud\CXX\Protocol.pb.h" />
+    <ClInclude Include="include\MQCloud\CXX\PublishingSocket.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\Socket.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\SubscriberSocket.hpp" />
+    <ClInclude Include="include\MQCloud\CXX\ThreadManagement.hpp" />
     <ClInclude Include="include\MQCloud\CXX\UserMessage.hpp" />
     <ClInclude Include="include\MQCloud\MQCloud.hpp" />
   </ItemGroup>

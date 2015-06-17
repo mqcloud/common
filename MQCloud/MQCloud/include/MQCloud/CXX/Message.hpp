@@ -1,9 +1,8 @@
-#include <functional>
 #include <atomic>
-#include <MQCloud/CXX/CStringAdaptor.hpp>
+#include <string>
 
-#ifndef MessageHpp
-#define MessageHpp
+#ifndef MESSAGEHPP
+#define MESSAGEHPP
 
 namespace MQCloud
 {
@@ -48,5 +47,5 @@ namespace MQCloud
 		int id;
 	};
 }
-#endif // MessageHpp
+#endif // MESSAGEHPP
 

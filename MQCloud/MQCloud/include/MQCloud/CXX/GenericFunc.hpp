@@ -1,4 +1,11 @@
+#include <functional>
+
+#ifndef GENERICFUNC_HPP
+#define GENERICFUNC_HPP
+namespace MQCloud {
+
 #if _MSC_VER >= 1700 || SWIG
+
 struct _VS_EmptyType { };
 
 template<class RT = void, class T1 = _VS_EmptyType, class T2 = _VS_EmptyType, class T3 = _VS_EmptyType>
@@ -152,16 +159,11 @@ struct GenericAction<T1, T2, _VS_EmptyType>
 #else
 
 template <class TR = void, class ... Types>
-struct GenericFunc 
-#ifndef SWIG
-	: std::function<TR (Types...)>
-#endif
+struct GenericFunc : std::function<TR (Types...)>
 {
 	GenericFunc() {}
 
-#ifndef SWIG
 	GenericFunc(const std::function<TR (Types... t)> & Action) : std::function<TR (Types... t)>(Action) {}
-#endif
 	virtual TR OnAction(Types ... result) {
 		if(*this) {
 			return (*this)(result...);
@@ -172,3 +174,5 @@ struct GenericFunc
 
 template<class... Types> using GenericAction = GenericFunc<void, Types...>;
 #endif
+}
+#endif // GENERICFUNC_HPP

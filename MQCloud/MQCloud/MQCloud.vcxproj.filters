@@ -19,6 +19,9 @@
     <Filter Include="include\MQCloud\CXX">
       <UniqueIdentifier>{ddfbc24f-1ac9-4bd8-9158-59c624f6ab75}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\MQCloud\CXX\Internal">
+      <UniqueIdentifier>{381e3d49-775e-473f-b79a-ed17a0730f20}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\MQCloud\MQCloud.hpp">
@@ -34,6 +37,66 @@
       <Filter>include\MQCloud\CXX</Filter>
     </ClInclude>
     <ClInclude Include="include\MQCloud\CXX\Protocol.pb.h">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\GenericSignal.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\Socket.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\Delegates.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\PublishingSocket.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\SubscriberSocket.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\ThreadManagement.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\BackEndConfiguration.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\BackEndFactory.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\EventsHandler.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\ExtensiabiletyEventsHandler.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\Internal\Signals.hpp">
+      <Filter>include\MQCloud\CXX\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\Internal\ResponseHandler.hpp">
+      <Filter>include\MQCloud\CXX\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\Internal\PatternTopicResponseHandler.hpp">
+      <Filter>include\MQCloud\CXX\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\Internal\ConnectionsHandler.hpp">
+      <Filter>include\MQCloud\CXX\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\Internal\MessagesManager.hpp">
+      <Filter>include\MQCloud\CXX\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\Internal\ExchangeEventsHandler.h">
+      <Filter>include\MQCloud\CXX\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\Internal\ExchangeEventsManager.hpp">
+      <Filter>include\MQCloud\CXX\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\Internal\ExchangeOperationsManager.hpp">
+      <Filter>include\MQCloud\CXX\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\FrontEnd.hpp">
+      <Filter>include\MQCloud\CXX</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MQCloud\CXX\API.hpp">
       <Filter>include\MQCloud\CXX</Filter>
     </ClInclude>
   </ItemGroup>

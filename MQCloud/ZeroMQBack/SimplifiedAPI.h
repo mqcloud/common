@@ -34,93 +34,93 @@ public:
 
 };
 
+/*
+#if _msc_ver >= 1700 || swig
+struct _vs_emptytype { };
 
-#if _MSC_VER >= 1700 || SWIG
-struct _VS_EmptyType { };
-
-template<class RT = void, class T1 = _VS_EmptyType, class T2 = _VS_EmptyType, class T3 = _VS_EmptyType>
-struct GenericFunc
-#ifndef SWIG
-		: std::function<RT (T1, T2, T3)>
+template<class rt = void, class t1 = _vs_emptytype, class t2 = _vs_emptytype, class t3 = _vs_emptytype>
+struct genericfunc
+#ifndef swig
+		: std::function<rt (t1, t2, t3)>
 #endif
 {
-	GenericFunc() {}
+	genericfunc() {}
 
-#ifndef SWIG
-	GenericFunc(const std::function<RT (T1, T2, T3)> & Action) : std::function<RT (T1, T2, T3)>(Action) {}
+#ifndef swig
+	genericfunc(const std::function<rt (t1, t2, t3)> & action) : std::function<rt (t1, t2, t3)>(action) {}
 #endif
 
-	virtual RT OnAction(T1 r1, T2 r2, T3 r3) {
+	virtual rt onaction(t1 r1, t2 r2, t3 r3) {
 		if(*this) {
 			return (*this)(r1, r2, r3);
 		}
 	}
 
-	virtual ~GenericFunc() {}
+	virtual ~genericfunc() {}
 };
 
-template<typename RT, typename T1>
-struct GenericFunc<RT, T1, _VS_EmptyType, _VS_EmptyType>
-#ifndef SWIG
-		: std::function<RT (T1)>
+template<typename rt, typename t1>
+struct genericfunc<rt, t1, _vs_emptytype, _vs_emptytype>
+#ifndef swig
+		: std::function<rt (t1)>
 #endif
 {
-	GenericFunc() {}
+	genericfunc() {}
 
-#ifndef SWIG
-	GenericFunc(const std::function<RT (T1)> & Action) : std::function<RT (T1)>(Action) {}
+#ifndef swig
+	genericfunc(const std::function<rt (t1)> & action) : std::function<rt (t1)>(action) {}
 #endif
 
-	virtual RT OnAction(T1 r1) {
+	virtual rt onaction(t1 r1) {
 		if(*this) {
 			return (*this)(r1);
 		}
 	}
 
-	virtual ~GenericFunc() {}
+	virtual ~genericfunc() {}
 };
 
-template<typename RT, typename T1, typename T2>
-struct GenericFunc<RT, T1, T2, _VS_EmptyType>
-#ifndef SWIG
-		: std::function<RT (T1, T2)>
+template<typename rt, typename t1, typename t2>
+struct genericfunc<rt, t1, t2, _vs_emptytype>
+#ifndef swig
+		: std::function<rt (t1, t2)>
 #endif
 {
-	GenericFunc() {}
+	genericfunc() {}
 
-#ifndef SWIG
-	GenericFunc(const std::function<RT (T1, T2)> & Action) : std::function<RT (T1, T2)>(Action) {}
+#ifndef swig
+	genericfunc(const std::function<rt (t1, t2)> & action) : std::function<rt (t1, t2)>(action) {}
 #endif
 
-	virtual RT OnAction(T1 r1, T2 r2) {
+	virtual rt onaction(t1 r1, t2 r2) {
 		if(*this) {
 			return (*this)(r1, r2);
 		}
 	}
 
-	virtual ~GenericFunc() {}
+	virtual ~genericfunc() {}
 };
 
 
-template<class T1 = _VS_EmptyType, class T2 = _VS_EmptyType, class T3 = _VS_EmptyType>
-struct GenericAction
-#ifndef SWIG
-		: std::function<void (T1, T2, T3)>
+template<class t1 = _vs_emptytype, class t2 = _vs_emptytype, class t3 = _vs_emptytype>
+struct genericaction
+#ifndef swig
+		: std::function<void (t1, t2, t3)>
 #endif
 {
-	GenericAction() {}
+	genericaction() {}
 
-#ifndef SWIG
-	GenericAction(const std::function<void (T1, T2, T3)> & Action) : std::function<void (T1, T2, T3)>(Action) {}
+#ifndef swig
+	genericaction(const std::function<void (t1, t2, t3)> & action) : std::function<void (t1, t2, t3)>(action) {}
 #endif
 
-	virtual void OnAction(T1 r1, T2 r2, T3 r3) {
+	virtual void onaction(t1 r1, t2 r2, t3 r3) {
 		if(*this) {
 			(*this)(r1, r2, r3);
 		}
 	}
 
-	virtual ~GenericAction() {}
+	virtual ~genericaction() {}
 };
 
 template<typename T1>
@@ -190,6 +190,6 @@ template<class... Types> using GenericAction = GenericFunc<void, Types...>;
 #endif
 
 typedef GenericAction<B> BAction;
-
+*/
 #endif // ZMQBackEndH
 
