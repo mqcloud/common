@@ -28,12 +28,9 @@
 
 // @@protoc_insertion_point(includes)
 
-namespace MQCloud
-{
-	namespace Internal
-	{
-		namespace Protocol
-		{
+namespace MQCloud {
+	namespace Internal {
+		namespace Protocol {
 			// Internal implementation detail -- do not call these.
 			void protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 			void protobuf_AssignDesc_MQCloud_2eInternal_2eProtocol_2eproto();
@@ -8812,10 +8809,8 @@ namespace MQCloud
 } // namespace MQCloud
 
 #ifndef SWIG
-namespace google
-{
-	namespace protobuf
-	{
+namespace google {
+	namespace protobuf {
 		template<>
 		struct is_proto_enum<::MQCloud::Internal::Protocol::IncomingEventType> : ::google::protobuf::internal::true_type {};
 

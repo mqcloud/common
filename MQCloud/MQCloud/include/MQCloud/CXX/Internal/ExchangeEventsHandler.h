@@ -1,84 +1,86 @@
-#include <MQCloud/CXX/Internal/MessagesManager.hpp>
-#include <MQCloud/CXX/Protocol.pb.h>
-#include <functional>
-
 #ifndef EXCHANGEEVENTSHANDLER_HPP
 #define EXCHANGEEVENTSHANDLER_HPP
 
+#include <MQCloud/CXX/Internal/MessagesManager.hpp>
+#include <MQCloud/CXX/GenericSignal.hpp>
+#include <MQCloud/CXX/Protocol.pb.h>
+#include <functional>
+
 namespace MQCloud {
 	namespace Internal {
-				struct StaticEventsHandler : std::enable_shared_from_this<StaticEventsHandler>, OnMessageAction {
+		struct ExchangeEventsHandler : std::enable_shared_from_this<ExchangeEventsHandler>, OnMessageAction {
 			// this functions can be turned into signals
-			std::function<void (const std::string &)> OnNodeUnavaliable;
-			std::function<void (const std::string &, const std::string &)> OnConnectionClosed;
-			std::function<void (const std::string &, const std::string &)> OnConnectionEstablished;
-			std::function<void (const std::string &, const std::string &, const std::string &)> OnNodeAdvertisedTopic;
-			std::function<void (const std::string &, const std::string &, const std::string &)> OnNodeRejectedTopic;
-			std::function<void (const std::string &, const std::string &, const std::string &)> OnNodeSubscribedToTopic;
-			std::function<void (const std::string &, const std::string &, const std::string &)> OnNodeUnsubscribedFromTopic;
+			GenericSignalHandler<const std::string &> OnNodeUnavaliable;
+			GenericSignalHandler<const std::string &, const std::string &> OnConnectionClosed;
+			GenericSignalHandler<const std::string &, const std::string &> OnConnectionEstablished;
+			GenericSignalHandler<const std::string &, const std::string &, const std::string &> OnNodeAdvertisedTopic;
+			GenericSignalHandler<const std::string &, const std::string &, const std::string &> OnNodeRejectedTopic;
+			GenericSignalHandler<const std::string &, const std::string &, const std::string &> OnNodeSubscribedToTopic;
+			GenericSignalHandler<const std::string &, const std::string &, const std::string &> OnNodeUnsubscribedFromTopic;
 
-			virtual void OnAction(const MQCloud::Message & m) {
-				Protocol::IncomingEvent event;
-				event.ParseFromString(m.data);
+			virtual void OnAction(const MQCloud::Message & m) override {
+				Protocol::IncomingEvent incomingEvent;
+				incomingEvent.ParseFromString(m.data);
 
-				switch(event.typecode()) {
-					case Protocol::IncomingEventTypeOnConnectionClosed: {
-						auto data = event.onconnectionclosed();
+				switch(incomingEvent.typecode()) {
+					case Protocol::IncomingEventTypeOnConnectionClosed : {
+						auto data = incomingEvent.onconnectionclosed();
 						auto from = data.fromnode();
 						auto to = data.tonode();
-						OnConnectionClosed(from, to);
+						OnConnectionClosed.OnAction(from, to);
 						break;
 
 					}
-					case Protocol::IncomingEventTypeOnConnectionEstablished: {
-						auto data = event.onconnectionestablished();
+					case Protocol::IncomingEventTypeOnConnectionEstablished : {
+						auto data = incomingEvent.onconnectionestablished();
 						auto from = data.fromnode();
 						auto to = data.tonode();
-						OnConnectionEstablished(from, to);
+						OnConnectionEstablished.OnAction(from, to);
 						break;
 					}
-					case Protocol::IncomingEventTypeOnNodeAdvertisedTopic: {
-						auto data = event.onnodeadvertisedtopic();
+					case Protocol::IncomingEventTypeOnNodeAdvertisedTopic : {
+						auto data = incomingEvent.onnodeadvertisedtopic();
 						auto node = data.node();
 						auto pattern = data.pattern();
 						auto topic = data.topic();
-						OnNodeAdvertisedTopic(node, pattern, topic);
+						OnNodeAdvertisedTopic.OnAction(node, pattern, topic);
 						break;
 					}
-					case Protocol::IncomingEventTypeOnNodeRejectedTopic: {
-						auto data = event.onnoderejectedtopic();
+					case Protocol::IncomingEventTypeOnNodeRejectedTopic : {
+						auto data = incomingEvent.onnoderejectedtopic();
 						auto node = data.node();
 						auto pattern = data.pattern();
 						auto topic = data.topic();
-						OnNodeRejectedTopic(node, pattern, topic);
+						OnNodeRejectedTopic.OnAction(node, pattern, topic);
 						break;
 					}
-					case Protocol::IncomingEventTypeOnNodeSubscribedToTopic: {
-						auto data = event.onnodesubscribedtotopic();
+					case Protocol::IncomingEventTypeOnNodeSubscribedToTopic : {
+						auto data = incomingEvent.onnodesubscribedtotopic();
 						auto node = data.node();
 						auto pattern = data.pattern();
 						auto topic = data.topic();
-						OnNodeSubscribedToTopic(node, pattern, topic);
+						OnNodeSubscribedToTopic.OnAction(node, pattern, topic);
 						break;
 					}
-					case Protocol::IncomingEventTypeOnNodeUnavaliable: {
-						auto data = event.onnodeunavaliable();
+					case Protocol::IncomingEventTypeOnNodeUnavaliable : {
+						auto data = incomingEvent.onnodeunavaliable();
 						auto node = data.node();
-						OnNodeUnavaliable(node);
+						OnNodeUnavaliable.OnAction(node);
 						break;
 					}
-					case Protocol::IncomingEventTypeOnNodeUnsubscribedFromTopic: {
-						auto data = event.onnodeunsubscribedfromtopic();
+					case Protocol::IncomingEventTypeOnNodeUnsubscribedFromTopic : {
+						auto data = incomingEvent.onnodeunsubscribedfromtopic();
 						auto node = data.node();
 						auto pattern = data.pattern();
 						auto topic = data.topic();
-						OnNodeUnsubscribedFromTopic(node, pattern, topic);
+						OnNodeUnsubscribedFromTopic.OnAction(node, pattern, topic);
 						break;
 					}
-					default: break;
+					default : break;
 				}
 			}
 		};
 	}
 }
 #endif // !EXCHANGEEVENTSHANDLER_HPP
+

@@ -5,7 +5,7 @@
 
 namespace MQCloud {
 	namespace Internal {
-				struct MessagesManager {
+		struct MessagesManager {
 			std::shared_ptr<ConnectionsHandler> ctx;
 
 			MessagesManager(std::shared_ptr<ConnectionsHandler> ctx) : ctx(ctx) {}
@@ -13,3 +13,4 @@ namespace MQCloud {
 	}
 }
 #endif // !MESSAGESMANAGER_HPP
+

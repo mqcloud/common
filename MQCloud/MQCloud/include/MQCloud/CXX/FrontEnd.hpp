@@ -9,17 +9,16 @@
 
 
 namespace MQCloud {
-	
 	// Extensiabilety //
 	// operations will de treated as sync thus after CorePublishMessage call CoreMessage message deallocation will begin
 	// calls will be performed from one thread per socket
 	struct FrontEnd {
 	private:
-		std::shared_ptr<CoreConfiguration> systemCtx;
-		std::shared_ptr<CoreConfiguration> runningCtx;
+		std::shared_ptr<BackEndConfiguration> systemCtx;
+		std::shared_ptr<BackEndConfiguration> runningCtx;
 
-		Internal::SystemEventsManager systemEventsManager;
-		Internal::SystemOperationsManager systemOperationsManager;
+		Internal::ExchangeEventsManager systemEventsManager;
+		Internal::ExchangeOperationsManager systemOperationsManager;
 		std::shared_ptr<Internal::ConnectionsHandler> systemConnectionHandler;
 		std::shared_ptr<Internal::ConnectionsHandler> runningConnectionHandler;
 		std::unordered_map<int, std::shared_ptr<ExtensiabiletyEventsHandler>> handlers;
@@ -30,16 +29,16 @@ namespace MQCloud {
 
 		std::shared_ptr<Task> HeartBeat;
 	public:
-		FrontEnd(std::shared_ptr<CoreConfiguration> systemCtx, std::shared_ptr<CoreConfiguration> runningCtx) : systemCtx(systemCtx),
+		FrontEnd(std::shared_ptr<BackEndConfiguration> systemCtx, std::shared_ptr<BackEndConfiguration> runningCtx) : systemCtx(systemCtx),
 		                                                                                                        runningCtx(runningCtx),
-		                                                                                                        systemConnectionHandler(std::make_shared<internal::ConnectionsHandler>(systemCtx)),
+		                                                                                                        systemConnectionHandler(std::make_shared<Internal::ConnectionsHandler>(systemCtx)),
 		                                                                                                        systemEventsManager(systemConnectionHandler, runningCtx->BackEndName),
 		                                                                                                        systemOperationsManager(systemConnectionHandler, runningCtx->BackEndName),
 		                                                                                                        lastHandlerId(0) { }
 
-		FrontEnd(std::shared_ptr<CoreConfiguration> runningCtx, const std::string & systemAdr) : systemCtx(systemCtx),
+		FrontEnd(std::shared_ptr<BackEndConfiguration> runningCtx, const std::string & systemAdr) : systemCtx(systemCtx),
 		                                                                                         runningCtx(runningCtx),
-		                                                                                         systemConnectionHandler(std::make_shared<internal::ConnectionsHandler>(runningCtx)),
+		                                                                                         systemConnectionHandler(std::make_shared<Internal::ConnectionsHandler>(runningCtx)),
 		                                                                                         systemEventsManager(systemConnectionHandler, runningCtx->BackEndName),
 		                                                                                         systemOperationsManager(systemConnectionHandler, runningCtx->BackEndName),
 		                                                                                         runningConnectionHandler(systemConnectionHandler),
@@ -117,6 +116,6 @@ namespace MQCloud {
 
 		std::string GetName();
 	};
-
 }
 #endif // !FRONTEND_HPP
+

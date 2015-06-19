@@ -8,7 +8,7 @@
 
 namespace MQCloud {
 	namespace Internal {
-				// For user on response handling
+		// For user on response handling
 		struct ResponseHandler : std::enable_shared_from_this<ResponseHandler>, OnUserMessageAction {
 			std::map<int, std::shared_ptr<OnUserMessageAction>> handlers;
 			std::mutex mutex;
@@ -44,3 +44,4 @@ namespace MQCloud {
 }
 
 #endif // !RESPONSEHANDLER_HPP
+

@@ -20,13 +20,9 @@
 
 #ifndef MQCloudCXX
 #define MQCloudCXX
-namespace MQCloud
-{
-	namespace Internal
-	{
 
-	}
-
+namespace MQCloud {
+	namespace Internal { }
 }
 #endif // MQCloudCXX
 

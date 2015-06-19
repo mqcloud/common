@@ -5,13 +5,12 @@
 #define THREADMANAGEMENT_HPP
 
 namespace MQCloud {
-
 	struct TaskId {
 		virtual ~TaskId();
 	};
 
 	// Threading (for callbacks execution and core logic)
-	struct CoreThreadManagement {
+	struct ThreadManagementInterface {
 		/*
 	@param task to execute
 	*/
@@ -25,8 +24,9 @@ namespace MQCloud {
 	*/
 		virtual std::shared_ptr<TaskId> RepeatTask(int delayMilliseconds, std::shared_ptr<Task> action);
 
-		virtual ~CoreThreadManagement();
+		virtual ~ThreadManagementInterface();
 	};
 }
 
 #endif // !THREADMANAGEMENT_HPP
+

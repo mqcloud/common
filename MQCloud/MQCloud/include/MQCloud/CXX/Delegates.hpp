@@ -5,12 +5,12 @@
 #include <vector>
 
 #ifndef DELEGATES_HPP
-	// Delegates (lambda functions constructable/swig %template definable for OnAction overloading)
+// Delegates (lambda functions constructable/swig %template definable for OnAction overloading)
 namespace MQCloud {
 	typedef GenericAction<> Task;
-	typedef GenericAction<const MQCloud::Message &> OnMessageAction;
-	typedef GenericAction<const MQCloud::UserMessage &> OnUserMessageAction;
-	typedef GenericAction<std::vector<MQCloud::UserMessage>> OnUserMessagesAction;
+	typedef GenericAction<const Message &> OnMessageAction;
+	typedef GenericAction<const UserMessage &> OnUserMessageAction;
+	typedef GenericAction<std::vector<UserMessage>> OnUserMessagesAction;
 	typedef GenericAction<std::vector<const std::string &>> OnNodesAction; // Gets a vector of ServiceId's
 	typedef GenericAction<const std::string &> OnNodeAction; // Get a ServiceId
 	typedef GenericAction<std::string> OnConnectedAction;
@@ -20,3 +20,4 @@ namespace MQCloud {
 	typedef GenericFunc<std::string, const MQCloud::Message &> OnMessageAlgorithmAction; // returns ServiceId to send to
 }
 #endif // !DELEGATES_HPP
+

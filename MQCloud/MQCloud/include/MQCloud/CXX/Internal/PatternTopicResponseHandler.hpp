@@ -9,7 +9,7 @@
 
 namespace MQCloud {
 	namespace Internal {
-				// For user on request handling
+		// For user on request handling
 		struct StaticResponseHandler : std::enable_shared_from_this<StaticResponseHandler>, OnMessageAction {
 			std::map<std::string, std::shared_ptr<OnMessageAction>> handlers;
 			std::mutex mutex;
@@ -49,3 +49,4 @@ namespace MQCloud {
 }
 
 #endif // !PATTERNTOPICRESPONSEHANDLER_HPP
+

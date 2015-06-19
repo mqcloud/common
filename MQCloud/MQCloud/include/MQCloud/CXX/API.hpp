@@ -8,13 +8,12 @@
 
 
 namespace MQCloud {
-
 	// Throws if can not connect to the Exchange
 	struct API {
 	private:
 		std::shared_ptr<FrontEnd> frontEnd;
 	public:
-		API(std::shared_ptr<BackEndFactory> runningBackEnd, std::shared_ptr<CoreConfiguration> exchangeCtx) {
+		API(std::shared_ptr<BackEndFactory> runningBackEnd, std::shared_ptr<BackEndConfiguration> exchangeCtx) {
 			frontEnd = std::make_shared<FrontEnd>(exchangeCtx, runningBackEnd->CreateContext());
 		}
 
@@ -33,7 +32,7 @@ namespace MQCloud {
 			return frontEnd->GetName();
 		}
 
-		std::shared_ptr<CoreConfiguration> GetExchangeContext();
+		std::shared_ptr<BackEndConfiguration> GetExchangeContext();
 
 		// Request-Reply, Request-Reply continuos *(nonblocking)
 		void Request(const UserMessage & out, std::shared_ptr<OnUserMessageAction> OnMessage);
@@ -53,7 +52,8 @@ namespace MQCloud {
 
 		// Survey-Respondent *(nonblocking, nonforcing)
 		void RequestMany(int MaxRespondents, int timeout, const UserMessage & out, std::shared_ptr<OnUserMessagesAction> OnReplyFromMany);
-	};	
+	};
 }
 
 #endif // !API_HPP
+

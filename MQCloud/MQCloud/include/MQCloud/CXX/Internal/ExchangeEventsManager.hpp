@@ -1,15 +1,16 @@
+#ifndef EXCHANGEEVENTSMANAGER_HPP
+#define EXCHANGEEVENTSMANAGER_HPP
+
+#include <MQCloud/CXX/Internal/ExchangeEventsHandler.h>
 #include <MQCloud/CXX/Internal/ResponseHandler.hpp>
 #include <MQCloud/CXX/Internal/MessagesManager.hpp>
 #include <MQCloud/CXX/Internal/PatternTopicResponseHandler.hpp>
 #include <MQCloud/CXX/Protocol.pb.h>
 #include <memory>
 
-#ifndef EXCHANGEEVENTSMANAGER_HPP
-#define EXCHANGEEVENTSMANAGER_HPP
-
 namespace MQCloud {
 	namespace Internal {
-				struct SystemEventsManager : MessagesManager {
+		struct ExchangeEventsManager : MessagesManager {
 			// _SE
 			const std::string serverPatternEvent;
 
@@ -20,13 +21,14 @@ namespace MQCloud {
 			const std::string runningBackEndName;
 
 			std::shared_ptr<ResponseHandler> eventsHandler;
+			std::shared_ptr<ExchangeEventsHandler> exchangeEventsHandler;
 
-
-			explicit SystemEventsManager(std::shared_ptr<ConnectionsHandler> ctx, const std::string & runningBackEndName)
+			explicit ExchangeEventsManager(std::shared_ptr<ConnectionsHandler> ctx, const std::string & runningBackEndName)
 				: MessagesManager(ctx), serverPatternEvent("_E"), serverTopicNodeEvent("_SE"), serverTopicHeartBeat("_SHB"), runningBackEndName(runningBackEndName) {
 				auto handler = std::make_shared<StaticResponseHandler>();
-				handler->AddHandler(serverPatternEvent, serverTopicNodeEvent, eventsHandler);
+				handler->AddHandler(serverPatternEvent, serverTopicNodeEvent, exchangeEventsHandler);
 				ctx->AddOnMesageHandler(handler);
+				//exchangeEventsHandler
 			}
 
 			void UnsubscribeEvent(const std::string & pattern, const std::string & topic) {
@@ -163,3 +165,4 @@ namespace MQCloud {
 	}
 }
 #endif // !EXCHANGEEVENTSMANAGER_HPP
+

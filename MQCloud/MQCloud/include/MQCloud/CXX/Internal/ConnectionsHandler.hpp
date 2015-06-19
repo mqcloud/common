@@ -9,7 +9,7 @@
 namespace MQCloud {
 	namespace Internal {
 		struct ConnectionsHandler {
-			ConnectionsHandler(std::shared_ptr<CoreConfiguration> ctx) : ctx(ctx), serviceId("-1"), inHandler(new GeneralMessageHandler) {
+			ConnectionsHandler(std::shared_ptr<BackEndConfiguration> ctx) : ctx(ctx), serviceId("-1"), inHandler(new GeneralMessageHandler) {
 				OnDisconnected->AddHandler(std::make_shared<OnError>([&](const std::string & error) {
 					                                                     std::lock_guard<std::mutex> lock_map(connectionMutex);
 					                                                     subscribtionCnnections.erase(subscribtionCnnections.begin(), subscribtionCnnections.end());
@@ -91,7 +91,7 @@ namespace MQCloud {
 			std::shared_ptr<GeneralTaskHandler> OnNodeConnectedToOther;
 			std::shared_ptr<GeneralStringHandler> OnNodeConnectedToThis;
 		private:
-			std::shared_ptr<CoreConfiguration> ctx;
+			std::shared_ptr<BackEndConfiguration> ctx;
 			std::shared_ptr<Socket> Out;
 			std::shared_ptr<Socket> subscribingSocket;
 			std::map<std::string, std::shared_ptr<Socket>> subscribtionCnnections;
@@ -113,3 +113,4 @@ namespace MQCloud {
 }
 
 #endif // !CONNECTIONSHANDLER_HPP
+

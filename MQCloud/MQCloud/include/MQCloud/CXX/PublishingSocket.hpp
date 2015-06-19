@@ -5,7 +5,7 @@
 
 namespace MQCloud {
 	// Publish socket (one to many)
-	struct CorePublishingSocket {
+	struct PublishingSocketInterface {
 		/*
 	ment to be sync
 	@return connection Publishing socket
@@ -19,7 +19,8 @@ namespace MQCloud {
 	*/
 		virtual void CorePublishMessage(std::shared_ptr<Socket> socket, const Message & msg);
 
-		virtual ~CorePublishingSocket();
+		virtual ~PublishingSocketInterface();
 	};
 }
 #endif // !COREPUBLISHINGSOCKET_HPP
+

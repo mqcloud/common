@@ -9,8 +9,7 @@
 
 namespace MQCloud {
 	namespace Internal {
-		
-		struct SystemOperationsManager : MessagesManager {
+		struct ExchangeOperationsManager : MessagesManager {
 			const int operationsSocketId = 0;
 
 			// _SO
@@ -24,7 +23,7 @@ namespace MQCloud {
 
 			std::shared_ptr<ResponseHandler> responseHandler;
 
-			explicit SystemOperationsManager(std::shared_ptr<ConnectionsHandler> ctx, const std::string & runningBackEndName) : MessagesManager(ctx), serverPatternOperation("_SPO"), serverTopicNodeOperation("_SO"),
+			explicit ExchangeOperationsManager(std::shared_ptr<ConnectionsHandler> ctx, const std::string & runningBackEndName) : MessagesManager(ctx), serverPatternOperation("_SPO"), serverTopicNodeOperation("_SO"),
 			                                                                                                                    runningBackEndName(runningBackEndName), responseHandler(std::make_shared<ResponseHandler>()) {
 				auto handler = std::make_shared<StaticResponseHandler>();
 				handler->AddHandler(serverPatternOperation, serverTopicNodeOperation, responseHandler);
@@ -209,3 +208,4 @@ namespace MQCloud {
 }
 
 #endif // !EXCHANGEOPERATIONSMANAGER_HPP
+

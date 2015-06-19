@@ -5,8 +5,7 @@
 #ifndef UserMessageHpp
 #define UserMessageHpp
 
-namespace MQCloud
-{
+namespace MQCloud {
 	struct UserMessage : protected Message {
 		UserMessage(const Message & m) : Message(m) {}
 

@@ -4,7 +4,7 @@
 #define EXTENSIABILETYEVENTSHANDLER_HPP
 
 namespace MQCloud {
-		//For pattern developers
+	//For pattern developers
 	struct ExtensiabiletyEventsHandler {
 
 		virtual void OnMessage(const Message & in);
@@ -22,3 +22,4 @@ namespace MQCloud {
 	};
 }
 #endif // !EXTENSIABILETYEVENTSHANDLER_HPP
+

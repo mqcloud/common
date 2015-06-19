@@ -6,16 +6,16 @@
 #define BACKENDCONFIGURATION_HPP
 
 namespace MQCloud {
-	
-		struct CoreConfiguration {
-		CoreThreadManagement ThreadingInterface;
-		CoreSubscriberSocket SubscriberSocketInterface;
-		CorePublishingSocket PublishingSocketInterface;
+	struct BackEndConfiguration {
+		std::shared_ptr<ThreadManagementInterface> ThreadingInterface;
+		std::shared_ptr<SubscriberSocketInterface> SubscriberSocketInterface;
+		std::shared_ptr<PublishingSocketInterface> PublishingSocketInterface;
 
 		std::string BackEndName; // BackEndName must include version only if one can not connect this backEnd to its older version
 
-		virtual ~CoreConfiguration() {}
+		virtual ~BackEndConfiguration() {}
 	};
 }
 
 #endif // !BACKENDCONFIGURATION_HPP
+

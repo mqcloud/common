@@ -16,3 +16,4 @@ namespace MQCloud {
 }
 
 #endif // !EVENTSHANDLER_HPP
+

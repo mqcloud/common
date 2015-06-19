@@ -17,14 +17,10 @@
 
 // @@protoc_insertion_point(includes)
 
-namespace MQCloud
-{
-	namespace Internal
-	{
-		namespace Protocol
-		{
-			namespace
-			{
+namespace MQCloud {
+	namespace Internal {
+		namespace Protocol {
+			namespace {
 				const ::google::protobuf::Descriptor * AdvertizeTopic_descriptor_ = NULL;
 				const ::google::protobuf::internal::GeneratedMessageReflection *
 				AdvertizeTopic_reflection_ = NULL;
@@ -601,8 +597,7 @@ namespace MQCloud
 				OutgoingOperationType_descriptor_ = file->enum_type(3);
 			}
 
-			namespace
-			{
+			namespace {
 				GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
 
 				inline void protobuf_AssignDescriptorsOnce() {
@@ -936,15 +931,15 @@ namespace MQCloud
 
 			bool IncomingEventType_IsValid(int value) {
 				switch(value) {
-					case 0:
-					case 1:
-					case 2:
-					case 3:
-					case 4:
-					case 5:
-					case 6:
+					case 0 :
+					case 1 :
+					case 2 :
+					case 3 :
+					case 4 :
+					case 5 :
+					case 6 :
 						return true;
-					default:
+					default :
 						return false;
 				}
 			}
@@ -956,13 +951,13 @@ namespace MQCloud
 
 			bool IncomingOperationType_IsValid(int value) {
 				switch(value) {
-					case 0:
-					case 1:
-					case 2:
-					case 3:
-					case 4:
+					case 0 :
+					case 1 :
+					case 2 :
+					case 3 :
+					case 4 :
 						return true;
-					default:
+					default :
 						return false;
 				}
 			}
@@ -974,15 +969,15 @@ namespace MQCloud
 
 			bool OutgoingEventType_IsValid(int value) {
 				switch(value) {
-					case 0:
-					case 1:
-					case 2:
-					case 3:
-					case 4:
-					case 5:
-					case 6:
+					case 0 :
+					case 1 :
+					case 2 :
+					case 3 :
+					case 4 :
+					case 5 :
+					case 6 :
 						return true;
-					default:
+					default :
 						return false;
 				}
 			}
@@ -994,13 +989,13 @@ namespace MQCloud
 
 			bool OutgoingOperationType_IsValid(int value) {
 				switch(value) {
-					case 0:
-					case 1:
-					case 2:
-					case 3:
-					case 4:
+					case 0 :
+					case 1 :
+					case 2 :
+					case 3 :
+					case 4 :
 						return true;
-					default:
+					default :
 						return false;
 				}
 			}
@@ -1105,7 +1100,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Pattern = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_pattern()));
@@ -1122,7 +1117,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -1139,7 +1134,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -1416,7 +1411,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string NodeName = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_nodename()));
@@ -1433,7 +1428,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 						}
 
 							// optional string BackEndName = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_BackEndName:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -1450,7 +1445,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -1720,7 +1715,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string RealNodeName = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_realnodename()));
@@ -1737,7 +1732,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 						}
 
 							// optional int32 HeartBeatRateMs = 2 [default = 0];
-						case 2: {
+						case 2 : {
 							if(tag == 16) {
 							parse_HeartBeatRateMs:
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -1752,7 +1747,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -2200,7 +2195,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -2215,7 +2210,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -2233,7 +2228,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -2250,7 +2245,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -2531,7 +2526,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -2546,7 +2541,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 						}
 
 							// repeated string Nodes = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Nodes:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -2566,7 +2561,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -2832,7 +2827,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -2847,7 +2842,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -2865,7 +2860,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -2882,7 +2877,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -3163,7 +3158,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -3178,7 +3173,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 						}
 
 							// repeated string Nodes = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Nodes:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -3198,7 +3193,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -3464,7 +3459,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -3479,7 +3474,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -3497,7 +3492,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -3514,7 +3509,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -3805,7 +3800,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -3820,7 +3815,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 						}
 
 							// optional string Node = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Node:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -3837,7 +3832,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -4106,7 +4101,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -4121,7 +4116,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -4139,7 +4134,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -4156,7 +4151,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -4447,7 +4442,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -4462,7 +4457,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 						}
 
 							// optional string Node = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Node:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -4479,7 +4474,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -4964,7 +4959,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								int value;
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -4984,7 +4979,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnConnectionClosed OnConnectionClosed = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_OnConnectionClosed:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -4998,7 +4993,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnConnectionEstablished OnConnectionEstablished = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_OnConnectionEstablished:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5012,7 +5007,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnNodeAdvertisedTopic OnNodeAdvertisedTopic = 4;
-						case 4: {
+						case 4 : {
 							if(tag == 34) {
 							parse_OnNodeAdvertisedTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5026,7 +5021,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnNodeRejectedTopic OnNodeRejectedTopic = 5;
-						case 5: {
+						case 5 : {
 							if(tag == 42) {
 							parse_OnNodeRejectedTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5040,7 +5035,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnNodeSubscribedToTopic OnNodeSubscribedToTopic = 6;
-						case 6: {
+						case 6 : {
 							if(tag == 50) {
 							parse_OnNodeSubscribedToTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5054,7 +5049,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnNodeUnavaliable OnNodeUnavaliable = 7;
-						case 7: {
+						case 7 : {
 							if(tag == 58) {
 							parse_OnNodeUnavaliable:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5068,7 +5063,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic OnNodeUnsubscribedFromTopic = 8;
-						case 8: {
+						case 8 : {
 							if(tag == 66) {
 							parse_OnNodeUnsubscribedFromTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5081,7 +5076,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -5508,7 +5503,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								int value;
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -5528,7 +5523,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.ConnectResponse ConnectResponse = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_ConnectResponse:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5542,7 +5537,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetPublisherResponse GetPublisherResponse = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_GetPublisherResponse:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5556,7 +5551,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetAllPublishersResponse GetAllPublishersResponse = 4;
-						case 4: {
+						case 4 : {
 							if(tag == 34) {
 							parse_GetAllPublishersResponse:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5570,7 +5565,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetSubscriberResponse GetSubscriberResponse = 5;
-						case 5: {
+						case 5 : {
 							if(tag == 42) {
 							parse_GetSubscriberResponse:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5584,7 +5579,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetAllSubscribersResponse GetAllSubscribersResponse = 6;
-						case 6: {
+						case 6 : {
 							if(tag == 50) {
 							parse_GetAllSubscribersResponse:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5597,7 +5592,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -5952,7 +5947,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string FromNode = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_fromnode()));
@@ -5969,7 +5964,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 						}
 
 							// optional string ToNode = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_ToNode:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -5986,7 +5981,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -6263,7 +6258,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string FromNode = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_fromnode()));
@@ -6280,7 +6275,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 						}
 
 							// optional string ToNode = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_ToNode:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -6297,7 +6292,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -6584,7 +6579,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -6601,7 +6596,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -6619,7 +6614,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -6636,7 +6631,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -6955,7 +6950,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -6972,7 +6967,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -6990,7 +6985,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -7007,7 +7002,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -7326,7 +7321,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -7343,7 +7338,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -7361,7 +7356,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -7378,7 +7373,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -7697,7 +7692,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -7714,7 +7709,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -7732,7 +7727,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -7749,7 +7744,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -8068,7 +8063,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -8085,7 +8080,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -8103,7 +8098,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -8120,7 +8115,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -8461,7 +8456,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								int value;
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -8481,7 +8476,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.AdvertizeTopic AdvertizeTopic = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_AdvertizeTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8495,7 +8490,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.Disconnect Disconnect = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Disconnect:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8509,7 +8504,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.RejectTopic RejectTopic = 4;
-						case 4: {
+						case 4 : {
 							if(tag == 34) {
 							parse_RejectTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8523,7 +8518,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.ReportNodeUnavaliable ReportNodeUnavaliable = 5;
-						case 5: {
+						case 5 : {
 							if(tag == 42) {
 							parse_ReportNodeUnavaliable:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8537,7 +8532,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.Subscribe Subscribe = 6;
-						case 6: {
+						case 6 : {
 							if(tag == 50) {
 							parse_Subscribe:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8551,7 +8546,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.UnSubscribe UnSubscribe = 7;
-						case 7: {
+						case 7 : {
 							if(tag == 58) {
 							parse_UnSubscribe:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8564,7 +8559,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -8967,7 +8962,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
-						case 1: {
+						case 1 : {
 							if(tag == 8) {
 								int value;
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -8987,7 +8982,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.ConnectRequest ConnectRequest = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_ConnectRequest:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -9001,7 +8996,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetPublisherRequest GetPublisherRequest = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_GetPublisherRequest:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -9015,7 +9010,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetAllPublishersRequest GetAllPublishersRequest = 4;
-						case 4: {
+						case 4 : {
 							if(tag == 34) {
 							parse_GetAllPublishersRequest:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -9029,7 +9024,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetSubscriberRequest GetSubscriberRequest = 5;
-						case 5: {
+						case 5 : {
 							if(tag == 42) {
 							parse_GetSubscriberRequest:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -9043,7 +9038,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetAllSubscribersRequest GetAllSubscribersRequest = 6;
-						case 6: {
+						case 6 : {
 							if(tag == 50) {
 							parse_GetAllSubscribersRequest:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -9056,7 +9051,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -9411,7 +9406,7 @@ const int RejectTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Pattern = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_pattern()));
@@ -9428,7 +9423,7 @@ const int RejectTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -9445,7 +9440,7 @@ const int RejectTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -9732,7 +9727,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -9749,7 +9744,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -9767,7 +9762,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3: {
+						case 3 : {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -9784,7 +9779,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -10093,7 +10088,7 @@ const int Subscribe::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Pattern = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_pattern()));
@@ -10110,7 +10105,7 @@ const int Subscribe::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -10127,7 +10122,7 @@ const int Subscribe::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -10404,7 +10399,7 @@ const int UnSubscribe::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Pattern = 1;
-						case 1: {
+						case 1 : {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_pattern()));
@@ -10421,7 +10416,7 @@ const int UnSubscribe::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 2;
-						case 2: {
+						case 2 : {
 							if(tag == 18) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -10438,7 +10433,7 @@ const int UnSubscribe::kTopicFieldNumber;
 							break;
 						}
 
-						default: {
+						default : {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==

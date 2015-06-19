@@ -4,8 +4,7 @@
 #ifndef MESSAGEHPP
 #define MESSAGEHPP
 
-namespace MQCloud
-{
+namespace MQCloud {
 	enum MessageState {
 		MessageStateOk=0,
 		MessageStateError=1,

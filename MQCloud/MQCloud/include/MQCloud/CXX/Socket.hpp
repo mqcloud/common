@@ -4,6 +4,7 @@
 
 #ifndef SOCKETHPP
 #define SOCKETHPP
+
 namespace MQCloud {
 	struct Socket {
 		std::string SocketId;
@@ -11,8 +12,9 @@ namespace MQCloud {
 
 		//Shall close socket
 		virtual ~Socket() {}
-	}; 
+	};
 }
 
 }
 #endif // !SOCKETHPP
+
