@@ -1,24 +1,57 @@
+#ifndef CONNECTIONSHANDLER_HPP
+#define CONNECTIONSHANDLER_HPP
+
 #include <MQCloud/CXX/Internal/Signals.hpp>
 #include <MQCloud/CXX/Socket.hpp>
 #include <MQCloud/CXX/BackEndConfiguration.hpp>
 #include <map>
-
-#ifndef CONNECTIONSHANDLER_HPP
-#define CONNECTIONSHANDLER_HPP
+#include "PatternTopicResponseHandler.hpp"
 
 namespace MQCloud {
 	namespace Internal {
 		struct ConnectionsHandler {
-			ConnectionsHandler(std::shared_ptr<BackEndConfiguration> ctx) : ctx(ctx), serviceId("-1"), inHandler(new GeneralMessageHandler) {
+		private:
+			std::shared_ptr<BackEndConfiguration> ctx;
+			std::shared_ptr<Socket> Out;
+			std::shared_ptr<Socket> subscribingSocket;
+			std::map<std::string, std::shared_ptr<Socket>> subscribtionCnnections;
+			std::mutex connectionMutex;
+			std::string serviceId;
+			int HeartBeatRate;
+			std::shared_ptr<GeneralMessageHandler> inHandler;
+			std::shared_ptr<StaticResponseHandler> patternTopicPairHandler;
+
+			void OnExternalNodeSocketDisconnect(const std::string & error) {
+				//TODO Clear handlers
+			}
+
+			void OnHostNodeSocketDisconnect(const std::string & error) {
+				//TODO Exchange Error, close up
+			}
+
+		public:
+			std::shared_ptr<GeneralStringHandler> OnExchangeError;
+			std::shared_ptr<GeneralStringHandler> OnDisconnected;
+			std::shared_ptr<GeneralTaskHandler> OnNodeConnectedToOther;
+			std::shared_ptr<GeneralStringHandler> OnNodeConnectedToThis;
+
+			ConnectionsHandler(std::shared_ptr<BackEndConfiguration> ctx) :
+				ctx(ctx),
+				serviceId("-1"),
+				inHandler(std::make_shared<GeneralMessageHandler>()),
+				patternTopicPairHandler(std::make_shared<StaticResponseHandler>()) {
+
 				OnDisconnected->AddHandler(std::make_shared<OnError>([&](const std::string & error) {
 					                                                     std::lock_guard<std::mutex> lock_map(connectionMutex);
 					                                                     subscribtionCnnections.erase(subscribtionCnnections.begin(), subscribtionCnnections.end());
 				                                                     }));
 
-				Out = ctx->PublishingSocketInterface.CoreCreatePublishingSocket();
+				Out = ctx->PublishingSocketInterface->CoreCreatePublishingSocket();
 				Out->AddDisconnectHandler(OnDisconnected);
-				subscribingSocket = ctx->SubscriberSocketInterface.CoreCreateSubscribingSocket();
+				subscribingSocket = ctx->SubscriberSocketInterface->CoreCreateSubscribingSocket();
 				subscribingSocket->AddDisconnectHandler(OnDisconnected);
+
+				AddOnMesageHandler(patternTopicPairHandler);
 
 			}
 
@@ -28,7 +61,7 @@ namespace MQCloud {
 			}
 
 			void ConnectToExchangeNode(const std::string & addr, std::shared_ptr<OnError> onError) {
-				auto connection = ctx->SubscriberSocketInterface.CoreConnectSubscribingSocket(subscribingSocket, addr, inHandler);
+				auto connection = ctx->SubscriberSocketInterface->CoreConnectSubscribingSocket(subscribingSocket, addr, inHandler);
 				auto id = connection->SocketId;
 				std::weak_ptr<Socket> weekConnectionPtr = connection;
 				OnExchangeError->AddHandler(onError);
@@ -48,7 +81,7 @@ namespace MQCloud {
 			}
 
 			void ConnectToNode(const std::string & addr) {
-				auto connection = ctx->SubscriberSocketInterface.CoreConnectSubscribingSocket(subscribingSocket, addr, inHandler);
+				auto connection = ctx->SubscriberSocketInterface->CoreConnectSubscribingSocket(subscribingSocket, addr, inHandler);
 				auto id = connection->SocketId;
 				std::weak_ptr<Socket> weekConnectionPtr = connection;
 
@@ -69,9 +102,13 @@ namespace MQCloud {
 				inHandler->AddHandler(handler);
 			}
 
+			void AddOnMesageHandler(const std::string & pattern, const std::string & topic, std::shared_ptr<OnUserMessageAction> handler) {
+				patternTopicPairHandler->AddHandler(pattern, topic, handler);
+			}
+
 			void PublishMessage(Message & m) {
 				m.serviceId = serviceId;
-				ctx->PublishingSocketInterface.CorePublishMessage(Out, m);
+				ctx->PublishingSocketInterface->CorePublishMessage(Out, m);
 			}
 
 			void SetServiceId(const std::string & id) {
@@ -85,29 +122,6 @@ namespace MQCloud {
 			int GetHeartBeatRate() const {
 				return HeartBeatRate;
 			}
-
-			std::shared_ptr<GeneralStringHandler> OnExchangeError;
-			std::shared_ptr<GeneralStringHandler> OnDisconnected;
-			std::shared_ptr<GeneralTaskHandler> OnNodeConnectedToOther;
-			std::shared_ptr<GeneralStringHandler> OnNodeConnectedToThis;
-		private:
-			std::shared_ptr<BackEndConfiguration> ctx;
-			std::shared_ptr<Socket> Out;
-			std::shared_ptr<Socket> subscribingSocket;
-			std::map<std::string, std::shared_ptr<Socket>> subscribtionCnnections;
-			std::mutex connectionMutex;
-			std::string serviceId;
-			int HeartBeatRate;
-			std::shared_ptr<GeneralMessageHandler> inHandler;
-
-			void OnExternalNodeSocketDisconnect(const std::string & error) {
-				//TODO Clear handlers
-			}
-
-			void OnHostNodeSocketDisconnect(const std::string & error) {
-				//TODO Exchange Error, close up
-			}
-
 		};
 	}
 }

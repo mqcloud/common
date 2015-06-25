@@ -24,10 +24,8 @@ namespace MQCloud {
 			std::shared_ptr<ExchangeEventsHandler> exchangeEventsHandler;
 
 			explicit ExchangeEventsManager(std::shared_ptr<ConnectionsHandler> ctx, const std::string & runningBackEndName)
-				: MessagesManager(ctx), serverPatternEvent("_E"), serverTopicNodeEvent("_SE"), serverTopicHeartBeat("_SHB"), runningBackEndName(runningBackEndName) {
-				auto handler = std::make_shared<StaticResponseHandler>();
-				handler->AddHandler(serverPatternEvent, serverTopicNodeEvent, exchangeEventsHandler);
-				ctx->AddOnMesageHandler(handler);
+				: MessagesManager(ctx), serverPatternEvent("_E"), serverTopicNodeEvent("_SE"), serverTopicHeartBeat("_SHB"), runningBackEndName(runningBackEndName), exchangeEventsHandler(std::make_shared<ExchangeEventsHandler>) {
+				ctx->AddOnMesageHandler(serverPatternEvent, serverTopicNodeEvent, exchangeEventsHandler);
 				//exchangeEventsHandler
 			}
 

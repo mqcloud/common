@@ -28,7 +28,7 @@ namespace MQCloud {
 				}
 			}
 
-			void AddHandler(const std::string & pattern, const std::string & topic, std::shared_ptr<OnUserMessageAction> handler) {
+			void AddHandler(const std::string & pattern, const std::string & topic, std::shared_ptr<OnMessageAction> handler) {
 				auto id = pattern + ">" + topic;
 
 				std::lock_guard<std::mutex> lockHandlers(mutex);

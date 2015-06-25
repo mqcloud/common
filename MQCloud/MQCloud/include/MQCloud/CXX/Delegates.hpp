@@ -9,6 +9,7 @@
 namespace MQCloud {
 	typedef GenericAction<> Task;
 	typedef GenericAction<const Message &> OnMessageAction;
+	typedef GenericAction<std::vector<Message>> OnMessagesAction;
 	typedef GenericAction<const UserMessage &> OnUserMessageAction;
 	typedef GenericAction<std::vector<UserMessage>> OnUserMessagesAction;
 	typedef GenericAction<std::vector<const std::string &>> OnNodesAction; // Gets a vector of ServiceId's

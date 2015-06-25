@@ -8,7 +8,7 @@
 
 namespace MQCloud {
 	namespace Internal {
-		struct ExchangeEventsHandler : std::enable_shared_from_this<ExchangeEventsHandler>, OnMessageAction {
+		struct ExchangeEventsHandler : std::enable_shared_from_this<ExchangeEventsHandler>, OnUserMessageAction {
 			// this functions can be turned into signals
 			GenericSignalHandler<const std::string &> OnNodeUnavaliable;
 			GenericSignalHandler<const std::string &, const std::string &> OnConnectionClosed;
@@ -18,9 +18,9 @@ namespace MQCloud {
 			GenericSignalHandler<const std::string &, const std::string &, const std::string &> OnNodeSubscribedToTopic;
 			GenericSignalHandler<const std::string &, const std::string &, const std::string &> OnNodeUnsubscribedFromTopic;
 
-			virtual void OnAction(const MQCloud::Message & m) override {
+			virtual void OnAction(const UserMessage & m) override {
 				Protocol::IncomingEvent incomingEvent;
-				incomingEvent.ParseFromString(m.data);
+				incomingEvent.ParseFromString(m.GetData());
 
 				switch(incomingEvent.typecode()) {
 					case Protocol::IncomingEventTypeOnConnectionClosed : {

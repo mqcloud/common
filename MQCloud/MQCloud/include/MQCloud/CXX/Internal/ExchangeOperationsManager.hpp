@@ -18,16 +18,13 @@ namespace MQCloud {
 			// _SG
 			const std::string serverTopicNodeOperation;
 
-
 			std::string runningBackEndName;
 
 			std::shared_ptr<ResponseHandler> responseHandler;
 
-			explicit ExchangeOperationsManager(std::shared_ptr<ConnectionsHandler> ctx, const std::string & runningBackEndName) : MessagesManager(ctx), serverPatternOperation("_SPO"), serverTopicNodeOperation("_SO"),
-			                                                                                                                    runningBackEndName(runningBackEndName), responseHandler(std::make_shared<ResponseHandler>()) {
-				auto handler = std::make_shared<StaticResponseHandler>();
-				handler->AddHandler(serverPatternOperation, serverTopicNodeOperation, responseHandler);
-				ctx->AddOnMesageHandler(handler);
+			explicit ExchangeOperationsManager(std::shared_ptr<ConnectionsHandler> ctx, const std::string & runningBackEndName) : MessagesManager(ctx), serverPatternOperation("_SPO"),
+			                                                                                                                      serverTopicNodeOperation("_SO"), responseHandler(std::make_shared<ResponseHandler>()) {
+				ctx->AddOnMesageHandler(serverPatternOperation, serverTopicNodeOperation, responseHandler);
 			}
 
 			void ConnectRequest(const std::string & desiredServiceName, std::shared_ptr<OnConnectedAction> handler) {
