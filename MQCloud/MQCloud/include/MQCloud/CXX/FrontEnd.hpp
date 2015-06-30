@@ -78,8 +78,20 @@ namespace MQCloud {
 		void RegisterResponsesHandler(const std::string & pattern, const std::string & topic);
 		void RegisterResponseCalback(const std::string & pattern, const std::string & topic, int messageId, std::shared_ptr<OnMessageAction> OnMessage);
 		void RegisterResponseCalback(const std::string & pattern, const std::string & topic, int messageId, std::function<void (const Message &)> OnMessage);
-		void RegisterMultipleResponsesCalback(const std::string & pattern, const std::string & topic, int message_id, int timeoutDeadlineMilliseconds, std::shared_ptr<OnMessagesAction> OnMessage);
-		void RegisterMultipleResponsesCalback(const std::string & pattern, const std::string & topic, int message_id, int timeoutDeadlineMilliseconds, std::function<void (std::vector<Message>)> OnMessage);
+
+		void RegisterMultipleResponsesCalback(const std::string & pattern, const std::string & topic, int message_id, int timeoutDeadlineMilliseconds, std::shared_ptr<OnMessagesAction> OnMessage) {
+			auto responses = std::make_shared<std::vector<Message>>();
+			
+			auto deadlineTask = runningCtx->ThreadingInterface->RepeatTask(timeoutDeadlineMilliseconds, std::make_shared<Task>([=]() {
+				OnMessage->OnAction(*responses);
+			}));
+
+				
+		}
+
+		void RegisterMultipleResponsesCalback(const std::string & pattern, const std::string & topic, int message_id, int timeoutDeadlineMilliseconds, std::function<void (std::vector<Message>)> OnMessage) {
+			RegisterMultipleResponsesCalback(pattern, topic, message_id, timeoutDeadlineMilliseconds, std::make_shared<OnMessagesAction>(OnMessage));
+		}
 
 		void Unsubscribe(const std::string & pattern, const std::string & topic);
 
