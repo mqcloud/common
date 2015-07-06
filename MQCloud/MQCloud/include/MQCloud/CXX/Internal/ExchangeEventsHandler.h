@@ -8,7 +8,7 @@
 
 namespace MQCloud {
 	namespace Internal {
-		struct ExchangeEventsHandler : std::enable_shared_from_this<ExchangeEventsHandler>, OnUserMessageAction {
+		struct ExchangeEventsHandler : OnUserMessageAction {
 			// this functions can be turned into signals
 			GenericSignalHandler<const std::string &> OnNodeUnavaliable;
 			GenericSignalHandler<const std::string &, const std::string &> OnConnectionClosed;
@@ -18,12 +18,12 @@ namespace MQCloud {
 			GenericSignalHandler<const std::string &, const std::string &, const std::string &> OnNodeSubscribedToTopic;
 			GenericSignalHandler<const std::string &, const std::string &, const std::string &> OnNodeUnsubscribedFromTopic;
 
-			virtual void OnAction(const UserMessage & m) override {
+			virtual void OnAction(const UserMessage& m) override {
 				Protocol::IncomingEvent incomingEvent;
 				incomingEvent.ParseFromString(m.GetData());
 
 				switch(incomingEvent.typecode()) {
-					case Protocol::IncomingEventTypeOnConnectionClosed : {
+					case Protocol::IncomingEventTypeOnConnectionClosed: {
 						auto data = incomingEvent.onconnectionclosed();
 						auto from = data.fromnode();
 						auto to = data.tonode();
@@ -31,14 +31,14 @@ namespace MQCloud {
 						break;
 
 					}
-					case Protocol::IncomingEventTypeOnConnectionEstablished : {
+					case Protocol::IncomingEventTypeOnConnectionEstablished: {
 						auto data = incomingEvent.onconnectionestablished();
 						auto from = data.fromnode();
 						auto to = data.tonode();
 						OnConnectionEstablished.OnAction(from, to);
 						break;
 					}
-					case Protocol::IncomingEventTypeOnNodeAdvertisedTopic : {
+					case Protocol::IncomingEventTypeOnNodeAdvertisedTopic: {
 						auto data = incomingEvent.onnodeadvertisedtopic();
 						auto node = data.node();
 						auto pattern = data.pattern();
@@ -46,7 +46,7 @@ namespace MQCloud {
 						OnNodeAdvertisedTopic.OnAction(node, pattern, topic);
 						break;
 					}
-					case Protocol::IncomingEventTypeOnNodeRejectedTopic : {
+					case Protocol::IncomingEventTypeOnNodeRejectedTopic: {
 						auto data = incomingEvent.onnoderejectedtopic();
 						auto node = data.node();
 						auto pattern = data.pattern();
@@ -54,7 +54,7 @@ namespace MQCloud {
 						OnNodeRejectedTopic.OnAction(node, pattern, topic);
 						break;
 					}
-					case Protocol::IncomingEventTypeOnNodeSubscribedToTopic : {
+					case Protocol::IncomingEventTypeOnNodeSubscribedToTopic: {
 						auto data = incomingEvent.onnodesubscribedtotopic();
 						auto node = data.node();
 						auto pattern = data.pattern();
@@ -62,13 +62,13 @@ namespace MQCloud {
 						OnNodeSubscribedToTopic.OnAction(node, pattern, topic);
 						break;
 					}
-					case Protocol::IncomingEventTypeOnNodeUnavaliable : {
+					case Protocol::IncomingEventTypeOnNodeUnavaliable: {
 						auto data = incomingEvent.onnodeunavaliable();
 						auto node = data.node();
 						OnNodeUnavaliable.OnAction(node);
 						break;
 					}
-					case Protocol::IncomingEventTypeOnNodeUnsubscribedFromTopic : {
+					case Protocol::IncomingEventTypeOnNodeUnsubscribedFromTopic: {
 						auto data = incomingEvent.onnodeunsubscribedfromtopic();
 						auto node = data.node();
 						auto pattern = data.pattern();
@@ -76,7 +76,7 @@ namespace MQCloud {
 						OnNodeUnsubscribedFromTopic.OnAction(node, pattern, topic);
 						break;
 					}
-					default : break;
+					default: break;
 				}
 			}
 		};

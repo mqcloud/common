@@ -7,25 +7,25 @@
 
 namespace MQCloud {
 	struct UserMessage : protected Message {
-		UserMessage(const Message & m) : Message(m) {}
+		UserMessage(const Message& m) : Message(m) {}
 
-		void SetData(const std::string & _data) {
+		void SetData(const std::string& _data) {
 			data = _data;
 		}
 
-		const std::string & GetData() const {
+		const std::string& GetData() const {
 			return data;
 		}
 
-		void SetTopic(const std::string & _data) {
+		void SetTopic(const std::string& _data) {
 			topic = _data;
 		}
 
-		const std::string & GetTopic() const {
+		const std::string& GetTopic() const {
 			return topic;
 		}
 
-		std::string & GetSender() {
+		std::string& GetSender() {
 			return serviceId;
 		}
 

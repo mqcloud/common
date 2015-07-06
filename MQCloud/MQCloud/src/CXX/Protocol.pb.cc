@@ -21,100 +21,100 @@ namespace MQCloud {
 	namespace Internal {
 		namespace Protocol {
 			namespace {
-				const ::google::protobuf::Descriptor * AdvertizeTopic_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* AdvertizeTopic_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				AdvertizeTopic_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * ConnectRequest_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* ConnectRequest_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				ConnectRequest_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * ConnectResponse_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* ConnectResponse_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				ConnectResponse_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * Disconnect_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* Disconnect_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				Disconnect_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * GetAllPublishersRequest_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* GetAllPublishersRequest_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				GetAllPublishersRequest_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * GetAllPublishersResponse_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* GetAllPublishersResponse_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				GetAllPublishersResponse_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * GetAllSubscribersRequest_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* GetAllSubscribersRequest_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				GetAllSubscribersRequest_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * GetAllSubscribersResponse_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* GetAllSubscribersResponse_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				GetAllSubscribersResponse_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * GetPublisherRequest_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* GetPublisherRequest_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				GetPublisherRequest_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * GetPublisherResponse_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* GetPublisherResponse_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				GetPublisherResponse_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * GetSubscriberRequest_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* GetSubscriberRequest_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				GetSubscriberRequest_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * GetSubscriberResponse_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* GetSubscriberResponse_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				GetSubscriberResponse_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * HeartBeat_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* HeartBeat_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				HeartBeat_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * IncomingEvent_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* IncomingEvent_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				IncomingEvent_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * IncomingOperation_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* IncomingOperation_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				IncomingOperation_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * OnConnectionClosed_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* OnConnectionClosed_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				OnConnectionClosed_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * OnConnectionEstablished_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* OnConnectionEstablished_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				OnConnectionEstablished_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * OnNodeAdvertisedTopic_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* OnNodeAdvertisedTopic_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				OnNodeAdvertisedTopic_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * OnNodeRejectedTopic_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* OnNodeRejectedTopic_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				OnNodeRejectedTopic_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * OnNodeSubscribedToTopic_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* OnNodeSubscribedToTopic_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				OnNodeSubscribedToTopic_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * OnNodeUnavaliable_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* OnNodeUnavaliable_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				OnNodeUnavaliable_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * OnNodeUnsubscribedFromTopic_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* OnNodeUnsubscribedFromTopic_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				OnNodeUnsubscribedFromTopic_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * OutgoingEvent_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* OutgoingEvent_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				OutgoingEvent_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * OutgoingOperation_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* OutgoingOperation_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				OutgoingOperation_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * RejectTopic_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* RejectTopic_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				RejectTopic_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * ReportNodeUnavaliable_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* ReportNodeUnavaliable_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				ReportNodeUnavaliable_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * Subscribe_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* Subscribe_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				Subscribe_reflection_ = NULL;
-				const ::google::protobuf::Descriptor * UnSubscribe_descriptor_ = NULL;
-				const ::google::protobuf::internal::GeneratedMessageReflection *
+				const ::google::protobuf::Descriptor* UnSubscribe_descriptor_ = NULL;
+				const ::google::protobuf::internal::GeneratedMessageReflection*
 				UnSubscribe_reflection_ = NULL;
-				const ::google::protobuf::EnumDescriptor * IncomingEventType_descriptor_ = NULL;
-				const ::google::protobuf::EnumDescriptor * IncomingOperationType_descriptor_ = NULL;
-				const ::google::protobuf::EnumDescriptor * OutgoingEventType_descriptor_ = NULL;
-				const ::google::protobuf::EnumDescriptor * OutgoingOperationType_descriptor_ = NULL;
+				const ::google::protobuf::EnumDescriptor* IncomingEventType_descriptor_ = NULL;
+				const ::google::protobuf::EnumDescriptor* IncomingOperationType_descriptor_ = NULL;
+				const ::google::protobuf::EnumDescriptor* OutgoingEventType_descriptor_ = NULL;
+				const ::google::protobuf::EnumDescriptor* OutgoingOperationType_descriptor_ = NULL;
 			} // namespace
 
 
 			void protobuf_AssignDesc_MQCloud_2eInternal_2eProtocol_2eproto() {
 				protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-				const ::google::protobuf::FileDescriptor * file =
+				const ::google::protobuf::FileDescriptor* file =
 						::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
 						                                                                     "MQCloud.Internal.Protocol.proto");
 				GOOGLE_CHECK(file != NULL);
@@ -598,14 +598,14 @@ namespace MQCloud {
 			}
 
 			namespace {
-				GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
+				GOOGLE_PROTOBUF_DECLARE_ONCE (protobuf_AssignDescriptors_once_);
 
 				inline void protobuf_AssignDescriptorsOnce() {
 					::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
 					                                   &protobuf_AssignDesc_MQCloud_2eInternal_2eProtocol_2eproto);
 				}
 
-				void protobuf_RegisterTypes(const ::std::string &) {
+				void protobuf_RegisterTypes(const ::std::string&) {
 					protobuf_AssignDescriptorsOnce();
 					::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
 					                                                                     AdvertizeTopic_descriptor_, &AdvertizeTopic::default_instance());
@@ -924,78 +924,78 @@ namespace MQCloud {
 				}
 			} static_descriptor_initializer_MQCloud_2eInternal_2eProtocol_2eproto_;
 
-			const ::google::protobuf::EnumDescriptor * IncomingEventType_descriptor() {
+			const ::google::protobuf::EnumDescriptor* IncomingEventType_descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return IncomingEventType_descriptor_;
 			}
 
 			bool IncomingEventType_IsValid(int value) {
 				switch(value) {
-					case 0 :
-					case 1 :
-					case 2 :
-					case 3 :
-					case 4 :
-					case 5 :
-					case 6 :
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+					case 6:
 						return true;
-					default :
+					default:
 						return false;
 				}
 			}
 
-			const ::google::protobuf::EnumDescriptor * IncomingOperationType_descriptor() {
+			const ::google::protobuf::EnumDescriptor* IncomingOperationType_descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return IncomingOperationType_descriptor_;
 			}
 
 			bool IncomingOperationType_IsValid(int value) {
 				switch(value) {
-					case 0 :
-					case 1 :
-					case 2 :
-					case 3 :
-					case 4 :
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+					case 4:
 						return true;
-					default :
+					default:
 						return false;
 				}
 			}
 
-			const ::google::protobuf::EnumDescriptor * OutgoingEventType_descriptor() {
+			const ::google::protobuf::EnumDescriptor* OutgoingEventType_descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OutgoingEventType_descriptor_;
 			}
 
 			bool OutgoingEventType_IsValid(int value) {
 				switch(value) {
-					case 0 :
-					case 1 :
-					case 2 :
-					case 3 :
-					case 4 :
-					case 5 :
-					case 6 :
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+					case 6:
 						return true;
-					default :
+					default:
 						return false;
 				}
 			}
 
-			const ::google::protobuf::EnumDescriptor * OutgoingOperationType_descriptor() {
+			const ::google::protobuf::EnumDescriptor* OutgoingOperationType_descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OutgoingOperationType_descriptor_;
 			}
 
 			bool OutgoingOperationType_IsValid(int value) {
 				switch(value) {
-					case 0 :
-					case 1 :
-					case 2 :
-					case 3 :
-					case 4 :
+					case 0:
+					case 1:
+					case 2:
+					case 3:
+					case 4:
 						return true;
-					default :
+					default:
 						return false;
 				}
 			}
@@ -1018,7 +1018,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 
 			void AdvertizeTopic::InitAsDefaultInstance() {}
 
-			AdvertizeTopic::AdvertizeTopic(const AdvertizeTopic & from)
+			AdvertizeTopic::AdvertizeTopic(const AdvertizeTopic& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -1054,20 +1054,20 @@ const int AdvertizeTopic::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * AdvertizeTopic::descriptor() {
+			const ::google::protobuf::Descriptor* AdvertizeTopic::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return AdvertizeTopic_descriptor_;
 			}
 
-			const AdvertizeTopic & AdvertizeTopic::default_instance() {
+			const AdvertizeTopic& AdvertizeTopic::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			AdvertizeTopic * AdvertizeTopic::default_instance_ = NULL;
+			AdvertizeTopic* AdvertizeTopic::default_instance_ = NULL;
 
-			AdvertizeTopic * AdvertizeTopic::New() const {
+			AdvertizeTopic* AdvertizeTopic::New() const {
 				return new AdvertizeTopic;
 			}
 
@@ -1089,7 +1089,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 			}
 
 			bool AdvertizeTopic::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.AdvertizeTopic)
@@ -1100,7 +1100,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Pattern = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_pattern()));
@@ -1117,7 +1117,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -1134,7 +1134,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -1157,7 +1157,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 			}
 
 			void AdvertizeTopic::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.AdvertizeTopic)
 				// optional string Pattern = 1;
 				if(has_pattern()) {
@@ -1186,8 +1186,8 @@ const int AdvertizeTopic::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.AdvertizeTopic)
 			}
 
-			::google::protobuf::uint8 * AdvertizeTopic::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* AdvertizeTopic::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.AdvertizeTopic)
 				// optional string Pattern = 1;
 				if(has_pattern()) {
@@ -1249,9 +1249,9 @@ const int AdvertizeTopic::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void AdvertizeTopic::MergeFrom(const ::google::protobuf::Message & from) {
+			void AdvertizeTopic::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const AdvertizeTopic * source =
+				const AdvertizeTopic* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const AdvertizeTopic*>(
 						                                                                               &from);
 				if(source == NULL) {
@@ -1261,7 +1261,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 				}
 			}
 
-			void AdvertizeTopic::MergeFrom(const AdvertizeTopic & from) {
+			void AdvertizeTopic::MergeFrom(const AdvertizeTopic& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_pattern()) {
@@ -1274,14 +1274,14 @@ const int AdvertizeTopic::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void AdvertizeTopic::CopyFrom(const ::google::protobuf::Message & from) {
+			void AdvertizeTopic::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void AdvertizeTopic::CopyFrom(const AdvertizeTopic & from) {
+			void AdvertizeTopic::CopyFrom(const AdvertizeTopic& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -1293,7 +1293,7 @@ const int AdvertizeTopic::kTopicFieldNumber;
 				return true;
 			}
 
-			void AdvertizeTopic::Swap(AdvertizeTopic * other) {
+			void AdvertizeTopic::Swap(AdvertizeTopic* other) {
 				if(other != this) {
 					std::swap(pattern_, other->pattern_);
 					std::swap(topic_, other->topic_);
@@ -1329,7 +1329,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 
 			void ConnectRequest::InitAsDefaultInstance() {}
 
-			ConnectRequest::ConnectRequest(const ConnectRequest & from)
+			ConnectRequest::ConnectRequest(const ConnectRequest& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -1365,20 +1365,20 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * ConnectRequest::descriptor() {
+			const ::google::protobuf::Descriptor* ConnectRequest::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return ConnectRequest_descriptor_;
 			}
 
-			const ConnectRequest & ConnectRequest::default_instance() {
+			const ConnectRequest& ConnectRequest::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			ConnectRequest * ConnectRequest::default_instance_ = NULL;
+			ConnectRequest* ConnectRequest::default_instance_ = NULL;
 
-			ConnectRequest * ConnectRequest::New() const {
+			ConnectRequest* ConnectRequest::New() const {
 				return new ConnectRequest;
 			}
 
@@ -1400,7 +1400,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 			}
 
 			bool ConnectRequest::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.ConnectRequest)
@@ -1411,7 +1411,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string NodeName = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_nodename()));
@@ -1428,7 +1428,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 						}
 
 							// optional string BackEndName = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_BackEndName:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -1445,7 +1445,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -1468,7 +1468,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 			}
 
 			void ConnectRequest::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.ConnectRequest)
 				// optional string NodeName = 1;
 				if(has_nodename()) {
@@ -1497,8 +1497,8 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.ConnectRequest)
 			}
 
-			::google::protobuf::uint8 * ConnectRequest::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* ConnectRequest::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.ConnectRequest)
 				// optional string NodeName = 1;
 				if(has_nodename()) {
@@ -1560,9 +1560,9 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 				return total_size;
 			}
 
-			void ConnectRequest::MergeFrom(const ::google::protobuf::Message & from) {
+			void ConnectRequest::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const ConnectRequest * source =
+				const ConnectRequest* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const ConnectRequest*>(
 						                                                                               &from);
 				if(source == NULL) {
@@ -1572,7 +1572,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 				}
 			}
 
-			void ConnectRequest::MergeFrom(const ConnectRequest & from) {
+			void ConnectRequest::MergeFrom(const ConnectRequest& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_nodename()) {
@@ -1585,14 +1585,14 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void ConnectRequest::CopyFrom(const ::google::protobuf::Message & from) {
+			void ConnectRequest::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void ConnectRequest::CopyFrom(const ConnectRequest & from) {
+			void ConnectRequest::CopyFrom(const ConnectRequest& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -1604,7 +1604,7 @@ const int ConnectRequest::kBackEndNameFieldNumber;
 				return true;
 			}
 
-			void ConnectRequest::Swap(ConnectRequest * other) {
+			void ConnectRequest::Swap(ConnectRequest* other) {
 				if(other != this) {
 					std::swap(nodename_, other->nodename_);
 					std::swap(backendname_, other->backendname_);
@@ -1640,7 +1640,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 
 			void ConnectResponse::InitAsDefaultInstance() {}
 
-			ConnectResponse::ConnectResponse(const ConnectResponse & from)
+			ConnectResponse::ConnectResponse(const ConnectResponse& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -1673,20 +1673,20 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * ConnectResponse::descriptor() {
+			const ::google::protobuf::Descriptor* ConnectResponse::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return ConnectResponse_descriptor_;
 			}
 
-			const ConnectResponse & ConnectResponse::default_instance() {
+			const ConnectResponse& ConnectResponse::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			ConnectResponse * ConnectResponse::default_instance_ = NULL;
+			ConnectResponse* ConnectResponse::default_instance_ = NULL;
 
-			ConnectResponse * ConnectResponse::New() const {
+			ConnectResponse* ConnectResponse::New() const {
 				return new ConnectResponse;
 			}
 
@@ -1704,7 +1704,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 			}
 
 			bool ConnectResponse::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.ConnectResponse)
@@ -1715,7 +1715,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string RealNodeName = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_realnodename()));
@@ -1732,7 +1732,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 						}
 
 							// optional int32 HeartBeatRateMs = 2 [default = 0];
-						case 2 : {
+						case 2: {
 							if(tag == 16) {
 							parse_HeartBeatRateMs:
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -1747,7 +1747,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -1770,7 +1770,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 			}
 
 			void ConnectResponse::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.ConnectResponse)
 				// optional string RealNodeName = 1;
 				if(has_realnodename()) {
@@ -1794,8 +1794,8 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.ConnectResponse)
 			}
 
-			::google::protobuf::uint8 * ConnectResponse::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* ConnectResponse::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.ConnectResponse)
 				// optional string RealNodeName = 1;
 				if(has_realnodename()) {
@@ -1851,9 +1851,9 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				return total_size;
 			}
 
-			void ConnectResponse::MergeFrom(const ::google::protobuf::Message & from) {
+			void ConnectResponse::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const ConnectResponse * source =
+				const ConnectResponse* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const ConnectResponse*>(
 						                                                                                &from);
 				if(source == NULL) {
@@ -1863,7 +1863,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				}
 			}
 
-			void ConnectResponse::MergeFrom(const ConnectResponse & from) {
+			void ConnectResponse::MergeFrom(const ConnectResponse& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_realnodename()) {
@@ -1876,14 +1876,14 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void ConnectResponse::CopyFrom(const ::google::protobuf::Message & from) {
+			void ConnectResponse::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void ConnectResponse::CopyFrom(const ConnectResponse & from) {
+			void ConnectResponse::CopyFrom(const ConnectResponse& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -1895,7 +1895,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				return true;
 			}
 
-			void ConnectResponse::Swap(ConnectResponse * other) {
+			void ConnectResponse::Swap(ConnectResponse* other) {
 				if(other != this) {
 					std::swap(realnodename_, other->realnodename_);
 					std::swap(heartbeatratems_, other->heartbeatratems_);
@@ -1929,7 +1929,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 
 			void Disconnect::InitAsDefaultInstance() {}
 
-			Disconnect::Disconnect(const Disconnect & from)
+			Disconnect::Disconnect(const Disconnect& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -1956,20 +1956,20 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * Disconnect::descriptor() {
+			const ::google::protobuf::Descriptor* Disconnect::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return Disconnect_descriptor_;
 			}
 
-			const Disconnect & Disconnect::default_instance() {
+			const Disconnect& Disconnect::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			Disconnect * Disconnect::default_instance_ = NULL;
+			Disconnect* Disconnect::default_instance_ = NULL;
 
-			Disconnect * Disconnect::New() const {
+			Disconnect* Disconnect::New() const {
 				return new Disconnect;
 			}
 
@@ -1979,7 +1979,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 			}
 
 			bool Disconnect::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.Disconnect)
@@ -2007,7 +2007,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 			}
 
 			void Disconnect::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.Disconnect)
 				if(!unknown_fields().empty()) {
 					::google::protobuf::internal::WireFormat::SerializeUnknownFields(
@@ -2016,8 +2016,8 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.Disconnect)
 			}
 
-			::google::protobuf::uint8 * Disconnect::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* Disconnect::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.Disconnect)
 				if(!unknown_fields().empty()) {
 					target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
@@ -2041,9 +2041,9 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				return total_size;
 			}
 
-			void Disconnect::MergeFrom(const ::google::protobuf::Message & from) {
+			void Disconnect::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const Disconnect * source =
+				const Disconnect* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const Disconnect*>(
 						                                                                           &from);
 				if(source == NULL) {
@@ -2053,19 +2053,19 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				}
 			}
 
-			void Disconnect::MergeFrom(const Disconnect & from) {
+			void Disconnect::MergeFrom(const Disconnect& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void Disconnect::CopyFrom(const ::google::protobuf::Message & from) {
+			void Disconnect::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void Disconnect::CopyFrom(const Disconnect & from) {
+			void Disconnect::CopyFrom(const Disconnect& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -2077,7 +2077,7 @@ const int ConnectResponse::kHeartBeatRateMsFieldNumber;
 				return true;
 			}
 
-			void Disconnect::Swap(Disconnect * other) {
+			void Disconnect::Swap(Disconnect* other) {
 				if(other != this) {
 					_unknown_fields_.Swap(&other->_unknown_fields_);
 					std::swap(_cached_size_, other->_cached_size_);
@@ -2111,7 +2111,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 
 			void GetAllPublishersRequest::InitAsDefaultInstance() {}
 
-			GetAllPublishersRequest::GetAllPublishersRequest(const GetAllPublishersRequest & from)
+			GetAllPublishersRequest::GetAllPublishersRequest(const GetAllPublishersRequest& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -2148,20 +2148,20 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * GetAllPublishersRequest::descriptor() {
+			const ::google::protobuf::Descriptor* GetAllPublishersRequest::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return GetAllPublishersRequest_descriptor_;
 			}
 
-			const GetAllPublishersRequest & GetAllPublishersRequest::default_instance() {
+			const GetAllPublishersRequest& GetAllPublishersRequest::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			GetAllPublishersRequest * GetAllPublishersRequest::default_instance_ = NULL;
+			GetAllPublishersRequest* GetAllPublishersRequest::default_instance_ = NULL;
 
-			GetAllPublishersRequest * GetAllPublishersRequest::New() const {
+			GetAllPublishersRequest* GetAllPublishersRequest::New() const {
 				return new GetAllPublishersRequest;
 			}
 
@@ -2184,7 +2184,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 			}
 
 			bool GetAllPublishersRequest::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllPublishersRequest)
@@ -2195,7 +2195,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -2210,7 +2210,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -2228,7 +2228,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -2245,7 +2245,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -2268,7 +2268,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 			}
 
 			void GetAllPublishersRequest::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllPublishersRequest)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -2302,8 +2302,8 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllPublishersRequest)
 			}
 
-			::google::protobuf::uint8 * GetAllPublishersRequest::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* GetAllPublishersRequest::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllPublishersRequest)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -2377,9 +2377,9 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void GetAllPublishersRequest::MergeFrom(const ::google::protobuf::Message & from) {
+			void GetAllPublishersRequest::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const GetAllPublishersRequest * source =
+				const GetAllPublishersRequest* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const GetAllPublishersRequest*>(
 						                                                                                        &from);
 				if(source == NULL) {
@@ -2389,7 +2389,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 				}
 			}
 
-			void GetAllPublishersRequest::MergeFrom(const GetAllPublishersRequest & from) {
+			void GetAllPublishersRequest::MergeFrom(const GetAllPublishersRequest& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_requestid()) {
@@ -2405,14 +2405,14 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void GetAllPublishersRequest::CopyFrom(const ::google::protobuf::Message & from) {
+			void GetAllPublishersRequest::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void GetAllPublishersRequest::CopyFrom(const GetAllPublishersRequest & from) {
+			void GetAllPublishersRequest::CopyFrom(const GetAllPublishersRequest& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -2424,7 +2424,7 @@ const int GetAllPublishersRequest::kTopicFieldNumber;
 				return true;
 			}
 
-			void GetAllPublishersRequest::Swap(GetAllPublishersRequest * other) {
+			void GetAllPublishersRequest::Swap(GetAllPublishersRequest* other) {
 				if(other != this) {
 					std::swap(requestid_, other->requestid_);
 					std::swap(pattern_, other->pattern_);
@@ -2461,7 +2461,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 
 			void GetAllPublishersResponse::InitAsDefaultInstance() {}
 
-			GetAllPublishersResponse::GetAllPublishersResponse(const GetAllPublishersResponse & from)
+			GetAllPublishersResponse::GetAllPublishersResponse(const GetAllPublishersResponse& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -2490,20 +2490,20 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * GetAllPublishersResponse::descriptor() {
+			const ::google::protobuf::Descriptor* GetAllPublishersResponse::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return GetAllPublishersResponse_descriptor_;
 			}
 
-			const GetAllPublishersResponse & GetAllPublishersResponse::default_instance() {
+			const GetAllPublishersResponse& GetAllPublishersResponse::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			GetAllPublishersResponse * GetAllPublishersResponse::default_instance_ = NULL;
+			GetAllPublishersResponse* GetAllPublishersResponse::default_instance_ = NULL;
 
-			GetAllPublishersResponse * GetAllPublishersResponse::New() const {
+			GetAllPublishersResponse* GetAllPublishersResponse::New() const {
 				return new GetAllPublishersResponse;
 			}
 
@@ -2515,7 +2515,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 			}
 
 			bool GetAllPublishersResponse::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllPublishersResponse)
@@ -2526,7 +2526,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -2541,7 +2541,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 						}
 
 							// repeated string Nodes = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Nodes:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -2561,7 +2561,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -2584,7 +2584,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 			}
 
 			void GetAllPublishersResponse::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllPublishersResponse)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -2608,8 +2608,8 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllPublishersResponse)
 			}
 
-			::google::protobuf::uint8 * GetAllPublishersResponse::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* GetAllPublishersResponse::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllPublishersResponse)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -2664,9 +2664,9 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 				return total_size;
 			}
 
-			void GetAllPublishersResponse::MergeFrom(const ::google::protobuf::Message & from) {
+			void GetAllPublishersResponse::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const GetAllPublishersResponse * source =
+				const GetAllPublishersResponse* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const GetAllPublishersResponse*>(
 						                                                                                         &from);
 				if(source == NULL) {
@@ -2676,7 +2676,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 				}
 			}
 
-			void GetAllPublishersResponse::MergeFrom(const GetAllPublishersResponse & from) {
+			void GetAllPublishersResponse::MergeFrom(const GetAllPublishersResponse& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				nodes_.MergeFrom(from.nodes_);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
@@ -2687,14 +2687,14 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void GetAllPublishersResponse::CopyFrom(const ::google::protobuf::Message & from) {
+			void GetAllPublishersResponse::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void GetAllPublishersResponse::CopyFrom(const GetAllPublishersResponse & from) {
+			void GetAllPublishersResponse::CopyFrom(const GetAllPublishersResponse& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -2706,7 +2706,7 @@ const int GetAllPublishersResponse::kNodesFieldNumber;
 				return true;
 			}
 
-			void GetAllPublishersResponse::Swap(GetAllPublishersResponse * other) {
+			void GetAllPublishersResponse::Swap(GetAllPublishersResponse* other) {
 				if(other != this) {
 					std::swap(requestid_, other->requestid_);
 					nodes_.Swap(&other->nodes_);
@@ -2743,7 +2743,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 
 			void GetAllSubscribersRequest::InitAsDefaultInstance() {}
 
-			GetAllSubscribersRequest::GetAllSubscribersRequest(const GetAllSubscribersRequest & from)
+			GetAllSubscribersRequest::GetAllSubscribersRequest(const GetAllSubscribersRequest& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -2780,20 +2780,20 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * GetAllSubscribersRequest::descriptor() {
+			const ::google::protobuf::Descriptor* GetAllSubscribersRequest::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return GetAllSubscribersRequest_descriptor_;
 			}
 
-			const GetAllSubscribersRequest & GetAllSubscribersRequest::default_instance() {
+			const GetAllSubscribersRequest& GetAllSubscribersRequest::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			GetAllSubscribersRequest * GetAllSubscribersRequest::default_instance_ = NULL;
+			GetAllSubscribersRequest* GetAllSubscribersRequest::default_instance_ = NULL;
 
-			GetAllSubscribersRequest * GetAllSubscribersRequest::New() const {
+			GetAllSubscribersRequest* GetAllSubscribersRequest::New() const {
 				return new GetAllSubscribersRequest;
 			}
 
@@ -2816,7 +2816,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 			}
 
 			bool GetAllSubscribersRequest::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
@@ -2827,7 +2827,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -2842,7 +2842,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -2860,7 +2860,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -2877,7 +2877,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -2900,7 +2900,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 			}
 
 			void GetAllSubscribersRequest::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -2934,8 +2934,8 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
 			}
 
-			::google::protobuf::uint8 * GetAllSubscribersRequest::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* GetAllSubscribersRequest::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -3009,9 +3009,9 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void GetAllSubscribersRequest::MergeFrom(const ::google::protobuf::Message & from) {
+			void GetAllSubscribersRequest::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const GetAllSubscribersRequest * source =
+				const GetAllSubscribersRequest* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const GetAllSubscribersRequest*>(
 						                                                                                         &from);
 				if(source == NULL) {
@@ -3021,7 +3021,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 				}
 			}
 
-			void GetAllSubscribersRequest::MergeFrom(const GetAllSubscribersRequest & from) {
+			void GetAllSubscribersRequest::MergeFrom(const GetAllSubscribersRequest& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_requestid()) {
@@ -3037,14 +3037,14 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void GetAllSubscribersRequest::CopyFrom(const ::google::protobuf::Message & from) {
+			void GetAllSubscribersRequest::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void GetAllSubscribersRequest::CopyFrom(const GetAllSubscribersRequest & from) {
+			void GetAllSubscribersRequest::CopyFrom(const GetAllSubscribersRequest& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -3056,7 +3056,7 @@ const int GetAllSubscribersRequest::kTopicFieldNumber;
 				return true;
 			}
 
-			void GetAllSubscribersRequest::Swap(GetAllSubscribersRequest * other) {
+			void GetAllSubscribersRequest::Swap(GetAllSubscribersRequest* other) {
 				if(other != this) {
 					std::swap(requestid_, other->requestid_);
 					std::swap(pattern_, other->pattern_);
@@ -3093,7 +3093,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 
 			void GetAllSubscribersResponse::InitAsDefaultInstance() {}
 
-			GetAllSubscribersResponse::GetAllSubscribersResponse(const GetAllSubscribersResponse & from)
+			GetAllSubscribersResponse::GetAllSubscribersResponse(const GetAllSubscribersResponse& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -3122,20 +3122,20 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * GetAllSubscribersResponse::descriptor() {
+			const ::google::protobuf::Descriptor* GetAllSubscribersResponse::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return GetAllSubscribersResponse_descriptor_;
 			}
 
-			const GetAllSubscribersResponse & GetAllSubscribersResponse::default_instance() {
+			const GetAllSubscribersResponse& GetAllSubscribersResponse::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			GetAllSubscribersResponse * GetAllSubscribersResponse::default_instance_ = NULL;
+			GetAllSubscribersResponse* GetAllSubscribersResponse::default_instance_ = NULL;
 
-			GetAllSubscribersResponse * GetAllSubscribersResponse::New() const {
+			GetAllSubscribersResponse* GetAllSubscribersResponse::New() const {
 				return new GetAllSubscribersResponse;
 			}
 
@@ -3147,7 +3147,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 			}
 
 			bool GetAllSubscribersResponse::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
@@ -3158,7 +3158,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -3173,7 +3173,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 						}
 
 							// repeated string Nodes = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Nodes:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -3193,7 +3193,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -3216,7 +3216,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 			}
 
 			void GetAllSubscribersResponse::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -3240,8 +3240,8 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
 			}
 
-			::google::protobuf::uint8 * GetAllSubscribersResponse::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* GetAllSubscribersResponse::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -3296,9 +3296,9 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 				return total_size;
 			}
 
-			void GetAllSubscribersResponse::MergeFrom(const ::google::protobuf::Message & from) {
+			void GetAllSubscribersResponse::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const GetAllSubscribersResponse * source =
+				const GetAllSubscribersResponse* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const GetAllSubscribersResponse*>(
 						                                                                                          &from);
 				if(source == NULL) {
@@ -3308,7 +3308,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 				}
 			}
 
-			void GetAllSubscribersResponse::MergeFrom(const GetAllSubscribersResponse & from) {
+			void GetAllSubscribersResponse::MergeFrom(const GetAllSubscribersResponse& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				nodes_.MergeFrom(from.nodes_);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
@@ -3319,14 +3319,14 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void GetAllSubscribersResponse::CopyFrom(const ::google::protobuf::Message & from) {
+			void GetAllSubscribersResponse::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void GetAllSubscribersResponse::CopyFrom(const GetAllSubscribersResponse & from) {
+			void GetAllSubscribersResponse::CopyFrom(const GetAllSubscribersResponse& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -3338,7 +3338,7 @@ const int GetAllSubscribersResponse::kNodesFieldNumber;
 				return true;
 			}
 
-			void GetAllSubscribersResponse::Swap(GetAllSubscribersResponse * other) {
+			void GetAllSubscribersResponse::Swap(GetAllSubscribersResponse* other) {
 				if(other != this) {
 					std::swap(requestid_, other->requestid_);
 					nodes_.Swap(&other->nodes_);
@@ -3375,7 +3375,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 
 			void GetPublisherRequest::InitAsDefaultInstance() {}
 
-			GetPublisherRequest::GetPublisherRequest(const GetPublisherRequest & from)
+			GetPublisherRequest::GetPublisherRequest(const GetPublisherRequest& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -3412,20 +3412,20 @@ const int GetPublisherRequest::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * GetPublisherRequest::descriptor() {
+			const ::google::protobuf::Descriptor* GetPublisherRequest::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return GetPublisherRequest_descriptor_;
 			}
 
-			const GetPublisherRequest & GetPublisherRequest::default_instance() {
+			const GetPublisherRequest& GetPublisherRequest::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			GetPublisherRequest * GetPublisherRequest::default_instance_ = NULL;
+			GetPublisherRequest* GetPublisherRequest::default_instance_ = NULL;
 
-			GetPublisherRequest * GetPublisherRequest::New() const {
+			GetPublisherRequest* GetPublisherRequest::New() const {
 				return new GetPublisherRequest;
 			}
 
@@ -3448,7 +3448,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 			}
 
 			bool GetPublisherRequest::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetPublisherRequest)
@@ -3459,7 +3459,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -3474,7 +3474,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -3492,7 +3492,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -3509,7 +3509,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -3532,7 +3532,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 			}
 
 			void GetPublisherRequest::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetPublisherRequest)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -3566,8 +3566,8 @@ const int GetPublisherRequest::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetPublisherRequest)
 			}
 
-			::google::protobuf::uint8 * GetPublisherRequest::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* GetPublisherRequest::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetPublisherRequest)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -3641,9 +3641,9 @@ const int GetPublisherRequest::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void GetPublisherRequest::MergeFrom(const ::google::protobuf::Message & from) {
+			void GetPublisherRequest::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const GetPublisherRequest * source =
+				const GetPublisherRequest* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const GetPublisherRequest*>(
 						                                                                                    &from);
 				if(source == NULL) {
@@ -3653,7 +3653,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 				}
 			}
 
-			void GetPublisherRequest::MergeFrom(const GetPublisherRequest & from) {
+			void GetPublisherRequest::MergeFrom(const GetPublisherRequest& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_requestid()) {
@@ -3669,14 +3669,14 @@ const int GetPublisherRequest::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void GetPublisherRequest::CopyFrom(const ::google::protobuf::Message & from) {
+			void GetPublisherRequest::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void GetPublisherRequest::CopyFrom(const GetPublisherRequest & from) {
+			void GetPublisherRequest::CopyFrom(const GetPublisherRequest& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -3688,7 +3688,7 @@ const int GetPublisherRequest::kTopicFieldNumber;
 				return true;
 			}
 
-			void GetPublisherRequest::Swap(GetPublisherRequest * other) {
+			void GetPublisherRequest::Swap(GetPublisherRequest* other) {
 				if(other != this) {
 					std::swap(requestid_, other->requestid_);
 					std::swap(pattern_, other->pattern_);
@@ -3725,7 +3725,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 
 			void GetPublisherResponse::InitAsDefaultInstance() {}
 
-			GetPublisherResponse::GetPublisherResponse(const GetPublisherResponse & from)
+			GetPublisherResponse::GetPublisherResponse(const GetPublisherResponse& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -3758,20 +3758,20 @@ const int GetPublisherResponse::kNodeFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * GetPublisherResponse::descriptor() {
+			const ::google::protobuf::Descriptor* GetPublisherResponse::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return GetPublisherResponse_descriptor_;
 			}
 
-			const GetPublisherResponse & GetPublisherResponse::default_instance() {
+			const GetPublisherResponse& GetPublisherResponse::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			GetPublisherResponse * GetPublisherResponse::default_instance_ = NULL;
+			GetPublisherResponse* GetPublisherResponse::default_instance_ = NULL;
 
-			GetPublisherResponse * GetPublisherResponse::New() const {
+			GetPublisherResponse* GetPublisherResponse::New() const {
 				return new GetPublisherResponse;
 			}
 
@@ -3789,7 +3789,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 			}
 
 			bool GetPublisherResponse::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetPublisherResponse)
@@ -3800,7 +3800,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -3815,7 +3815,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 						}
 
 							// optional string Node = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Node:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -3832,7 +3832,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -3855,7 +3855,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 			}
 
 			void GetPublisherResponse::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetPublisherResponse)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -3879,8 +3879,8 @@ const int GetPublisherResponse::kNodeFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetPublisherResponse)
 			}
 
-			::google::protobuf::uint8 * GetPublisherResponse::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* GetPublisherResponse::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetPublisherResponse)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -3936,9 +3936,9 @@ const int GetPublisherResponse::kNodeFieldNumber;
 				return total_size;
 			}
 
-			void GetPublisherResponse::MergeFrom(const ::google::protobuf::Message & from) {
+			void GetPublisherResponse::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const GetPublisherResponse * source =
+				const GetPublisherResponse* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const GetPublisherResponse*>(
 						                                                                                     &from);
 				if(source == NULL) {
@@ -3948,7 +3948,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 				}
 			}
 
-			void GetPublisherResponse::MergeFrom(const GetPublisherResponse & from) {
+			void GetPublisherResponse::MergeFrom(const GetPublisherResponse& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_requestid()) {
@@ -3961,14 +3961,14 @@ const int GetPublisherResponse::kNodeFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void GetPublisherResponse::CopyFrom(const ::google::protobuf::Message & from) {
+			void GetPublisherResponse::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void GetPublisherResponse::CopyFrom(const GetPublisherResponse & from) {
+			void GetPublisherResponse::CopyFrom(const GetPublisherResponse& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -3980,7 +3980,7 @@ const int GetPublisherResponse::kNodeFieldNumber;
 				return true;
 			}
 
-			void GetPublisherResponse::Swap(GetPublisherResponse * other) {
+			void GetPublisherResponse::Swap(GetPublisherResponse* other) {
 				if(other != this) {
 					std::swap(requestid_, other->requestid_);
 					std::swap(node_, other->node_);
@@ -4017,7 +4017,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 
 			void GetSubscriberRequest::InitAsDefaultInstance() {}
 
-			GetSubscriberRequest::GetSubscriberRequest(const GetSubscriberRequest & from)
+			GetSubscriberRequest::GetSubscriberRequest(const GetSubscriberRequest& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -4054,20 +4054,20 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * GetSubscriberRequest::descriptor() {
+			const ::google::protobuf::Descriptor* GetSubscriberRequest::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return GetSubscriberRequest_descriptor_;
 			}
 
-			const GetSubscriberRequest & GetSubscriberRequest::default_instance() {
+			const GetSubscriberRequest& GetSubscriberRequest::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			GetSubscriberRequest * GetSubscriberRequest::default_instance_ = NULL;
+			GetSubscriberRequest* GetSubscriberRequest::default_instance_ = NULL;
 
-			GetSubscriberRequest * GetSubscriberRequest::New() const {
+			GetSubscriberRequest* GetSubscriberRequest::New() const {
 				return new GetSubscriberRequest;
 			}
 
@@ -4090,7 +4090,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 			}
 
 			bool GetSubscriberRequest::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetSubscriberRequest)
@@ -4101,7 +4101,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -4116,7 +4116,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -4134,7 +4134,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -4151,7 +4151,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -4174,7 +4174,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 			}
 
 			void GetSubscriberRequest::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetSubscriberRequest)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -4208,8 +4208,8 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetSubscriberRequest)
 			}
 
-			::google::protobuf::uint8 * GetSubscriberRequest::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* GetSubscriberRequest::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetSubscriberRequest)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -4283,9 +4283,9 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void GetSubscriberRequest::MergeFrom(const ::google::protobuf::Message & from) {
+			void GetSubscriberRequest::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const GetSubscriberRequest * source =
+				const GetSubscriberRequest* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const GetSubscriberRequest*>(
 						                                                                                     &from);
 				if(source == NULL) {
@@ -4295,7 +4295,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 				}
 			}
 
-			void GetSubscriberRequest::MergeFrom(const GetSubscriberRequest & from) {
+			void GetSubscriberRequest::MergeFrom(const GetSubscriberRequest& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_requestid()) {
@@ -4311,14 +4311,14 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void GetSubscriberRequest::CopyFrom(const ::google::protobuf::Message & from) {
+			void GetSubscriberRequest::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void GetSubscriberRequest::CopyFrom(const GetSubscriberRequest & from) {
+			void GetSubscriberRequest::CopyFrom(const GetSubscriberRequest& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -4330,7 +4330,7 @@ const int GetSubscriberRequest::kTopicFieldNumber;
 				return true;
 			}
 
-			void GetSubscriberRequest::Swap(GetSubscriberRequest * other) {
+			void GetSubscriberRequest::Swap(GetSubscriberRequest* other) {
 				if(other != this) {
 					std::swap(requestid_, other->requestid_);
 					std::swap(pattern_, other->pattern_);
@@ -4367,7 +4367,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 
 			void GetSubscriberResponse::InitAsDefaultInstance() {}
 
-			GetSubscriberResponse::GetSubscriberResponse(const GetSubscriberResponse & from)
+			GetSubscriberResponse::GetSubscriberResponse(const GetSubscriberResponse& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -4400,20 +4400,20 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * GetSubscriberResponse::descriptor() {
+			const ::google::protobuf::Descriptor* GetSubscriberResponse::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return GetSubscriberResponse_descriptor_;
 			}
 
-			const GetSubscriberResponse & GetSubscriberResponse::default_instance() {
+			const GetSubscriberResponse& GetSubscriberResponse::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			GetSubscriberResponse * GetSubscriberResponse::default_instance_ = NULL;
+			GetSubscriberResponse* GetSubscriberResponse::default_instance_ = NULL;
 
-			GetSubscriberResponse * GetSubscriberResponse::New() const {
+			GetSubscriberResponse* GetSubscriberResponse::New() const {
 				return new GetSubscriberResponse;
 			}
 
@@ -4431,7 +4431,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 			}
 
 			bool GetSubscriberResponse::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetSubscriberResponse)
@@ -4442,7 +4442,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional int32 RequestId = 1 [default = 0];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
 									::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -4457,7 +4457,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 						}
 
 							// optional string Node = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Node:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -4474,7 +4474,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -4497,7 +4497,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 			}
 
 			void GetSubscriberResponse::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetSubscriberResponse)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -4521,8 +4521,8 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetSubscriberResponse)
 			}
 
-			::google::protobuf::uint8 * GetSubscriberResponse::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* GetSubscriberResponse::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetSubscriberResponse)
 				// optional int32 RequestId = 1 [default = 0];
 				if(has_requestid()) {
@@ -4578,9 +4578,9 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				return total_size;
 			}
 
-			void GetSubscriberResponse::MergeFrom(const ::google::protobuf::Message & from) {
+			void GetSubscriberResponse::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const GetSubscriberResponse * source =
+				const GetSubscriberResponse* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const GetSubscriberResponse*>(
 						                                                                                      &from);
 				if(source == NULL) {
@@ -4590,7 +4590,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				}
 			}
 
-			void GetSubscriberResponse::MergeFrom(const GetSubscriberResponse & from) {
+			void GetSubscriberResponse::MergeFrom(const GetSubscriberResponse& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_requestid()) {
@@ -4603,14 +4603,14 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void GetSubscriberResponse::CopyFrom(const ::google::protobuf::Message & from) {
+			void GetSubscriberResponse::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void GetSubscriberResponse::CopyFrom(const GetSubscriberResponse & from) {
+			void GetSubscriberResponse::CopyFrom(const GetSubscriberResponse& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -4622,7 +4622,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				return true;
 			}
 
-			void GetSubscriberResponse::Swap(GetSubscriberResponse * other) {
+			void GetSubscriberResponse::Swap(GetSubscriberResponse* other) {
 				if(other != this) {
 					std::swap(requestid_, other->requestid_);
 					std::swap(node_, other->node_);
@@ -4656,7 +4656,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 
 			void HeartBeat::InitAsDefaultInstance() {}
 
-			HeartBeat::HeartBeat(const HeartBeat & from)
+			HeartBeat::HeartBeat(const HeartBeat& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -4683,20 +4683,20 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * HeartBeat::descriptor() {
+			const ::google::protobuf::Descriptor* HeartBeat::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return HeartBeat_descriptor_;
 			}
 
-			const HeartBeat & HeartBeat::default_instance() {
+			const HeartBeat& HeartBeat::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			HeartBeat * HeartBeat::default_instance_ = NULL;
+			HeartBeat* HeartBeat::default_instance_ = NULL;
 
-			HeartBeat * HeartBeat::New() const {
+			HeartBeat* HeartBeat::New() const {
 				return new HeartBeat;
 			}
 
@@ -4706,7 +4706,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 			}
 
 			bool HeartBeat::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.HeartBeat)
@@ -4734,7 +4734,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 			}
 
 			void HeartBeat::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.HeartBeat)
 				if(!unknown_fields().empty()) {
 					::google::protobuf::internal::WireFormat::SerializeUnknownFields(
@@ -4743,8 +4743,8 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.HeartBeat)
 			}
 
-			::google::protobuf::uint8 * HeartBeat::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* HeartBeat::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.HeartBeat)
 				if(!unknown_fields().empty()) {
 					target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
@@ -4768,9 +4768,9 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				return total_size;
 			}
 
-			void HeartBeat::MergeFrom(const ::google::protobuf::Message & from) {
+			void HeartBeat::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const HeartBeat * source =
+				const HeartBeat* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const HeartBeat*>(
 						                                                                          &from);
 				if(source == NULL) {
@@ -4780,19 +4780,19 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				}
 			}
 
-			void HeartBeat::MergeFrom(const HeartBeat & from) {
+			void HeartBeat::MergeFrom(const HeartBeat& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void HeartBeat::CopyFrom(const ::google::protobuf::Message & from) {
+			void HeartBeat::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void HeartBeat::CopyFrom(const HeartBeat & from) {
+			void HeartBeat::CopyFrom(const HeartBeat& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -4804,7 +4804,7 @@ const int GetSubscriberResponse::kNodeFieldNumber;
 				return true;
 			}
 
-			void HeartBeat::Swap(HeartBeat * other) {
+			void HeartBeat::Swap(HeartBeat* other) {
 				if(other != this) {
 					_unknown_fields_.Swap(&other->_unknown_fields_);
 					std::swap(_cached_size_, other->_cached_size_);
@@ -4851,7 +4851,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 				onnodeunsubscribedfromtopic_ = const_cast<::MQCloud::Internal::Protocol::OnNodeUnsubscribedFromTopic*>(&::MQCloud::Internal::Protocol::OnNodeUnsubscribedFromTopic::default_instance());
 			}
 
-			IncomingEvent::IncomingEvent(const IncomingEvent & from)
+			IncomingEvent::IncomingEvent(const IncomingEvent& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -4894,20 +4894,20 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * IncomingEvent::descriptor() {
+			const ::google::protobuf::Descriptor* IncomingEvent::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return IncomingEvent_descriptor_;
 			}
 
-			const IncomingEvent & IncomingEvent::default_instance() {
+			const IncomingEvent& IncomingEvent::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			IncomingEvent * IncomingEvent::default_instance_ = NULL;
+			IncomingEvent* IncomingEvent::default_instance_ = NULL;
 
-			IncomingEvent * IncomingEvent::New() const {
+			IncomingEvent* IncomingEvent::New() const {
 				return new IncomingEvent;
 			}
 
@@ -4948,7 +4948,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 			}
 
 			bool IncomingEvent::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.IncomingEvent)
@@ -4959,7 +4959,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								int value;
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -4979,7 +4979,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnConnectionClosed OnConnectionClosed = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_OnConnectionClosed:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -4993,7 +4993,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnConnectionEstablished OnConnectionEstablished = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_OnConnectionEstablished:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5007,7 +5007,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnNodeAdvertisedTopic OnNodeAdvertisedTopic = 4;
-						case 4 : {
+						case 4: {
 							if(tag == 34) {
 							parse_OnNodeAdvertisedTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5021,7 +5021,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnNodeRejectedTopic OnNodeRejectedTopic = 5;
-						case 5 : {
+						case 5: {
 							if(tag == 42) {
 							parse_OnNodeRejectedTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5035,7 +5035,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnNodeSubscribedToTopic OnNodeSubscribedToTopic = 6;
-						case 6 : {
+						case 6: {
 							if(tag == 50) {
 							parse_OnNodeSubscribedToTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5049,7 +5049,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnNodeUnavaliable OnNodeUnavaliable = 7;
-						case 7 : {
+						case 7: {
 							if(tag == 58) {
 							parse_OnNodeUnavaliable:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5063,7 +5063,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic OnNodeUnsubscribedFromTopic = 8;
-						case 8 : {
+						case 8: {
 							if(tag == 66) {
 							parse_OnNodeUnsubscribedFromTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5076,7 +5076,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -5099,7 +5099,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 			}
 
 			void IncomingEvent::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.IncomingEvent)
 				// optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
 				if(has_typecode()) {
@@ -5156,8 +5156,8 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.IncomingEvent)
 			}
 
-			::google::protobuf::uint8 * IncomingEvent::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* IncomingEvent::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.IncomingEvent)
 				// optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
 				if(has_typecode()) {
@@ -5293,9 +5293,9 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 				return total_size;
 			}
 
-			void IncomingEvent::MergeFrom(const ::google::protobuf::Message & from) {
+			void IncomingEvent::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const IncomingEvent * source =
+				const IncomingEvent* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const IncomingEvent*>(
 						                                                                              &from);
 				if(source == NULL) {
@@ -5305,7 +5305,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 				}
 			}
 
-			void IncomingEvent::MergeFrom(const IncomingEvent & from) {
+			void IncomingEvent::MergeFrom(const IncomingEvent& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_typecode()) {
@@ -5336,14 +5336,14 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void IncomingEvent::CopyFrom(const ::google::protobuf::Message & from) {
+			void IncomingEvent::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void IncomingEvent::CopyFrom(const IncomingEvent & from) {
+			void IncomingEvent::CopyFrom(const IncomingEvent& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -5355,7 +5355,7 @@ const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
 				return true;
 			}
 
-			void IncomingEvent::Swap(IncomingEvent * other) {
+			void IncomingEvent::Swap(IncomingEvent* other) {
 				if(other != this) {
 					std::swap(typecode_, other->typecode_);
 					std::swap(onconnectionclosed_, other->onconnectionclosed_);
@@ -5407,7 +5407,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 				getallsubscribersresponse_ = const_cast<::MQCloud::Internal::Protocol::GetAllSubscribersResponse*>(&::MQCloud::Internal::Protocol::GetAllSubscribersResponse::default_instance());
 			}
 
-			IncomingOperation::IncomingOperation(const IncomingOperation & from)
+			IncomingOperation::IncomingOperation(const IncomingOperation& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -5446,20 +5446,20 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * IncomingOperation::descriptor() {
+			const ::google::protobuf::Descriptor* IncomingOperation::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return IncomingOperation_descriptor_;
 			}
 
-			const IncomingOperation & IncomingOperation::default_instance() {
+			const IncomingOperation& IncomingOperation::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			IncomingOperation * IncomingOperation::default_instance_ = NULL;
+			IncomingOperation* IncomingOperation::default_instance_ = NULL;
 
-			IncomingOperation * IncomingOperation::New() const {
+			IncomingOperation* IncomingOperation::New() const {
 				return new IncomingOperation;
 			}
 
@@ -5492,7 +5492,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 			}
 
 			bool IncomingOperation::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.IncomingOperation)
@@ -5503,7 +5503,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								int value;
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -5523,7 +5523,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.ConnectResponse ConnectResponse = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_ConnectResponse:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5537,7 +5537,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetPublisherResponse GetPublisherResponse = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_GetPublisherResponse:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5551,7 +5551,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetAllPublishersResponse GetAllPublishersResponse = 4;
-						case 4 : {
+						case 4: {
 							if(tag == 34) {
 							parse_GetAllPublishersResponse:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5565,7 +5565,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetSubscriberResponse GetSubscriberResponse = 5;
-						case 5 : {
+						case 5: {
 							if(tag == 42) {
 							parse_GetSubscriberResponse:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5579,7 +5579,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetAllSubscribersResponse GetAllSubscribersResponse = 6;
-						case 6 : {
+						case 6: {
 							if(tag == 50) {
 							parse_GetAllSubscribersResponse:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -5592,7 +5592,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -5615,7 +5615,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 			}
 
 			void IncomingOperation::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.IncomingOperation)
 				// optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
 				if(has_typecode()) {
@@ -5660,8 +5660,8 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.IncomingOperation)
 			}
 
-			::google::protobuf::uint8 * IncomingOperation::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* IncomingOperation::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.IncomingOperation)
 				// optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
 				if(has_typecode()) {
@@ -5769,9 +5769,9 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 				return total_size;
 			}
 
-			void IncomingOperation::MergeFrom(const ::google::protobuf::Message & from) {
+			void IncomingOperation::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const IncomingOperation * source =
+				const IncomingOperation* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const IncomingOperation*>(
 						                                                                                  &from);
 				if(source == NULL) {
@@ -5781,7 +5781,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 				}
 			}
 
-			void IncomingOperation::MergeFrom(const IncomingOperation & from) {
+			void IncomingOperation::MergeFrom(const IncomingOperation& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_typecode()) {
@@ -5806,14 +5806,14 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void IncomingOperation::CopyFrom(const ::google::protobuf::Message & from) {
+			void IncomingOperation::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void IncomingOperation::CopyFrom(const IncomingOperation & from) {
+			void IncomingOperation::CopyFrom(const IncomingOperation& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -5825,7 +5825,7 @@ const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
 				return true;
 			}
 
-			void IncomingOperation::Swap(IncomingOperation * other) {
+			void IncomingOperation::Swap(IncomingOperation* other) {
 				if(other != this) {
 					std::swap(typecode_, other->typecode_);
 					std::swap(connectresponse_, other->connectresponse_);
@@ -5865,7 +5865,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 
 			void OnConnectionClosed::InitAsDefaultInstance() {}
 
-			OnConnectionClosed::OnConnectionClosed(const OnConnectionClosed & from)
+			OnConnectionClosed::OnConnectionClosed(const OnConnectionClosed& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -5901,20 +5901,20 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * OnConnectionClosed::descriptor() {
+			const ::google::protobuf::Descriptor* OnConnectionClosed::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OnConnectionClosed_descriptor_;
 			}
 
-			const OnConnectionClosed & OnConnectionClosed::default_instance() {
+			const OnConnectionClosed& OnConnectionClosed::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			OnConnectionClosed * OnConnectionClosed::default_instance_ = NULL;
+			OnConnectionClosed* OnConnectionClosed::default_instance_ = NULL;
 
-			OnConnectionClosed * OnConnectionClosed::New() const {
+			OnConnectionClosed* OnConnectionClosed::New() const {
 				return new OnConnectionClosed;
 			}
 
@@ -5936,7 +5936,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 			}
 
 			bool OnConnectionClosed::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnConnectionClosed)
@@ -5947,7 +5947,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string FromNode = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_fromnode()));
@@ -5964,7 +5964,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 						}
 
 							// optional string ToNode = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_ToNode:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -5981,7 +5981,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -6004,7 +6004,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 			}
 
 			void OnConnectionClosed::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnConnectionClosed)
 				// optional string FromNode = 1;
 				if(has_fromnode()) {
@@ -6033,8 +6033,8 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnConnectionClosed)
 			}
 
-			::google::protobuf::uint8 * OnConnectionClosed::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* OnConnectionClosed::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnConnectionClosed)
 				// optional string FromNode = 1;
 				if(has_fromnode()) {
@@ -6096,9 +6096,9 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 				return total_size;
 			}
 
-			void OnConnectionClosed::MergeFrom(const ::google::protobuf::Message & from) {
+			void OnConnectionClosed::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const OnConnectionClosed * source =
+				const OnConnectionClosed* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const OnConnectionClosed*>(
 						                                                                                   &from);
 				if(source == NULL) {
@@ -6108,7 +6108,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 				}
 			}
 
-			void OnConnectionClosed::MergeFrom(const OnConnectionClosed & from) {
+			void OnConnectionClosed::MergeFrom(const OnConnectionClosed& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_fromnode()) {
@@ -6121,14 +6121,14 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void OnConnectionClosed::CopyFrom(const ::google::protobuf::Message & from) {
+			void OnConnectionClosed::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void OnConnectionClosed::CopyFrom(const OnConnectionClosed & from) {
+			void OnConnectionClosed::CopyFrom(const OnConnectionClosed& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -6140,7 +6140,7 @@ const int OnConnectionClosed::kToNodeFieldNumber;
 				return true;
 			}
 
-			void OnConnectionClosed::Swap(OnConnectionClosed * other) {
+			void OnConnectionClosed::Swap(OnConnectionClosed* other) {
 				if(other != this) {
 					std::swap(fromnode_, other->fromnode_);
 					std::swap(tonode_, other->tonode_);
@@ -6176,7 +6176,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 
 			void OnConnectionEstablished::InitAsDefaultInstance() {}
 
-			OnConnectionEstablished::OnConnectionEstablished(const OnConnectionEstablished & from)
+			OnConnectionEstablished::OnConnectionEstablished(const OnConnectionEstablished& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -6212,20 +6212,20 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * OnConnectionEstablished::descriptor() {
+			const ::google::protobuf::Descriptor* OnConnectionEstablished::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OnConnectionEstablished_descriptor_;
 			}
 
-			const OnConnectionEstablished & OnConnectionEstablished::default_instance() {
+			const OnConnectionEstablished& OnConnectionEstablished::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			OnConnectionEstablished * OnConnectionEstablished::default_instance_ = NULL;
+			OnConnectionEstablished* OnConnectionEstablished::default_instance_ = NULL;
 
-			OnConnectionEstablished * OnConnectionEstablished::New() const {
+			OnConnectionEstablished* OnConnectionEstablished::New() const {
 				return new OnConnectionEstablished;
 			}
 
@@ -6247,7 +6247,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 			}
 
 			bool OnConnectionEstablished::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnConnectionEstablished)
@@ -6258,7 +6258,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string FromNode = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_fromnode()));
@@ -6275,7 +6275,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 						}
 
 							// optional string ToNode = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_ToNode:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -6292,7 +6292,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -6315,7 +6315,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 			}
 
 			void OnConnectionEstablished::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnConnectionEstablished)
 				// optional string FromNode = 1;
 				if(has_fromnode()) {
@@ -6344,8 +6344,8 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnConnectionEstablished)
 			}
 
-			::google::protobuf::uint8 * OnConnectionEstablished::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* OnConnectionEstablished::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnConnectionEstablished)
 				// optional string FromNode = 1;
 				if(has_fromnode()) {
@@ -6407,9 +6407,9 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 				return total_size;
 			}
 
-			void OnConnectionEstablished::MergeFrom(const ::google::protobuf::Message & from) {
+			void OnConnectionEstablished::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const OnConnectionEstablished * source =
+				const OnConnectionEstablished* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const OnConnectionEstablished*>(
 						                                                                                        &from);
 				if(source == NULL) {
@@ -6419,7 +6419,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 				}
 			}
 
-			void OnConnectionEstablished::MergeFrom(const OnConnectionEstablished & from) {
+			void OnConnectionEstablished::MergeFrom(const OnConnectionEstablished& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_fromnode()) {
@@ -6432,14 +6432,14 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void OnConnectionEstablished::CopyFrom(const ::google::protobuf::Message & from) {
+			void OnConnectionEstablished::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void OnConnectionEstablished::CopyFrom(const OnConnectionEstablished & from) {
+			void OnConnectionEstablished::CopyFrom(const OnConnectionEstablished& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -6451,7 +6451,7 @@ const int OnConnectionEstablished::kToNodeFieldNumber;
 				return true;
 			}
 
-			void OnConnectionEstablished::Swap(OnConnectionEstablished * other) {
+			void OnConnectionEstablished::Swap(OnConnectionEstablished* other) {
 				if(other != this) {
 					std::swap(fromnode_, other->fromnode_);
 					std::swap(tonode_, other->tonode_);
@@ -6488,7 +6488,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 
 			void OnNodeAdvertisedTopic::InitAsDefaultInstance() {}
 
-			OnNodeAdvertisedTopic::OnNodeAdvertisedTopic(const OnNodeAdvertisedTopic & from)
+			OnNodeAdvertisedTopic::OnNodeAdvertisedTopic(const OnNodeAdvertisedTopic& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -6528,20 +6528,20 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * OnNodeAdvertisedTopic::descriptor() {
+			const ::google::protobuf::Descriptor* OnNodeAdvertisedTopic::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OnNodeAdvertisedTopic_descriptor_;
 			}
 
-			const OnNodeAdvertisedTopic & OnNodeAdvertisedTopic::default_instance() {
+			const OnNodeAdvertisedTopic& OnNodeAdvertisedTopic::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			OnNodeAdvertisedTopic * OnNodeAdvertisedTopic::default_instance_ = NULL;
+			OnNodeAdvertisedTopic* OnNodeAdvertisedTopic::default_instance_ = NULL;
 
-			OnNodeAdvertisedTopic * OnNodeAdvertisedTopic::New() const {
+			OnNodeAdvertisedTopic* OnNodeAdvertisedTopic::New() const {
 				return new OnNodeAdvertisedTopic;
 			}
 
@@ -6568,7 +6568,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 			}
 
 			bool OnNodeAdvertisedTopic::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
@@ -6579,7 +6579,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -6596,7 +6596,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -6614,7 +6614,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -6631,7 +6631,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -6654,7 +6654,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 			}
 
 			void OnNodeAdvertisedTopic::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -6693,8 +6693,8 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
 			}
 
-			::google::protobuf::uint8 * OnNodeAdvertisedTopic::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* OnNodeAdvertisedTopic::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -6774,9 +6774,9 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void OnNodeAdvertisedTopic::MergeFrom(const ::google::protobuf::Message & from) {
+			void OnNodeAdvertisedTopic::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const OnNodeAdvertisedTopic * source =
+				const OnNodeAdvertisedTopic* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const OnNodeAdvertisedTopic*>(
 						                                                                                      &from);
 				if(source == NULL) {
@@ -6786,7 +6786,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 				}
 			}
 
-			void OnNodeAdvertisedTopic::MergeFrom(const OnNodeAdvertisedTopic & from) {
+			void OnNodeAdvertisedTopic::MergeFrom(const OnNodeAdvertisedTopic& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_node()) {
@@ -6802,14 +6802,14 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void OnNodeAdvertisedTopic::CopyFrom(const ::google::protobuf::Message & from) {
+			void OnNodeAdvertisedTopic::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void OnNodeAdvertisedTopic::CopyFrom(const OnNodeAdvertisedTopic & from) {
+			void OnNodeAdvertisedTopic::CopyFrom(const OnNodeAdvertisedTopic& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -6821,7 +6821,7 @@ const int OnNodeAdvertisedTopic::kTopicFieldNumber;
 				return true;
 			}
 
-			void OnNodeAdvertisedTopic::Swap(OnNodeAdvertisedTopic * other) {
+			void OnNodeAdvertisedTopic::Swap(OnNodeAdvertisedTopic* other) {
 				if(other != this) {
 					std::swap(node_, other->node_);
 					std::swap(pattern_, other->pattern_);
@@ -6859,7 +6859,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 
 			void OnNodeRejectedTopic::InitAsDefaultInstance() {}
 
-			OnNodeRejectedTopic::OnNodeRejectedTopic(const OnNodeRejectedTopic & from)
+			OnNodeRejectedTopic::OnNodeRejectedTopic(const OnNodeRejectedTopic& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -6899,20 +6899,20 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * OnNodeRejectedTopic::descriptor() {
+			const ::google::protobuf::Descriptor* OnNodeRejectedTopic::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OnNodeRejectedTopic_descriptor_;
 			}
 
-			const OnNodeRejectedTopic & OnNodeRejectedTopic::default_instance() {
+			const OnNodeRejectedTopic& OnNodeRejectedTopic::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			OnNodeRejectedTopic * OnNodeRejectedTopic::default_instance_ = NULL;
+			OnNodeRejectedTopic* OnNodeRejectedTopic::default_instance_ = NULL;
 
-			OnNodeRejectedTopic * OnNodeRejectedTopic::New() const {
+			OnNodeRejectedTopic* OnNodeRejectedTopic::New() const {
 				return new OnNodeRejectedTopic;
 			}
 
@@ -6939,7 +6939,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 			}
 
 			bool OnNodeRejectedTopic::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
@@ -6950,7 +6950,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -6967,7 +6967,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -6985,7 +6985,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -7002,7 +7002,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -7025,7 +7025,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 			}
 
 			void OnNodeRejectedTopic::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -7064,8 +7064,8 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
 			}
 
-			::google::protobuf::uint8 * OnNodeRejectedTopic::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* OnNodeRejectedTopic::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -7145,9 +7145,9 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void OnNodeRejectedTopic::MergeFrom(const ::google::protobuf::Message & from) {
+			void OnNodeRejectedTopic::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const OnNodeRejectedTopic * source =
+				const OnNodeRejectedTopic* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const OnNodeRejectedTopic*>(
 						                                                                                    &from);
 				if(source == NULL) {
@@ -7157,7 +7157,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 				}
 			}
 
-			void OnNodeRejectedTopic::MergeFrom(const OnNodeRejectedTopic & from) {
+			void OnNodeRejectedTopic::MergeFrom(const OnNodeRejectedTopic& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_node()) {
@@ -7173,14 +7173,14 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void OnNodeRejectedTopic::CopyFrom(const ::google::protobuf::Message & from) {
+			void OnNodeRejectedTopic::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void OnNodeRejectedTopic::CopyFrom(const OnNodeRejectedTopic & from) {
+			void OnNodeRejectedTopic::CopyFrom(const OnNodeRejectedTopic& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -7192,7 +7192,7 @@ const int OnNodeRejectedTopic::kTopicFieldNumber;
 				return true;
 			}
 
-			void OnNodeRejectedTopic::Swap(OnNodeRejectedTopic * other) {
+			void OnNodeRejectedTopic::Swap(OnNodeRejectedTopic* other) {
 				if(other != this) {
 					std::swap(node_, other->node_);
 					std::swap(pattern_, other->pattern_);
@@ -7230,7 +7230,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 
 			void OnNodeSubscribedToTopic::InitAsDefaultInstance() {}
 
-			OnNodeSubscribedToTopic::OnNodeSubscribedToTopic(const OnNodeSubscribedToTopic & from)
+			OnNodeSubscribedToTopic::OnNodeSubscribedToTopic(const OnNodeSubscribedToTopic& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -7270,20 +7270,20 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * OnNodeSubscribedToTopic::descriptor() {
+			const ::google::protobuf::Descriptor* OnNodeSubscribedToTopic::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OnNodeSubscribedToTopic_descriptor_;
 			}
 
-			const OnNodeSubscribedToTopic & OnNodeSubscribedToTopic::default_instance() {
+			const OnNodeSubscribedToTopic& OnNodeSubscribedToTopic::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			OnNodeSubscribedToTopic * OnNodeSubscribedToTopic::default_instance_ = NULL;
+			OnNodeSubscribedToTopic* OnNodeSubscribedToTopic::default_instance_ = NULL;
 
-			OnNodeSubscribedToTopic * OnNodeSubscribedToTopic::New() const {
+			OnNodeSubscribedToTopic* OnNodeSubscribedToTopic::New() const {
 				return new OnNodeSubscribedToTopic;
 			}
 
@@ -7310,7 +7310,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 			}
 
 			bool OnNodeSubscribedToTopic::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
@@ -7321,7 +7321,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -7338,7 +7338,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -7356,7 +7356,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -7373,7 +7373,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -7396,7 +7396,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 			}
 
 			void OnNodeSubscribedToTopic::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -7435,8 +7435,8 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
 			}
 
-			::google::protobuf::uint8 * OnNodeSubscribedToTopic::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* OnNodeSubscribedToTopic::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -7516,9 +7516,9 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void OnNodeSubscribedToTopic::MergeFrom(const ::google::protobuf::Message & from) {
+			void OnNodeSubscribedToTopic::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const OnNodeSubscribedToTopic * source =
+				const OnNodeSubscribedToTopic* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const OnNodeSubscribedToTopic*>(
 						                                                                                        &from);
 				if(source == NULL) {
@@ -7528,7 +7528,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 				}
 			}
 
-			void OnNodeSubscribedToTopic::MergeFrom(const OnNodeSubscribedToTopic & from) {
+			void OnNodeSubscribedToTopic::MergeFrom(const OnNodeSubscribedToTopic& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_node()) {
@@ -7544,14 +7544,14 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void OnNodeSubscribedToTopic::CopyFrom(const ::google::protobuf::Message & from) {
+			void OnNodeSubscribedToTopic::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void OnNodeSubscribedToTopic::CopyFrom(const OnNodeSubscribedToTopic & from) {
+			void OnNodeSubscribedToTopic::CopyFrom(const OnNodeSubscribedToTopic& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -7563,7 +7563,7 @@ const int OnNodeSubscribedToTopic::kTopicFieldNumber;
 				return true;
 			}
 
-			void OnNodeSubscribedToTopic::Swap(OnNodeSubscribedToTopic * other) {
+			void OnNodeSubscribedToTopic::Swap(OnNodeSubscribedToTopic* other) {
 				if(other != this) {
 					std::swap(node_, other->node_);
 					std::swap(pattern_, other->pattern_);
@@ -7601,7 +7601,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 
 			void OnNodeUnavaliable::InitAsDefaultInstance() {}
 
-			OnNodeUnavaliable::OnNodeUnavaliable(const OnNodeUnavaliable & from)
+			OnNodeUnavaliable::OnNodeUnavaliable(const OnNodeUnavaliable& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -7641,20 +7641,20 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * OnNodeUnavaliable::descriptor() {
+			const ::google::protobuf::Descriptor* OnNodeUnavaliable::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OnNodeUnavaliable_descriptor_;
 			}
 
-			const OnNodeUnavaliable & OnNodeUnavaliable::default_instance() {
+			const OnNodeUnavaliable& OnNodeUnavaliable::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			OnNodeUnavaliable * OnNodeUnavaliable::default_instance_ = NULL;
+			OnNodeUnavaliable* OnNodeUnavaliable::default_instance_ = NULL;
 
-			OnNodeUnavaliable * OnNodeUnavaliable::New() const {
+			OnNodeUnavaliable* OnNodeUnavaliable::New() const {
 				return new OnNodeUnavaliable;
 			}
 
@@ -7681,7 +7681,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 			}
 
 			bool OnNodeUnavaliable::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeUnavaliable)
@@ -7692,7 +7692,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -7709,7 +7709,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -7727,7 +7727,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -7744,7 +7744,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -7767,7 +7767,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 			}
 
 			void OnNodeUnavaliable::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeUnavaliable)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -7806,8 +7806,8 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeUnavaliable)
 			}
 
-			::google::protobuf::uint8 * OnNodeUnavaliable::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* OnNodeUnavaliable::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeUnavaliable)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -7887,9 +7887,9 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void OnNodeUnavaliable::MergeFrom(const ::google::protobuf::Message & from) {
+			void OnNodeUnavaliable::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const OnNodeUnavaliable * source =
+				const OnNodeUnavaliable* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const OnNodeUnavaliable*>(
 						                                                                                  &from);
 				if(source == NULL) {
@@ -7899,7 +7899,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 				}
 			}
 
-			void OnNodeUnavaliable::MergeFrom(const OnNodeUnavaliable & from) {
+			void OnNodeUnavaliable::MergeFrom(const OnNodeUnavaliable& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_node()) {
@@ -7915,14 +7915,14 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void OnNodeUnavaliable::CopyFrom(const ::google::protobuf::Message & from) {
+			void OnNodeUnavaliable::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void OnNodeUnavaliable::CopyFrom(const OnNodeUnavaliable & from) {
+			void OnNodeUnavaliable::CopyFrom(const OnNodeUnavaliable& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -7934,7 +7934,7 @@ const int OnNodeUnavaliable::kTopicFieldNumber;
 				return true;
 			}
 
-			void OnNodeUnavaliable::Swap(OnNodeUnavaliable * other) {
+			void OnNodeUnavaliable::Swap(OnNodeUnavaliable* other) {
 				if(other != this) {
 					std::swap(node_, other->node_);
 					std::swap(pattern_, other->pattern_);
@@ -7972,7 +7972,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 
 			void OnNodeUnsubscribedFromTopic::InitAsDefaultInstance() {}
 
-			OnNodeUnsubscribedFromTopic::OnNodeUnsubscribedFromTopic(const OnNodeUnsubscribedFromTopic & from)
+			OnNodeUnsubscribedFromTopic::OnNodeUnsubscribedFromTopic(const OnNodeUnsubscribedFromTopic& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -8012,20 +8012,20 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * OnNodeUnsubscribedFromTopic::descriptor() {
+			const ::google::protobuf::Descriptor* OnNodeUnsubscribedFromTopic::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OnNodeUnsubscribedFromTopic_descriptor_;
 			}
 
-			const OnNodeUnsubscribedFromTopic & OnNodeUnsubscribedFromTopic::default_instance() {
+			const OnNodeUnsubscribedFromTopic& OnNodeUnsubscribedFromTopic::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			OnNodeUnsubscribedFromTopic * OnNodeUnsubscribedFromTopic::default_instance_ = NULL;
+			OnNodeUnsubscribedFromTopic* OnNodeUnsubscribedFromTopic::default_instance_ = NULL;
 
-			OnNodeUnsubscribedFromTopic * OnNodeUnsubscribedFromTopic::New() const {
+			OnNodeUnsubscribedFromTopic* OnNodeUnsubscribedFromTopic::New() const {
 				return new OnNodeUnsubscribedFromTopic;
 			}
 
@@ -8052,7 +8052,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 			}
 
 			bool OnNodeUnsubscribedFromTopic::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
@@ -8063,7 +8063,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -8080,7 +8080,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -8098,7 +8098,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -8115,7 +8115,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -8138,7 +8138,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 			}
 
 			void OnNodeUnsubscribedFromTopic::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -8177,8 +8177,8 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
 			}
 
-			::google::protobuf::uint8 * OnNodeUnsubscribedFromTopic::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* OnNodeUnsubscribedFromTopic::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -8258,9 +8258,9 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void OnNodeUnsubscribedFromTopic::MergeFrom(const ::google::protobuf::Message & from) {
+			void OnNodeUnsubscribedFromTopic::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const OnNodeUnsubscribedFromTopic * source =
+				const OnNodeUnsubscribedFromTopic* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const OnNodeUnsubscribedFromTopic*>(
 						                                                                                            &from);
 				if(source == NULL) {
@@ -8270,7 +8270,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 				}
 			}
 
-			void OnNodeUnsubscribedFromTopic::MergeFrom(const OnNodeUnsubscribedFromTopic & from) {
+			void OnNodeUnsubscribedFromTopic::MergeFrom(const OnNodeUnsubscribedFromTopic& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_node()) {
@@ -8286,14 +8286,14 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void OnNodeUnsubscribedFromTopic::CopyFrom(const ::google::protobuf::Message & from) {
+			void OnNodeUnsubscribedFromTopic::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void OnNodeUnsubscribedFromTopic::CopyFrom(const OnNodeUnsubscribedFromTopic & from) {
+			void OnNodeUnsubscribedFromTopic::CopyFrom(const OnNodeUnsubscribedFromTopic& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -8305,7 +8305,7 @@ const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
 				return true;
 			}
 
-			void OnNodeUnsubscribedFromTopic::Swap(OnNodeUnsubscribedFromTopic * other) {
+			void OnNodeUnsubscribedFromTopic::Swap(OnNodeUnsubscribedFromTopic* other) {
 				if(other != this) {
 					std::swap(node_, other->node_);
 					std::swap(pattern_, other->pattern_);
@@ -8354,7 +8354,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 				unsubscribe_ = const_cast<::MQCloud::Internal::Protocol::UnSubscribe*>(&::MQCloud::Internal::Protocol::UnSubscribe::default_instance());
 			}
 
-			OutgoingEvent::OutgoingEvent(const OutgoingEvent & from)
+			OutgoingEvent::OutgoingEvent(const OutgoingEvent& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -8395,20 +8395,20 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * OutgoingEvent::descriptor() {
+			const ::google::protobuf::Descriptor* OutgoingEvent::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OutgoingEvent_descriptor_;
 			}
 
-			const OutgoingEvent & OutgoingEvent::default_instance() {
+			const OutgoingEvent& OutgoingEvent::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			OutgoingEvent * OutgoingEvent::default_instance_ = NULL;
+			OutgoingEvent* OutgoingEvent::default_instance_ = NULL;
 
-			OutgoingEvent * OutgoingEvent::New() const {
+			OutgoingEvent* OutgoingEvent::New() const {
 				return new OutgoingEvent;
 			}
 
@@ -8445,7 +8445,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 			}
 
 			bool OutgoingEvent::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OutgoingEvent)
@@ -8456,7 +8456,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								int value;
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -8476,7 +8476,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.AdvertizeTopic AdvertizeTopic = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_AdvertizeTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8490,7 +8490,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.Disconnect Disconnect = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Disconnect:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8504,7 +8504,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.RejectTopic RejectTopic = 4;
-						case 4 : {
+						case 4: {
 							if(tag == 34) {
 							parse_RejectTopic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8518,7 +8518,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.ReportNodeUnavaliable ReportNodeUnavaliable = 5;
-						case 5 : {
+						case 5: {
 							if(tag == 42) {
 							parse_ReportNodeUnavaliable:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8532,7 +8532,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.Subscribe Subscribe = 6;
-						case 6 : {
+						case 6: {
 							if(tag == 50) {
 							parse_Subscribe:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8546,7 +8546,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.UnSubscribe UnSubscribe = 7;
-						case 7 : {
+						case 7: {
 							if(tag == 58) {
 							parse_UnSubscribe:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8559,7 +8559,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -8582,7 +8582,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 			}
 
 			void OutgoingEvent::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OutgoingEvent)
 				// optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
 				if(has_typecode()) {
@@ -8633,8 +8633,8 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OutgoingEvent)
 			}
 
-			::google::protobuf::uint8 * OutgoingEvent::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* OutgoingEvent::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OutgoingEvent)
 				// optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
 				if(has_typecode()) {
@@ -8756,9 +8756,9 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 				return total_size;
 			}
 
-			void OutgoingEvent::MergeFrom(const ::google::protobuf::Message & from) {
+			void OutgoingEvent::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const OutgoingEvent * source =
+				const OutgoingEvent* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const OutgoingEvent*>(
 						                                                                              &from);
 				if(source == NULL) {
@@ -8768,7 +8768,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 				}
 			}
 
-			void OutgoingEvent::MergeFrom(const OutgoingEvent & from) {
+			void OutgoingEvent::MergeFrom(const OutgoingEvent& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_typecode()) {
@@ -8796,14 +8796,14 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void OutgoingEvent::CopyFrom(const ::google::protobuf::Message & from) {
+			void OutgoingEvent::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void OutgoingEvent::CopyFrom(const OutgoingEvent & from) {
+			void OutgoingEvent::CopyFrom(const OutgoingEvent& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -8815,7 +8815,7 @@ const int OutgoingEvent::kUnSubscribeFieldNumber;
 				return true;
 			}
 
-			void OutgoingEvent::Swap(OutgoingEvent * other) {
+			void OutgoingEvent::Swap(OutgoingEvent* other) {
 				if(other != this) {
 					std::swap(typecode_, other->typecode_);
 					std::swap(advertizetopic_, other->advertizetopic_);
@@ -8866,7 +8866,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 				getallsubscribersrequest_ = const_cast<::MQCloud::Internal::Protocol::GetAllSubscribersRequest*>(&::MQCloud::Internal::Protocol::GetAllSubscribersRequest::default_instance());
 			}
 
-			OutgoingOperation::OutgoingOperation(const OutgoingOperation & from)
+			OutgoingOperation::OutgoingOperation(const OutgoingOperation& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -8905,20 +8905,20 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * OutgoingOperation::descriptor() {
+			const ::google::protobuf::Descriptor* OutgoingOperation::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return OutgoingOperation_descriptor_;
 			}
 
-			const OutgoingOperation & OutgoingOperation::default_instance() {
+			const OutgoingOperation& OutgoingOperation::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			OutgoingOperation * OutgoingOperation::default_instance_ = NULL;
+			OutgoingOperation* OutgoingOperation::default_instance_ = NULL;
 
-			OutgoingOperation * OutgoingOperation::New() const {
+			OutgoingOperation* OutgoingOperation::New() const {
 				return new OutgoingOperation;
 			}
 
@@ -8951,7 +8951,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 			}
 
 			bool OutgoingOperation::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OutgoingOperation)
@@ -8962,7 +8962,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
-						case 1 : {
+						case 1: {
 							if(tag == 8) {
 								int value;
 								DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -8982,7 +8982,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.ConnectRequest ConnectRequest = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_ConnectRequest:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -8996,7 +8996,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetPublisherRequest GetPublisherRequest = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_GetPublisherRequest:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -9010,7 +9010,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetAllPublishersRequest GetAllPublishersRequest = 4;
-						case 4 : {
+						case 4: {
 							if(tag == 34) {
 							parse_GetAllPublishersRequest:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -9024,7 +9024,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetSubscriberRequest GetSubscriberRequest = 5;
-						case 5 : {
+						case 5: {
 							if(tag == 42) {
 							parse_GetSubscriberRequest:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -9038,7 +9038,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 						}
 
 							// optional .MQCloud.Internal.Protocol.GetAllSubscribersRequest GetAllSubscribersRequest = 6;
-						case 6 : {
+						case 6: {
 							if(tag == 50) {
 							parse_GetAllSubscribersRequest:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -9051,7 +9051,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -9074,7 +9074,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 			}
 
 			void OutgoingOperation::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OutgoingOperation)
 				// optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
 				if(has_typecode()) {
@@ -9119,8 +9119,8 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OutgoingOperation)
 			}
 
-			::google::protobuf::uint8 * OutgoingOperation::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* OutgoingOperation::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OutgoingOperation)
 				// optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
 				if(has_typecode()) {
@@ -9228,9 +9228,9 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 				return total_size;
 			}
 
-			void OutgoingOperation::MergeFrom(const ::google::protobuf::Message & from) {
+			void OutgoingOperation::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const OutgoingOperation * source =
+				const OutgoingOperation* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const OutgoingOperation*>(
 						                                                                                  &from);
 				if(source == NULL) {
@@ -9240,7 +9240,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 				}
 			}
 
-			void OutgoingOperation::MergeFrom(const OutgoingOperation & from) {
+			void OutgoingOperation::MergeFrom(const OutgoingOperation& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_typecode()) {
@@ -9265,14 +9265,14 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void OutgoingOperation::CopyFrom(const ::google::protobuf::Message & from) {
+			void OutgoingOperation::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void OutgoingOperation::CopyFrom(const OutgoingOperation & from) {
+			void OutgoingOperation::CopyFrom(const OutgoingOperation& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -9284,7 +9284,7 @@ const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
 				return true;
 			}
 
-			void OutgoingOperation::Swap(OutgoingOperation * other) {
+			void OutgoingOperation::Swap(OutgoingOperation* other) {
 				if(other != this) {
 					std::swap(typecode_, other->typecode_);
 					std::swap(connectrequest_, other->connectrequest_);
@@ -9324,7 +9324,7 @@ const int RejectTopic::kTopicFieldNumber;
 
 			void RejectTopic::InitAsDefaultInstance() {}
 
-			RejectTopic::RejectTopic(const RejectTopic & from)
+			RejectTopic::RejectTopic(const RejectTopic& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -9360,20 +9360,20 @@ const int RejectTopic::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * RejectTopic::descriptor() {
+			const ::google::protobuf::Descriptor* RejectTopic::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return RejectTopic_descriptor_;
 			}
 
-			const RejectTopic & RejectTopic::default_instance() {
+			const RejectTopic& RejectTopic::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			RejectTopic * RejectTopic::default_instance_ = NULL;
+			RejectTopic* RejectTopic::default_instance_ = NULL;
 
-			RejectTopic * RejectTopic::New() const {
+			RejectTopic* RejectTopic::New() const {
 				return new RejectTopic;
 			}
 
@@ -9395,7 +9395,7 @@ const int RejectTopic::kTopicFieldNumber;
 			}
 
 			bool RejectTopic::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.RejectTopic)
@@ -9406,7 +9406,7 @@ const int RejectTopic::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Pattern = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_pattern()));
@@ -9423,7 +9423,7 @@ const int RejectTopic::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -9440,7 +9440,7 @@ const int RejectTopic::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -9463,7 +9463,7 @@ const int RejectTopic::kTopicFieldNumber;
 			}
 
 			void RejectTopic::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.RejectTopic)
 				// optional string Pattern = 1;
 				if(has_pattern()) {
@@ -9492,8 +9492,8 @@ const int RejectTopic::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.RejectTopic)
 			}
 
-			::google::protobuf::uint8 * RejectTopic::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* RejectTopic::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.RejectTopic)
 				// optional string Pattern = 1;
 				if(has_pattern()) {
@@ -9555,9 +9555,9 @@ const int RejectTopic::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void RejectTopic::MergeFrom(const ::google::protobuf::Message & from) {
+			void RejectTopic::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const RejectTopic * source =
+				const RejectTopic* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const RejectTopic*>(
 						                                                                            &from);
 				if(source == NULL) {
@@ -9567,7 +9567,7 @@ const int RejectTopic::kTopicFieldNumber;
 				}
 			}
 
-			void RejectTopic::MergeFrom(const RejectTopic & from) {
+			void RejectTopic::MergeFrom(const RejectTopic& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_pattern()) {
@@ -9580,14 +9580,14 @@ const int RejectTopic::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void RejectTopic::CopyFrom(const ::google::protobuf::Message & from) {
+			void RejectTopic::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void RejectTopic::CopyFrom(const RejectTopic & from) {
+			void RejectTopic::CopyFrom(const RejectTopic& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -9599,7 +9599,7 @@ const int RejectTopic::kTopicFieldNumber;
 				return true;
 			}
 
-			void RejectTopic::Swap(RejectTopic * other) {
+			void RejectTopic::Swap(RejectTopic* other) {
 				if(other != this) {
 					std::swap(pattern_, other->pattern_);
 					std::swap(topic_, other->topic_);
@@ -9636,7 +9636,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 
 			void ReportNodeUnavaliable::InitAsDefaultInstance() {}
 
-			ReportNodeUnavaliable::ReportNodeUnavaliable(const ReportNodeUnavaliable & from)
+			ReportNodeUnavaliable::ReportNodeUnavaliable(const ReportNodeUnavaliable& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -9676,20 +9676,20 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * ReportNodeUnavaliable::descriptor() {
+			const ::google::protobuf::Descriptor* ReportNodeUnavaliable::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return ReportNodeUnavaliable_descriptor_;
 			}
 
-			const ReportNodeUnavaliable & ReportNodeUnavaliable::default_instance() {
+			const ReportNodeUnavaliable& ReportNodeUnavaliable::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			ReportNodeUnavaliable * ReportNodeUnavaliable::default_instance_ = NULL;
+			ReportNodeUnavaliable* ReportNodeUnavaliable::default_instance_ = NULL;
 
-			ReportNodeUnavaliable * ReportNodeUnavaliable::New() const {
+			ReportNodeUnavaliable* ReportNodeUnavaliable::New() const {
 				return new ReportNodeUnavaliable;
 			}
 
@@ -9716,7 +9716,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 			}
 
 			bool ReportNodeUnavaliable::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
@@ -9727,7 +9727,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Node = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_node()));
@@ -9744,7 +9744,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 						}
 
 							// optional string Pattern = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Pattern:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -9762,7 +9762,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 3;
-						case 3 : {
+						case 3: {
 							if(tag == 26) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -9779,7 +9779,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -9802,7 +9802,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 			}
 
 			void ReportNodeUnavaliable::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -9841,8 +9841,8 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
 			}
 
-			::google::protobuf::uint8 * ReportNodeUnavaliable::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* ReportNodeUnavaliable::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
 				// optional string Node = 1;
 				if(has_node()) {
@@ -9922,9 +9922,9 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void ReportNodeUnavaliable::MergeFrom(const ::google::protobuf::Message & from) {
+			void ReportNodeUnavaliable::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const ReportNodeUnavaliable * source =
+				const ReportNodeUnavaliable* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const ReportNodeUnavaliable*>(
 						                                                                                      &from);
 				if(source == NULL) {
@@ -9934,7 +9934,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 				}
 			}
 
-			void ReportNodeUnavaliable::MergeFrom(const ReportNodeUnavaliable & from) {
+			void ReportNodeUnavaliable::MergeFrom(const ReportNodeUnavaliable& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_node()) {
@@ -9950,14 +9950,14 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void ReportNodeUnavaliable::CopyFrom(const ::google::protobuf::Message & from) {
+			void ReportNodeUnavaliable::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void ReportNodeUnavaliable::CopyFrom(const ReportNodeUnavaliable & from) {
+			void ReportNodeUnavaliable::CopyFrom(const ReportNodeUnavaliable& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -9969,7 +9969,7 @@ const int ReportNodeUnavaliable::kTopicFieldNumber;
 				return true;
 			}
 
-			void ReportNodeUnavaliable::Swap(ReportNodeUnavaliable * other) {
+			void ReportNodeUnavaliable::Swap(ReportNodeUnavaliable* other) {
 				if(other != this) {
 					std::swap(node_, other->node_);
 					std::swap(pattern_, other->pattern_);
@@ -10006,7 +10006,7 @@ const int Subscribe::kTopicFieldNumber;
 
 			void Subscribe::InitAsDefaultInstance() {}
 
-			Subscribe::Subscribe(const Subscribe & from)
+			Subscribe::Subscribe(const Subscribe& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -10042,20 +10042,20 @@ const int Subscribe::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * Subscribe::descriptor() {
+			const ::google::protobuf::Descriptor* Subscribe::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return Subscribe_descriptor_;
 			}
 
-			const Subscribe & Subscribe::default_instance() {
+			const Subscribe& Subscribe::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			Subscribe * Subscribe::default_instance_ = NULL;
+			Subscribe* Subscribe::default_instance_ = NULL;
 
-			Subscribe * Subscribe::New() const {
+			Subscribe* Subscribe::New() const {
 				return new Subscribe;
 			}
 
@@ -10077,7 +10077,7 @@ const int Subscribe::kTopicFieldNumber;
 			}
 
 			bool Subscribe::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.Subscribe)
@@ -10088,7 +10088,7 @@ const int Subscribe::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Pattern = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_pattern()));
@@ -10105,7 +10105,7 @@ const int Subscribe::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -10122,7 +10122,7 @@ const int Subscribe::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -10145,7 +10145,7 @@ const int Subscribe::kTopicFieldNumber;
 			}
 
 			void Subscribe::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.Subscribe)
 				// optional string Pattern = 1;
 				if(has_pattern()) {
@@ -10174,8 +10174,8 @@ const int Subscribe::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.Subscribe)
 			}
 
-			::google::protobuf::uint8 * Subscribe::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* Subscribe::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.Subscribe)
 				// optional string Pattern = 1;
 				if(has_pattern()) {
@@ -10237,9 +10237,9 @@ const int Subscribe::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void Subscribe::MergeFrom(const ::google::protobuf::Message & from) {
+			void Subscribe::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const Subscribe * source =
+				const Subscribe* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const Subscribe*>(
 						                                                                          &from);
 				if(source == NULL) {
@@ -10249,7 +10249,7 @@ const int Subscribe::kTopicFieldNumber;
 				}
 			}
 
-			void Subscribe::MergeFrom(const Subscribe & from) {
+			void Subscribe::MergeFrom(const Subscribe& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_pattern()) {
@@ -10262,14 +10262,14 @@ const int Subscribe::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void Subscribe::CopyFrom(const ::google::protobuf::Message & from) {
+			void Subscribe::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void Subscribe::CopyFrom(const Subscribe & from) {
+			void Subscribe::CopyFrom(const Subscribe& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -10281,7 +10281,7 @@ const int Subscribe::kTopicFieldNumber;
 				return true;
 			}
 
-			void Subscribe::Swap(Subscribe * other) {
+			void Subscribe::Swap(Subscribe* other) {
 				if(other != this) {
 					std::swap(pattern_, other->pattern_);
 					std::swap(topic_, other->topic_);
@@ -10317,7 +10317,7 @@ const int UnSubscribe::kTopicFieldNumber;
 
 			void UnSubscribe::InitAsDefaultInstance() {}
 
-			UnSubscribe::UnSubscribe(const UnSubscribe & from)
+			UnSubscribe::UnSubscribe(const UnSubscribe& from)
 				: ::google::protobuf::Message() {
 				SharedCtor();
 				MergeFrom(from);
@@ -10353,20 +10353,20 @@ const int UnSubscribe::kTopicFieldNumber;
 				GOOGLE_SAFE_CONCURRENT_WRITES_END();
 			}
 
-			const ::google::protobuf::Descriptor * UnSubscribe::descriptor() {
+			const ::google::protobuf::Descriptor* UnSubscribe::descriptor() {
 				protobuf_AssignDescriptorsOnce();
 				return UnSubscribe_descriptor_;
 			}
 
-			const UnSubscribe & UnSubscribe::default_instance() {
+			const UnSubscribe& UnSubscribe::default_instance() {
 				if(default_instance_ == NULL)
 					protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
 				return *default_instance_;
 			}
 
-			UnSubscribe * UnSubscribe::default_instance_ = NULL;
+			UnSubscribe* UnSubscribe::default_instance_ = NULL;
 
-			UnSubscribe * UnSubscribe::New() const {
+			UnSubscribe* UnSubscribe::New() const {
 				return new UnSubscribe;
 			}
 
@@ -10388,7 +10388,7 @@ const int UnSubscribe::kTopicFieldNumber;
 			}
 
 			bool UnSubscribe::MergePartialFromCodedStream(
-				::google::protobuf::io::CodedInputStream * input) {
+				::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
 				::google::protobuf::uint32 tag;
 				// @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.UnSubscribe)
@@ -10399,7 +10399,7 @@ const int UnSubscribe::kTopicFieldNumber;
 						goto handle_unusual;
 					switch(::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
 							// optional string Pattern = 1;
-						case 1 : {
+						case 1: {
 							if(tag == 10) {
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
 									input, this->mutable_pattern()));
@@ -10416,7 +10416,7 @@ const int UnSubscribe::kTopicFieldNumber;
 						}
 
 							// optional string Topic = 2;
-						case 2 : {
+						case 2: {
 							if(tag == 18) {
 							parse_Topic:
 								DO_(::google::protobuf::internal::WireFormatLite::ReadString(
@@ -10433,7 +10433,7 @@ const int UnSubscribe::kTopicFieldNumber;
 							break;
 						}
 
-						default : {
+						default: {
 						handle_unusual:
 							if(tag == 0 ||
 								::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
@@ -10456,7 +10456,7 @@ const int UnSubscribe::kTopicFieldNumber;
 			}
 
 			void UnSubscribe::SerializeWithCachedSizes(
-				::google::protobuf::io::CodedOutputStream * output) const {
+				::google::protobuf::io::CodedOutputStream* output) const {
 				// @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.UnSubscribe)
 				// optional string Pattern = 1;
 				if(has_pattern()) {
@@ -10485,8 +10485,8 @@ const int UnSubscribe::kTopicFieldNumber;
 				// @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.UnSubscribe)
 			}
 
-			::google::protobuf::uint8 * UnSubscribe::SerializeWithCachedSizesToArray(
-				::google::protobuf::uint8 * target) const {
+			::google::protobuf::uint8* UnSubscribe::SerializeWithCachedSizesToArray(
+				::google::protobuf::uint8* target) const {
 				// @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.UnSubscribe)
 				// optional string Pattern = 1;
 				if(has_pattern()) {
@@ -10548,9 +10548,9 @@ const int UnSubscribe::kTopicFieldNumber;
 				return total_size;
 			}
 
-			void UnSubscribe::MergeFrom(const ::google::protobuf::Message & from) {
+			void UnSubscribe::MergeFrom(const ::google::protobuf::Message& from) {
 				GOOGLE_CHECK_NE(&from, this);
-				const UnSubscribe * source =
+				const UnSubscribe* source =
 						::google::protobuf::internal::dynamic_cast_if_available<const UnSubscribe*>(
 						                                                                            &from);
 				if(source == NULL) {
@@ -10560,7 +10560,7 @@ const int UnSubscribe::kTopicFieldNumber;
 				}
 			}
 
-			void UnSubscribe::MergeFrom(const UnSubscribe & from) {
+			void UnSubscribe::MergeFrom(const UnSubscribe& from) {
 				GOOGLE_CHECK_NE(&from, this);
 				if(from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
 					if(from.has_pattern()) {
@@ -10573,14 +10573,14 @@ const int UnSubscribe::kTopicFieldNumber;
 				mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 			}
 
-			void UnSubscribe::CopyFrom(const ::google::protobuf::Message & from) {
+			void UnSubscribe::CopyFrom(const ::google::protobuf::Message& from) {
 				if(&from == this)
 					return;
 				Clear();
 				MergeFrom(from);
 			}
 
-			void UnSubscribe::CopyFrom(const UnSubscribe & from) {
+			void UnSubscribe::CopyFrom(const UnSubscribe& from) {
 				if(&from == this)
 					return;
 				Clear();
@@ -10592,7 +10592,7 @@ const int UnSubscribe::kTopicFieldNumber;
 				return true;
 			}
 
-			void UnSubscribe::Swap(UnSubscribe * other) {
+			void UnSubscribe::Swap(UnSubscribe* other) {
 				if(other != this) {
 					std::swap(pattern_, other->pattern_);
 					std::swap(topic_, other->topic_);

@@ -23,13 +23,13 @@ namespace MQCloud {
 			std::shared_ptr<ResponseHandler> eventsHandler;
 			std::shared_ptr<ExchangeEventsHandler> exchangeEventsHandler;
 
-			explicit ExchangeEventsManager(std::shared_ptr<ConnectionsHandler> ctx, const std::string & runningBackEndName)
+			explicit ExchangeEventsManager(std::shared_ptr<ConnectionsHandler> ctx, const std::string& runningBackEndName)
 				: MessagesManager(ctx), serverPatternEvent("_E"), serverTopicNodeEvent("_SE"), serverTopicHeartBeat("_SHB"), runningBackEndName(runningBackEndName), exchangeEventsHandler(std::make_shared<ExchangeEventsHandler>) {
 				ctx->AddOnMesageHandler(serverPatternEvent, serverTopicNodeEvent, exchangeEventsHandler);
 				//exchangeEventsHandler
 			}
 
-			void UnsubscribeEvent(const std::string & pattern, const std::string & topic) {
+			void UnsubscribeEvent(const std::string& pattern, const std::string& topic) {
 				auto event = Protocol::UnSubscribe();
 				event.set_pattern(pattern);
 				event.set_topic(topic);
@@ -48,7 +48,7 @@ namespace MQCloud {
 				ctx->PublishMessage(result);
 			}
 
-			void SubscribeEvent(const std::string & pattern, const std::string & topic) {
+			void SubscribeEvent(const std::string& pattern, const std::string& topic) {
 				auto event = Protocol::Subscribe();
 				event.set_pattern(pattern);
 				event.set_topic(topic);
@@ -67,7 +67,7 @@ namespace MQCloud {
 				ctx->PublishMessage(result);
 			}
 
-			void ReportNodeUnavaliable(const std::string & pattern, const std::string & topic, const std::string & node) {
+			void ReportNodeUnavaliable(const std::string& pattern, const std::string& topic, const std::string& node) {
 				auto event = Protocol::ReportNodeUnavaliable();
 				event.set_node(node);
 				event.set_pattern(pattern);
@@ -87,7 +87,7 @@ namespace MQCloud {
 				ctx->PublishMessage(result);
 			}
 
-			void RejectTopicEvent(const std::string & pattern, const std::string & topic) {
+			void RejectTopicEvent(const std::string& pattern, const std::string& topic) {
 				auto event = Protocol::RejectTopic();
 				event.set_pattern(pattern);
 				event.set_topic(topic);
@@ -106,7 +106,7 @@ namespace MQCloud {
 				ctx->PublishMessage(result);
 			}
 
-			void AdvertizeTopicEvent(const std::string & pattern, const std::string & topic) {
+			void AdvertizeTopicEvent(const std::string& pattern, const std::string& topic) {
 				auto event = Protocol::AdvertizeTopic();
 				event.set_pattern(pattern);
 				event.set_topic(topic);
@@ -144,7 +144,7 @@ namespace MQCloud {
 
 			void HeartBeatEvent() {
 				auto event = Protocol::HeartBeat();
-
+				
 				Message result;
 				result.data = event.SerializeAsString();
 
@@ -155,7 +155,7 @@ namespace MQCloud {
 			}
 
 		private:
-			void PrepareMessage(Message & result) {
+			void PrepareMessage(Message& result) {
 				result.PatternName = serverPatternEvent;
 				result.topic = serverTopicNodeEvent;
 			}

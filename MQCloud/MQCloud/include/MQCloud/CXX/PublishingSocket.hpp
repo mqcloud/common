@@ -17,7 +17,7 @@ namespace MQCloud {
 	@param connection socket which shall send message
 	@param message
 	*/
-		virtual void CorePublishMessage(std::shared_ptr<Socket> socket, const Message & msg);
+		virtual void CorePublishMessage(std::shared_ptr<Socket> socket, const Message& msg);
 
 		virtual ~PublishingSocketInterface();
 	};

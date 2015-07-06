@@ -7,7 +7,6 @@
 
 namespace MQCloud {
 	struct BackEndConfiguration {
-		std::shared_ptr<ThreadManagementInterface> ThreadingInterface;
 		std::shared_ptr<SubscriberSocketInterface> SubscriberSocketInterface;
 		std::shared_ptr<PublishingSocketInterface> PublishingSocketInterface;
 

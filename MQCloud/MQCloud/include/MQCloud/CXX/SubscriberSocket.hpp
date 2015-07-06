@@ -19,7 +19,7 @@ namespace MQCloud {
 	@param connection Subscriber socket of this node
 	@param callback on accepting new message 
 	*/
-		virtual std::shared_ptr<Socket> CoreConnectSubscribingSocket(std::shared_ptr<Socket> socket, const std::string & addr, std::shared_ptr<OnMessageAction> action);
+		virtual std::shared_ptr<Socket> CoreConnectSubscribingSocket(std::shared_ptr<Socket> socket, const std::string& addr, std::shared_ptr<OnMessageAction> action);
 
 		virtual ~SubscriberSocketInterface();
 	};

@@ -157,21 +157,23 @@ namespace MQCloud {
 
 #else
 
-template <class TR = void, class ... Types>
-struct GenericFunc : std::function<TR (Types...)>
-{
-	GenericFunc() {}
+	template<class TR = void, class ... Types>
+	struct GenericFunc : std::function<TR (Types ...)> {
+		GenericFunc() {}
 
-	GenericFunc(const std::function<TR (Types... t)> & Action) : std::function<TR (Types... t)>(Action) {}
-	virtual TR OnAction(Types ... result) {
-		if(*this) {
-			return (*this)(result...);
+		GenericFunc(const std::function<TR (Types ... t)>& Action) : std::function<TR (Types ... t)>(Action) {}
+
+		virtual TR OnAction(Types ... result) {
+			if(*this) {
+				return (*this)(result...);
+			}
 		}
-	}
-	virtual ~GenericFunc(){}
-};
 
-template<class... Types> using GenericAction = GenericFunc<void, Types...>;
+		virtual ~GenericFunc() {}
+	};
+
+	template<class... Types>
+	using GenericAction = GenericFunc<void, Types...>;
 #endif
 }
 #endif // GENERICFUNC_HPP

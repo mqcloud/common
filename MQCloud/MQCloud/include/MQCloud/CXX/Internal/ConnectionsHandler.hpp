@@ -21,11 +21,11 @@ namespace MQCloud {
 			std::shared_ptr<GeneralMessageHandler> inHandler;
 			std::shared_ptr<StaticResponseHandler> patternTopicPairHandler;
 
-			void OnExternalNodeSocketDisconnect(const std::string & error) {
+			void OnExternalNodeSocketDisconnect(const std::string& error) {
 				//TODO Clear handlers
 			}
 
-			void OnHostNodeSocketDisconnect(const std::string & error) {
+			void OnHostNodeSocketDisconnect(const std::string& error) {
 				//TODO Exchange Error, close up
 			}
 
@@ -41,7 +41,7 @@ namespace MQCloud {
 				inHandler(std::make_shared<GeneralMessageHandler>()),
 				patternTopicPairHandler(std::make_shared<StaticResponseHandler>()) {
 
-				OnDisconnected->AddHandler(std::make_shared<OnError>([&](const std::string & error) {
+				OnDisconnected->AddHandler(std::make_shared<OnError>([&](const std::string& error) {
 					                                                     std::lock_guard<std::mutex> lock_map(connectionMutex);
 					                                                     subscribtionCnnections.erase(subscribtionCnnections.begin(), subscribtionCnnections.end());
 				                                                     }));
@@ -55,18 +55,18 @@ namespace MQCloud {
 
 			}
 
-			void RemoveNode(const std::string & addr) {
+			void RemoveNode(const std::string& addr) {
 				std::lock_guard<std::mutex> lockHandlers(connectionMutex);
 				subscribtionCnnections.erase(addr);
 			}
 
-			void ConnectToExchangeNode(const std::string & addr, std::shared_ptr<OnError> onError) {
+			void ConnectToExchangeNode(const std::string& addr, std::shared_ptr<OnError> onError) {
 				auto connection = ctx->SubscriberSocketInterface->CoreConnectSubscribingSocket(subscribingSocket, addr, inHandler);
 				auto id = connection->SocketId;
 				std::weak_ptr<Socket> weekConnectionPtr = connection;
 				OnExchangeError->AddHandler(onError);
 
-				auto handler = std::make_shared<OnError>([&, weekConnectionPtr, id](const std::string & error) {
+				auto handler = std::make_shared<OnError>([&, weekConnectionPtr, id](const std::string& error) {
 					                                         if(auto weekConnectionSrc = weekConnectionPtr.lock()) {
 						                                         std::lock_guard<std::mutex> lock_map(connectionMutex);
 						                                         subscribtionCnnections.erase(id);
@@ -80,7 +80,7 @@ namespace MQCloud {
 				subscribtionCnnections[id] = connection;
 			}
 
-			void ConnectToNode(const std::string & addr) {
+			void ConnectToNode(const std::string& addr) {
 				auto connection = ctx->SubscriberSocketInterface->CoreConnectSubscribingSocket(subscribingSocket, addr, inHandler);
 				auto id = connection->SocketId;
 				std::weak_ptr<Socket> weekConnectionPtr = connection;
@@ -102,20 +102,20 @@ namespace MQCloud {
 				inHandler->AddHandler(handler);
 			}
 
-			void AddOnMesageHandler(const std::string & pattern, const std::string & topic, std::shared_ptr<OnUserMessageAction> handler) {
+			void AddOnMesageHandler(const std::string& pattern, const std::string& topic, std::shared_ptr<OnUserMessageAction> handler) {
 				patternTopicPairHandler->AddHandler(pattern, topic, handler);
 			}
 
-			void PublishMessage(Message & m) {
+			void PublishMessage(Message& m) {
 				m.serviceId = serviceId;
 				ctx->PublishingSocketInterface->CorePublishMessage(Out, m);
 			}
 
-			void SetServiceId(const std::string & id) {
+			void SetServiceId(const std::string& id) {
 				serviceId = id;
 			}
 
-			void SetHeartBeatRate(const int & heartbeatratems) {
+			void SetHeartBeatRate(const int& heartbeatratems) {
 				HeartBeatRate = heartbeatratems;
 			}
 

@@ -10,11 +10,11 @@
 namespace MQCloud {
 	namespace Internal {
 		// For user on request handling
-		struct StaticResponseHandler : std::enable_shared_from_this<StaticResponseHandler>, OnMessageAction {
+		struct StaticResponseHandler : OnMessageAction {
 			std::map<std::string, std::shared_ptr<OnMessageAction>> handlers;
 			std::mutex mutex;
 
-			virtual void OnAction(const Message & m) {
+			virtual void OnAction(const Message& m) {
 				auto id = m.PatternName + ">";
 				id += m.topic;
 
@@ -28,14 +28,14 @@ namespace MQCloud {
 				}
 			}
 
-			void AddHandler(const std::string & pattern, const std::string & topic, std::shared_ptr<OnMessageAction> handler) {
+			void AddHandler(const std::string& pattern, const std::string& topic, std::shared_ptr<OnMessageAction> handler) {
 				auto id = pattern + ">" + topic;
 
 				std::lock_guard<std::mutex> lockHandlers(mutex);
 				handlers[id] = handler;
 			}
 
-			void RemoveHandler(const std::string & pattern, const std::string & topic) {
+			void RemoveHandler(const std::string& pattern, const std::string& topic) {
 				auto id = pattern + ">" + topic;
 
 				std::lock_guard<std::mutex> lockHandlers(mutex);

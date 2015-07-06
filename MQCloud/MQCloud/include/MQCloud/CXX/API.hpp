@@ -22,11 +22,11 @@ namespace MQCloud {
 			frontEnd = std::make_shared<FrontEnd>(exchangeCtx, runningBackEnd->CreateContext());
 		}
 
-		API(std::shared_ptr<BackEndFactory> runningBackEnd, const std::string & exchengeAdress) {
+		API(std::shared_ptr<BackEndFactory> runningBackEnd, const std::string& exchengeAdress) {
 			frontEnd = std::make_shared<FrontEnd>(runningBackEnd, exchengeAdress);
 		}
 
-		void Connect(const std::string & desiredName, std::shared_ptr<OnConnectedAction> handler) {
+		void Connect(const std::string& desiredName, std::shared_ptr<OnConnectedAction> handler) {
 			frontEnd->Connect(desiredName, handler);
 		}
 
@@ -39,11 +39,11 @@ namespace MQCloud {
 		}
 
 		// Request-Reply, Request-Reply continuos *(nonblocking)
-		void Request(const UserMessage & out, std::shared_ptr<OnUserMessageAction> OnMessage) {
+		void Request(const UserMessage& out, std::shared_ptr<OnUserMessageAction> OnMessage) {
 			auto message = (Message*)&out;
 			message->PatternName = "_RR";
 			frontEnd->RegisterResponseCalback("_RR", message->topic, message->GetMessageId(),
-			                                  [=](const Message & in) {
+			                                  [=](const Message& in) {
 				                                  auto out = UserMessage(in);
 				                                  OnMessage->OnAction(out);
 			                                  });
@@ -51,65 +51,65 @@ namespace MQCloud {
 
 		}
 
-		void RequestTarget(const UserMessage & out, const std::string & target, std::shared_ptr<OnUserMessageAction> OnMessage) {
+		void RequestTarget(const UserMessage& out, const std::string& target, std::shared_ptr<OnUserMessageAction> OnMessage) {
 			auto message = (Message*)&out;
 			message->PatternName = "_RR";
 			frontEnd->RegisterResponseCalback("_RR", message->topic, message->GetMessageId(),
-			                                  [=](const Message & in) {
+			                                  [=](const Message& in) {
 				                                  auto out = UserMessage(in);
 				                                  OnMessage->OnAction(out);
 			                                  });
 			frontEnd->PublishMessageToNode(target, *message);
 		}
 
-		void AdvertizeReplysOnTopic(const std::string & topic, std::shared_ptr<OnUserMessageAction> OnMessage) {
-			frontEnd->Subscribe("_RR", topic, std::make_shared<OnNodesAction>(), [=](const Message & m) {
+		void AdvertizeReplysOnTopic(const std::string& topic, std::shared_ptr<OnUserMessageAction> OnMessage) {
+			frontEnd->Subscribe("_RR", topic, std::make_shared<OnNodesAction>(), [=](const Message& m) {
 				                    auto message = UserMessage(m);
 				                    OnMessage->OnAction(message);
 			                    });
 		}
 
-		void AdvertizeRequestsOnTopic(const std::string & topic) {
+		void AdvertizeRequestsOnTopic(const std::string& topic) {
 			frontEnd->AdvertiseTopic("_RR", topic);
 			frontEnd->RegisterResponsesHandler("_RR", topic);
 		}
 
-		void CloseRequestsOnTopic(const std::string & topic) {
+		void CloseRequestsOnTopic(const std::string& topic) {
 			frontEnd->AdvertiseTopic("_RR", topic);
 		}
 
-		void CloseReplysOnTopic(const std::string & topic) {
+		void CloseReplysOnTopic(const std::string& topic) {
 			frontEnd->Unsubscribe("RR", topic);
 		}
 
 		// Publish-Subscribe
-		void AdvertizePublishingOnTopic(const std::string & topic) {
+		void AdvertizePublishingOnTopic(const std::string& topic) {
 			frontEnd->AdvertiseTopic("_PS", topic);
 		}
 
-		void PublishMessage(const UserMessage & out) {
+		void PublishMessage(const UserMessage& out) {
 			auto message = (Message*)&out;
 			message->PatternName = "_PS";
 			frontEnd->PublishMessageToAllNodes(*message);
 		}
 
-		void ClosePublishingOnTopic(const std::string & topic) {
+		void ClosePublishingOnTopic(const std::string& topic) {
 			frontEnd->RejectTopic("_PS", topic);
 		}
 
-		void Subscribe(const std::string & topic, std::shared_ptr<OnUserMessageAction> OnMessage) {
-			frontEnd->Subscribe("_PS", topic, [=](const Message & m) {
+		void Subscribe(const std::string& topic, std::shared_ptr<OnUserMessageAction> OnMessage) {
+			frontEnd->Subscribe("_PS", topic, [=](const Message& m) {
 				                    auto message = UserMessage(m);
 				                    OnMessage->OnAction(message);
 			                    });
 		}
 
-		void UnSubscribe(const std::string & topic) {
+		void UnSubscribe(const std::string& topic) {
 			frontEnd->Unsubscribe("_PS", topic);
 		}
 
 		// Survey-Respondent *(nonblocking, nonforcing)
-		void RequestMany(int MaxRespondents, int timeout, const UserMessage & out, std::shared_ptr<OnUserMessagesAction> OnReplyFromMany) {
+		void RequestMany(int MaxRespondents, int timeout, const UserMessage& out, std::shared_ptr<OnUserMessagesAction> OnReplyFromMany) {
 			auto message = (Message*)&out;
 			message->PatternName = "_RR";
 			frontEnd->GetAllSubscribedNodes("_RR", message->topic, [=](std::vector<std::string> r) {
