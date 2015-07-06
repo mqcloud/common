@@ -12,17 +12,18 @@
 #include <mutex>
 #include <map>
 
-#include <MQCloud/CXX/Message.hpp>
-#include <MQCloud/CXX/UserMessage.hpp>
-#include <MQCloud/CXX/Protocol.pb.h>
-#include <MQCloud/CXX/GenericFunc.hpp>
-#include <MQCloud/CXX/GenericSignal.hpp>
+#include <MQCloud/Message.hpp>
+#include <MQCloud/UserMessage.hpp>
+#include <MQCloud/Protocol.pb.h>
+#include <MQCloud/GenericFunc.hpp>
+#include <MQCloud/GenericSignal.hpp>
 
 #ifndef MQCloudCXX
 #define MQCloudCXX
 
 namespace MQCloud {
-	namespace Internal { }
+    namespace Internal {
+    }
 }
 #endif // MQCloudCXX
 

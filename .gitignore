@@ -183,5 +183,6 @@ UpgradeLog*.htm
 FakesAssemblies/
 
 # MQCloud depends
-MQCloud/MQCloud/external/lib/*
-MQCloud/MQCloud/external/include/*
+MQCloud/MQCloud/external/*
+!MQCloud/MQCloud/external/Read*
+!MQCloud/MQCloud/external/LI*
