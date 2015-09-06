@@ -1,8 +1,8 @@
-#include <atomic>
-#include <string>
-
 #ifndef MESSAGEHPP
 #define MESSAGEHPP
+
+#include <atomic>
+#include <string>
 
 namespace MQCloud {
     enum MessageState {

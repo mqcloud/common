@@ -1,4 +1,7 @@
+// Here we are using TBB. In case of slowdown (1 000 000+ handlers concurrently accessed ) one would use Folly AtomicHashMap.
+// Note that Folly can be used for limited number of platforms!
 #include <MQCloud/Delegates.hpp>
+#include <tbb/concurrent_hash_map.h>
 #include <mutex>
 #include <memory>
 #include <map>
@@ -11,38 +14,16 @@ namespace MQCloud {
         // For user on response handling
         struct ResponseHandler :
                 OnUserMessageAction {
-            std::map<int, std::shared_ptr<OnUserMessageAction>> handlers;
-            std::mutex                                          mutex;
+            tbb::concurrent_hash_map<int, std::shared_ptr<OnUserMessageAction>> handlers;
 
-            virtual void OnAction(const UserMessage &m) {
-                auto id = m.GetMessageId();
+            virtual void OnAction(const UserMessage &m);
 
-                std::unique_lock<std::mutex> lockHandlers(mutex);
-                lockHandlers.lock();
-                auto it = handlers.find(id);
-                if (it != handlers.end()) {
-                    auto action = it->second;
-                    handlers.erase(it);
-                    lockHandlers.unlock();
-                    action->OnAction(m);
-                }
-            }
+            void AddHandler(const int &id, std::shared_ptr<OnUserMessageAction> handler);
 
-            void AddHandler(const int &id, std::shared_ptr<OnUserMessageAction> handler) {
-                std::lock_guard<std::mutex> lockHandlers(mutex);
-                handlers[id] = handler;
-            }
+            void RemoveHandler(const int &id);
 
-            void RemoveHandler(const int &id) {
-                std::lock_guard<std::mutex> lockHandlers(mutex);
-                auto                        it = handlers.find(id);
-                if (it != handlers.end()) {
-                    handlers.erase(it);
-                }
-            }
+            void FreeAll();
         };
+
     }
 }
-
-#endif // !RESPONSEHANDLER_HPP
-

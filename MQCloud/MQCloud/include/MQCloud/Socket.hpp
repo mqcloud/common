@@ -8,13 +8,14 @@
 namespace MQCloud {
     struct Socket {
         std::string  SocketId;
-
+        virtual void Connect();
         virtual void AddDisconnectHandler(std::shared_ptr<OnError> handler);
 
         //Shall close socket
         virtual ~Socket() {
         }
     };
+
 }
 
 }

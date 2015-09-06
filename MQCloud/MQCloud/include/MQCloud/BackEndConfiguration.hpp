@@ -7,8 +7,8 @@
 
 namespace MQCloud {
     struct BackEndConfiguration {
-        std::shared_ptr<SubscriberSocketInterface> SubscriberSocketInterface;
-        std::shared_ptr<PublishingSocketInterface> PublishingSocketInterface;
+        std::shared_ptr<SubscriberSocketInterface> SubscriberSocket;
+        std::shared_ptr<PublishingSocketInterface> PublishingSocket;
 
         std::string BackEndName; // BackEndName must include version only if one can not connect this backEnd to its older version
 

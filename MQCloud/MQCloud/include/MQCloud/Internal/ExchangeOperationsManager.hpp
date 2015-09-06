@@ -3,6 +3,7 @@
 #include <MQCloud/Internal/MessagesManager.hpp>
 #include <MQCloud/Internal/PatternTopicResponseHandler.hpp>
 #include <MQCloud/Protocol.pb.h>
+#include "ResponseHandler.hpp"
 
 #ifndef EXCHANGEOPERATIONSMANAGER_HPP
 #define EXCHANGEOPERATIONSMANAGER_HPP

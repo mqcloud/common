@@ -1,9 +1,9 @@
+#ifndef UserMessageHpp
+#define UserMessageHpp
+
 #include <string>
 #include <functional>
 #include <MQCloud/Message.hpp>
-
-#ifndef UserMessageHpp
-#define UserMessageHpp
 
 namespace MQCloud {
     struct UserMessage :

@@ -8,12 +8,15 @@
 #include <memory>
 #include <future>
 #include <MQCloud/ThreadManagement.hpp>
+#include <tbb/task_group.h>
 
 namespace MQCloud {
     namespace Internal {
-        struct ThreadManager :
+        struct ThreadManagerTbbImpl :
                 ThreadManagementInterface {
-
+        private:
+            tbb::task_group tasks;
+        public:
             virtual void AddTask(std::shared_ptr<::MQCloud::GenericAction> action);
 
             virtual std::shared_ptr<TaskId> RepeatTask(int delayMilliseconds,

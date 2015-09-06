@@ -7,11 +7,12 @@
 #include <MQCloud/ExtensiabiletyEventsHandler.hpp>
 
 #include <unordered_map>
+#include <MQCloud/Internal/ThreadManagerTbbImpl.hpp>
 
 
 namespace MQCloud {
     // Extensiabilety //
-    // operations will de treated as sync thus after CorePublishMessage call CoreMessage message deallocation will begin
+    // operations will de treated as sync thus after PublishMessage call CoreMessage message deallocation will begin
     // calls will be performed from one thread per socket
     struct FrontEnd :
 #ifndef SWIG
@@ -43,7 +44,7 @@ namespace MQCloud {
                 systemEventsManager(systemConnectionHandler, runningCtx->BackEndName),
                 systemOperationsManager(systemConnectionHandler, runningCtx->BackEndName),
                 lastHandlerId(0),
-                ThreadingInterface(std::make_shared<ThreadManager>()) {
+                ThreadingInterface(std::make_shared<MQCloud::Internal::ThreadManagerTbbImpl>()) {
         }
 
         FrontEnd(std::shared_ptr<BackEndConfiguration> runningCtx, const std::string &systemAdr) :
@@ -54,7 +55,7 @@ namespace MQCloud {
                 systemOperationsManager(systemConnectionHandler, runningCtx->BackEndName),
                 runningConnectionHandler(systemConnectionHandler),
                 lastHandlerId(0),
-                ThreadingInterface(std::make_shared<ThreadManager>()) {
+                ThreadingInterface(std::make_shared<MQCloud::Internal::ThreadManagerTbbImpl>()) {
         }
 
         void Connect(const std::string &serviceName, std::shared_ptr<OnConnectedAction> OnConnected) {
@@ -107,7 +108,7 @@ namespace MQCloud {
 
         void Subscribe(const std::string &pattern,
                        const std::string &topic,
-                       std::shared_ptr<OnNodesAction> OnSubscribed,
+                       std::function<void (std::vector<const std::string &>)> OnSubscribed,
                        std::function<void(const Message &)> OnMessage);
 
         void RegisterResponsesHandler(const std::string &pattern, const std::string &topic);

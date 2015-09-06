@@ -1,4 +1,4 @@
-﻿'comment: created by OJ'
+'comment: created by OJ'
 'comment: tested with http://www.plantuml.com/plantuml/form'
 'comment: skinparam monochrome true'
 
@@ -6,60 +6,6 @@ participant Subscriber
 participant Exchange
 participant PublisherA
 participant PublisherB
-== No Subscribers ==
-
-PublisherA -> PublisherA: AdvertiseTopic Call
-activate PublisherA
-PublisherA-->Exchange:AdvertizeTopic
-
-activate PublisherA
-activate Exchange
-Exchange-->PublisherA:OnNodeAdvertisedTopic
-deactivate Exchange
-deactivate PublisherA
-
-PublisherA-->Exchange:GetAllSubscribersRequest
-activate PublisherA
-activate Exchange
-Exchange-->PublisherA:GetAllSubscribersResponse
-deactivate Exchange
-deactivate PublisherA
-deactivate PublisherA
-note right : Now Publisher A can send messages yet there are no subscribers yet
- 
-== Subscriber wants to subscribe ==
-Subscriber-> Subscriber: Subscribe Call
-activate Subscriber
-Subscriber-->Exchange: GetAllPublishersRequest
-activate Exchange
-activate Subscriber
-Exchange-->Subscriber: GetAllPublishersResponse
-deactivate Exchange
-deactivate Subscriber
-Subscriber->PublisherA:Connect
-activate Subscriber
-Subscriber-->Exchange:OnConnectionEstablished
-activate Exchange
-Subscriber->Subscriber:OnNodeConnectedToOther
-deactivate Subscriber
-Exchange-->PublisherA:OnConnectionEstablished
-deactivate Exchange
-activate PublisherA
-PublisherA->PublisherA:OnNodeConnectedToThis
-deactivate PublisherA
-Subscriber-->Exchange:Subscribe
-activate Exchange
-activate Subscriber
-note right : Inform Publishers that a node subscribed
-
-
-Exchange-->PublisherA:OnNodeSubscribedToTopic
-Exchange-->Subscriber:OnNodeSubscribedToTopic
-deactivate Subscriber
-deactivate Exchange
-deactivate Subscriber
-
-note right : Now Publisher A can send messages to a target
 
 == Another Publisher to that same pattern/topic apeared ==
 PublisherB->PublisherB:AdvertizeTopic call

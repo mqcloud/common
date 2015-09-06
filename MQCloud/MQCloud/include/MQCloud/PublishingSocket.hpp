@@ -11,14 +11,14 @@ namespace MQCloud {
     ment to be sync
     @return connection Publishing socket
     */
-        virtual std::shared_ptr<Socket> CoreCreatePublishingSocket();
+        virtual std::shared_ptr<Socket> CreatePublishingSocket();
 
         /*
     ment to be sync
     @param connection socket which shall send message
     @param message
     */
-        virtual void CorePublishMessage(std::shared_ptr<Socket> socket, const Message &msg);
+        virtual void PublishMessage(std::shared_ptr<Socket> socket, const Message &msg);
 
         virtual ~PublishingSocketInterface();
     };
