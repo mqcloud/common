@@ -19,7 +19,7 @@ namespace MQCloud {
             std::shared_ptr<Socket>                        subscribingSocket;
             std::string                                    serviceId;
 
-            tbb::concurrent_hash_map<std::string, std::shared_ptr<Socket>> subscribtionCnnections;
+            tbb::concurrent_hash_map<std::string, std::shared_ptr<SocketConnection>> subscribtionCnnections;
 
             std::shared_ptr<GeneralMessageHandler>         inHandler;
             std::shared_ptr<StaticResponseHandler>         patternTopicPairHandler;
@@ -70,6 +70,10 @@ namespace MQCloud {
             void SetHeartBeatRate(const int &heartbeatratems);
 
             int GetHeartBeatRate() const;
+
+			std::string getOutgoingUrl() {
+				return Out->SocketId;
+			}
         };
     }
 }

@@ -37,7 +37,7 @@ namespace MQCloud {
                 Protocol::ConnectRequest request;
                 request.set_nodename(desiredServiceName);
                 request.set_backendname(runningBackEndName);
-
+				request.set_nodeurl(ctx->Out->SocketId);
                 Protocol::OutgoingOperation operation;
 
                 operation.set_typecode(Protocol::OutgoingOperationTypeConnectRequest);

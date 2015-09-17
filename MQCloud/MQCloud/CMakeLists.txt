@@ -10,14 +10,24 @@ file(GLOB SOURCES
     "src/*"
 )
 
+file(GLOB TEST_SOURCES
+        "../MQCloudTest/*"
+        )
+
 set(SOURCE_FILES
     external/ReadMe.txt
     ${SOURCES}
     )
 
+set(TEST_SOURCE_FILES
+        external/ReadMe.txt
+        ${TEST_SOURCES}
+        )
+
 
 
 include_directories(external)
-include_directories(include)
+include_directories(external/include)
 
-add_executable(MQCloud ${SOURCE_FILES})
+add_library(MQCloud ${SOURCE_FILES})
+add_executable(MQCloudTest ${TEST_SOURCE_FILES})

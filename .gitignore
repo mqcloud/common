@@ -185,4 +185,7 @@ FakesAssemblies/
 # MQCloud depends
 MQCloud/MQCloud/external/*
 !MQCloud/MQCloud/external/Read*
-!MQCloud/MQCloud/external/LI*
+!MQCloud/MQCloud/external/lic*
+MQCloud/ZMQBackEnd/external/*
+!MQCloud/ZMQBackEnd/external/Read*
+!MQCloud/ZMQBackEnd/external/lic*

@@ -11,34 +11,47 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\MQCloud\CXX\API.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\BackEndConfiguration.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\BackEndFactory.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Delegates.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\EventsHandler.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\ExtensiabiletyEventsHandler.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\FrontEnd.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\GenericFunc.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\GenericSignal.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Internal\ConnectionsHandler.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Internal\ExchangeEventsHandler.h" />
-    <ClInclude Include="include\MQCloud\CXX\Internal\ExchangeEventsManager.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Internal\ExchangeOperationsManager.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Internal\MessagesManager.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Internal\PatternTopicResponseHandler.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Internal\ResponseHandler.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Internal\Signals.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Message.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Protocol.pb.h" />
-    <ClInclude Include="include\MQCloud\CXX\PublishingSocket.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\Socket.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\SubscriberSocket.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\ThreadManagement.hpp" />
-    <ClInclude Include="include\MQCloud\CXX\UserMessage.hpp" />
-    <ClInclude Include="include\MQCloud\MQCloud.hpp" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\CXX\Protocol.pb.cc" />
+    <ClInclude Include="include\MQCloud\API.hpp" />
+    <ClInclude Include="include\MQCloud\BackEndConfiguration.hpp" />
+    <ClInclude Include="include\MQCloud\BackEndFactory.hpp" />
+    <ClInclude Include="include\MQCloud\Delegates.hpp" />
+    <ClInclude Include="include\MQCloud\EventsHandler.hpp" />
+    <ClInclude Include="include\MQCloud\ExtensiabiletyEventsHandler.hpp" />
+    <ClInclude Include="include\MQCloud\FrontEnd.hpp" />
+    <ClInclude Include="include\MQCloud\GenericFunc.hpp" />
+    <ClInclude Include="include\MQCloud\GenericSignal.hpp" />
+    <ClInclude Include="include\MQCloud\Internal\ConnectionsHandler.hpp" />
+    <ClInclude Include="include\MQCloud\Internal\ExchangeEventsHandler.hpp" />
+    <ClInclude Include="include\MQCloud\Internal\ExchangeEventsManager.hpp" />
+    <ClInclude Include="include\MQCloud\Internal\ExchangeOperationsManager.hpp" />
+    <ClInclude Include="include\MQCloud\Internal\MessagesManager.hpp" />
+    <ClInclude Include="include\MQCloud\Internal\PatternTopicResponseHandler.hpp" />
+    <ClInclude Include="include\MQCloud\Internal\ResponseHandler.hpp" />
+    <ClInclude Include="include\MQCloud\Internal\Signals.hpp" />
+    <ClInclude Include="include\MQCloud\Internal\ThreadManagerTbbImpl.hpp" />
+    <ClInclude Include="include\MQCloud\Message.hpp" />
+    <ClInclude Include="include\MQCloud\MQCloud.hpp" />
+    <ClInclude Include="include\MQCloud\Protocol.pb.h" />
+    <ClInclude Include="include\MQCloud\PublishingSocket.hpp" />
+    <ClInclude Include="include\MQCloud\Socket.hpp" />
+    <ClInclude Include="include\MQCloud\SubscriberSocket.hpp" />
+    <ClInclude Include="include\MQCloud\TaskId.hpp" />
+    <ClInclude Include="include\MQCloud\TaskManagerThread.hpp" />
+    <ClInclude Include="include\MQCloud\ThreadManagement.hpp" />
+    <ClInclude Include="include\MQCloud\UserMessage.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\API.cpp" />
+    <ClCompile Include="src\Internal\ConnectionsHandler.cpp" />
+    <ClCompile Include="src\Internal\ExchangeEventsHandler.cpp" />
+    <ClCompile Include="src\Internal\ExchangeEventsManager.cpp" />
+    <ClCompile Include="src\Internal\ResponseHandler.cpp" />
+    <ClCompile Include="src\Internal\ThreadManagerTbbImpl.cpp" />
+    <ClCompile Include="src\Protocol.pb.cc" />
+    <ClCompile Include="src\TaskManagerThread.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{70DB0C46-6471-44E6-9DDF-C611A86C52DE}</ProjectGuid>
@@ -49,7 +62,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -112,5 +125,18 @@
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\gtest.1.7.0.1\build\native\gtest.targets" Condition="Exists('..\packages\gtest.1.7.0.1\build\native\gtest.targets')" />
+    <Import Project="..\packages\tbb.redist.4.2.3.1\build\native\tbb.redist.targets" Condition="Exists('..\packages\tbb.redist.4.2.3.1\build\native\tbb.redist.targets')" />
+    <Import Project="..\packages\tbb.4.2.3.1\build\native\tbb.targets" Condition="Exists('..\packages\tbb.4.2.3.1\build\native\tbb.targets')" />
+    <Import Project="..\packages\protobuf.2.5.0.0\build\native\protobuf.targets" Condition="Exists('..\packages\protobuf.2.5.0.0\build\native\protobuf.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\gtest.1.7.0.1\build\native\gtest.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\gtest.1.7.0.1\build\native\gtest.targets'))" />
+    <Error Condition="!Exists('..\packages\tbb.redist.4.2.3.1\build\native\tbb.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\tbb.redist.4.2.3.1\build\native\tbb.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\tbb.4.2.3.1\build\native\tbb.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\tbb.4.2.3.1\build\native\tbb.targets'))" />
+    <Error Condition="!Exists('..\packages\protobuf.2.5.0.0\build\native\protobuf.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\protobuf.2.5.0.0\build\native\protobuf.targets'))" />
+  </Target>
 </Project>

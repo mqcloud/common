@@ -44,7 +44,7 @@ namespace MQCloud {
         void CloseReplysOnTopic(const std::string &topic);
 
         void AdvertizePublishingOnTopic(const std::string &topic);
-
+			
         void PublishMessage(const UserMessage &out);
 
         void ClosePublishingOnTopic(const std::string &topic);

@@ -2,7 +2,6 @@
 // source: MQCloud.Internal.Protocol.proto
 
 #define INTERNAL_SUPPRESS_PROTOBUF_FIELD_DEPRECATION
-
 #include "MQCloud.Internal.Protocol.pb.h"
 
 #include <algorithm>
@@ -15,10056 +14,10287 @@
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-
 // @@protoc_insertion_point(includes)
 
 namespace MQCloud {
-    namespace Internal {
-        namespace Protocol {
-            namespace {
-                const ::google::protobuf::Descriptor *AdvertizeTopic_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *AdvertizeTopic_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *ConnectRequest_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *ConnectRequest_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *ConnectResponse_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *ConnectResponse_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *Disconnect_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *Disconnect_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *GetAllPublishersRequest_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *GetAllPublishersRequest_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *GetAllPublishersResponse_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *GetAllPublishersResponse_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *GetAllSubscribersRequest_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *GetAllSubscribersRequest_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *GetAllSubscribersResponse_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *GetAllSubscribersResponse_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *GetPublisherRequest_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *GetPublisherRequest_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *GetPublisherResponse_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *GetPublisherResponse_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *GetSubscriberRequest_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *GetSubscriberRequest_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *GetSubscriberResponse_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *GetSubscriberResponse_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *HeartBeat_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *HeartBeat_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *IncomingEvent_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *IncomingEvent_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *IncomingOperation_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *IncomingOperation_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *OnConnectionClosed_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *OnConnectionClosed_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *OnConnectionEstablished_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *OnConnectionEstablished_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *OnNodeAdvertisedTopic_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *OnNodeAdvertisedTopic_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *OnNodeRejectedTopic_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *OnNodeRejectedTopic_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *OnNodeSubscribedToTopic_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *OnNodeSubscribedToTopic_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *OnNodeUnavaliable_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *OnNodeUnavaliable_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *OnNodeUnsubscribedFromTopic_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *OnNodeUnsubscribedFromTopic_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *OutgoingEvent_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *OutgoingEvent_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *OutgoingOperation_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *OutgoingOperation_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *RejectTopic_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *RejectTopic_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *ReportNodeUnavaliable_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *ReportNodeUnavaliable_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *Subscribe_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *Subscribe_reflection_ = NULL;
-                const ::google::protobuf::Descriptor *UnSubscribe_descriptor_ = NULL;
-                const ::google::protobuf::internal::GeneratedMessageReflection *UnSubscribe_reflection_ = NULL;
-                const ::google::protobuf::EnumDescriptor *IncomingEventType_descriptor_     = NULL;
-                const ::google::protobuf::EnumDescriptor *IncomingOperationType_descriptor_ = NULL;
-                const ::google::protobuf::EnumDescriptor *OutgoingEventType_descriptor_     = NULL;
-                const ::google::protobuf::EnumDescriptor *OutgoingOperationType_descriptor_ = NULL;
-            } // namespace
+namespace Internal {
+namespace Protocol {
+
+namespace {
+
+const ::google::protobuf::Descriptor* AdvertizeTopic_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  AdvertizeTopic_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ConnectRequest_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ConnectRequest_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ConnectResponse_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ConnectResponse_reflection_ = NULL;
+const ::google::protobuf::Descriptor* Disconnect_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  Disconnect_reflection_ = NULL;
+const ::google::protobuf::Descriptor* GetAllPublishersRequest_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  GetAllPublishersRequest_reflection_ = NULL;
+const ::google::protobuf::Descriptor* GetAllPublishersResponse_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  GetAllPublishersResponse_reflection_ = NULL;
+const ::google::protobuf::Descriptor* GetAllSubscribersRequest_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  GetAllSubscribersRequest_reflection_ = NULL;
+const ::google::protobuf::Descriptor* GetAllSubscribersResponse_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  GetAllSubscribersResponse_reflection_ = NULL;
+const ::google::protobuf::Descriptor* GetPublisherRequest_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  GetPublisherRequest_reflection_ = NULL;
+const ::google::protobuf::Descriptor* GetPublisherResponse_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  GetPublisherResponse_reflection_ = NULL;
+const ::google::protobuf::Descriptor* GetSubscriberRequest_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  GetSubscriberRequest_reflection_ = NULL;
+const ::google::protobuf::Descriptor* GetSubscriberResponse_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  GetSubscriberResponse_reflection_ = NULL;
+const ::google::protobuf::Descriptor* HeartBeat_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  HeartBeat_reflection_ = NULL;
+const ::google::protobuf::Descriptor* IncomingEvent_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  IncomingEvent_reflection_ = NULL;
+const ::google::protobuf::Descriptor* IncomingOperation_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  IncomingOperation_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OnConnectionClosed_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OnConnectionClosed_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OnConnectionEstablished_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OnConnectionEstablished_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OnNodeAdvertisedTopic_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OnNodeAdvertisedTopic_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OnNodeRejectedTopic_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OnNodeRejectedTopic_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OnNodeSubscribedToTopic_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OnNodeSubscribedToTopic_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OnNodeUnavaliable_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OnNodeUnavaliable_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OnNodeUnsubscribedFromTopic_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OnNodeUnsubscribedFromTopic_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OutgoingEvent_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OutgoingEvent_reflection_ = NULL;
+const ::google::protobuf::Descriptor* OutgoingOperation_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  OutgoingOperation_reflection_ = NULL;
+const ::google::protobuf::Descriptor* RejectTopic_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  RejectTopic_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ReportNodeUnavaliable_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ReportNodeUnavaliable_reflection_ = NULL;
+const ::google::protobuf::Descriptor* Subscribe_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  Subscribe_reflection_ = NULL;
+const ::google::protobuf::Descriptor* UnSubscribe_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  UnSubscribe_reflection_ = NULL;
+const ::google::protobuf::EnumDescriptor* IncomingEventType_descriptor_ = NULL;
+const ::google::protobuf::EnumDescriptor* IncomingOperationType_descriptor_ = NULL;
+const ::google::protobuf::EnumDescriptor* OutgoingEventType_descriptor_ = NULL;
+const ::google::protobuf::EnumDescriptor* OutgoingOperationType_descriptor_ = NULL;
+
+}  // namespace
 
 
-            void protobuf_AssignDesc_MQCloud_2eInternal_2eProtocol_2eproto() {
-                protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                const ::google::protobuf::FileDescriptor *file = ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-                        "MQCloud.Internal.Protocol.proto");
-                GOOGLE_CHECK(file != NULL);
-                AdvertizeTopic_descriptor_ = file->message_type(0);
-                static const int AdvertizeTopic_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdvertizeTopic, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdvertizeTopic, topic_),
-                };
-                AdvertizeTopic_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        AdvertizeTopic_descriptor_, AdvertizeTopic::default_instance_, AdvertizeTopic_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdvertizeTopic, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdvertizeTopic, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(AdvertizeTopic));
-                ConnectRequest_descriptor_ = file->message_type(1);
-                static const int ConnectRequest_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectRequest, nodename_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectRequest, backendname_),
-                };
-                ConnectRequest_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        ConnectRequest_descriptor_, ConnectRequest::default_instance_, ConnectRequest_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectRequest, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectRequest, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(ConnectRequest));
-                ConnectResponse_descriptor_ = file->message_type(2);
-                static const int ConnectResponse_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectResponse, realnodename_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectResponse, heartbeatratems_),
-                };
-                ConnectResponse_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        ConnectResponse_descriptor_, ConnectResponse::default_instance_, ConnectResponse_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectResponse, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectResponse, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(ConnectResponse));
-                Disconnect_descriptor_ = file->message_type(3);
-                static const int Disconnect_offsets_[1] = {
-                };
-                Disconnect_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        Disconnect_descriptor_, Disconnect::default_instance_, Disconnect_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Disconnect, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Disconnect, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(Disconnect));
-                GetAllPublishersRequest_descriptor_ = file->message_type(4);
-                static const int GetAllPublishersRequest_offsets_[3] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersRequest, requestid_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersRequest, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersRequest, topic_),
-                };
-                GetAllPublishersRequest_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        GetAllPublishersRequest_descriptor_, GetAllPublishersRequest::default_instance_,
-                        GetAllPublishersRequest_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersRequest, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersRequest, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(GetAllPublishersRequest));
-                GetAllPublishersResponse_descriptor_ = file->message_type(5);
-                static const int GetAllPublishersResponse_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersResponse, requestid_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersResponse, nodes_),
-                };
-                GetAllPublishersResponse_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        GetAllPublishersResponse_descriptor_, GetAllPublishersResponse::default_instance_,
-                        GetAllPublishersResponse_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersResponse, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersResponse, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(GetAllPublishersResponse));
-                GetAllSubscribersRequest_descriptor_ = file->message_type(6);
-                static const int GetAllSubscribersRequest_offsets_[3] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersRequest, requestid_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersRequest, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersRequest, topic_),
-                };
-                GetAllSubscribersRequest_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        GetAllSubscribersRequest_descriptor_, GetAllSubscribersRequest::default_instance_,
-                        GetAllSubscribersRequest_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersRequest, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersRequest, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(GetAllSubscribersRequest));
-                GetAllSubscribersResponse_descriptor_ = file->message_type(7);
-                static const int GetAllSubscribersResponse_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersResponse, requestid_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersResponse, nodes_),
-                };
-                GetAllSubscribersResponse_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        GetAllSubscribersResponse_descriptor_, GetAllSubscribersResponse::default_instance_,
-                        GetAllSubscribersResponse_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersResponse, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersResponse, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(GetAllSubscribersResponse));
-                GetPublisherRequest_descriptor_ = file->message_type(8);
-                static const int GetPublisherRequest_offsets_[3] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherRequest, requestid_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherRequest, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherRequest, topic_),
-                };
-                GetPublisherRequest_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        GetPublisherRequest_descriptor_, GetPublisherRequest::default_instance_,
-                        GetPublisherRequest_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherRequest, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherRequest, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(GetPublisherRequest));
-                GetPublisherResponse_descriptor_ = file->message_type(9);
-                static const int GetPublisherResponse_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherResponse, requestid_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherResponse, node_),
-                };
-                GetPublisherResponse_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        GetPublisherResponse_descriptor_, GetPublisherResponse::default_instance_,
-                        GetPublisherResponse_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherResponse, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherResponse, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(GetPublisherResponse));
-                GetSubscriberRequest_descriptor_ = file->message_type(10);
-                static const int GetSubscriberRequest_offsets_[3] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberRequest, requestid_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberRequest, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberRequest, topic_),
-                };
-                GetSubscriberRequest_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        GetSubscriberRequest_descriptor_, GetSubscriberRequest::default_instance_,
-                        GetSubscriberRequest_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberRequest, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberRequest, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(GetSubscriberRequest));
-                GetSubscriberResponse_descriptor_ = file->message_type(11);
-                static const int GetSubscriberResponse_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberResponse, requestid_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberResponse, node_),
-                };
-                GetSubscriberResponse_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        GetSubscriberResponse_descriptor_, GetSubscriberResponse::default_instance_,
-                        GetSubscriberResponse_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberResponse, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberResponse, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(GetSubscriberResponse));
-                HeartBeat_descriptor_ = file->message_type(12);
-                static const int HeartBeat_offsets_[1] = {
-                };
-                HeartBeat_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        HeartBeat_descriptor_, HeartBeat::default_instance_, HeartBeat_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HeartBeat, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HeartBeat, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(HeartBeat));
-                IncomingEvent_descriptor_ = file->message_type(13);
-                static const int IncomingEvent_offsets_[8] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, typecode_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onconnectionclosed_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onconnectionestablished_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onnodeadvertisedtopic_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onnoderejectedtopic_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onnodesubscribedtotopic_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onnodeunavaliable_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onnodeunsubscribedfromtopic_),
-                };
-                IncomingEvent_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        IncomingEvent_descriptor_, IncomingEvent::default_instance_, IncomingEvent_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(IncomingEvent));
-                IncomingOperation_descriptor_ = file->message_type(14);
-                static const int IncomingOperation_offsets_[6] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, typecode_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, connectresponse_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, getpublisherresponse_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, getallpublishersresponse_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, getsubscriberresponse_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, getallsubscribersresponse_),
-                };
-                IncomingOperation_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        IncomingOperation_descriptor_, IncomingOperation::default_instance_, IncomingOperation_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(IncomingOperation));
-                OnConnectionClosed_descriptor_ = file->message_type(15);
-                static const int OnConnectionClosed_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionClosed, fromnode_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionClosed, tonode_),
-                };
-                OnConnectionClosed_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        OnConnectionClosed_descriptor_, OnConnectionClosed::default_instance_,
-                        OnConnectionClosed_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionClosed, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionClosed, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(OnConnectionClosed));
-                OnConnectionEstablished_descriptor_ = file->message_type(16);
-                static const int OnConnectionEstablished_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionEstablished, fromnode_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionEstablished, tonode_),
-                };
-                OnConnectionEstablished_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        OnConnectionEstablished_descriptor_, OnConnectionEstablished::default_instance_,
-                        OnConnectionEstablished_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionEstablished, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionEstablished, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(OnConnectionEstablished));
-                OnNodeAdvertisedTopic_descriptor_ = file->message_type(17);
-                static const int OnNodeAdvertisedTopic_offsets_[3] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeAdvertisedTopic, node_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeAdvertisedTopic, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeAdvertisedTopic, topic_),
-                };
-                OnNodeAdvertisedTopic_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        OnNodeAdvertisedTopic_descriptor_, OnNodeAdvertisedTopic::default_instance_,
-                        OnNodeAdvertisedTopic_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeAdvertisedTopic, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeAdvertisedTopic, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(OnNodeAdvertisedTopic));
-                OnNodeRejectedTopic_descriptor_ = file->message_type(18);
-                static const int OnNodeRejectedTopic_offsets_[3] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeRejectedTopic, node_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeRejectedTopic, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeRejectedTopic, topic_),
-                };
-                OnNodeRejectedTopic_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        OnNodeRejectedTopic_descriptor_, OnNodeRejectedTopic::default_instance_,
-                        OnNodeRejectedTopic_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeRejectedTopic, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeRejectedTopic, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(OnNodeRejectedTopic));
-                OnNodeSubscribedToTopic_descriptor_ = file->message_type(19);
-                static const int OnNodeSubscribedToTopic_offsets_[3] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeSubscribedToTopic, node_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeSubscribedToTopic, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeSubscribedToTopic, topic_),
-                };
-                OnNodeSubscribedToTopic_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        OnNodeSubscribedToTopic_descriptor_, OnNodeSubscribedToTopic::default_instance_,
-                        OnNodeSubscribedToTopic_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeSubscribedToTopic, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeSubscribedToTopic, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(OnNodeSubscribedToTopic));
-                OnNodeUnavaliable_descriptor_ = file->message_type(20);
-                static const int OnNodeUnavaliable_offsets_[3] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnavaliable, node_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnavaliable, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnavaliable, topic_),
-                };
-                OnNodeUnavaliable_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        OnNodeUnavaliable_descriptor_, OnNodeUnavaliable::default_instance_, OnNodeUnavaliable_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnavaliable, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnavaliable, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(OnNodeUnavaliable));
-                OnNodeUnsubscribedFromTopic_descriptor_ = file->message_type(21);
-                static const int OnNodeUnsubscribedFromTopic_offsets_[3] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnsubscribedFromTopic, node_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnsubscribedFromTopic, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnsubscribedFromTopic, topic_),
-                };
-                OnNodeUnsubscribedFromTopic_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        OnNodeUnsubscribedFromTopic_descriptor_, OnNodeUnsubscribedFromTopic::default_instance_,
-                        OnNodeUnsubscribedFromTopic_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnsubscribedFromTopic, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnsubscribedFromTopic, _unknown_fields_),
-                        -1, ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(OnNodeUnsubscribedFromTopic));
-                OutgoingEvent_descriptor_ = file->message_type(22);
-                static const int OutgoingEvent_offsets_[7] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, typecode_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, advertizetopic_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, disconnect_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, rejecttopic_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, reportnodeunavaliable_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, subscribe_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, unsubscribe_),
-                };
-                OutgoingEvent_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        OutgoingEvent_descriptor_, OutgoingEvent::default_instance_, OutgoingEvent_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(OutgoingEvent));
-                OutgoingOperation_descriptor_ = file->message_type(23);
-                static const int OutgoingOperation_offsets_[6] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, typecode_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, connectrequest_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, getpublisherrequest_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, getallpublishersrequest_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, getsubscriberrequest_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, getallsubscribersrequest_),
-                };
-                OutgoingOperation_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        OutgoingOperation_descriptor_, OutgoingOperation::default_instance_, OutgoingOperation_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(OutgoingOperation));
-                RejectTopic_descriptor_ = file->message_type(24);
-                static const int RejectTopic_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RejectTopic, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RejectTopic, topic_),
-                };
-                RejectTopic_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        RejectTopic_descriptor_, RejectTopic::default_instance_, RejectTopic_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RejectTopic, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RejectTopic, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(RejectTopic));
-                ReportNodeUnavaliable_descriptor_ = file->message_type(25);
-                static const int ReportNodeUnavaliable_offsets_[3] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReportNodeUnavaliable, node_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReportNodeUnavaliable, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReportNodeUnavaliable, topic_),
-                };
-                ReportNodeUnavaliable_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        ReportNodeUnavaliable_descriptor_, ReportNodeUnavaliable::default_instance_,
-                        ReportNodeUnavaliable_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReportNodeUnavaliable, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReportNodeUnavaliable, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(ReportNodeUnavaliable));
-                Subscribe_descriptor_ = file->message_type(26);
-                static const int Subscribe_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Subscribe, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Subscribe, topic_),
-                };
-                Subscribe_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        Subscribe_descriptor_, Subscribe::default_instance_, Subscribe_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Subscribe, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Subscribe, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(Subscribe));
-                UnSubscribe_descriptor_ = file->message_type(27);
-                static const int UnSubscribe_offsets_[2] = {
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnSubscribe, pattern_),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnSubscribe, topic_),
-                };
-                UnSubscribe_reflection_ = new ::google::protobuf::internal::GeneratedMessageReflection(
-                        UnSubscribe_descriptor_, UnSubscribe::default_instance_, UnSubscribe_offsets_,
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnSubscribe, _has_bits_[0]),
-                        GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnSubscribe, _unknown_fields_), -1,
-                        ::google::protobuf::DescriptorPool::generated_pool(),
-                        ::google::protobuf::MessageFactory::generated_factory(), sizeof(UnSubscribe));
-                IncomingEventType_descriptor_     = file->enum_type(0);
-                IncomingOperationType_descriptor_ = file->enum_type(1);
-                OutgoingEventType_descriptor_     = file->enum_type(2);
-                OutgoingOperationType_descriptor_ = file->enum_type(3);
-            }
+void protobuf_AssignDesc_MQCloud_2eInternal_2eProtocol_2eproto() {
+  protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  const ::google::protobuf::FileDescriptor* file =
+    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
+      "MQCloud.Internal.Protocol.proto");
+  GOOGLE_CHECK(file != NULL);
+  AdvertizeTopic_descriptor_ = file->message_type(0);
+  static const int AdvertizeTopic_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdvertizeTopic, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdvertizeTopic, topic_),
+  };
+  AdvertizeTopic_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      AdvertizeTopic_descriptor_,
+      AdvertizeTopic::default_instance_,
+      AdvertizeTopic_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdvertizeTopic, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AdvertizeTopic, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(AdvertizeTopic));
+  ConnectRequest_descriptor_ = file->message_type(1);
+  static const int ConnectRequest_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectRequest, nodename_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectRequest, backendname_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectRequest, nodeurl_),
+  };
+  ConnectRequest_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ConnectRequest_descriptor_,
+      ConnectRequest::default_instance_,
+      ConnectRequest_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectRequest, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectRequest, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ConnectRequest));
+  ConnectResponse_descriptor_ = file->message_type(2);
+  static const int ConnectResponse_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectResponse, realnodename_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectResponse, heartbeatratems_),
+  };
+  ConnectResponse_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ConnectResponse_descriptor_,
+      ConnectResponse::default_instance_,
+      ConnectResponse_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectResponse, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConnectResponse, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ConnectResponse));
+  Disconnect_descriptor_ = file->message_type(3);
+  static const int Disconnect_offsets_[1] = {
+  };
+  Disconnect_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      Disconnect_descriptor_,
+      Disconnect::default_instance_,
+      Disconnect_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Disconnect, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Disconnect, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(Disconnect));
+  GetAllPublishersRequest_descriptor_ = file->message_type(4);
+  static const int GetAllPublishersRequest_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersRequest, requestid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersRequest, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersRequest, topic_),
+  };
+  GetAllPublishersRequest_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      GetAllPublishersRequest_descriptor_,
+      GetAllPublishersRequest::default_instance_,
+      GetAllPublishersRequest_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersRequest, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersRequest, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(GetAllPublishersRequest));
+  GetAllPublishersResponse_descriptor_ = file->message_type(5);
+  static const int GetAllPublishersResponse_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersResponse, requestid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersResponse, nodes_),
+  };
+  GetAllPublishersResponse_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      GetAllPublishersResponse_descriptor_,
+      GetAllPublishersResponse::default_instance_,
+      GetAllPublishersResponse_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersResponse, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllPublishersResponse, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(GetAllPublishersResponse));
+  GetAllSubscribersRequest_descriptor_ = file->message_type(6);
+  static const int GetAllSubscribersRequest_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersRequest, requestid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersRequest, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersRequest, topic_),
+  };
+  GetAllSubscribersRequest_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      GetAllSubscribersRequest_descriptor_,
+      GetAllSubscribersRequest::default_instance_,
+      GetAllSubscribersRequest_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersRequest, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersRequest, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(GetAllSubscribersRequest));
+  GetAllSubscribersResponse_descriptor_ = file->message_type(7);
+  static const int GetAllSubscribersResponse_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersResponse, requestid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersResponse, nodes_),
+  };
+  GetAllSubscribersResponse_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      GetAllSubscribersResponse_descriptor_,
+      GetAllSubscribersResponse::default_instance_,
+      GetAllSubscribersResponse_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersResponse, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetAllSubscribersResponse, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(GetAllSubscribersResponse));
+  GetPublisherRequest_descriptor_ = file->message_type(8);
+  static const int GetPublisherRequest_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherRequest, requestid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherRequest, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherRequest, topic_),
+  };
+  GetPublisherRequest_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      GetPublisherRequest_descriptor_,
+      GetPublisherRequest::default_instance_,
+      GetPublisherRequest_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherRequest, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherRequest, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(GetPublisherRequest));
+  GetPublisherResponse_descriptor_ = file->message_type(9);
+  static const int GetPublisherResponse_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherResponse, requestid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherResponse, node_),
+  };
+  GetPublisherResponse_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      GetPublisherResponse_descriptor_,
+      GetPublisherResponse::default_instance_,
+      GetPublisherResponse_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherResponse, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetPublisherResponse, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(GetPublisherResponse));
+  GetSubscriberRequest_descriptor_ = file->message_type(10);
+  static const int GetSubscriberRequest_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberRequest, requestid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberRequest, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberRequest, topic_),
+  };
+  GetSubscriberRequest_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      GetSubscriberRequest_descriptor_,
+      GetSubscriberRequest::default_instance_,
+      GetSubscriberRequest_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberRequest, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberRequest, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(GetSubscriberRequest));
+  GetSubscriberResponse_descriptor_ = file->message_type(11);
+  static const int GetSubscriberResponse_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberResponse, requestid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberResponse, node_),
+  };
+  GetSubscriberResponse_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      GetSubscriberResponse_descriptor_,
+      GetSubscriberResponse::default_instance_,
+      GetSubscriberResponse_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberResponse, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GetSubscriberResponse, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(GetSubscriberResponse));
+  HeartBeat_descriptor_ = file->message_type(12);
+  static const int HeartBeat_offsets_[1] = {
+  };
+  HeartBeat_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      HeartBeat_descriptor_,
+      HeartBeat::default_instance_,
+      HeartBeat_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HeartBeat, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HeartBeat, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(HeartBeat));
+  IncomingEvent_descriptor_ = file->message_type(13);
+  static const int IncomingEvent_offsets_[8] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, typecode_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onconnectionclosed_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onconnectionestablished_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onnodeadvertisedtopic_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onnoderejectedtopic_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onnodesubscribedtotopic_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onnodeunavaliable_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, onnodeunsubscribedfromtopic_),
+  };
+  IncomingEvent_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      IncomingEvent_descriptor_,
+      IncomingEvent::default_instance_,
+      IncomingEvent_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingEvent, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(IncomingEvent));
+  IncomingOperation_descriptor_ = file->message_type(14);
+  static const int IncomingOperation_offsets_[6] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, typecode_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, connectresponse_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, getpublisherresponse_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, getallpublishersresponse_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, getsubscriberresponse_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, getallsubscribersresponse_),
+  };
+  IncomingOperation_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      IncomingOperation_descriptor_,
+      IncomingOperation::default_instance_,
+      IncomingOperation_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(IncomingOperation, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(IncomingOperation));
+  OnConnectionClosed_descriptor_ = file->message_type(15);
+  static const int OnConnectionClosed_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionClosed, fromnode_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionClosed, tonode_),
+  };
+  OnConnectionClosed_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      OnConnectionClosed_descriptor_,
+      OnConnectionClosed::default_instance_,
+      OnConnectionClosed_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionClosed, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionClosed, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(OnConnectionClosed));
+  OnConnectionEstablished_descriptor_ = file->message_type(16);
+  static const int OnConnectionEstablished_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionEstablished, fromnode_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionEstablished, tonode_),
+  };
+  OnConnectionEstablished_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      OnConnectionEstablished_descriptor_,
+      OnConnectionEstablished::default_instance_,
+      OnConnectionEstablished_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionEstablished, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnConnectionEstablished, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(OnConnectionEstablished));
+  OnNodeAdvertisedTopic_descriptor_ = file->message_type(17);
+  static const int OnNodeAdvertisedTopic_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeAdvertisedTopic, node_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeAdvertisedTopic, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeAdvertisedTopic, topic_),
+  };
+  OnNodeAdvertisedTopic_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      OnNodeAdvertisedTopic_descriptor_,
+      OnNodeAdvertisedTopic::default_instance_,
+      OnNodeAdvertisedTopic_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeAdvertisedTopic, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeAdvertisedTopic, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(OnNodeAdvertisedTopic));
+  OnNodeRejectedTopic_descriptor_ = file->message_type(18);
+  static const int OnNodeRejectedTopic_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeRejectedTopic, node_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeRejectedTopic, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeRejectedTopic, topic_),
+  };
+  OnNodeRejectedTopic_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      OnNodeRejectedTopic_descriptor_,
+      OnNodeRejectedTopic::default_instance_,
+      OnNodeRejectedTopic_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeRejectedTopic, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeRejectedTopic, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(OnNodeRejectedTopic));
+  OnNodeSubscribedToTopic_descriptor_ = file->message_type(19);
+  static const int OnNodeSubscribedToTopic_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeSubscribedToTopic, node_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeSubscribedToTopic, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeSubscribedToTopic, topic_),
+  };
+  OnNodeSubscribedToTopic_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      OnNodeSubscribedToTopic_descriptor_,
+      OnNodeSubscribedToTopic::default_instance_,
+      OnNodeSubscribedToTopic_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeSubscribedToTopic, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeSubscribedToTopic, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(OnNodeSubscribedToTopic));
+  OnNodeUnavaliable_descriptor_ = file->message_type(20);
+  static const int OnNodeUnavaliable_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnavaliable, node_),
+  };
+  OnNodeUnavaliable_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      OnNodeUnavaliable_descriptor_,
+      OnNodeUnavaliable::default_instance_,
+      OnNodeUnavaliable_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnavaliable, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnavaliable, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(OnNodeUnavaliable));
+  OnNodeUnsubscribedFromTopic_descriptor_ = file->message_type(21);
+  static const int OnNodeUnsubscribedFromTopic_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnsubscribedFromTopic, node_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnsubscribedFromTopic, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnsubscribedFromTopic, topic_),
+  };
+  OnNodeUnsubscribedFromTopic_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      OnNodeUnsubscribedFromTopic_descriptor_,
+      OnNodeUnsubscribedFromTopic::default_instance_,
+      OnNodeUnsubscribedFromTopic_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnsubscribedFromTopic, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OnNodeUnsubscribedFromTopic, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(OnNodeUnsubscribedFromTopic));
+  OutgoingEvent_descriptor_ = file->message_type(22);
+  static const int OutgoingEvent_offsets_[7] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, typecode_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, advertizetopic_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, disconnect_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, rejecttopic_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, reportnodeunavaliable_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, subscribe_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, unsubscribe_),
+  };
+  OutgoingEvent_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      OutgoingEvent_descriptor_,
+      OutgoingEvent::default_instance_,
+      OutgoingEvent_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingEvent, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(OutgoingEvent));
+  OutgoingOperation_descriptor_ = file->message_type(23);
+  static const int OutgoingOperation_offsets_[6] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, typecode_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, connectrequest_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, getpublisherrequest_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, getallpublishersrequest_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, getsubscriberrequest_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, getallsubscribersrequest_),
+  };
+  OutgoingOperation_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      OutgoingOperation_descriptor_,
+      OutgoingOperation::default_instance_,
+      OutgoingOperation_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(OutgoingOperation, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(OutgoingOperation));
+  RejectTopic_descriptor_ = file->message_type(24);
+  static const int RejectTopic_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RejectTopic, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RejectTopic, topic_),
+  };
+  RejectTopic_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      RejectTopic_descriptor_,
+      RejectTopic::default_instance_,
+      RejectTopic_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RejectTopic, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RejectTopic, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(RejectTopic));
+  ReportNodeUnavaliable_descriptor_ = file->message_type(25);
+  static const int ReportNodeUnavaliable_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReportNodeUnavaliable, node_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReportNodeUnavaliable, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReportNodeUnavaliable, topic_),
+  };
+  ReportNodeUnavaliable_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ReportNodeUnavaliable_descriptor_,
+      ReportNodeUnavaliable::default_instance_,
+      ReportNodeUnavaliable_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReportNodeUnavaliable, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ReportNodeUnavaliable, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ReportNodeUnavaliable));
+  Subscribe_descriptor_ = file->message_type(26);
+  static const int Subscribe_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Subscribe, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Subscribe, topic_),
+  };
+  Subscribe_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      Subscribe_descriptor_,
+      Subscribe::default_instance_,
+      Subscribe_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Subscribe, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Subscribe, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(Subscribe));
+  UnSubscribe_descriptor_ = file->message_type(27);
+  static const int UnSubscribe_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnSubscribe, pattern_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnSubscribe, topic_),
+  };
+  UnSubscribe_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      UnSubscribe_descriptor_,
+      UnSubscribe::default_instance_,
+      UnSubscribe_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnSubscribe, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UnSubscribe, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(UnSubscribe));
+  IncomingEventType_descriptor_ = file->enum_type(0);
+  IncomingOperationType_descriptor_ = file->enum_type(1);
+  OutgoingEventType_descriptor_ = file->enum_type(2);
+  OutgoingOperationType_descriptor_ = file->enum_type(3);
+}
 
-            namespace {
-                GOOGLE_PROTOBUF_DECLARE_ONCE (protobuf_AssignDescriptors_once_);
+namespace {
 
-                inline void protobuf_AssignDescriptorsOnce() {
-                    ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                                                       &protobuf_AssignDesc_MQCloud_2eInternal_2eProtocol_2eproto);
-                }
+GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
+inline void protobuf_AssignDescriptorsOnce() {
+  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
+                 &protobuf_AssignDesc_MQCloud_2eInternal_2eProtocol_2eproto);
+}
 
-                void protobuf_RegisterTypes(const ::std::string &) {
-                    protobuf_AssignDescriptorsOnce();
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(AdvertizeTopic_descriptor_,
-                                                                                         &AdvertizeTopic::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(ConnectRequest_descriptor_,
-                                                                                         &ConnectRequest::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(ConnectResponse_descriptor_,
-                                                                                         &ConnectResponse::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(Disconnect_descriptor_,
-                                                                                         &Disconnect::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            GetAllPublishersRequest_descriptor_, &GetAllPublishersRequest::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            GetAllPublishersResponse_descriptor_, &GetAllPublishersResponse::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            GetAllSubscribersRequest_descriptor_, &GetAllSubscribersRequest::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            GetAllSubscribersResponse_descriptor_, &GetAllSubscribersResponse::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            GetPublisherRequest_descriptor_, &GetPublisherRequest::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            GetPublisherResponse_descriptor_, &GetPublisherResponse::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            GetSubscriberRequest_descriptor_, &GetSubscriberRequest::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            GetSubscriberResponse_descriptor_, &GetSubscriberResponse::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(HeartBeat_descriptor_,
-                                                                                         &HeartBeat::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(IncomingEvent_descriptor_,
-                                                                                         &IncomingEvent::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(IncomingOperation_descriptor_,
-                                                                                         &IncomingOperation::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(OnConnectionClosed_descriptor_,
-                                                                                         &OnConnectionClosed::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            OnConnectionEstablished_descriptor_, &OnConnectionEstablished::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            OnNodeAdvertisedTopic_descriptor_, &OnNodeAdvertisedTopic::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            OnNodeRejectedTopic_descriptor_, &OnNodeRejectedTopic::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            OnNodeSubscribedToTopic_descriptor_, &OnNodeSubscribedToTopic::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(OnNodeUnavaliable_descriptor_,
-                                                                                         &OnNodeUnavaliable::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            OnNodeUnsubscribedFromTopic_descriptor_, &OnNodeUnsubscribedFromTopic::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(OutgoingEvent_descriptor_,
-                                                                                         &OutgoingEvent::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(OutgoingOperation_descriptor_,
-                                                                                         &OutgoingOperation::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(RejectTopic_descriptor_,
-                                                                                         &RejectTopic::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-                            ReportNodeUnavaliable_descriptor_, &ReportNodeUnavaliable::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(Subscribe_descriptor_,
-                                                                                         &Subscribe::default_instance());
-                    ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(UnSubscribe_descriptor_,
-                                                                                         &UnSubscribe::default_instance());
-                }
-            } // namespace
+void protobuf_RegisterTypes(const ::std::string&) {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    AdvertizeTopic_descriptor_, &AdvertizeTopic::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ConnectRequest_descriptor_, &ConnectRequest::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ConnectResponse_descriptor_, &ConnectResponse::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    Disconnect_descriptor_, &Disconnect::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    GetAllPublishersRequest_descriptor_, &GetAllPublishersRequest::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    GetAllPublishersResponse_descriptor_, &GetAllPublishersResponse::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    GetAllSubscribersRequest_descriptor_, &GetAllSubscribersRequest::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    GetAllSubscribersResponse_descriptor_, &GetAllSubscribersResponse::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    GetPublisherRequest_descriptor_, &GetPublisherRequest::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    GetPublisherResponse_descriptor_, &GetPublisherResponse::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    GetSubscriberRequest_descriptor_, &GetSubscriberRequest::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    GetSubscriberResponse_descriptor_, &GetSubscriberResponse::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    HeartBeat_descriptor_, &HeartBeat::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    IncomingEvent_descriptor_, &IncomingEvent::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    IncomingOperation_descriptor_, &IncomingOperation::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    OnConnectionClosed_descriptor_, &OnConnectionClosed::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    OnConnectionEstablished_descriptor_, &OnConnectionEstablished::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    OnNodeAdvertisedTopic_descriptor_, &OnNodeAdvertisedTopic::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    OnNodeRejectedTopic_descriptor_, &OnNodeRejectedTopic::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    OnNodeSubscribedToTopic_descriptor_, &OnNodeSubscribedToTopic::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    OnNodeUnavaliable_descriptor_, &OnNodeUnavaliable::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    OnNodeUnsubscribedFromTopic_descriptor_, &OnNodeUnsubscribedFromTopic::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    OutgoingEvent_descriptor_, &OutgoingEvent::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    OutgoingOperation_descriptor_, &OutgoingOperation::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    RejectTopic_descriptor_, &RejectTopic::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ReportNodeUnavaliable_descriptor_, &ReportNodeUnavaliable::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    Subscribe_descriptor_, &Subscribe::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    UnSubscribe_descriptor_, &UnSubscribe::default_instance());
+}
 
-            void protobuf_ShutdownFile_MQCloud_2eInternal_2eProtocol_2eproto() {
-                delete AdvertizeTopic::default_instance_;
-                delete AdvertizeTopic_reflection_;
-                delete ConnectRequest::default_instance_;
-                delete ConnectRequest_reflection_;
-                delete ConnectResponse::default_instance_;
-                delete ConnectResponse_reflection_;
-                delete Disconnect::default_instance_;
-                delete Disconnect_reflection_;
-                delete GetAllPublishersRequest::default_instance_;
-                delete GetAllPublishersRequest_reflection_;
-                delete GetAllPublishersResponse::default_instance_;
-                delete GetAllPublishersResponse_reflection_;
-                delete GetAllSubscribersRequest::default_instance_;
-                delete GetAllSubscribersRequest_reflection_;
-                delete GetAllSubscribersResponse::default_instance_;
-                delete GetAllSubscribersResponse_reflection_;
-                delete GetPublisherRequest::default_instance_;
-                delete GetPublisherRequest_reflection_;
-                delete GetPublisherResponse::default_instance_;
-                delete GetPublisherResponse_reflection_;
-                delete GetSubscriberRequest::default_instance_;
-                delete GetSubscriberRequest_reflection_;
-                delete GetSubscriberResponse::default_instance_;
-                delete GetSubscriberResponse_reflection_;
-                delete HeartBeat::default_instance_;
-                delete HeartBeat_reflection_;
-                delete IncomingEvent::default_instance_;
-                delete IncomingEvent_reflection_;
-                delete IncomingOperation::default_instance_;
-                delete IncomingOperation_reflection_;
-                delete OnConnectionClosed::default_instance_;
-                delete OnConnectionClosed_reflection_;
-                delete OnConnectionEstablished::default_instance_;
-                delete OnConnectionEstablished_reflection_;
-                delete OnNodeAdvertisedTopic::default_instance_;
-                delete OnNodeAdvertisedTopic_reflection_;
-                delete OnNodeRejectedTopic::default_instance_;
-                delete OnNodeRejectedTopic_reflection_;
-                delete OnNodeSubscribedToTopic::default_instance_;
-                delete OnNodeSubscribedToTopic_reflection_;
-                delete OnNodeUnavaliable::default_instance_;
-                delete OnNodeUnavaliable_reflection_;
-                delete OnNodeUnsubscribedFromTopic::default_instance_;
-                delete OnNodeUnsubscribedFromTopic_reflection_;
-                delete OutgoingEvent::default_instance_;
-                delete OutgoingEvent_reflection_;
-                delete OutgoingOperation::default_instance_;
-                delete OutgoingOperation_reflection_;
-                delete RejectTopic::default_instance_;
-                delete RejectTopic_reflection_;
-                delete ReportNodeUnavaliable::default_instance_;
-                delete ReportNodeUnavaliable_reflection_;
-                delete Subscribe::default_instance_;
-                delete Subscribe_reflection_;
-                delete UnSubscribe::default_instance_;
-                delete UnSubscribe_reflection_;
-            }
+}  // namespace
 
-            void protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto() {
-                static bool already_here = false;
-                if (already_here)
-                    return;
-                already_here = true;
-                GOOGLE_PROTOBUF_VERIFY_VERSION;
+void protobuf_ShutdownFile_MQCloud_2eInternal_2eProtocol_2eproto() {
+  delete AdvertizeTopic::default_instance_;
+  delete AdvertizeTopic_reflection_;
+  delete ConnectRequest::default_instance_;
+  delete ConnectRequest_reflection_;
+  delete ConnectResponse::default_instance_;
+  delete ConnectResponse_reflection_;
+  delete Disconnect::default_instance_;
+  delete Disconnect_reflection_;
+  delete GetAllPublishersRequest::default_instance_;
+  delete GetAllPublishersRequest_reflection_;
+  delete GetAllPublishersResponse::default_instance_;
+  delete GetAllPublishersResponse_reflection_;
+  delete GetAllSubscribersRequest::default_instance_;
+  delete GetAllSubscribersRequest_reflection_;
+  delete GetAllSubscribersResponse::default_instance_;
+  delete GetAllSubscribersResponse_reflection_;
+  delete GetPublisherRequest::default_instance_;
+  delete GetPublisherRequest_reflection_;
+  delete GetPublisherResponse::default_instance_;
+  delete GetPublisherResponse_reflection_;
+  delete GetSubscriberRequest::default_instance_;
+  delete GetSubscriberRequest_reflection_;
+  delete GetSubscriberResponse::default_instance_;
+  delete GetSubscriberResponse_reflection_;
+  delete HeartBeat::default_instance_;
+  delete HeartBeat_reflection_;
+  delete IncomingEvent::default_instance_;
+  delete IncomingEvent_reflection_;
+  delete IncomingOperation::default_instance_;
+  delete IncomingOperation_reflection_;
+  delete OnConnectionClosed::default_instance_;
+  delete OnConnectionClosed_reflection_;
+  delete OnConnectionEstablished::default_instance_;
+  delete OnConnectionEstablished_reflection_;
+  delete OnNodeAdvertisedTopic::default_instance_;
+  delete OnNodeAdvertisedTopic_reflection_;
+  delete OnNodeRejectedTopic::default_instance_;
+  delete OnNodeRejectedTopic_reflection_;
+  delete OnNodeSubscribedToTopic::default_instance_;
+  delete OnNodeSubscribedToTopic_reflection_;
+  delete OnNodeUnavaliable::default_instance_;
+  delete OnNodeUnavaliable_reflection_;
+  delete OnNodeUnsubscribedFromTopic::default_instance_;
+  delete OnNodeUnsubscribedFromTopic_reflection_;
+  delete OutgoingEvent::default_instance_;
+  delete OutgoingEvent_reflection_;
+  delete OutgoingOperation::default_instance_;
+  delete OutgoingOperation_reflection_;
+  delete RejectTopic::default_instance_;
+  delete RejectTopic_reflection_;
+  delete ReportNodeUnavaliable::default_instance_;
+  delete ReportNodeUnavaliable_reflection_;
+  delete Subscribe::default_instance_;
+  delete Subscribe_reflection_;
+  delete UnSubscribe::default_instance_;
+  delete UnSubscribe_reflection_;
+}
 
-                ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-                        "\n\037MQCloud.Internal.Protocol.proto\022\031MQClo"
-                                "ud.Internal.Protocol\"0\n\016AdvertizeTopic\022\017"
-                                "\n\007Pattern\030\001 \001(\t\022\r\n\005Topic\030\002 \001(\t\"7\n\016Connec"
-                                "tRequest\022\020\n\010NodeName\030\001 \001(\t\022\023\n\013BackEndNam"
-                                "e\030\002 \001(\t\"C\n\017ConnectResponse\022\024\n\014RealNodeNa"
-                                "me\030\001 \001(\t\022\032\n\017HeartBeatRateMs\030\002 \001(\005:\0010\"\014\n\n"
-                                "Disconnect\"O\n\027GetAllPublishersRequest\022\024\n"
-                                "\tRequestId\030\001 \001(\005:\0010\022\017\n\007Pattern\030\002 \001(\t\022\r\n\005"
-                                "Topic\030\003 \001(\t\"\?\n\030GetAllPublishersResponse\022"
-                                "\024\n\tRequestId\030\001 \001(\005:\0010\022\r\n\005Nodes\030\002 \003(\t\"P\n\030"
-                                "GetAllSubscribersRequest\022\024\n\tRequestId\030\001 "
-                                "\001(\005:\0010\022\017\n\007Pattern\030\002 \001(\t\022\r\n\005Topic\030\003 \001(\t\"@"
-                                "\n\031GetAllSubscribersResponse\022\024\n\tRequestId"
-                                "\030\001 \001(\005:\0010\022\r\n\005Nodes\030\002 \003(\t\"K\n\023GetPublisher"
-                                "Request\022\024\n\tRequestId\030\001 \001(\005:\0010\022\017\n\007Pattern"
-                                "\030\002 \001(\t\022\r\n\005Topic\030\003 \001(\t\":\n\024GetPublisherRes"
-                                "ponse\022\024\n\tRequestId\030\001 \001(\005:\0010\022\014\n\004Node\030\002 \001("
-                                "\t\"L\n\024GetSubscriberRequest\022\024\n\tRequestId\030\001"
-                                " \001(\005:\0010\022\017\n\007Pattern\030\002 \001(\t\022\r\n\005Topic\030\003 \001(\t\""
-                                ";\n\025GetSubscriberResponse\022\024\n\tRequestId\030\001 "
-                                "\001(\005:\0010\022\014\n\004Node\030\002 \001(\t\"\013\n\tHeartBeat\"\255\005\n\rIn"
-                                "comingEvent\022c\n\010TypeCode\030\001 \001(\0162,.MQCloud."
-                                "Internal.Protocol.IncomingEventType:#Inc"
-                                "omingEventTypeOnConnectionClosed\022I\n\022OnCo"
-                                "nnectionClosed\030\002 \001(\0132-.MQCloud.Internal."
-                                "Protocol.OnConnectionClosed\022S\n\027OnConnect"
-                                "ionEstablished\030\003 \001(\01322.MQCloud.Internal."
-                                "Protocol.OnConnectionEstablished\022O\n\025OnNo"
-                                "deAdvertisedTopic\030\004 \001(\01320.MQCloud.Intern"
-                                "al.Protocol.OnNodeAdvertisedTopic\022K\n\023OnN"
-                                "odeRejectedTopic\030\005 \001(\0132..MQCloud.Interna"
-                                "l.Protocol.OnNodeRejectedTopic\022S\n\027OnNode"
-                                "SubscribedToTopic\030\006 \001(\01322.MQCloud.Intern"
-                                "al.Protocol.OnNodeSubscribedToTopic\022G\n\021O"
-                                "nNodeUnavaliable\030\007 \001(\0132,.MQCloud.Interna"
-                                "l.Protocol.OnNodeUnavaliable\022[\n\033OnNodeUn"
-                                "subscribedFromTopic\030\010 \001(\01326.MQCloud.Inte"
-                                "rnal.Protocol.OnNodeUnsubscribedFromTopi"
-                                "c\"\221\004\n\021IncomingOperation\022g\n\010TypeCode\030\001 \001("
-                                "\01620.MQCloud.Internal.Protocol.IncomingOp"
-                                "erationType:#IncomingOperationTypeConnec"
-                                "tRequest\022C\n\017ConnectResponse\030\002 \001(\0132*.MQCl"
-                                "oud.Internal.Protocol.ConnectResponse\022M\n"
-                                "\024GetPublisherResponse\030\003 \001(\0132/.MQCloud.In"
-                                "ternal.Protocol.GetPublisherResponse\022U\n\030"
-                                "GetAllPublishersResponse\030\004 \001(\01323.MQCloud"
-                                ".Internal.Protocol.GetAllPublishersRespo"
-                                "nse\022O\n\025GetSubscriberResponse\030\005 \001(\01320.MQC"
-                                "loud.Internal.Protocol.GetSubscriberResp"
-                                "onse\022W\n\031GetAllSubscribersResponse\030\006 \001(\0132"
-                                "4.MQCloud.Internal.Protocol.GetAllSubscr"
-                                "ibersResponse\"6\n\022OnConnectionClosed\022\020\n\010F"
-                                "romNode\030\001 \001(\t\022\016\n\006ToNode\030\002 \001(\t\";\n\027OnConne"
-                                "ctionEstablished\022\020\n\010FromNode\030\001 \001(\t\022\016\n\006To"
-                                "Node\030\002 \001(\t\"E\n\025OnNodeAdvertisedTopic\022\014\n\004N"
-                                "ode\030\001 \001(\t\022\017\n\007Pattern\030\002 \001(\t\022\r\n\005Topic\030\003 \001("
-                                "\t\"C\n\023OnNodeRejectedTopic\022\014\n\004Node\030\001 \001(\t\022\017"
-                                "\n\007Pattern\030\002 \001(\t\022\r\n\005Topic\030\003 \001(\t\"G\n\027OnNode"
-                                "SubscribedToTopic\022\014\n\004Node\030\001 \001(\t\022\017\n\007Patte"
-                                "rn\030\002 \001(\t\022\r\n\005Topic\030\003 \001(\t\"A\n\021OnNodeUnavali"
-                                "able\022\014\n\004Node\030\001 \001(\t\022\017\n\007Pattern\030\002 \001(\t\022\r\n\005T"
-                                "opic\030\003 \001(\t\"K\n\033OnNodeUnsubscribedFromTopi"
-                                "c\022\014\n\004Node\030\001 \001(\t\022\017\n\007Pattern\030\002 \001(\t\022\r\n\005Topi"
-                                "c\030\003 \001(\t\"\362\003\n\rOutgoingEvent\022_\n\010TypeCode\030\001 "
-                                "\001(\0162,.MQCloud.Internal.Protocol.Outgoing"
-                                "EventType:\037OutgoingEventTypeAdvertizeTop"
-                                "ic\022A\n\016AdvertizeTopic\030\002 \001(\0132).MQCloud.Int"
-                                "ernal.Protocol.AdvertizeTopic\0229\n\nDisconn"
-                                "ect\030\003 \001(\0132%.MQCloud.Internal.Protocol.Di"
-                                "sconnect\022;\n\013RejectTopic\030\004 \001(\0132&.MQCloud."
-                                "Internal.Protocol.RejectTopic\022O\n\025ReportN"
-                                "odeUnavaliable\030\005 \001(\01320.MQCloud.Internal."
-                                "Protocol.ReportNodeUnavaliable\0227\n\tSubscr"
-                                "ibe\030\006 \001(\0132$.MQCloud.Internal.Protocol.Su"
-                                "bscribe\022;\n\013UnSubscribe\030\007 \001(\0132&.MQCloud.I"
-                                "nternal.Protocol.UnSubscribe\"\207\004\n\021Outgoin"
-                                "gOperation\022g\n\010TypeCode\030\001 \001(\01620.MQCloud.I"
-                                "nternal.Protocol.OutgoingOperationType:#"
-                                "OutgoingOperationTypeConnectRequest\022A\n\016C"
-                                "onnectRequest\030\002 \001(\0132).MQCloud.Internal.P"
-                                "rotocol.ConnectRequest\022K\n\023GetPublisherRe"
-                                "quest\030\003 \001(\0132..MQCloud.Internal.Protocol."
-                                "GetPublisherRequest\022S\n\027GetAllPublishersR"
-                                "equest\030\004 \001(\01322.MQCloud.Internal.Protocol"
-                                ".GetAllPublishersRequest\022M\n\024GetSubscribe"
-                                "rRequest\030\005 \001(\0132/.MQCloud.Internal.Protoc"
-                                "ol.GetSubscriberRequest\022U\n\030GetAllSubscri"
-                                "bersRequest\030\006 \001(\01323.MQCloud.Internal.Pro"
-                                "tocol.GetAllSubscribersRequest\"-\n\013Reject"
-                                "Topic\022\017\n\007Pattern\030\001 \001(\t\022\r\n\005Topic\030\002 \001(\t\"E\n"
-                                "\025ReportNodeUnavaliable\022\014\n\004Node\030\001 \001(\t\022\017\n\007"
-                                "Pattern\030\002 \001(\t\022\r\n\005Topic\030\003 \001(\t\"+\n\tSubscrib"
-                                "e\022\017\n\007Pattern\030\001 \001(\t\022\r\n\005Topic\030\002 \001(\t\"-\n\013UnS"
-                                "ubscribe\022\017\n\007Pattern\030\001 \001(\t\022\r\n\005Topic\030\002 \001(\t"
-                                "*\310\002\n\021IncomingEventType\022\'\n#IncomingEventT"
-                                "ypeOnConnectionClosed\020\000\022,\n(IncomingEvent"
-                                "TypeOnConnectionEstablished\020\001\022*\n&Incomin"
-                                "gEventTypeOnNodeAdvertisedTopic\020\002\022(\n$Inc"
-                                "omingEventTypeOnNodeRejectedTopic\020\003\022,\n(I"
-                                "ncomingEventTypeOnNodeSubscribedToTopic\020"
-                                "\004\022&\n\"IncomingEventTypeOnNodeUnavaliable\020"
-                                "\005\0220\n,IncomingEventTypeOnNodeUnsubscribed"
-                                "FromTopic\020\006*\202\002\n\025IncomingOperationType\022\'\n"
-                                "#IncomingOperationTypeConnectRequest\020\000\022,"
-                                "\n(IncomingOperationTypeGetPublisherReque"
-                                "st\020\001\0220\n,IncomingOperationTypeGetAllPubli"
-                                "shersRequest\020\002\022-\n)IncomingOperationTypeG"
-                                "etSubscriberRequest\020\003\0221\n-IncomingOperati"
-                                "onTypeGetAllSubscribersRequest\020\004*\211\002\n\021Out"
-                                "goingEventType\022#\n\037OutgoingEventTypeAdver"
-                                "tizeTopic\020\000\022\037\n\033OutgoingEventTypeDisconne"
-                                "ct\020\001\022\036\n\032OutgoingEventTypeHeartBeat\020\002\022 \n\034"
-                                "OutgoingEventTypeRejectTopic\020\003\022*\n&Outgoi"
-                                "ngEventTypeReportNodeUnavaliable\020\004\022\036\n\032Ou"
-                                "tgoingEventTypeSubscribe\020\005\022 \n\034OutgoingEv"
-                                "entTypeUnSubscribe\020\006*\202\002\n\025OutgoingOperati"
-                                "onType\022\'\n#OutgoingOperationTypeConnectRe"
-                                "quest\020\000\022,\n(OutgoingOperationTypeGetPubli"
-                                "sherRequest\020\001\0220\n,OutgoingOperationTypeGe"
-                                "tAllPublishersRequest\020\002\022-\n)OutgoingOpera"
-                                "tionTypeGetSubscriberRequest\020\003\0221\n-Outgoi"
-                                "ngOperationTypeGetAllSubscribersRequest\020"
-                                "\004", 4881);
-                ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile("MQCloud.Internal.Protocol.proto",
-                                                                                  &protobuf_RegisterTypes);
-                AdvertizeTopic::default_instance_              = new AdvertizeTopic();
-                ConnectRequest::default_instance_              = new ConnectRequest();
-                ConnectResponse::default_instance_             = new ConnectResponse();
-                Disconnect::default_instance_                  = new Disconnect();
-                GetAllPublishersRequest::default_instance_     = new GetAllPublishersRequest();
-                GetAllPublishersResponse::default_instance_    = new GetAllPublishersResponse();
-                GetAllSubscribersRequest::default_instance_    = new GetAllSubscribersRequest();
-                GetAllSubscribersResponse::default_instance_   = new GetAllSubscribersResponse();
-                GetPublisherRequest::default_instance_         = new GetPublisherRequest();
-                GetPublisherResponse::default_instance_        = new GetPublisherResponse();
-                GetSubscriberRequest::default_instance_        = new GetSubscriberRequest();
-                GetSubscriberResponse::default_instance_       = new GetSubscriberResponse();
-                HeartBeat::default_instance_                   = new HeartBeat();
-                IncomingEvent::default_instance_               = new IncomingEvent();
-                IncomingOperation::default_instance_           = new IncomingOperation();
-                OnConnectionClosed::default_instance_          = new OnConnectionClosed();
-                OnConnectionEstablished::default_instance_     = new OnConnectionEstablished();
-                OnNodeAdvertisedTopic::default_instance_       = new OnNodeAdvertisedTopic();
-                OnNodeRejectedTopic::default_instance_         = new OnNodeRejectedTopic();
-                OnNodeSubscribedToTopic::default_instance_     = new OnNodeSubscribedToTopic();
-                OnNodeUnavaliable::default_instance_           = new OnNodeUnavaliable();
-                OnNodeUnsubscribedFromTopic::default_instance_ = new OnNodeUnsubscribedFromTopic();
-                OutgoingEvent::default_instance_               = new OutgoingEvent();
-                OutgoingOperation::default_instance_           = new OutgoingOperation();
-                RejectTopic::default_instance_                 = new RejectTopic();
-                ReportNodeUnavaliable::default_instance_       = new ReportNodeUnavaliable();
-                Subscribe::default_instance_                   = new Subscribe();
-                UnSubscribe::default_instance_                 = new UnSubscribe();
-                AdvertizeTopic::default_instance_->InitAsDefaultInstance();
-                ConnectRequest::default_instance_->InitAsDefaultInstance();
-                ConnectResponse::default_instance_->InitAsDefaultInstance();
-                Disconnect::default_instance_->InitAsDefaultInstance();
-                GetAllPublishersRequest::default_instance_->InitAsDefaultInstance();
-                GetAllPublishersResponse::default_instance_->InitAsDefaultInstance();
-                GetAllSubscribersRequest::default_instance_->InitAsDefaultInstance();
-                GetAllSubscribersResponse::default_instance_->InitAsDefaultInstance();
-                GetPublisherRequest::default_instance_->InitAsDefaultInstance();
-                GetPublisherResponse::default_instance_->InitAsDefaultInstance();
-                GetSubscriberRequest::default_instance_->InitAsDefaultInstance();
-                GetSubscriberResponse::default_instance_->InitAsDefaultInstance();
-                HeartBeat::default_instance_->InitAsDefaultInstance();
-                IncomingEvent::default_instance_->InitAsDefaultInstance();
-                IncomingOperation::default_instance_->InitAsDefaultInstance();
-                OnConnectionClosed::default_instance_->InitAsDefaultInstance();
-                OnConnectionEstablished::default_instance_->InitAsDefaultInstance();
-                OnNodeAdvertisedTopic::default_instance_->InitAsDefaultInstance();
-                OnNodeRejectedTopic::default_instance_->InitAsDefaultInstance();
-                OnNodeSubscribedToTopic::default_instance_->InitAsDefaultInstance();
-                OnNodeUnavaliable::default_instance_->InitAsDefaultInstance();
-                OnNodeUnsubscribedFromTopic::default_instance_->InitAsDefaultInstance();
-                OutgoingEvent::default_instance_->InitAsDefaultInstance();
-                OutgoingOperation::default_instance_->InitAsDefaultInstance();
-                RejectTopic::default_instance_->InitAsDefaultInstance();
-                ReportNodeUnavaliable::default_instance_->InitAsDefaultInstance();
-                Subscribe::default_instance_->InitAsDefaultInstance();
-                UnSubscribe::default_instance_->InitAsDefaultInstance();
-                ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_MQCloud_2eInternal_2eProtocol_2eproto);
-            }
+void protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto() {
+  static bool already_here = false;
+  if (already_here) return;
+  already_here = true;
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-            // Force AddDescriptors() to be called at static initialization time.
-            struct StaticDescriptorInitializer_MQCloud_2eInternal_2eProtocol_2eproto {
-                StaticDescriptorInitializer_MQCloud_2eInternal_2eProtocol_2eproto() {
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                }
-            } static_descriptor_initializer_MQCloud_2eInternal_2eProtocol_2eproto_;
+  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
+    "\n\037MQCloud.Internal.Protocol.proto\022\031MQClo"
+    "ud.Internal.Protocol\"0\n\016AdvertizeTopic\022\017"
+    "\n\007Pattern\030\001 \001(\t\022\r\n\005Topic\030\002 \001(\t\"H\n\016Connec"
+    "tRequest\022\020\n\010NodeName\030\001 \001(\t\022\023\n\013BackEndNam"
+    "e\030\002 \001(\t\022\017\n\007NodeUrl\030\003 \001(\t\"C\n\017ConnectRespo"
+    "nse\022\024\n\014RealNodeName\030\001 \001(\t\022\032\n\017HeartBeatRa"
+    "teMs\030\002 \001(\005:\0010\"\014\n\nDisconnect\"O\n\027GetAllPub"
+    "lishersRequest\022\024\n\tRequestId\030\001 \001(\005:\0010\022\017\n\007"
+    "Pattern\030\002 \001(\t\022\r\n\005Topic\030\003 \001(\t\"\?\n\030GetAllPu"
+    "blishersResponse\022\024\n\tRequestId\030\001 \001(\005:\0010\022\r"
+    "\n\005Nodes\030\002 \003(\t\"P\n\030GetAllSubscribersReques"
+    "t\022\024\n\tRequestId\030\001 \001(\005:\0010\022\017\n\007Pattern\030\002 \001(\t"
+    "\022\r\n\005Topic\030\003 \001(\t\"@\n\031GetAllSubscribersResp"
+    "onse\022\024\n\tRequestId\030\001 \001(\005:\0010\022\r\n\005Nodes\030\002 \003("
+    "\t\"K\n\023GetPublisherRequest\022\024\n\tRequestId\030\001 "
+    "\001(\005:\0010\022\017\n\007Pattern\030\002 \001(\t\022\r\n\005Topic\030\003 \001(\t\":"
+    "\n\024GetPublisherResponse\022\024\n\tRequestId\030\001 \001("
+    "\005:\0010\022\014\n\004Node\030\002 \001(\t\"L\n\024GetSubscriberReque"
+    "st\022\024\n\tRequestId\030\001 \001(\005:\0010\022\017\n\007Pattern\030\002 \001("
+    "\t\022\r\n\005Topic\030\003 \001(\t\";\n\025GetSubscriberRespons"
+    "e\022\024\n\tRequestId\030\001 \001(\005:\0010\022\014\n\004Node\030\002 \001(\t\"\013\n"
+    "\tHeartBeat\"\255\005\n\rIncomingEvent\022c\n\010TypeCode"
+    "\030\001 \001(\0162,.MQCloud.Internal.Protocol.Incom"
+    "ingEventType:#IncomingEventTypeOnConnect"
+    "ionClosed\022I\n\022OnConnectionClosed\030\002 \001(\0132-."
+    "MQCloud.Internal.Protocol.OnConnectionCl"
+    "osed\022S\n\027OnConnectionEstablished\030\003 \001(\01322."
+    "MQCloud.Internal.Protocol.OnConnectionEs"
+    "tablished\022O\n\025OnNodeAdvertisedTopic\030\004 \001(\013"
+    "20.MQCloud.Internal.Protocol.OnNodeAdver"
+    "tisedTopic\022K\n\023OnNodeRejectedTopic\030\005 \001(\0132"
+    "..MQCloud.Internal.Protocol.OnNodeReject"
+    "edTopic\022S\n\027OnNodeSubscribedToTopic\030\006 \001(\013"
+    "22.MQCloud.Internal.Protocol.OnNodeSubsc"
+    "ribedToTopic\022G\n\021OnNodeUnavaliable\030\007 \001(\0132"
+    ",.MQCloud.Internal.Protocol.OnNodeUnaval"
+    "iable\022[\n\033OnNodeUnsubscribedFromTopic\030\010 \001"
+    "(\01326.MQCloud.Internal.Protocol.OnNodeUns"
+    "ubscribedFromTopic\"\221\004\n\021IncomingOperation"
+    "\022g\n\010TypeCode\030\001 \001(\01620.MQCloud.Internal.Pr"
+    "otocol.IncomingOperationType:#IncomingOp"
+    "erationTypeConnectRequest\022C\n\017ConnectResp"
+    "onse\030\002 \001(\0132*.MQCloud.Internal.Protocol.C"
+    "onnectResponse\022M\n\024GetPublisherResponse\030\003"
+    " \001(\0132/.MQCloud.Internal.Protocol.GetPubl"
+    "isherResponse\022U\n\030GetAllPublishersRespons"
+    "e\030\004 \001(\01323.MQCloud.Internal.Protocol.GetA"
+    "llPublishersResponse\022O\n\025GetSubscriberRes"
+    "ponse\030\005 \001(\01320.MQCloud.Internal.Protocol."
+    "GetSubscriberResponse\022W\n\031GetAllSubscribe"
+    "rsResponse\030\006 \001(\01324.MQCloud.Internal.Prot"
+    "ocol.GetAllSubscribersResponse\"6\n\022OnConn"
+    "ectionClosed\022\020\n\010FromNode\030\001 \001(\t\022\016\n\006ToNode"
+    "\030\002 \001(\t\";\n\027OnConnectionEstablished\022\020\n\010Fro"
+    "mNode\030\001 \001(\t\022\016\n\006ToNode\030\002 \001(\t\"E\n\025OnNodeAdv"
+    "ertisedTopic\022\014\n\004Node\030\001 \001(\t\022\017\n\007Pattern\030\002 "
+    "\001(\t\022\r\n\005Topic\030\003 \001(\t\"C\n\023OnNodeRejectedTopi"
+    "c\022\014\n\004Node\030\001 \001(\t\022\017\n\007Pattern\030\002 \001(\t\022\r\n\005Topi"
+    "c\030\003 \001(\t\"G\n\027OnNodeSubscribedToTopic\022\014\n\004No"
+    "de\030\001 \001(\t\022\017\n\007Pattern\030\002 \001(\t\022\r\n\005Topic\030\003 \001(\t"
+    "\"!\n\021OnNodeUnavaliable\022\014\n\004Node\030\001 \001(\t\"K\n\033O"
+    "nNodeUnsubscribedFromTopic\022\014\n\004Node\030\001 \001(\t"
+    "\022\017\n\007Pattern\030\002 \001(\t\022\r\n\005Topic\030\003 \001(\t\"\362\003\n\rOut"
+    "goingEvent\022_\n\010TypeCode\030\001 \001(\0162,.MQCloud.I"
+    "nternal.Protocol.OutgoingEventType:\037Outg"
+    "oingEventTypeAdvertizeTopic\022A\n\016Advertize"
+    "Topic\030\002 \001(\0132).MQCloud.Internal.Protocol."
+    "AdvertizeTopic\0229\n\nDisconnect\030\003 \001(\0132%.MQC"
+    "loud.Internal.Protocol.Disconnect\022;\n\013Rej"
+    "ectTopic\030\004 \001(\0132&.MQCloud.Internal.Protoc"
+    "ol.RejectTopic\022O\n\025ReportNodeUnavaliable\030"
+    "\005 \001(\01320.MQCloud.Internal.Protocol.Report"
+    "NodeUnavaliable\0227\n\tSubscribe\030\006 \001(\0132$.MQC"
+    "loud.Internal.Protocol.Subscribe\022;\n\013UnSu"
+    "bscribe\030\007 \001(\0132&.MQCloud.Internal.Protoco"
+    "l.UnSubscribe\"\207\004\n\021OutgoingOperation\022g\n\010T"
+    "ypeCode\030\001 \001(\01620.MQCloud.Internal.Protoco"
+    "l.OutgoingOperationType:#OutgoingOperati"
+    "onTypeConnectRequest\022A\n\016ConnectRequest\030\002"
+    " \001(\0132).MQCloud.Internal.Protocol.Connect"
+    "Request\022K\n\023GetPublisherRequest\030\003 \001(\0132..M"
+    "QCloud.Internal.Protocol.GetPublisherReq"
+    "uest\022S\n\027GetAllPublishersRequest\030\004 \001(\01322."
+    "MQCloud.Internal.Protocol.GetAllPublishe"
+    "rsRequest\022M\n\024GetSubscriberRequest\030\005 \001(\0132"
+    "/.MQCloud.Internal.Protocol.GetSubscribe"
+    "rRequest\022U\n\030GetAllSubscribersRequest\030\006 \001"
+    "(\01323.MQCloud.Internal.Protocol.GetAllSub"
+    "scribersRequest\"-\n\013RejectTopic\022\017\n\007Patter"
+    "n\030\001 \001(\t\022\r\n\005Topic\030\002 \001(\t\"E\n\025ReportNodeUnav"
+    "aliable\022\014\n\004Node\030\001 \001(\t\022\017\n\007Pattern\030\002 \001(\t\022\r"
+    "\n\005Topic\030\003 \001(\t\"+\n\tSubscribe\022\017\n\007Pattern\030\001 "
+    "\001(\t\022\r\n\005Topic\030\002 \001(\t\"-\n\013UnSubscribe\022\017\n\007Pat"
+    "tern\030\001 \001(\t\022\r\n\005Topic\030\002 \001(\t*\310\002\n\021IncomingEv"
+    "entType\022\'\n#IncomingEventTypeOnConnection"
+    "Closed\020\000\022,\n(IncomingEventTypeOnConnectio"
+    "nEstablished\020\001\022*\n&IncomingEventTypeOnNod"
+    "eAdvertisedTopic\020\002\022(\n$IncomingEventTypeO"
+    "nNodeRejectedTopic\020\003\022,\n(IncomingEventTyp"
+    "eOnNodeSubscribedToTopic\020\004\022&\n\"IncomingEv"
+    "entTypeOnNodeUnavaliable\020\005\0220\n,IncomingEv"
+    "entTypeOnNodeUnsubscribedFromTopic\020\006*\202\002\n"
+    "\025IncomingOperationType\022\'\n#IncomingOperat"
+    "ionTypeConnectRequest\020\000\022,\n(IncomingOpera"
+    "tionTypeGetPublisherRequest\020\001\0220\n,Incomin"
+    "gOperationTypeGetAllPublishersRequest\020\002\022"
+    "-\n)IncomingOperationTypeGetSubscriberReq"
+    "uest\020\003\0221\n-IncomingOperationTypeGetAllSub"
+    "scribersRequest\020\004*\211\002\n\021OutgoingEventType\022"
+    "#\n\037OutgoingEventTypeAdvertizeTopic\020\000\022\037\n\033"
+    "OutgoingEventTypeDisconnect\020\001\022\036\n\032Outgoin"
+    "gEventTypeHeartBeat\020\002\022 \n\034OutgoingEventTy"
+    "peRejectTopic\020\003\022*\n&OutgoingEventTypeRepo"
+    "rtNodeUnavaliable\020\004\022\036\n\032OutgoingEventType"
+    "Subscribe\020\005\022 \n\034OutgoingEventTypeUnSubscr"
+    "ibe\020\006*\202\002\n\025OutgoingOperationType\022\'\n#Outgo"
+    "ingOperationTypeConnectRequest\020\000\022,\n(Outg"
+    "oingOperationTypeGetPublisherRequest\020\001\0220"
+    "\n,OutgoingOperationTypeGetAllPublishersR"
+    "equest\020\002\022-\n)OutgoingOperationTypeGetSubs"
+    "criberRequest\020\003\0221\n-OutgoingOperationType"
+    "GetAllSubscribersRequest\020\004", 4866);
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
+    "MQCloud.Internal.Protocol.proto", &protobuf_RegisterTypes);
+  AdvertizeTopic::default_instance_ = new AdvertizeTopic();
+  ConnectRequest::default_instance_ = new ConnectRequest();
+  ConnectResponse::default_instance_ = new ConnectResponse();
+  Disconnect::default_instance_ = new Disconnect();
+  GetAllPublishersRequest::default_instance_ = new GetAllPublishersRequest();
+  GetAllPublishersResponse::default_instance_ = new GetAllPublishersResponse();
+  GetAllSubscribersRequest::default_instance_ = new GetAllSubscribersRequest();
+  GetAllSubscribersResponse::default_instance_ = new GetAllSubscribersResponse();
+  GetPublisherRequest::default_instance_ = new GetPublisherRequest();
+  GetPublisherResponse::default_instance_ = new GetPublisherResponse();
+  GetSubscriberRequest::default_instance_ = new GetSubscriberRequest();
+  GetSubscriberResponse::default_instance_ = new GetSubscriberResponse();
+  HeartBeat::default_instance_ = new HeartBeat();
+  IncomingEvent::default_instance_ = new IncomingEvent();
+  IncomingOperation::default_instance_ = new IncomingOperation();
+  OnConnectionClosed::default_instance_ = new OnConnectionClosed();
+  OnConnectionEstablished::default_instance_ = new OnConnectionEstablished();
+  OnNodeAdvertisedTopic::default_instance_ = new OnNodeAdvertisedTopic();
+  OnNodeRejectedTopic::default_instance_ = new OnNodeRejectedTopic();
+  OnNodeSubscribedToTopic::default_instance_ = new OnNodeSubscribedToTopic();
+  OnNodeUnavaliable::default_instance_ = new OnNodeUnavaliable();
+  OnNodeUnsubscribedFromTopic::default_instance_ = new OnNodeUnsubscribedFromTopic();
+  OutgoingEvent::default_instance_ = new OutgoingEvent();
+  OutgoingOperation::default_instance_ = new OutgoingOperation();
+  RejectTopic::default_instance_ = new RejectTopic();
+  ReportNodeUnavaliable::default_instance_ = new ReportNodeUnavaliable();
+  Subscribe::default_instance_ = new Subscribe();
+  UnSubscribe::default_instance_ = new UnSubscribe();
+  AdvertizeTopic::default_instance_->InitAsDefaultInstance();
+  ConnectRequest::default_instance_->InitAsDefaultInstance();
+  ConnectResponse::default_instance_->InitAsDefaultInstance();
+  Disconnect::default_instance_->InitAsDefaultInstance();
+  GetAllPublishersRequest::default_instance_->InitAsDefaultInstance();
+  GetAllPublishersResponse::default_instance_->InitAsDefaultInstance();
+  GetAllSubscribersRequest::default_instance_->InitAsDefaultInstance();
+  GetAllSubscribersResponse::default_instance_->InitAsDefaultInstance();
+  GetPublisherRequest::default_instance_->InitAsDefaultInstance();
+  GetPublisherResponse::default_instance_->InitAsDefaultInstance();
+  GetSubscriberRequest::default_instance_->InitAsDefaultInstance();
+  GetSubscriberResponse::default_instance_->InitAsDefaultInstance();
+  HeartBeat::default_instance_->InitAsDefaultInstance();
+  IncomingEvent::default_instance_->InitAsDefaultInstance();
+  IncomingOperation::default_instance_->InitAsDefaultInstance();
+  OnConnectionClosed::default_instance_->InitAsDefaultInstance();
+  OnConnectionEstablished::default_instance_->InitAsDefaultInstance();
+  OnNodeAdvertisedTopic::default_instance_->InitAsDefaultInstance();
+  OnNodeRejectedTopic::default_instance_->InitAsDefaultInstance();
+  OnNodeSubscribedToTopic::default_instance_->InitAsDefaultInstance();
+  OnNodeUnavaliable::default_instance_->InitAsDefaultInstance();
+  OnNodeUnsubscribedFromTopic::default_instance_->InitAsDefaultInstance();
+  OutgoingEvent::default_instance_->InitAsDefaultInstance();
+  OutgoingOperation::default_instance_->InitAsDefaultInstance();
+  RejectTopic::default_instance_->InitAsDefaultInstance();
+  ReportNodeUnavaliable::default_instance_->InitAsDefaultInstance();
+  Subscribe::default_instance_->InitAsDefaultInstance();
+  UnSubscribe::default_instance_->InitAsDefaultInstance();
+  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_MQCloud_2eInternal_2eProtocol_2eproto);
+}
 
-            const ::google::protobuf::EnumDescriptor *IncomingEventType_descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return IncomingEventType_descriptor_;
-            }
+// Force AddDescriptors() to be called at static initialization time.
+struct StaticDescriptorInitializer_MQCloud_2eInternal_2eProtocol_2eproto {
+  StaticDescriptorInitializer_MQCloud_2eInternal_2eProtocol_2eproto() {
+    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  }
+} static_descriptor_initializer_MQCloud_2eInternal_2eProtocol_2eproto_;
+const ::google::protobuf::EnumDescriptor* IncomingEventType_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return IncomingEventType_descriptor_;
+}
+bool IncomingEventType_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      return true;
+    default:
+      return false;
+  }
+}
 
-            bool IncomingEventType_IsValid(int value) {
-                switch (value) {
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                    case 5:
-                    case 6:
-                        return true;
-                    default:
-                        return false;
-                }
-            }
+const ::google::protobuf::EnumDescriptor* IncomingOperationType_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return IncomingOperationType_descriptor_;
+}
+bool IncomingOperationType_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      return true;
+    default:
+      return false;
+  }
+}
 
-            const ::google::protobuf::EnumDescriptor *IncomingOperationType_descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return IncomingOperationType_descriptor_;
-            }
+const ::google::protobuf::EnumDescriptor* OutgoingEventType_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OutgoingEventType_descriptor_;
+}
+bool OutgoingEventType_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      return true;
+    default:
+      return false;
+  }
+}
 
-            bool IncomingOperationType_IsValid(int value) {
-                switch (value) {
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                        return true;
-                    default:
-                        return false;
-                }
-            }
-
-            const ::google::protobuf::EnumDescriptor *OutgoingEventType_descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OutgoingEventType_descriptor_;
-            }
-
-            bool OutgoingEventType_IsValid(int value) {
-                switch (value) {
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                    case 5:
-                    case 6:
-                        return true;
-                    default:
-                        return false;
-                }
-            }
-
-            const ::google::protobuf::EnumDescriptor *OutgoingOperationType_descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OutgoingOperationType_descriptor_;
-            }
-
-            bool OutgoingOperationType_IsValid(int value) {
-                switch (value) {
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                        return true;
-                    default:
-                        return false;
-                }
-            }
-
-
-            // ===================================================================
-
-#ifndef _MSC_VER
-            const int AdvertizeTopic::kPatternFieldNumber;
-            const int AdvertizeTopic::kTopicFieldNumber;
-#endif // !_MSC_VER
-
-
-            AdvertizeTopic::AdvertizeTopic() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.AdvertizeTopic)
-            }
-
-            void AdvertizeTopic::InitAsDefaultInstance() {
-            }
-
-            AdvertizeTopic::AdvertizeTopic(const AdvertizeTopic &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.AdvertizeTopic)
-            }
-
-            void AdvertizeTopic::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
-
-            AdvertizeTopic::~AdvertizeTopic() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.AdvertizeTopic)
-                SharedDtor();
-            }
-
-            void AdvertizeTopic::SharedDtor() {
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
-
-            void AdvertizeTopic::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
-
-            const ::google::protobuf::Descriptor *AdvertizeTopic::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return AdvertizeTopic_descriptor_;
-            }
-
-            const AdvertizeTopic &AdvertizeTopic::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
-
-            AdvertizeTopic *AdvertizeTopic::default_instance_ = NULL;
-
-            AdvertizeTopic *AdvertizeTopic::New() const {
-                return new AdvertizeTopic;
-            }
-
-            void AdvertizeTopic::Clear() {
-                if (_has_bits_[0 / 32] & 3) {
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool AdvertizeTopic::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.AdvertizeTopic)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string Pattern = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Topic;
-                            break;
-                        }
-
-                            // optional string Topic = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
-
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.AdvertizeTopic)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.AdvertizeTopic)
-                return false;
-#undef DO_
-            }
-
-            void AdvertizeTopic::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.AdvertizeTopic)
-                // optional string Pattern = 1;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->pattern(), output);
-                }
-
-                // optional string Topic = 2;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->topic(), output);
-                }
-
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.AdvertizeTopic)
-            }
-
-            ::google::protobuf::uint8 *AdvertizeTopic::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.AdvertizeTopic)
-                // optional string Pattern = 1;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->pattern(),
-                                                                                              target);
-                }
-
-                // optional string Topic = 2;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->topic(), target);
-                }
-
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.AdvertizeTopic)
-                return target;
-            }
-
-            int AdvertizeTopic::ByteSize() const {
-                int total_size = 0;
-
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string Pattern = 1;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
-
-                    // optional string Topic = 2;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
-
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
-
-            void AdvertizeTopic::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const AdvertizeTopic *source = ::google::protobuf::internal::dynamic_cast_if_available<const AdvertizeTopic *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
-
-            void AdvertizeTopic::MergeFrom(const AdvertizeTopic &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
-
-            void AdvertizeTopic::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
-
-            void AdvertizeTopic::CopyFrom(const AdvertizeTopic &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
-
-            bool AdvertizeTopic::IsInitialized() const {
-
-                return true;
-            }
-
-            void AdvertizeTopic::Swap(AdvertizeTopic * other) {
-                if (other != this) {
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
-
-            ::google::protobuf::Metadata AdvertizeTopic::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = AdvertizeTopic_descriptor_;
-                metadata.reflection = AdvertizeTopic_reflection_;
-                return metadata;
-            }
+const ::google::protobuf::EnumDescriptor* OutgoingOperationType_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OutgoingOperationType_descriptor_;
+}
+bool OutgoingOperationType_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      return true;
+    default:
+      return false;
+  }
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int ConnectRequest::kNodeNameFieldNumber;
-            const int ConnectRequest::kBackEndNameFieldNumber;
-#endif // !_MSC_VER
+const int AdvertizeTopic::kPatternFieldNumber;
+const int AdvertizeTopic::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+AdvertizeTopic::AdvertizeTopic()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.AdvertizeTopic)
+}
 
-            ConnectRequest::ConnectRequest() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.ConnectRequest)
-            }
+void AdvertizeTopic::InitAsDefaultInstance() {
+}
 
-            void ConnectRequest::InitAsDefaultInstance() {
-            }
+AdvertizeTopic::AdvertizeTopic(const AdvertizeTopic& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.AdvertizeTopic)
+}
 
-            ConnectRequest::ConnectRequest(const ConnectRequest &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.ConnectRequest)
-            }
+void AdvertizeTopic::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void ConnectRequest::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                nodename_     = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                backendname_  = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+AdvertizeTopic::~AdvertizeTopic() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.AdvertizeTopic)
+  SharedDtor();
+}
 
-            ConnectRequest::~ConnectRequest() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.ConnectRequest)
-                SharedDtor();
-            }
+void AdvertizeTopic::SharedDtor() {
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void ConnectRequest::SharedDtor() {
-                if (nodename_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete nodename_;
-                }
-                if (backendname_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete backendname_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void AdvertizeTopic::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* AdvertizeTopic::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return AdvertizeTopic_descriptor_;
+}
 
-            void ConnectRequest::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const AdvertizeTopic& AdvertizeTopic::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *ConnectRequest::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return ConnectRequest_descriptor_;
-            }
+AdvertizeTopic* AdvertizeTopic::default_instance_ = NULL;
 
-            const ConnectRequest &ConnectRequest::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+AdvertizeTopic* AdvertizeTopic::New() const {
+  return new AdvertizeTopic;
+}
 
-            ConnectRequest *ConnectRequest::default_instance_ = NULL;
+void AdvertizeTopic::Clear() {
+  if (_has_bits_[0 / 32] & 3) {
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            ConnectRequest *ConnectRequest::New() const {
-                return new ConnectRequest;
-            }
-
-            void ConnectRequest::Clear() {
-                if (_has_bits_[0 / 32] & 3) {
-                    if (has_nodename()) {
-                        if (nodename_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            nodename_->clear();
-                        }
-                    }
-                    if (has_backendname()) {
-                        if (backendname_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            backendname_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool ConnectRequest::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool AdvertizeTopic::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.ConnectRequest)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string NodeName = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_nodename()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->nodename().data(), this->nodename().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "nodename");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_BackEndName;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.AdvertizeTopic)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string Pattern = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Topic;
+        break;
+      }
 
-                            // optional string BackEndName = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_BackEndName:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_backendname()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->backendname().data(), this->backendname().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "backendname");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string Topic = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.ConnectRequest)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.ConnectRequest)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.AdvertizeTopic)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.AdvertizeTopic)
+  return false;
 #undef DO_
-            }
+}
 
-            void ConnectRequest::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.ConnectRequest)
-                // optional string NodeName = 1;
-                if (has_nodename()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->nodename().data(),
-                                                                                         this->nodename().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "nodename");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->nodename(), output);
-                }
+void AdvertizeTopic::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.AdvertizeTopic)
+  // optional string Pattern = 1;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->pattern(), output);
+  }
 
-                // optional string BackEndName = 2;
-                if (has_backendname()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->backendname().data(),
-                                                                                         this->backendname().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "backendname");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->backendname(),
-                                                                                          output);
-                }
+  // optional string Topic = 2;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->topic(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.ConnectRequest)
-            }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.AdvertizeTopic)
+}
 
-            ::google::protobuf::uint8 *ConnectRequest::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.ConnectRequest)
-                // optional string NodeName = 1;
-                if (has_nodename()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->nodename().data(),
-                                                                                         this->nodename().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "nodename");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->nodename(),
-                                                                                              target);
-                }
+::google::protobuf::uint8* AdvertizeTopic::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.AdvertizeTopic)
+  // optional string Pattern = 1;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->pattern(), target);
+  }
 
-                // optional string BackEndName = 2;
-                if (has_backendname()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->backendname().data(),
-                                                                                         this->backendname().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "backendname");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->backendname(),
-                                                                                              target);
-                }
+  // optional string Topic = 2;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->topic(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.ConnectRequest)
-                return target;
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.AdvertizeTopic)
+  return target;
+}
 
-            int ConnectRequest::ByteSize() const {
-                int total_size = 0;
+int AdvertizeTopic::ByteSize() const {
+  int total_size = 0;
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string NodeName = 1;
-                    if (has_nodename()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->nodename());
-                    }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string Pattern = 1;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-                    // optional string BackEndName = 2;
-                    if (has_backendname()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->backendname());
-                    }
+    // optional string Topic = 2;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void ConnectRequest::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const ConnectRequest *source = ::google::protobuf::internal::dynamic_cast_if_available<const ConnectRequest *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void AdvertizeTopic::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const AdvertizeTopic* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const AdvertizeTopic*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            void ConnectRequest::MergeFrom(const ConnectRequest &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_nodename()) {
-                        set_nodename(from.nodename());
-                    }
-                    if (from.has_backendname()) {
-                        set_backendname(from.backendname());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+void AdvertizeTopic::MergeFrom(const AdvertizeTopic& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-            void ConnectRequest::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void AdvertizeTopic::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void ConnectRequest::CopyFrom(const ConnectRequest &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void AdvertizeTopic::CopyFrom(const AdvertizeTopic& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            bool ConnectRequest::IsInitialized() const {
+bool AdvertizeTopic::IsInitialized() const {
 
-                return true;
-            }
+  return true;
+}
 
-            void ConnectRequest::Swap(ConnectRequest * other) {
-                if (other != this) {
-                    std::swap(nodename_, other->nodename_);
-                    std::swap(backendname_, other->backendname_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void AdvertizeTopic::Swap(AdvertizeTopic* other) {
+  if (other != this) {
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            ::google::protobuf::Metadata ConnectRequest::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = ConnectRequest_descriptor_;
-                metadata.reflection = ConnectRequest_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata AdvertizeTopic::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = AdvertizeTopic_descriptor_;
+  metadata.reflection = AdvertizeTopic_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int ConnectResponse::kRealNodeNameFieldNumber;
-            const int ConnectResponse::kHeartBeatRateMsFieldNumber;
-#endif // !_MSC_VER
+const int ConnectRequest::kNodeNameFieldNumber;
+const int ConnectRequest::kBackEndNameFieldNumber;
+const int ConnectRequest::kNodeUrlFieldNumber;
+#endif  // !_MSC_VER
 
+ConnectRequest::ConnectRequest()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.ConnectRequest)
+}
 
-            ConnectResponse::ConnectResponse() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.ConnectResponse)
-            }
+void ConnectRequest::InitAsDefaultInstance() {
+}
 
-            void ConnectResponse::InitAsDefaultInstance() {
-            }
+ConnectRequest::ConnectRequest(const ConnectRequest& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.ConnectRequest)
+}
 
-            ConnectResponse::ConnectResponse(const ConnectResponse &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.ConnectResponse)
-            }
+void ConnectRequest::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  nodename_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  backendname_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  nodeurl_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void ConnectResponse::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_    = 0;
-                realnodename_    = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                heartbeatratems_ = 0;
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+ConnectRequest::~ConnectRequest() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.ConnectRequest)
+  SharedDtor();
+}
 
-            ConnectResponse::~ConnectResponse() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.ConnectResponse)
-                SharedDtor();
-            }
+void ConnectRequest::SharedDtor() {
+  if (nodename_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete nodename_;
+  }
+  if (backendname_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete backendname_;
+  }
+  if (nodeurl_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete nodeurl_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void ConnectResponse::SharedDtor() {
-                if (realnodename_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete realnodename_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void ConnectRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ConnectRequest::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ConnectRequest_descriptor_;
+}
 
-            void ConnectResponse::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const ConnectRequest& ConnectRequest::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *ConnectResponse::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return ConnectResponse_descriptor_;
-            }
+ConnectRequest* ConnectRequest::default_instance_ = NULL;
 
-            const ConnectResponse &ConnectResponse::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+ConnectRequest* ConnectRequest::New() const {
+  return new ConnectRequest;
+}
 
-            ConnectResponse *ConnectResponse::default_instance_ = NULL;
+void ConnectRequest::Clear() {
+  if (_has_bits_[0 / 32] & 7) {
+    if (has_nodename()) {
+      if (nodename_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        nodename_->clear();
+      }
+    }
+    if (has_backendname()) {
+      if (backendname_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        backendname_->clear();
+      }
+    }
+    if (has_nodeurl()) {
+      if (nodeurl_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        nodeurl_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            ConnectResponse *ConnectResponse::New() const {
-                return new ConnectResponse;
-            }
-
-            void ConnectResponse::Clear() {
-                if (_has_bits_[0 / 32] & 3) {
-                    if (has_realnodename()) {
-                        if (realnodename_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            realnodename_->clear();
-                        }
-                    }
-                    heartbeatratems_ = 0;
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool ConnectResponse::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool ConnectRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.ConnectResponse)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string RealNodeName = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_realnodename()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->realnodename().data(), this->realnodename().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "realnodename");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(16))
-                                goto parse_HeartBeatRateMs;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.ConnectRequest)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string NodeName = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_nodename()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->nodename().data(), this->nodename().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "nodename");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_BackEndName;
+        break;
+      }
 
-                            // optional int32 HeartBeatRateMs = 2 [default = 0];
-                        case 2: {
-                            if (tag == 16) {
-                                parse_HeartBeatRateMs:
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<::google::protobuf::int32,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                                        input, &heartbeatratems_)));
-                                set_has_heartbeatratems();
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string BackEndName = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_BackEndName:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_backendname()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->backendname().data(), this->backendname().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "backendname");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_NodeUrl;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.ConnectResponse)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.ConnectResponse)
-                return false;
+      // optional string NodeUrl = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_NodeUrl:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_nodeurl()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->nodeurl().data(), this->nodeurl().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "nodeurl");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.ConnectRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.ConnectRequest)
+  return false;
 #undef DO_
-            }
+}
 
-            void ConnectResponse::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.ConnectResponse)
-                // optional string RealNodeName = 1;
-                if (has_realnodename()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->realnodename().data(),
-                                                                                         this->realnodename().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "realnodename");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->realnodename(),
-                                                                                          output);
-                }
+void ConnectRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.ConnectRequest)
+  // optional string NodeName = 1;
+  if (has_nodename()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->nodename().data(), this->nodename().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "nodename");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->nodename(), output);
+  }
 
-                // optional int32 HeartBeatRateMs = 2 [default = 0];
-                if (has_heartbeatratems()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->heartbeatratems(), output);
-                }
+  // optional string BackEndName = 2;
+  if (has_backendname()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->backendname().data(), this->backendname().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "backendname");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->backendname(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.ConnectResponse)
-            }
+  // optional string NodeUrl = 3;
+  if (has_nodeurl()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->nodeurl().data(), this->nodeurl().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "nodeurl");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->nodeurl(), output);
+  }
 
-            ::google::protobuf::uint8 *ConnectResponse::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.ConnectResponse)
-                // optional string RealNodeName = 1;
-                if (has_realnodename()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->realnodename().data(),
-                                                                                         this->realnodename().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "realnodename");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->realnodename(),
-                                                                                              target);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.ConnectRequest)
+}
 
-                // optional int32 HeartBeatRateMs = 2 [default = 0];
-                if (has_heartbeatratems()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->heartbeatratems(),
-                                                                                             target);
-                }
+::google::protobuf::uint8* ConnectRequest::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.ConnectRequest)
+  // optional string NodeName = 1;
+  if (has_nodename()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->nodename().data(), this->nodename().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "nodename");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->nodename(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.ConnectResponse)
-                return target;
-            }
+  // optional string BackEndName = 2;
+  if (has_backendname()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->backendname().data(), this->backendname().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "backendname");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->backendname(), target);
+  }
 
-            int ConnectResponse::ByteSize() const {
-                int total_size = 0;
+  // optional string NodeUrl = 3;
+  if (has_nodeurl()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->nodeurl().data(), this->nodeurl().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "nodeurl");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->nodeurl(), target);
+  }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string RealNodeName = 1;
-                    if (has_realnodename()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::StringSize(this->realnodename());
-                    }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.ConnectRequest)
+  return target;
+}
 
-                    // optional int32 HeartBeatRateMs = 2 [default = 0];
-                    if (has_heartbeatratems()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::Int32Size(
-                                              this->heartbeatratems());
-                    }
+int ConnectRequest::ByteSize() const {
+  int total_size = 0;
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string NodeName = 1;
+    if (has_nodename()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->nodename());
+    }
 
-            void ConnectResponse::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const ConnectResponse *source = ::google::protobuf::internal::dynamic_cast_if_available<const ConnectResponse *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+    // optional string BackEndName = 2;
+    if (has_backendname()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->backendname());
+    }
 
-            void ConnectResponse::MergeFrom(const ConnectResponse &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_realnodename()) {
-                        set_realnodename(from.realnodename());
-                    }
-                    if (from.has_heartbeatratems()) {
-                        set_heartbeatratems(from.heartbeatratems());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+    // optional string NodeUrl = 3;
+    if (has_nodeurl()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->nodeurl());
+    }
 
-            void ConnectResponse::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void ConnectResponse::CopyFrom(const ConnectResponse &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void ConnectRequest::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ConnectRequest* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ConnectRequest*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            bool ConnectResponse::IsInitialized() const {
+void ConnectRequest::MergeFrom(const ConnectRequest& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_nodename()) {
+      set_nodename(from.nodename());
+    }
+    if (from.has_backendname()) {
+      set_backendname(from.backendname());
+    }
+    if (from.has_nodeurl()) {
+      set_nodeurl(from.nodeurl());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                return true;
-            }
+void ConnectRequest::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void ConnectResponse::Swap(ConnectResponse * other) {
-                if (other != this) {
-                    std::swap(realnodename_, other->realnodename_);
-                    std::swap(heartbeatratems_, other->heartbeatratems_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void ConnectRequest::CopyFrom(const ConnectRequest& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            ::google::protobuf::Metadata ConnectResponse::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = ConnectResponse_descriptor_;
-                metadata.reflection = ConnectResponse_reflection_;
-                return metadata;
-            }
+bool ConnectRequest::IsInitialized() const {
+
+  return true;
+}
+
+void ConnectRequest::Swap(ConnectRequest* other) {
+  if (other != this) {
+    std::swap(nodename_, other->nodename_);
+    std::swap(backendname_, other->backendname_);
+    std::swap(nodeurl_, other->nodeurl_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ConnectRequest::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ConnectRequest_descriptor_;
+  metadata.reflection = ConnectRequest_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-#endif // !_MSC_VER
+const int ConnectResponse::kRealNodeNameFieldNumber;
+const int ConnectResponse::kHeartBeatRateMsFieldNumber;
+#endif  // !_MSC_VER
 
+ConnectResponse::ConnectResponse()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.ConnectResponse)
+}
 
-            Disconnect::Disconnect() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.Disconnect)
-            }
+void ConnectResponse::InitAsDefaultInstance() {
+}
 
-            void Disconnect::InitAsDefaultInstance() {
-            }
+ConnectResponse::ConnectResponse(const ConnectResponse& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.ConnectResponse)
+}
 
-            Disconnect::Disconnect(const Disconnect &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.Disconnect)
-            }
+void ConnectResponse::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  realnodename_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  heartbeatratems_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void Disconnect::SharedCtor() {
-                _cached_size_ = 0;
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+ConnectResponse::~ConnectResponse() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.ConnectResponse)
+  SharedDtor();
+}
 
-            Disconnect::~Disconnect() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.Disconnect)
-                SharedDtor();
-            }
+void ConnectResponse::SharedDtor() {
+  if (realnodename_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete realnodename_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void Disconnect::SharedDtor() {
-                if (this != default_instance_) {
-                }
-            }
+void ConnectResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ConnectResponse::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ConnectResponse_descriptor_;
+}
 
-            void Disconnect::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const ConnectResponse& ConnectResponse::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *Disconnect::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return Disconnect_descriptor_;
-            }
+ConnectResponse* ConnectResponse::default_instance_ = NULL;
 
-            const Disconnect &Disconnect::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+ConnectResponse* ConnectResponse::New() const {
+  return new ConnectResponse;
+}
 
-            Disconnect *Disconnect::default_instance_ = NULL;
+void ConnectResponse::Clear() {
+  if (_has_bits_[0 / 32] & 3) {
+    if (has_realnodename()) {
+      if (realnodename_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        realnodename_->clear();
+      }
+    }
+    heartbeatratems_ = 0;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            Disconnect *Disconnect::New() const {
-                return new Disconnect;
-            }
-
-            void Disconnect::Clear() {
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool Disconnect::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool ConnectResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.Disconnect)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    handle_unusual:
-                    if (tag == 0
-                        || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                           == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                        goto success;
-                    }
-                    DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag, mutable_unknown_fields()));
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.Disconnect)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.Disconnect)
-                return false;
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.ConnectResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string RealNodeName = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_realnodename()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->realnodename().data(), this->realnodename().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "realnodename");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(16)) goto parse_HeartBeatRateMs;
+        break;
+      }
+
+      // optional int32 HeartBeatRateMs = 2 [default = 0];
+      case 2: {
+        if (tag == 16) {
+         parse_HeartBeatRateMs:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &heartbeatratems_)));
+          set_has_heartbeatratems();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.ConnectResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.ConnectResponse)
+  return false;
 #undef DO_
-            }
+}
 
-            void Disconnect::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.Disconnect)
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.Disconnect)
-            }
+void ConnectResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.ConnectResponse)
+  // optional string RealNodeName = 1;
+  if (has_realnodename()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->realnodename().data(), this->realnodename().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "realnodename");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->realnodename(), output);
+  }
 
-            ::google::protobuf::uint8 *Disconnect::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.Disconnect)
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.Disconnect)
-                return target;
-            }
+  // optional int32 HeartBeatRateMs = 2 [default = 0];
+  if (has_heartbeatratems()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->heartbeatratems(), output);
+  }
 
-            int Disconnect::ByteSize() const {
-                int total_size = 0;
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.ConnectResponse)
+}
 
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+::google::protobuf::uint8* ConnectResponse::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.ConnectResponse)
+  // optional string RealNodeName = 1;
+  if (has_realnodename()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->realnodename().data(), this->realnodename().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "realnodename");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->realnodename(), target);
+  }
 
-            void Disconnect::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const Disconnect *source = ::google::protobuf::internal::dynamic_cast_if_available<const Disconnect *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+  // optional int32 HeartBeatRateMs = 2 [default = 0];
+  if (has_heartbeatratems()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->heartbeatratems(), target);
+  }
 
-            void Disconnect::MergeFrom(const Disconnect &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.ConnectResponse)
+  return target;
+}
 
-            void Disconnect::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+int ConnectResponse::ByteSize() const {
+  int total_size = 0;
 
-            void Disconnect::CopyFrom(const Disconnect &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string RealNodeName = 1;
+    if (has_realnodename()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->realnodename());
+    }
 
-            bool Disconnect::IsInitialized() const {
+    // optional int32 HeartBeatRateMs = 2 [default = 0];
+    if (has_heartbeatratems()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->heartbeatratems());
+    }
 
-                return true;
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void Disconnect::Swap(Disconnect * other) {
-                if (other != this) {
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void ConnectResponse::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ConnectResponse* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ConnectResponse*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            ::google::protobuf::Metadata Disconnect::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = Disconnect_descriptor_;
-                metadata.reflection = Disconnect_reflection_;
-                return metadata;
-            }
+void ConnectResponse::MergeFrom(const ConnectResponse& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_realnodename()) {
+      set_realnodename(from.realnodename());
+    }
+    if (from.has_heartbeatratems()) {
+      set_heartbeatratems(from.heartbeatratems());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ConnectResponse::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ConnectResponse::CopyFrom(const ConnectResponse& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ConnectResponse::IsInitialized() const {
+
+  return true;
+}
+
+void ConnectResponse::Swap(ConnectResponse* other) {
+  if (other != this) {
+    std::swap(realnodename_, other->realnodename_);
+    std::swap(heartbeatratems_, other->heartbeatratems_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ConnectResponse::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ConnectResponse_descriptor_;
+  metadata.reflection = ConnectResponse_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int GetAllPublishersRequest::kRequestIdFieldNumber;
-            const int GetAllPublishersRequest::kPatternFieldNumber;
-            const int GetAllPublishersRequest::kTopicFieldNumber;
-#endif // !_MSC_VER
+#endif  // !_MSC_VER
 
+Disconnect::Disconnect()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.Disconnect)
+}
 
-            GetAllPublishersRequest::GetAllPublishersRequest() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetAllPublishersRequest)
-            }
+void Disconnect::InitAsDefaultInstance() {
+}
 
-            void GetAllPublishersRequest::InitAsDefaultInstance() {
-            }
+Disconnect::Disconnect(const Disconnect& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.Disconnect)
+}
 
-            GetAllPublishersRequest::GetAllPublishersRequest(const GetAllPublishersRequest &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetAllPublishersRequest)
-            }
+void Disconnect::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void GetAllPublishersRequest::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                requestid_    = 0;
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+Disconnect::~Disconnect() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.Disconnect)
+  SharedDtor();
+}
 
-            GetAllPublishersRequest::~GetAllPublishersRequest() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetAllPublishersRequest)
-                SharedDtor();
-            }
+void Disconnect::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
 
-            void GetAllPublishersRequest::SharedDtor() {
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void Disconnect::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Disconnect::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return Disconnect_descriptor_;
+}
 
-            void GetAllPublishersRequest::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const Disconnect& Disconnect::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *GetAllPublishersRequest::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return GetAllPublishersRequest_descriptor_;
-            }
+Disconnect* Disconnect::default_instance_ = NULL;
 
-            const GetAllPublishersRequest &GetAllPublishersRequest::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+Disconnect* Disconnect::New() const {
+  return new Disconnect;
+}
 
-            GetAllPublishersRequest *GetAllPublishersRequest::default_instance_ = NULL;
+void Disconnect::Clear() {
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            GetAllPublishersRequest *GetAllPublishersRequest::New() const {
-                return new GetAllPublishersRequest;
-            }
-
-            void GetAllPublishersRequest::Clear() {
-                if (_has_bits_[0 / 32] & 7) {
-                    requestid_ = 0;
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool GetAllPublishersRequest::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool Disconnect::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllPublishersRequest)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional int32 RequestId = 1 [default = 0];
-                        case 1: {
-                            if (tag == 8) {
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<::google::protobuf::int32,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                                        input, &requestid_)));
-                                set_has_requestid();
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Pattern;
-                            break;
-                        }
-
-                            // optional string Pattern = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Pattern:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Topic;
-                            break;
-                        }
-
-                            // optional string Topic = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
-
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetAllPublishersRequest)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetAllPublishersRequest)
-                return false;
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.Disconnect)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0 ||
+        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, mutable_unknown_fields()));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.Disconnect)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.Disconnect)
+  return false;
 #undef DO_
-            }
+}
 
-            void GetAllPublishersRequest::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllPublishersRequest)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
-                }
+void Disconnect::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.Disconnect)
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.Disconnect)
+}
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->pattern(), output);
-                }
+::google::protobuf::uint8* Disconnect::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.Disconnect)
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.Disconnect)
+  return target;
+}
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(3, this->topic(), output);
-                }
+int Disconnect::ByteSize() const {
+  int total_size = 0;
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllPublishersRequest)
-            }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            ::google::protobuf::uint8 *GetAllPublishersRequest::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllPublishersRequest)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(),
-                                                                                             target);
-                }
+void Disconnect::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const Disconnect* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const Disconnect*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->pattern(),
-                                                                                              target);
-                }
+void Disconnect::MergeFrom(const Disconnect& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(3, this->topic(), target);
-                }
+void Disconnect::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetAllPublishersRequest)
-                return target;
-            }
+void Disconnect::CopyFrom(const Disconnect& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            int GetAllPublishersRequest::ByteSize() const {
-                int total_size = 0;
+bool Disconnect::IsInitialized() const {
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional int32 RequestId = 1 [default = 0];
-                    if (has_requestid()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::Int32Size(this->requestid());
-                    }
+  return true;
+}
 
-                    // optional string Pattern = 2;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+void Disconnect::Swap(Disconnect* other) {
+  if (other != this) {
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-                    // optional string Topic = 3;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
-
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
-
-            void GetAllPublishersRequest::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const GetAllPublishersRequest *source = ::google::protobuf::internal::dynamic_cast_if_available<const GetAllPublishersRequest *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
-
-            void GetAllPublishersRequest::MergeFrom(const GetAllPublishersRequest &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_requestid()) {
-                        set_requestid(from.requestid());
-                    }
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
-
-            void GetAllPublishersRequest::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
-
-            void GetAllPublishersRequest::CopyFrom(const GetAllPublishersRequest &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
-
-            bool GetAllPublishersRequest::IsInitialized() const {
-
-                return true;
-            }
-
-            void GetAllPublishersRequest::Swap(GetAllPublishersRequest * other) {
-                if (other != this) {
-                    std::swap(requestid_, other->requestid_);
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
-
-            ::google::protobuf::Metadata GetAllPublishersRequest::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = GetAllPublishersRequest_descriptor_;
-                metadata.reflection = GetAllPublishersRequest_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata Disconnect::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = Disconnect_descriptor_;
+  metadata.reflection = Disconnect_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int GetAllPublishersResponse::kRequestIdFieldNumber;
-            const int GetAllPublishersResponse::kNodesFieldNumber;
-#endif // !_MSC_VER
+const int GetAllPublishersRequest::kRequestIdFieldNumber;
+const int GetAllPublishersRequest::kPatternFieldNumber;
+const int GetAllPublishersRequest::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+GetAllPublishersRequest::GetAllPublishersRequest()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetAllPublishersRequest)
+}
 
-            GetAllPublishersResponse::GetAllPublishersResponse() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetAllPublishersResponse)
-            }
+void GetAllPublishersRequest::InitAsDefaultInstance() {
+}
 
-            void GetAllPublishersResponse::InitAsDefaultInstance() {
-            }
+GetAllPublishersRequest::GetAllPublishersRequest(const GetAllPublishersRequest& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetAllPublishersRequest)
+}
 
-            GetAllPublishersResponse::GetAllPublishersResponse(const GetAllPublishersResponse &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetAllPublishersResponse)
-            }
+void GetAllPublishersRequest::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  requestid_ = 0;
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void GetAllPublishersResponse::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                requestid_    = 0;
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+GetAllPublishersRequest::~GetAllPublishersRequest() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetAllPublishersRequest)
+  SharedDtor();
+}
 
-            GetAllPublishersResponse::~GetAllPublishersResponse() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetAllPublishersResponse)
-                SharedDtor();
-            }
+void GetAllPublishersRequest::SharedDtor() {
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void GetAllPublishersResponse::SharedDtor() {
-                if (this != default_instance_) {
-                }
-            }
+void GetAllPublishersRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* GetAllPublishersRequest::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return GetAllPublishersRequest_descriptor_;
+}
 
-            void GetAllPublishersResponse::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const GetAllPublishersRequest& GetAllPublishersRequest::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *GetAllPublishersResponse::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return GetAllPublishersResponse_descriptor_;
-            }
+GetAllPublishersRequest* GetAllPublishersRequest::default_instance_ = NULL;
 
-            const GetAllPublishersResponse &GetAllPublishersResponse::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+GetAllPublishersRequest* GetAllPublishersRequest::New() const {
+  return new GetAllPublishersRequest;
+}
 
-            GetAllPublishersResponse *GetAllPublishersResponse::default_instance_ = NULL;
+void GetAllPublishersRequest::Clear() {
+  if (_has_bits_[0 / 32] & 7) {
+    requestid_ = 0;
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            GetAllPublishersResponse *GetAllPublishersResponse::New() const {
-                return new GetAllPublishersResponse;
-            }
-
-            void GetAllPublishersResponse::Clear() {
-                requestid_ = 0;
-                nodes_.Clear();
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool GetAllPublishersResponse::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool GetAllPublishersRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllPublishersResponse)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional int32 RequestId = 1 [default = 0];
-                        case 1: {
-                            if (tag == 8) {
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<::google::protobuf::int32,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                                        input, &requestid_)));
-                                set_has_requestid();
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Nodes;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllPublishersRequest)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int32 RequestId = 1 [default = 0];
+      case 1: {
+        if (tag == 8) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &requestid_)));
+          set_has_requestid();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Pattern;
+        break;
+      }
 
-                            // repeated string Nodes = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Nodes:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input, this->add_nodes()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->nodes(this->nodes_size() - 1).data(),
-                                        this->nodes(this->nodes_size() - 1).length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "nodes");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Nodes;
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string Pattern = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Pattern:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_Topic;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetAllPublishersResponse)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetAllPublishersResponse)
-                return false;
+      // optional string Topic = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetAllPublishersRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetAllPublishersRequest)
+  return false;
 #undef DO_
-            }
+}
 
-            void GetAllPublishersResponse::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllPublishersResponse)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
-                }
+void GetAllPublishersRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllPublishersRequest)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
+  }
 
-                // repeated string Nodes = 2;
-                for (int i = 0; i < this->nodes_size(); i++) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->nodes(i).data(),
-                                                                                         this->nodes(i).length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "nodes");
-                    ::google::protobuf::internal::WireFormatLite::WriteString(2, this->nodes(i), output);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->pattern(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllPublishersResponse)
-            }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->topic(), output);
+  }
 
-            ::google::protobuf::uint8 *GetAllPublishersResponse::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllPublishersResponse)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(),
-                                                                                             target);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllPublishersRequest)
+}
 
-                // repeated string Nodes = 2;
-                for (int i = 0; i < this->nodes_size(); i++) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->nodes(i).data(),
-                                                                                         this->nodes(i).length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "nodes");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->nodes(i),
-                                                                                              target);
-                }
+::google::protobuf::uint8* GetAllPublishersRequest::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllPublishersRequest)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetAllPublishersResponse)
-                return target;
-            }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->pattern(), target);
+  }
 
-            int GetAllPublishersResponse::ByteSize() const {
-                int total_size = 0;
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->topic(), target);
+  }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional int32 RequestId = 1 [default = 0];
-                    if (has_requestid()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::Int32Size(this->requestid());
-                    }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetAllPublishersRequest)
+  return target;
+}
 
-                }
-                // repeated string Nodes = 2;
-                total_size += 1 * this->nodes_size();
-                for (int i = 0; i < this->nodes_size(); i++) {
-                    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(this->nodes(i));
-                }
+int GetAllPublishersRequest::ByteSize() const {
+  int total_size = 0;
 
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 RequestId = 1 [default = 0];
+    if (has_requestid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->requestid());
+    }
 
-            void GetAllPublishersResponse::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const GetAllPublishersResponse *source = ::google::protobuf::internal::dynamic_cast_if_available<const GetAllPublishersResponse *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+    // optional string Pattern = 2;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-            void GetAllPublishersResponse::MergeFrom(const GetAllPublishersResponse &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                nodes_.MergeFrom(from.nodes_);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_requestid()) {
-                        set_requestid(from.requestid());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+    // optional string Topic = 3;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-            void GetAllPublishersResponse::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void GetAllPublishersResponse::CopyFrom(const GetAllPublishersResponse &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void GetAllPublishersRequest::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const GetAllPublishersRequest* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const GetAllPublishersRequest*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            bool GetAllPublishersResponse::IsInitialized() const {
+void GetAllPublishersRequest::MergeFrom(const GetAllPublishersRequest& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_requestid()) {
+      set_requestid(from.requestid());
+    }
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                return true;
-            }
+void GetAllPublishersRequest::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void GetAllPublishersResponse::Swap(GetAllPublishersResponse * other) {
-                if (other != this) {
-                    std::swap(requestid_, other->requestid_);
-                    nodes_.Swap(&other->nodes_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void GetAllPublishersRequest::CopyFrom(const GetAllPublishersRequest& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            ::google::protobuf::Metadata GetAllPublishersResponse::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = GetAllPublishersResponse_descriptor_;
-                metadata.reflection = GetAllPublishersResponse_reflection_;
-                return metadata;
-            }
+bool GetAllPublishersRequest::IsInitialized() const {
+
+  return true;
+}
+
+void GetAllPublishersRequest::Swap(GetAllPublishersRequest* other) {
+  if (other != this) {
+    std::swap(requestid_, other->requestid_);
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata GetAllPublishersRequest::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = GetAllPublishersRequest_descriptor_;
+  metadata.reflection = GetAllPublishersRequest_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int GetAllSubscribersRequest::kRequestIdFieldNumber;
-            const int GetAllSubscribersRequest::kPatternFieldNumber;
-            const int GetAllSubscribersRequest::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int GetAllPublishersResponse::kRequestIdFieldNumber;
+const int GetAllPublishersResponse::kNodesFieldNumber;
+#endif  // !_MSC_VER
 
+GetAllPublishersResponse::GetAllPublishersResponse()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetAllPublishersResponse)
+}
 
-            GetAllSubscribersRequest::GetAllSubscribersRequest() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
-            }
+void GetAllPublishersResponse::InitAsDefaultInstance() {
+}
 
-            void GetAllSubscribersRequest::InitAsDefaultInstance() {
-            }
+GetAllPublishersResponse::GetAllPublishersResponse(const GetAllPublishersResponse& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetAllPublishersResponse)
+}
 
-            GetAllSubscribersRequest::GetAllSubscribersRequest(const GetAllSubscribersRequest &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
-            }
+void GetAllPublishersResponse::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  requestid_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void GetAllSubscribersRequest::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                requestid_    = 0;
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+GetAllPublishersResponse::~GetAllPublishersResponse() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetAllPublishersResponse)
+  SharedDtor();
+}
 
-            GetAllSubscribersRequest::~GetAllSubscribersRequest() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
-                SharedDtor();
-            }
+void GetAllPublishersResponse::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
 
-            void GetAllSubscribersRequest::SharedDtor() {
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void GetAllPublishersResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* GetAllPublishersResponse::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return GetAllPublishersResponse_descriptor_;
+}
 
-            void GetAllSubscribersRequest::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const GetAllPublishersResponse& GetAllPublishersResponse::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *GetAllSubscribersRequest::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return GetAllSubscribersRequest_descriptor_;
-            }
+GetAllPublishersResponse* GetAllPublishersResponse::default_instance_ = NULL;
 
-            const GetAllSubscribersRequest &GetAllSubscribersRequest::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+GetAllPublishersResponse* GetAllPublishersResponse::New() const {
+  return new GetAllPublishersResponse;
+}
 
-            GetAllSubscribersRequest *GetAllSubscribersRequest::default_instance_ = NULL;
+void GetAllPublishersResponse::Clear() {
+  requestid_ = 0;
+  nodes_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            GetAllSubscribersRequest *GetAllSubscribersRequest::New() const {
-                return new GetAllSubscribersRequest;
-            }
-
-            void GetAllSubscribersRequest::Clear() {
-                if (_has_bits_[0 / 32] & 7) {
-                    requestid_ = 0;
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool GetAllSubscribersRequest::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool GetAllPublishersResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional int32 RequestId = 1 [default = 0];
-                        case 1: {
-                            if (tag == 8) {
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<::google::protobuf::int32,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                                        input, &requestid_)));
-                                set_has_requestid();
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Pattern;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllPublishersResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int32 RequestId = 1 [default = 0];
+      case 1: {
+        if (tag == 8) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &requestid_)));
+          set_has_requestid();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Nodes;
+        break;
+      }
 
-                            // optional string Pattern = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Pattern:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Topic;
-                            break;
-                        }
+      // repeated string Nodes = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Nodes:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_nodes()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->nodes(this->nodes_size() - 1).data(),
+            this->nodes(this->nodes_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "nodes");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Nodes;
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                            // optional string Topic = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
-
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetAllPublishersResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetAllPublishersResponse)
+  return false;
 #undef DO_
-            }
+}
 
-            void GetAllSubscribersRequest::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
-                }
+void GetAllPublishersResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllPublishersResponse)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->pattern(), output);
-                }
+  // repeated string Nodes = 2;
+  for (int i = 0; i < this->nodes_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    this->nodes(i).data(), this->nodes(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE,
+    "nodes");
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->nodes(i), output);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(3, this->topic(), output);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllPublishersResponse)
+}
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
-            }
+::google::protobuf::uint8* GetAllPublishersResponse::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllPublishersResponse)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(), target);
+  }
 
-            ::google::protobuf::uint8 *GetAllSubscribersRequest::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(),
-                                                                                             target);
-                }
+  // repeated string Nodes = 2;
+  for (int i = 0; i < this->nodes_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->nodes(i).data(), this->nodes(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "nodes");
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(2, this->nodes(i), target);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->pattern(),
-                                                                                              target);
-                }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetAllPublishersResponse)
+  return target;
+}
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(3, this->topic(), target);
-                }
+int GetAllPublishersResponse::ByteSize() const {
+  int total_size = 0;
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
-                return target;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 RequestId = 1 [default = 0];
+    if (has_requestid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->requestid());
+    }
 
-            int GetAllSubscribersRequest::ByteSize() const {
-                int total_size = 0;
+  }
+  // repeated string Nodes = 2;
+  total_size += 1 * this->nodes_size();
+  for (int i = 0; i < this->nodes_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->nodes(i));
+  }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional int32 RequestId = 1 [default = 0];
-                    if (has_requestid()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::Int32Size(this->requestid());
-                    }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-                    // optional string Pattern = 2;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+void GetAllPublishersResponse::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const GetAllPublishersResponse* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const GetAllPublishersResponse*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-                    // optional string Topic = 3;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+void GetAllPublishersResponse::MergeFrom(const GetAllPublishersResponse& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  nodes_.MergeFrom(from.nodes_);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_requestid()) {
+      set_requestid(from.requestid());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+void GetAllPublishersResponse::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void GetAllSubscribersRequest::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const GetAllSubscribersRequest *source = ::google::protobuf::internal::dynamic_cast_if_available<const GetAllSubscribersRequest *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void GetAllPublishersResponse::CopyFrom(const GetAllPublishersResponse& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void GetAllSubscribersRequest::MergeFrom(const GetAllSubscribersRequest &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_requestid()) {
-                        set_requestid(from.requestid());
-                    }
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+bool GetAllPublishersResponse::IsInitialized() const {
 
-            void GetAllSubscribersRequest::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  return true;
+}
 
-            void GetAllSubscribersRequest::CopyFrom(const GetAllSubscribersRequest &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void GetAllPublishersResponse::Swap(GetAllPublishersResponse* other) {
+  if (other != this) {
+    std::swap(requestid_, other->requestid_);
+    nodes_.Swap(&other->nodes_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            bool GetAllSubscribersRequest::IsInitialized() const {
-
-                return true;
-            }
-
-            void GetAllSubscribersRequest::Swap(GetAllSubscribersRequest * other) {
-                if (other != this) {
-                    std::swap(requestid_, other->requestid_);
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
-
-            ::google::protobuf::Metadata GetAllSubscribersRequest::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = GetAllSubscribersRequest_descriptor_;
-                metadata.reflection = GetAllSubscribersRequest_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata GetAllPublishersResponse::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = GetAllPublishersResponse_descriptor_;
+  metadata.reflection = GetAllPublishersResponse_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int GetAllSubscribersResponse::kRequestIdFieldNumber;
-            const int GetAllSubscribersResponse::kNodesFieldNumber;
-#endif // !_MSC_VER
+const int GetAllSubscribersRequest::kRequestIdFieldNumber;
+const int GetAllSubscribersRequest::kPatternFieldNumber;
+const int GetAllSubscribersRequest::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+GetAllSubscribersRequest::GetAllSubscribersRequest()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
+}
 
-            GetAllSubscribersResponse::GetAllSubscribersResponse() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
-            }
+void GetAllSubscribersRequest::InitAsDefaultInstance() {
+}
 
-            void GetAllSubscribersResponse::InitAsDefaultInstance() {
-            }
+GetAllSubscribersRequest::GetAllSubscribersRequest(const GetAllSubscribersRequest& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
+}
 
-            GetAllSubscribersResponse::GetAllSubscribersResponse(const GetAllSubscribersResponse &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
-            }
+void GetAllSubscribersRequest::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  requestid_ = 0;
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void GetAllSubscribersResponse::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                requestid_    = 0;
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+GetAllSubscribersRequest::~GetAllSubscribersRequest() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
+  SharedDtor();
+}
 
-            GetAllSubscribersResponse::~GetAllSubscribersResponse() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
-                SharedDtor();
-            }
+void GetAllSubscribersRequest::SharedDtor() {
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void GetAllSubscribersResponse::SharedDtor() {
-                if (this != default_instance_) {
-                }
-            }
+void GetAllSubscribersRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* GetAllSubscribersRequest::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return GetAllSubscribersRequest_descriptor_;
+}
 
-            void GetAllSubscribersResponse::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const GetAllSubscribersRequest& GetAllSubscribersRequest::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *GetAllSubscribersResponse::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return GetAllSubscribersResponse_descriptor_;
-            }
+GetAllSubscribersRequest* GetAllSubscribersRequest::default_instance_ = NULL;
 
-            const GetAllSubscribersResponse &GetAllSubscribersResponse::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+GetAllSubscribersRequest* GetAllSubscribersRequest::New() const {
+  return new GetAllSubscribersRequest;
+}
 
-            GetAllSubscribersResponse *GetAllSubscribersResponse::default_instance_ = NULL;
+void GetAllSubscribersRequest::Clear() {
+  if (_has_bits_[0 / 32] & 7) {
+    requestid_ = 0;
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            GetAllSubscribersResponse *GetAllSubscribersResponse::New() const {
-                return new GetAllSubscribersResponse;
-            }
-
-            void GetAllSubscribersResponse::Clear() {
-                requestid_ = 0;
-                nodes_.Clear();
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool GetAllSubscribersResponse::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool GetAllSubscribersRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional int32 RequestId = 1 [default = 0];
-                        case 1: {
-                            if (tag == 8) {
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<::google::protobuf::int32,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                                        input, &requestid_)));
-                                set_has_requestid();
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Nodes;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int32 RequestId = 1 [default = 0];
+      case 1: {
+        if (tag == 8) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &requestid_)));
+          set_has_requestid();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Pattern;
+        break;
+      }
 
-                            // repeated string Nodes = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Nodes:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input, this->add_nodes()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->nodes(this->nodes_size() - 1).data(),
-                                        this->nodes(this->nodes_size() - 1).length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "nodes");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Nodes;
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string Pattern = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Pattern:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_Topic;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
-                return false;
+      // optional string Topic = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
+  return false;
 #undef DO_
-            }
+}
 
-            void GetAllSubscribersResponse::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
-                }
+void GetAllSubscribersRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
+  }
 
-                // repeated string Nodes = 2;
-                for (int i = 0; i < this->nodes_size(); i++) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->nodes(i).data(),
-                                                                                         this->nodes(i).length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "nodes");
-                    ::google::protobuf::internal::WireFormatLite::WriteString(2, this->nodes(i), output);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->pattern(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
-            }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->topic(), output);
+  }
 
-            ::google::protobuf::uint8 *GetAllSubscribersResponse::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(),
-                                                                                             target);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
+}
 
-                // repeated string Nodes = 2;
-                for (int i = 0; i < this->nodes_size(); i++) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->nodes(i).data(),
-                                                                                         this->nodes(i).length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "nodes");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->nodes(i),
-                                                                                              target);
-                }
+::google::protobuf::uint8* GetAllSubscribersRequest::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
-                return target;
-            }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->pattern(), target);
+  }
 
-            int GetAllSubscribersResponse::ByteSize() const {
-                int total_size = 0;
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->topic(), target);
+  }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional int32 RequestId = 1 [default = 0];
-                    if (has_requestid()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::Int32Size(this->requestid());
-                    }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetAllSubscribersRequest)
+  return target;
+}
 
-                }
-                // repeated string Nodes = 2;
-                total_size += 1 * this->nodes_size();
-                for (int i = 0; i < this->nodes_size(); i++) {
-                    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(this->nodes(i));
-                }
+int GetAllSubscribersRequest::ByteSize() const {
+  int total_size = 0;
 
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 RequestId = 1 [default = 0];
+    if (has_requestid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->requestid());
+    }
 
-            void GetAllSubscribersResponse::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const GetAllSubscribersResponse *source = ::google::protobuf::internal::dynamic_cast_if_available<const GetAllSubscribersResponse *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+    // optional string Pattern = 2;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-            void GetAllSubscribersResponse::MergeFrom(const GetAllSubscribersResponse &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                nodes_.MergeFrom(from.nodes_);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_requestid()) {
-                        set_requestid(from.requestid());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+    // optional string Topic = 3;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-            void GetAllSubscribersResponse::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void GetAllSubscribersResponse::CopyFrom(const GetAllSubscribersResponse &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void GetAllSubscribersRequest::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const GetAllSubscribersRequest* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const GetAllSubscribersRequest*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            bool GetAllSubscribersResponse::IsInitialized() const {
+void GetAllSubscribersRequest::MergeFrom(const GetAllSubscribersRequest& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_requestid()) {
+      set_requestid(from.requestid());
+    }
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                return true;
-            }
+void GetAllSubscribersRequest::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void GetAllSubscribersResponse::Swap(GetAllSubscribersResponse * other) {
-                if (other != this) {
-                    std::swap(requestid_, other->requestid_);
-                    nodes_.Swap(&other->nodes_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void GetAllSubscribersRequest::CopyFrom(const GetAllSubscribersRequest& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            ::google::protobuf::Metadata GetAllSubscribersResponse::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = GetAllSubscribersResponse_descriptor_;
-                metadata.reflection = GetAllSubscribersResponse_reflection_;
-                return metadata;
-            }
+bool GetAllSubscribersRequest::IsInitialized() const {
+
+  return true;
+}
+
+void GetAllSubscribersRequest::Swap(GetAllSubscribersRequest* other) {
+  if (other != this) {
+    std::swap(requestid_, other->requestid_);
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata GetAllSubscribersRequest::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = GetAllSubscribersRequest_descriptor_;
+  metadata.reflection = GetAllSubscribersRequest_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int GetPublisherRequest::kRequestIdFieldNumber;
-            const int GetPublisherRequest::kPatternFieldNumber;
-            const int GetPublisherRequest::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int GetAllSubscribersResponse::kRequestIdFieldNumber;
+const int GetAllSubscribersResponse::kNodesFieldNumber;
+#endif  // !_MSC_VER
 
+GetAllSubscribersResponse::GetAllSubscribersResponse()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
+}
 
-            GetPublisherRequest::GetPublisherRequest() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetPublisherRequest)
-            }
+void GetAllSubscribersResponse::InitAsDefaultInstance() {
+}
 
-            void GetPublisherRequest::InitAsDefaultInstance() {
-            }
+GetAllSubscribersResponse::GetAllSubscribersResponse(const GetAllSubscribersResponse& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
+}
 
-            GetPublisherRequest::GetPublisherRequest(const GetPublisherRequest &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetPublisherRequest)
-            }
+void GetAllSubscribersResponse::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  requestid_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void GetPublisherRequest::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                requestid_    = 0;
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+GetAllSubscribersResponse::~GetAllSubscribersResponse() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
+  SharedDtor();
+}
 
-            GetPublisherRequest::~GetPublisherRequest() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetPublisherRequest)
-                SharedDtor();
-            }
+void GetAllSubscribersResponse::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
 
-            void GetPublisherRequest::SharedDtor() {
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void GetAllSubscribersResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* GetAllSubscribersResponse::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return GetAllSubscribersResponse_descriptor_;
+}
 
-            void GetPublisherRequest::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const GetAllSubscribersResponse& GetAllSubscribersResponse::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *GetPublisherRequest::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return GetPublisherRequest_descriptor_;
-            }
+GetAllSubscribersResponse* GetAllSubscribersResponse::default_instance_ = NULL;
 
-            const GetPublisherRequest &GetPublisherRequest::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+GetAllSubscribersResponse* GetAllSubscribersResponse::New() const {
+  return new GetAllSubscribersResponse;
+}
 
-            GetPublisherRequest *GetPublisherRequest::default_instance_ = NULL;
+void GetAllSubscribersResponse::Clear() {
+  requestid_ = 0;
+  nodes_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            GetPublisherRequest *GetPublisherRequest::New() const {
-                return new GetPublisherRequest;
-            }
-
-            void GetPublisherRequest::Clear() {
-                if (_has_bits_[0 / 32] & 7) {
-                    requestid_ = 0;
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool GetPublisherRequest::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool GetAllSubscribersResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetPublisherRequest)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional int32 RequestId = 1 [default = 0];
-                        case 1: {
-                            if (tag == 8) {
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<::google::protobuf::int32,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                                        input, &requestid_)));
-                                set_has_requestid();
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Pattern;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int32 RequestId = 1 [default = 0];
+      case 1: {
+        if (tag == 8) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &requestid_)));
+          set_has_requestid();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Nodes;
+        break;
+      }
 
-                            // optional string Pattern = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Pattern:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Topic;
-                            break;
-                        }
+      // repeated string Nodes = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Nodes:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_nodes()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->nodes(this->nodes_size() - 1).data(),
+            this->nodes(this->nodes_size() - 1).length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "nodes");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Nodes;
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                            // optional string Topic = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
-
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetPublisherRequest)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetPublisherRequest)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
+  return false;
 #undef DO_
-            }
+}
 
-            void GetPublisherRequest::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetPublisherRequest)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
-                }
+void GetAllSubscribersResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->pattern(), output);
-                }
+  // repeated string Nodes = 2;
+  for (int i = 0; i < this->nodes_size(); i++) {
+  ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+    this->nodes(i).data(), this->nodes(i).length(),
+    ::google::protobuf::internal::WireFormat::SERIALIZE,
+    "nodes");
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->nodes(i), output);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(3, this->topic(), output);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
+}
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetPublisherRequest)
-            }
+::google::protobuf::uint8* GetAllSubscribersResponse::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(), target);
+  }
 
-            ::google::protobuf::uint8 *GetPublisherRequest::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetPublisherRequest)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(),
-                                                                                             target);
-                }
+  // repeated string Nodes = 2;
+  for (int i = 0; i < this->nodes_size(); i++) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->nodes(i).data(), this->nodes(i).length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "nodes");
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(2, this->nodes(i), target);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->pattern(),
-                                                                                              target);
-                }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetAllSubscribersResponse)
+  return target;
+}
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(3, this->topic(), target);
-                }
+int GetAllSubscribersResponse::ByteSize() const {
+  int total_size = 0;
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetPublisherRequest)
-                return target;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 RequestId = 1 [default = 0];
+    if (has_requestid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->requestid());
+    }
 
-            int GetPublisherRequest::ByteSize() const {
-                int total_size = 0;
+  }
+  // repeated string Nodes = 2;
+  total_size += 1 * this->nodes_size();
+  for (int i = 0; i < this->nodes_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->nodes(i));
+  }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional int32 RequestId = 1 [default = 0];
-                    if (has_requestid()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::Int32Size(this->requestid());
-                    }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-                    // optional string Pattern = 2;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+void GetAllSubscribersResponse::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const GetAllSubscribersResponse* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const GetAllSubscribersResponse*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-                    // optional string Topic = 3;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+void GetAllSubscribersResponse::MergeFrom(const GetAllSubscribersResponse& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  nodes_.MergeFrom(from.nodes_);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_requestid()) {
+      set_requestid(from.requestid());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+void GetAllSubscribersResponse::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void GetPublisherRequest::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const GetPublisherRequest *source = ::google::protobuf::internal::dynamic_cast_if_available<const GetPublisherRequest *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void GetAllSubscribersResponse::CopyFrom(const GetAllSubscribersResponse& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void GetPublisherRequest::MergeFrom(const GetPublisherRequest &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_requestid()) {
-                        set_requestid(from.requestid());
-                    }
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+bool GetAllSubscribersResponse::IsInitialized() const {
 
-            void GetPublisherRequest::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  return true;
+}
 
-            void GetPublisherRequest::CopyFrom(const GetPublisherRequest &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void GetAllSubscribersResponse::Swap(GetAllSubscribersResponse* other) {
+  if (other != this) {
+    std::swap(requestid_, other->requestid_);
+    nodes_.Swap(&other->nodes_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            bool GetPublisherRequest::IsInitialized() const {
-
-                return true;
-            }
-
-            void GetPublisherRequest::Swap(GetPublisherRequest * other) {
-                if (other != this) {
-                    std::swap(requestid_, other->requestid_);
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
-
-            ::google::protobuf::Metadata GetPublisherRequest::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = GetPublisherRequest_descriptor_;
-                metadata.reflection = GetPublisherRequest_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata GetAllSubscribersResponse::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = GetAllSubscribersResponse_descriptor_;
+  metadata.reflection = GetAllSubscribersResponse_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int GetPublisherResponse::kRequestIdFieldNumber;
-            const int GetPublisherResponse::kNodeFieldNumber;
-#endif // !_MSC_VER
+const int GetPublisherRequest::kRequestIdFieldNumber;
+const int GetPublisherRequest::kPatternFieldNumber;
+const int GetPublisherRequest::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+GetPublisherRequest::GetPublisherRequest()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetPublisherRequest)
+}
 
-            GetPublisherResponse::GetPublisherResponse() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetPublisherResponse)
-            }
+void GetPublisherRequest::InitAsDefaultInstance() {
+}
 
-            void GetPublisherResponse::InitAsDefaultInstance() {
-            }
+GetPublisherRequest::GetPublisherRequest(const GetPublisherRequest& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetPublisherRequest)
+}
 
-            GetPublisherResponse::GetPublisherResponse(const GetPublisherResponse &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetPublisherResponse)
-            }
+void GetPublisherRequest::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  requestid_ = 0;
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void GetPublisherResponse::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                requestid_    = 0;
-                node_         = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+GetPublisherRequest::~GetPublisherRequest() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetPublisherRequest)
+  SharedDtor();
+}
 
-            GetPublisherResponse::~GetPublisherResponse() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetPublisherResponse)
-                SharedDtor();
-            }
+void GetPublisherRequest::SharedDtor() {
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void GetPublisherResponse::SharedDtor() {
-                if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete node_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void GetPublisherRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* GetPublisherRequest::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return GetPublisherRequest_descriptor_;
+}
 
-            void GetPublisherResponse::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const GetPublisherRequest& GetPublisherRequest::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *GetPublisherResponse::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return GetPublisherResponse_descriptor_;
-            }
+GetPublisherRequest* GetPublisherRequest::default_instance_ = NULL;
 
-            const GetPublisherResponse &GetPublisherResponse::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+GetPublisherRequest* GetPublisherRequest::New() const {
+  return new GetPublisherRequest;
+}
 
-            GetPublisherResponse *GetPublisherResponse::default_instance_ = NULL;
+void GetPublisherRequest::Clear() {
+  if (_has_bits_[0 / 32] & 7) {
+    requestid_ = 0;
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            GetPublisherResponse *GetPublisherResponse::New() const {
-                return new GetPublisherResponse;
-            }
-
-            void GetPublisherResponse::Clear() {
-                if (_has_bits_[0 / 32] & 3) {
-                    requestid_ = 0;
-                    if (has_node()) {
-                        if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            node_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool GetPublisherResponse::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool GetPublisherRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetPublisherResponse)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional int32 RequestId = 1 [default = 0];
-                        case 1: {
-                            if (tag == 8) {
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<::google::protobuf::int32,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                                        input, &requestid_)));
-                                set_has_requestid();
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Node;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetPublisherRequest)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int32 RequestId = 1 [default = 0];
+      case 1: {
+        if (tag == 8) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &requestid_)));
+          set_has_requestid();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Pattern;
+        break;
+      }
 
-                            // optional string Node = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Node:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_node()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->node().data(), this->node().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "node");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string Pattern = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Pattern:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_Topic;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetPublisherResponse)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetPublisherResponse)
-                return false;
+      // optional string Topic = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetPublisherRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetPublisherRequest)
+  return false;
 #undef DO_
-            }
+}
 
-            void GetPublisherResponse::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetPublisherResponse)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
-                }
+void GetPublisherRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetPublisherRequest)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
+  }
 
-                // optional string Node = 2;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->node(), output);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->pattern(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetPublisherResponse)
-            }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->topic(), output);
+  }
 
-            ::google::protobuf::uint8 *GetPublisherResponse::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetPublisherResponse)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(),
-                                                                                             target);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetPublisherRequest)
+}
 
-                // optional string Node = 2;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->node(), target);
-                }
+::google::protobuf::uint8* GetPublisherRequest::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetPublisherRequest)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetPublisherResponse)
-                return target;
-            }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->pattern(), target);
+  }
 
-            int GetPublisherResponse::ByteSize() const {
-                int total_size = 0;
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->topic(), target);
+  }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional int32 RequestId = 1 [default = 0];
-                    if (has_requestid()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::Int32Size(this->requestid());
-                    }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetPublisherRequest)
+  return target;
+}
 
-                    // optional string Node = 2;
-                    if (has_node()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->node());
-                    }
+int GetPublisherRequest::ByteSize() const {
+  int total_size = 0;
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 RequestId = 1 [default = 0];
+    if (has_requestid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->requestid());
+    }
 
-            void GetPublisherResponse::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const GetPublisherResponse *source = ::google::protobuf::internal::dynamic_cast_if_available<const GetPublisherResponse *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+    // optional string Pattern = 2;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-            void GetPublisherResponse::MergeFrom(const GetPublisherResponse &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_requestid()) {
-                        set_requestid(from.requestid());
-                    }
-                    if (from.has_node()) {
-                        set_node(from.node());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+    // optional string Topic = 3;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-            void GetPublisherResponse::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void GetPublisherResponse::CopyFrom(const GetPublisherResponse &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void GetPublisherRequest::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const GetPublisherRequest* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const GetPublisherRequest*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            bool GetPublisherResponse::IsInitialized() const {
+void GetPublisherRequest::MergeFrom(const GetPublisherRequest& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_requestid()) {
+      set_requestid(from.requestid());
+    }
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                return true;
-            }
+void GetPublisherRequest::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void GetPublisherResponse::Swap(GetPublisherResponse * other) {
-                if (other != this) {
-                    std::swap(requestid_, other->requestid_);
-                    std::swap(node_, other->node_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void GetPublisherRequest::CopyFrom(const GetPublisherRequest& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            ::google::protobuf::Metadata GetPublisherResponse::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = GetPublisherResponse_descriptor_;
-                metadata.reflection = GetPublisherResponse_reflection_;
-                return metadata;
-            }
+bool GetPublisherRequest::IsInitialized() const {
+
+  return true;
+}
+
+void GetPublisherRequest::Swap(GetPublisherRequest* other) {
+  if (other != this) {
+    std::swap(requestid_, other->requestid_);
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata GetPublisherRequest::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = GetPublisherRequest_descriptor_;
+  metadata.reflection = GetPublisherRequest_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int GetSubscriberRequest::kRequestIdFieldNumber;
-            const int GetSubscriberRequest::kPatternFieldNumber;
-            const int GetSubscriberRequest::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int GetPublisherResponse::kRequestIdFieldNumber;
+const int GetPublisherResponse::kNodeFieldNumber;
+#endif  // !_MSC_VER
 
+GetPublisherResponse::GetPublisherResponse()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetPublisherResponse)
+}
 
-            GetSubscriberRequest::GetSubscriberRequest() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetSubscriberRequest)
-            }
+void GetPublisherResponse::InitAsDefaultInstance() {
+}
 
-            void GetSubscriberRequest::InitAsDefaultInstance() {
-            }
+GetPublisherResponse::GetPublisherResponse(const GetPublisherResponse& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetPublisherResponse)
+}
 
-            GetSubscriberRequest::GetSubscriberRequest(const GetSubscriberRequest &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetSubscriberRequest)
-            }
+void GetPublisherResponse::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  requestid_ = 0;
+  node_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void GetSubscriberRequest::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                requestid_    = 0;
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+GetPublisherResponse::~GetPublisherResponse() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetPublisherResponse)
+  SharedDtor();
+}
 
-            GetSubscriberRequest::~GetSubscriberRequest() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetSubscriberRequest)
-                SharedDtor();
-            }
+void GetPublisherResponse::SharedDtor() {
+  if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete node_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void GetSubscriberRequest::SharedDtor() {
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void GetPublisherResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* GetPublisherResponse::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return GetPublisherResponse_descriptor_;
+}
 
-            void GetSubscriberRequest::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const GetPublisherResponse& GetPublisherResponse::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *GetSubscriberRequest::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return GetSubscriberRequest_descriptor_;
-            }
+GetPublisherResponse* GetPublisherResponse::default_instance_ = NULL;
 
-            const GetSubscriberRequest &GetSubscriberRequest::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+GetPublisherResponse* GetPublisherResponse::New() const {
+  return new GetPublisherResponse;
+}
 
-            GetSubscriberRequest *GetSubscriberRequest::default_instance_ = NULL;
+void GetPublisherResponse::Clear() {
+  if (_has_bits_[0 / 32] & 3) {
+    requestid_ = 0;
+    if (has_node()) {
+      if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        node_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            GetSubscriberRequest *GetSubscriberRequest::New() const {
-                return new GetSubscriberRequest;
-            }
-
-            void GetSubscriberRequest::Clear() {
-                if (_has_bits_[0 / 32] & 7) {
-                    requestid_ = 0;
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool GetSubscriberRequest::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool GetPublisherResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetSubscriberRequest)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional int32 RequestId = 1 [default = 0];
-                        case 1: {
-                            if (tag == 8) {
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<::google::protobuf::int32,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                                        input, &requestid_)));
-                                set_has_requestid();
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Pattern;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetPublisherResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int32 RequestId = 1 [default = 0];
+      case 1: {
+        if (tag == 8) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &requestid_)));
+          set_has_requestid();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Node;
+        break;
+      }
 
-                            // optional string Pattern = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Pattern:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Topic;
-                            break;
-                        }
+      // optional string Node = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Node:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_node()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->node().data(), this->node().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "node");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                            // optional string Topic = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
-
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetSubscriberRequest)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetSubscriberRequest)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetPublisherResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetPublisherResponse)
+  return false;
 #undef DO_
-            }
+}
 
-            void GetSubscriberRequest::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetSubscriberRequest)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
-                }
+void GetPublisherResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetPublisherResponse)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->pattern(), output);
-                }
+  // optional string Node = 2;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->node(), output);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(3, this->topic(), output);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetPublisherResponse)
+}
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetSubscriberRequest)
-            }
+::google::protobuf::uint8* GetPublisherResponse::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetPublisherResponse)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(), target);
+  }
 
-            ::google::protobuf::uint8 *GetSubscriberRequest::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetSubscriberRequest)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(),
-                                                                                             target);
-                }
+  // optional string Node = 2;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->node(), target);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->pattern(),
-                                                                                              target);
-                }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetPublisherResponse)
+  return target;
+}
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(3, this->topic(), target);
-                }
+int GetPublisherResponse::ByteSize() const {
+  int total_size = 0;
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetSubscriberRequest)
-                return target;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 RequestId = 1 [default = 0];
+    if (has_requestid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->requestid());
+    }
 
-            int GetSubscriberRequest::ByteSize() const {
-                int total_size = 0;
+    // optional string Node = 2;
+    if (has_node()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->node());
+    }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional int32 RequestId = 1 [default = 0];
-                    if (has_requestid()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::Int32Size(this->requestid());
-                    }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-                    // optional string Pattern = 2;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+void GetPublisherResponse::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const GetPublisherResponse* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const GetPublisherResponse*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-                    // optional string Topic = 3;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+void GetPublisherResponse::MergeFrom(const GetPublisherResponse& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_requestid()) {
+      set_requestid(from.requestid());
+    }
+    if (from.has_node()) {
+      set_node(from.node());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+void GetPublisherResponse::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void GetSubscriberRequest::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const GetSubscriberRequest *source = ::google::protobuf::internal::dynamic_cast_if_available<const GetSubscriberRequest *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void GetPublisherResponse::CopyFrom(const GetPublisherResponse& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void GetSubscriberRequest::MergeFrom(const GetSubscriberRequest &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_requestid()) {
-                        set_requestid(from.requestid());
-                    }
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+bool GetPublisherResponse::IsInitialized() const {
 
-            void GetSubscriberRequest::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  return true;
+}
 
-            void GetSubscriberRequest::CopyFrom(const GetSubscriberRequest &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void GetPublisherResponse::Swap(GetPublisherResponse* other) {
+  if (other != this) {
+    std::swap(requestid_, other->requestid_);
+    std::swap(node_, other->node_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            bool GetSubscriberRequest::IsInitialized() const {
-
-                return true;
-            }
-
-            void GetSubscriberRequest::Swap(GetSubscriberRequest * other) {
-                if (other != this) {
-                    std::swap(requestid_, other->requestid_);
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
-
-            ::google::protobuf::Metadata GetSubscriberRequest::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = GetSubscriberRequest_descriptor_;
-                metadata.reflection = GetSubscriberRequest_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata GetPublisherResponse::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = GetPublisherResponse_descriptor_;
+  metadata.reflection = GetPublisherResponse_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int GetSubscriberResponse::kRequestIdFieldNumber;
-            const int GetSubscriberResponse::kNodeFieldNumber;
-#endif // !_MSC_VER
+const int GetSubscriberRequest::kRequestIdFieldNumber;
+const int GetSubscriberRequest::kPatternFieldNumber;
+const int GetSubscriberRequest::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+GetSubscriberRequest::GetSubscriberRequest()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetSubscriberRequest)
+}
 
-            GetSubscriberResponse::GetSubscriberResponse() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetSubscriberResponse)
-            }
+void GetSubscriberRequest::InitAsDefaultInstance() {
+}
 
-            void GetSubscriberResponse::InitAsDefaultInstance() {
-            }
+GetSubscriberRequest::GetSubscriberRequest(const GetSubscriberRequest& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetSubscriberRequest)
+}
 
-            GetSubscriberResponse::GetSubscriberResponse(const GetSubscriberResponse &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetSubscriberResponse)
-            }
+void GetSubscriberRequest::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  requestid_ = 0;
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void GetSubscriberResponse::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                requestid_    = 0;
-                node_         = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+GetSubscriberRequest::~GetSubscriberRequest() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetSubscriberRequest)
+  SharedDtor();
+}
 
-            GetSubscriberResponse::~GetSubscriberResponse() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetSubscriberResponse)
-                SharedDtor();
-            }
+void GetSubscriberRequest::SharedDtor() {
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void GetSubscriberResponse::SharedDtor() {
-                if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete node_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void GetSubscriberRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* GetSubscriberRequest::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return GetSubscriberRequest_descriptor_;
+}
 
-            void GetSubscriberResponse::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const GetSubscriberRequest& GetSubscriberRequest::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *GetSubscriberResponse::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return GetSubscriberResponse_descriptor_;
-            }
+GetSubscriberRequest* GetSubscriberRequest::default_instance_ = NULL;
 
-            const GetSubscriberResponse &GetSubscriberResponse::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+GetSubscriberRequest* GetSubscriberRequest::New() const {
+  return new GetSubscriberRequest;
+}
 
-            GetSubscriberResponse *GetSubscriberResponse::default_instance_ = NULL;
+void GetSubscriberRequest::Clear() {
+  if (_has_bits_[0 / 32] & 7) {
+    requestid_ = 0;
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            GetSubscriberResponse *GetSubscriberResponse::New() const {
-                return new GetSubscriberResponse;
-            }
-
-            void GetSubscriberResponse::Clear() {
-                if (_has_bits_[0 / 32] & 3) {
-                    requestid_ = 0;
-                    if (has_node()) {
-                        if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            node_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool GetSubscriberResponse::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool GetSubscriberRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetSubscriberResponse)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional int32 RequestId = 1 [default = 0];
-                        case 1: {
-                            if (tag == 8) {
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<::google::protobuf::int32,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                                        input, &requestid_)));
-                                set_has_requestid();
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Node;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetSubscriberRequest)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int32 RequestId = 1 [default = 0];
+      case 1: {
+        if (tag == 8) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &requestid_)));
+          set_has_requestid();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Pattern;
+        break;
+      }
 
-                            // optional string Node = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Node:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_node()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->node().data(), this->node().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "node");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string Pattern = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Pattern:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_Topic;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetSubscriberResponse)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetSubscriberResponse)
-                return false;
+      // optional string Topic = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetSubscriberRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetSubscriberRequest)
+  return false;
 #undef DO_
-            }
+}
 
-            void GetSubscriberResponse::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetSubscriberResponse)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
-                }
+void GetSubscriberRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetSubscriberRequest)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
+  }
 
-                // optional string Node = 2;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->node(), output);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->pattern(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetSubscriberResponse)
-            }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->topic(), output);
+  }
 
-            ::google::protobuf::uint8 *GetSubscriberResponse::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetSubscriberResponse)
-                // optional int32 RequestId = 1 [default = 0];
-                if (has_requestid()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(),
-                                                                                             target);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetSubscriberRequest)
+}
 
-                // optional string Node = 2;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->node(), target);
-                }
+::google::protobuf::uint8* GetSubscriberRequest::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetSubscriberRequest)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetSubscriberResponse)
-                return target;
-            }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->pattern(), target);
+  }
 
-            int GetSubscriberResponse::ByteSize() const {
-                int total_size = 0;
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->topic(), target);
+  }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional int32 RequestId = 1 [default = 0];
-                    if (has_requestid()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::Int32Size(this->requestid());
-                    }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetSubscriberRequest)
+  return target;
+}
 
-                    // optional string Node = 2;
-                    if (has_node()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->node());
-                    }
+int GetSubscriberRequest::ByteSize() const {
+  int total_size = 0;
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 RequestId = 1 [default = 0];
+    if (has_requestid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->requestid());
+    }
 
-            void GetSubscriberResponse::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const GetSubscriberResponse *source = ::google::protobuf::internal::dynamic_cast_if_available<const GetSubscriberResponse *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+    // optional string Pattern = 2;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-            void GetSubscriberResponse::MergeFrom(const GetSubscriberResponse &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_requestid()) {
-                        set_requestid(from.requestid());
-                    }
-                    if (from.has_node()) {
-                        set_node(from.node());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+    // optional string Topic = 3;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-            void GetSubscriberResponse::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void GetSubscriberResponse::CopyFrom(const GetSubscriberResponse &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void GetSubscriberRequest::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const GetSubscriberRequest* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const GetSubscriberRequest*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            bool GetSubscriberResponse::IsInitialized() const {
+void GetSubscriberRequest::MergeFrom(const GetSubscriberRequest& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_requestid()) {
+      set_requestid(from.requestid());
+    }
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                return true;
-            }
+void GetSubscriberRequest::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void GetSubscriberResponse::Swap(GetSubscriberResponse * other) {
-                if (other != this) {
-                    std::swap(requestid_, other->requestid_);
-                    std::swap(node_, other->node_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void GetSubscriberRequest::CopyFrom(const GetSubscriberRequest& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            ::google::protobuf::Metadata GetSubscriberResponse::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = GetSubscriberResponse_descriptor_;
-                metadata.reflection = GetSubscriberResponse_reflection_;
-                return metadata;
-            }
+bool GetSubscriberRequest::IsInitialized() const {
+
+  return true;
+}
+
+void GetSubscriberRequest::Swap(GetSubscriberRequest* other) {
+  if (other != this) {
+    std::swap(requestid_, other->requestid_);
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata GetSubscriberRequest::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = GetSubscriberRequest_descriptor_;
+  metadata.reflection = GetSubscriberRequest_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-#endif // !_MSC_VER
+const int GetSubscriberResponse::kRequestIdFieldNumber;
+const int GetSubscriberResponse::kNodeFieldNumber;
+#endif  // !_MSC_VER
 
+GetSubscriberResponse::GetSubscriberResponse()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.GetSubscriberResponse)
+}
 
-            HeartBeat::HeartBeat() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.HeartBeat)
-            }
+void GetSubscriberResponse::InitAsDefaultInstance() {
+}
 
-            void HeartBeat::InitAsDefaultInstance() {
-            }
+GetSubscriberResponse::GetSubscriberResponse(const GetSubscriberResponse& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.GetSubscriberResponse)
+}
 
-            HeartBeat::HeartBeat(const HeartBeat &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.HeartBeat)
-            }
+void GetSubscriberResponse::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  requestid_ = 0;
+  node_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void HeartBeat::SharedCtor() {
-                _cached_size_ = 0;
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+GetSubscriberResponse::~GetSubscriberResponse() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.GetSubscriberResponse)
+  SharedDtor();
+}
 
-            HeartBeat::~HeartBeat() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.HeartBeat)
-                SharedDtor();
-            }
+void GetSubscriberResponse::SharedDtor() {
+  if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete node_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void HeartBeat::SharedDtor() {
-                if (this != default_instance_) {
-                }
-            }
+void GetSubscriberResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* GetSubscriberResponse::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return GetSubscriberResponse_descriptor_;
+}
 
-            void HeartBeat::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const GetSubscriberResponse& GetSubscriberResponse::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *HeartBeat::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return HeartBeat_descriptor_;
-            }
+GetSubscriberResponse* GetSubscriberResponse::default_instance_ = NULL;
 
-            const HeartBeat &HeartBeat::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+GetSubscriberResponse* GetSubscriberResponse::New() const {
+  return new GetSubscriberResponse;
+}
 
-            HeartBeat *HeartBeat::default_instance_ = NULL;
+void GetSubscriberResponse::Clear() {
+  if (_has_bits_[0 / 32] & 3) {
+    requestid_ = 0;
+    if (has_node()) {
+      if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        node_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            HeartBeat *HeartBeat::New() const {
-                return new HeartBeat;
-            }
-
-            void HeartBeat::Clear() {
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool HeartBeat::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool GetSubscriberResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.HeartBeat)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    handle_unusual:
-                    if (tag == 0
-                        || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                           == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                        goto success;
-                    }
-                    DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag, mutable_unknown_fields()));
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.HeartBeat)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.HeartBeat)
-                return false;
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.GetSubscriberResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional int32 RequestId = 1 [default = 0];
+      case 1: {
+        if (tag == 8) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &requestid_)));
+          set_has_requestid();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Node;
+        break;
+      }
+
+      // optional string Node = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Node:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_node()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->node().data(), this->node().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "node");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.GetSubscriberResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.GetSubscriberResponse)
+  return false;
 #undef DO_
-            }
+}
 
-            void HeartBeat::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.HeartBeat)
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.HeartBeat)
-            }
+void GetSubscriberResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.GetSubscriberResponse)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->requestid(), output);
+  }
 
-            ::google::protobuf::uint8 *HeartBeat::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.HeartBeat)
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.HeartBeat)
-                return target;
-            }
+  // optional string Node = 2;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->node(), output);
+  }
 
-            int HeartBeat::ByteSize() const {
-                int total_size = 0;
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.GetSubscriberResponse)
+}
 
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+::google::protobuf::uint8* GetSubscriberResponse::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.GetSubscriberResponse)
+  // optional int32 RequestId = 1 [default = 0];
+  if (has_requestid()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->requestid(), target);
+  }
 
-            void HeartBeat::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const HeartBeat *source = ::google::protobuf::internal::dynamic_cast_if_available<const HeartBeat *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+  // optional string Node = 2;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->node(), target);
+  }
 
-            void HeartBeat::MergeFrom(const HeartBeat &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.GetSubscriberResponse)
+  return target;
+}
 
-            void HeartBeat::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+int GetSubscriberResponse::ByteSize() const {
+  int total_size = 0;
 
-            void HeartBeat::CopyFrom(const HeartBeat &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional int32 RequestId = 1 [default = 0];
+    if (has_requestid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->requestid());
+    }
 
-            bool HeartBeat::IsInitialized() const {
+    // optional string Node = 2;
+    if (has_node()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->node());
+    }
 
-                return true;
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void HeartBeat::Swap(HeartBeat * other) {
-                if (other != this) {
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void GetSubscriberResponse::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const GetSubscriberResponse* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const GetSubscriberResponse*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            ::google::protobuf::Metadata HeartBeat::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = HeartBeat_descriptor_;
-                metadata.reflection = HeartBeat_reflection_;
-                return metadata;
-            }
+void GetSubscriberResponse::MergeFrom(const GetSubscriberResponse& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_requestid()) {
+      set_requestid(from.requestid());
+    }
+    if (from.has_node()) {
+      set_node(from.node());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void GetSubscriberResponse::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void GetSubscriberResponse::CopyFrom(const GetSubscriberResponse& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetSubscriberResponse::IsInitialized() const {
+
+  return true;
+}
+
+void GetSubscriberResponse::Swap(GetSubscriberResponse* other) {
+  if (other != this) {
+    std::swap(requestid_, other->requestid_);
+    std::swap(node_, other->node_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata GetSubscriberResponse::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = GetSubscriberResponse_descriptor_;
+  metadata.reflection = GetSubscriberResponse_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int IncomingEvent::kTypeCodeFieldNumber;
-            const int IncomingEvent::kOnConnectionClosedFieldNumber;
-            const int IncomingEvent::kOnConnectionEstablishedFieldNumber;
-            const int IncomingEvent::kOnNodeAdvertisedTopicFieldNumber;
-            const int IncomingEvent::kOnNodeRejectedTopicFieldNumber;
-            const int IncomingEvent::kOnNodeSubscribedToTopicFieldNumber;
-            const int IncomingEvent::kOnNodeUnavaliableFieldNumber;
-            const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
-#endif // !_MSC_VER
+#endif  // !_MSC_VER
 
+HeartBeat::HeartBeat()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.HeartBeat)
+}
 
-            IncomingEvent::IncomingEvent() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.IncomingEvent)
-            }
+void HeartBeat::InitAsDefaultInstance() {
+}
 
-            void IncomingEvent::InitAsDefaultInstance() {
-                onconnectionclosed_          = const_cast<::MQCloud::Internal::Protocol::OnConnectionClosed *>(&::MQCloud::Internal::Protocol::OnConnectionClosed::default_instance());
-                onconnectionestablished_     = const_cast<::MQCloud::Internal::Protocol::OnConnectionEstablished *>(&::MQCloud::Internal::Protocol::OnConnectionEstablished::default_instance());
-                onnodeadvertisedtopic_       = const_cast<::MQCloud::Internal::Protocol::OnNodeAdvertisedTopic *>(&::MQCloud::Internal::Protocol::OnNodeAdvertisedTopic::default_instance());
-                onnoderejectedtopic_         = const_cast<::MQCloud::Internal::Protocol::OnNodeRejectedTopic *>(&::MQCloud::Internal::Protocol::OnNodeRejectedTopic::default_instance());
-                onnodesubscribedtotopic_     = const_cast<::MQCloud::Internal::Protocol::OnNodeSubscribedToTopic *>(&::MQCloud::Internal::Protocol::OnNodeSubscribedToTopic::default_instance());
-                onnodeunavaliable_           = const_cast<::MQCloud::Internal::Protocol::OnNodeUnavaliable *>(&::MQCloud::Internal::Protocol::OnNodeUnavaliable::default_instance());
-                onnodeunsubscribedfromtopic_ = const_cast<::MQCloud::Internal::Protocol::OnNodeUnsubscribedFromTopic *>(&::MQCloud::Internal::Protocol::OnNodeUnsubscribedFromTopic::default_instance());
-            }
+HeartBeat::HeartBeat(const HeartBeat& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.HeartBeat)
+}
 
-            IncomingEvent::IncomingEvent(const IncomingEvent &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.IncomingEvent)
-            }
+void HeartBeat::SharedCtor() {
+  _cached_size_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void IncomingEvent::SharedCtor() {
-                _cached_size_                = 0;
-                typecode_                    = 0;
-                onconnectionclosed_          = NULL;
-                onconnectionestablished_     = NULL;
-                onnodeadvertisedtopic_       = NULL;
-                onnoderejectedtopic_         = NULL;
-                onnodesubscribedtotopic_     = NULL;
-                onnodeunavaliable_           = NULL;
-                onnodeunsubscribedfromtopic_ = NULL;
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+HeartBeat::~HeartBeat() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.HeartBeat)
+  SharedDtor();
+}
 
-            IncomingEvent::~IncomingEvent() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.IncomingEvent)
-                SharedDtor();
-            }
+void HeartBeat::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
 
-            void IncomingEvent::SharedDtor() {
-                if (this != default_instance_) {
-                    delete onconnectionclosed_;
-                    delete onconnectionestablished_;
-                    delete onnodeadvertisedtopic_;
-                    delete onnoderejectedtopic_;
-                    delete onnodesubscribedtotopic_;
-                    delete onnodeunavaliable_;
-                    delete onnodeunsubscribedfromtopic_;
-                }
-            }
+void HeartBeat::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* HeartBeat::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return HeartBeat_descriptor_;
+}
 
-            void IncomingEvent::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const HeartBeat& HeartBeat::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *IncomingEvent::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return IncomingEvent_descriptor_;
-            }
+HeartBeat* HeartBeat::default_instance_ = NULL;
 
-            const IncomingEvent &IncomingEvent::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+HeartBeat* HeartBeat::New() const {
+  return new HeartBeat;
+}
 
-            IncomingEvent *IncomingEvent::default_instance_ = NULL;
+void HeartBeat::Clear() {
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            IncomingEvent *IncomingEvent::New() const {
-                return new IncomingEvent;
-            }
-
-            void IncomingEvent::Clear() {
-                if (_has_bits_[0 / 32] & 255) {
-                    typecode_ = 0;
-                    if (has_onconnectionclosed()) {
-                        if (onconnectionclosed_ != NULL)
-                            onconnectionclosed_->::MQCloud::Internal::Protocol::OnConnectionClosed::Clear();
-                    }
-                    if (has_onconnectionestablished()) {
-                        if (onconnectionestablished_ != NULL)
-                            onconnectionestablished_->::MQCloud::Internal::Protocol::OnConnectionEstablished::Clear();
-                    }
-                    if (has_onnodeadvertisedtopic()) {
-                        if (onnodeadvertisedtopic_ != NULL)
-                            onnodeadvertisedtopic_->::MQCloud::Internal::Protocol::OnNodeAdvertisedTopic::Clear();
-                    }
-                    if (has_onnoderejectedtopic()) {
-                        if (onnoderejectedtopic_ != NULL)
-                            onnoderejectedtopic_->::MQCloud::Internal::Protocol::OnNodeRejectedTopic::Clear();
-                    }
-                    if (has_onnodesubscribedtotopic()) {
-                        if (onnodesubscribedtotopic_ != NULL)
-                            onnodesubscribedtotopic_->::MQCloud::Internal::Protocol::OnNodeSubscribedToTopic::Clear();
-                    }
-                    if (has_onnodeunavaliable()) {
-                        if (onnodeunavaliable_ != NULL)
-                            onnodeunavaliable_->::MQCloud::Internal::Protocol::OnNodeUnavaliable::Clear();
-                    }
-                    if (has_onnodeunsubscribedfromtopic()) {
-                        if (onnodeunsubscribedfromtopic_ != NULL)
-                            onnodeunsubscribedfromtopic_->::MQCloud::Internal::Protocol::OnNodeUnsubscribedFromTopic::Clear();
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool IncomingEvent::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool HeartBeat::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.IncomingEvent)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
-                        case 1: {
-                            if (tag == 8) {
-                                int value;
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<int,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                                        input, &value)));
-                                if (::MQCloud::Internal::Protocol::IncomingEventType_IsValid(value)) {
-                                    set_typecode(static_cast<::MQCloud::Internal::Protocol::IncomingEventType>(value));
-                                } else {
-                                    mutable_unknown_fields()->AddVarint(1, value);
-                                }
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_OnConnectionClosed;
-                            break;
-                        }
-
-                            // optional .MQCloud.Internal.Protocol.OnConnectionClosed OnConnectionClosed = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_OnConnectionClosed:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_onconnectionclosed()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_OnConnectionEstablished;
-                            break;
-                        }
-
-                            // optional .MQCloud.Internal.Protocol.OnConnectionEstablished OnConnectionEstablished = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_OnConnectionEstablished:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_onconnectionestablished()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(34))
-                                goto parse_OnNodeAdvertisedTopic;
-                            break;
-                        }
-
-                            // optional .MQCloud.Internal.Protocol.OnNodeAdvertisedTopic OnNodeAdvertisedTopic = 4;
-                        case 4: {
-                            if (tag == 34) {
-                                parse_OnNodeAdvertisedTopic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_onnodeadvertisedtopic()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(42))
-                                goto parse_OnNodeRejectedTopic;
-                            break;
-                        }
-
-                            // optional .MQCloud.Internal.Protocol.OnNodeRejectedTopic OnNodeRejectedTopic = 5;
-                        case 5: {
-                            if (tag == 42) {
-                                parse_OnNodeRejectedTopic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_onnoderejectedtopic()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(50))
-                                goto parse_OnNodeSubscribedToTopic;
-                            break;
-                        }
-
-                            // optional .MQCloud.Internal.Protocol.OnNodeSubscribedToTopic OnNodeSubscribedToTopic = 6;
-                        case 6: {
-                            if (tag == 50) {
-                                parse_OnNodeSubscribedToTopic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_onnodesubscribedtotopic()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(58))
-                                goto parse_OnNodeUnavaliable;
-                            break;
-                        }
-
-                            // optional .MQCloud.Internal.Protocol.OnNodeUnavaliable OnNodeUnavaliable = 7;
-                        case 7: {
-                            if (tag == 58) {
-                                parse_OnNodeUnavaliable:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_onnodeunavaliable()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(66))
-                                goto parse_OnNodeUnsubscribedFromTopic;
-                            break;
-                        }
-
-                            // optional .MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic OnNodeUnsubscribedFromTopic = 8;
-                        case 8: {
-                            if (tag == 66) {
-                                parse_OnNodeUnsubscribedFromTopic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_onnodeunsubscribedfromtopic()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
-
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.IncomingEvent)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.IncomingEvent)
-                return false;
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.HeartBeat)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0 ||
+        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, mutable_unknown_fields()));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.HeartBeat)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.HeartBeat)
+  return false;
 #undef DO_
-            }
+}
 
-            void IncomingEvent::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.IncomingEvent)
-                // optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
-                if (has_typecode()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteEnum(1, this->typecode(), output);
-                }
+void HeartBeat::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.HeartBeat)
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.HeartBeat)
+}
 
-                // optional .MQCloud.Internal.Protocol.OnConnectionClosed OnConnectionClosed = 2;
-                if (has_onconnectionclosed()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2,
-                                                                                           this->onconnectionclosed(),
-                                                                                           output);
-                }
+::google::protobuf::uint8* HeartBeat::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.HeartBeat)
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.HeartBeat)
+  return target;
+}
 
-                // optional .MQCloud.Internal.Protocol.OnConnectionEstablished OnConnectionEstablished = 3;
-                if (has_onconnectionestablished()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(3,
-                                                                                           this->onconnectionestablished(),
-                                                                                           output);
-                }
+int HeartBeat::ByteSize() const {
+  int total_size = 0;
 
-                // optional .MQCloud.Internal.Protocol.OnNodeAdvertisedTopic OnNodeAdvertisedTopic = 4;
-                if (has_onnodeadvertisedtopic()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(4,
-                                                                                           this->onnodeadvertisedtopic(),
-                                                                                           output);
-                }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-                // optional .MQCloud.Internal.Protocol.OnNodeRejectedTopic OnNodeRejectedTopic = 5;
-                if (has_onnoderejectedtopic()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(5,
-                                                                                           this->onnoderejectedtopic(),
-                                                                                           output);
-                }
+void HeartBeat::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const HeartBeat* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const HeartBeat*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-                // optional .MQCloud.Internal.Protocol.OnNodeSubscribedToTopic OnNodeSubscribedToTopic = 6;
-                if (has_onnodesubscribedtotopic()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(6,
-                                                                                           this->onnodesubscribedtotopic(),
-                                                                                           output);
-                }
+void HeartBeat::MergeFrom(const HeartBeat& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                // optional .MQCloud.Internal.Protocol.OnNodeUnavaliable OnNodeUnavaliable = 7;
-                if (has_onnodeunavaliable()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(7, this->onnodeunavaliable(),
-                                                                                           output);
-                }
+void HeartBeat::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-                // optional .MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic OnNodeUnsubscribedFromTopic = 8;
-                if (has_onnodeunsubscribedfromtopic()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(8,
-                                                                                           this->onnodeunsubscribedfromtopic(),
-                                                                                           output);
-                }
+void HeartBeat::CopyFrom(const HeartBeat& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.IncomingEvent)
-            }
+bool HeartBeat::IsInitialized() const {
 
-            ::google::protobuf::uint8 *IncomingEvent::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.IncomingEvent)
-                // optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
-                if (has_typecode()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(1, this->typecode(),
-                                                                                            target);
-                }
+  return true;
+}
 
-                // optional .MQCloud.Internal.Protocol.OnConnectionClosed OnConnectionClosed = 2;
-                if (has_onconnectionclosed()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(2,
-                                                                                                        this->onconnectionclosed(),
-                                                                                                        target);
-                }
+void HeartBeat::Swap(HeartBeat* other) {
+  if (other != this) {
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-                // optional .MQCloud.Internal.Protocol.OnConnectionEstablished OnConnectionEstablished = 3;
-                if (has_onconnectionestablished()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(3,
-                                                                                                        this->onconnectionestablished(),
-                                                                                                        target);
-                }
-
-                // optional .MQCloud.Internal.Protocol.OnNodeAdvertisedTopic OnNodeAdvertisedTopic = 4;
-                if (has_onnodeadvertisedtopic()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(4,
-                                                                                                        this->onnodeadvertisedtopic(),
-                                                                                                        target);
-                }
-
-                // optional .MQCloud.Internal.Protocol.OnNodeRejectedTopic OnNodeRejectedTopic = 5;
-                if (has_onnoderejectedtopic()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(5,
-                                                                                                        this->onnoderejectedtopic(),
-                                                                                                        target);
-                }
-
-                // optional .MQCloud.Internal.Protocol.OnNodeSubscribedToTopic OnNodeSubscribedToTopic = 6;
-                if (has_onnodesubscribedtotopic()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(6,
-                                                                                                        this->onnodesubscribedtotopic(),
-                                                                                                        target);
-                }
-
-                // optional .MQCloud.Internal.Protocol.OnNodeUnavaliable OnNodeUnavaliable = 7;
-                if (has_onnodeunavaliable()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(7,
-                                                                                                        this->onnodeunavaliable(),
-                                                                                                        target);
-                }
-
-                // optional .MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic OnNodeUnsubscribedFromTopic = 8;
-                if (has_onnodeunsubscribedfromtopic()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(8,
-                                                                                                        this->onnodeunsubscribedfromtopic(),
-                                                                                                        target);
-                }
-
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.IncomingEvent)
-                return target;
-            }
-
-            int IncomingEvent::ByteSize() const {
-                int total_size = 0;
-
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
-                    if (has_typecode()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::EnumSize(this->typecode());
-                    }
-
-                    // optional .MQCloud.Internal.Protocol.OnConnectionClosed OnConnectionClosed = 2;
-                    if (has_onconnectionclosed()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->onconnectionclosed());
-                    }
-
-                    // optional .MQCloud.Internal.Protocol.OnConnectionEstablished OnConnectionEstablished = 3;
-                    if (has_onconnectionestablished()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->onconnectionestablished());
-                    }
-
-                    // optional .MQCloud.Internal.Protocol.OnNodeAdvertisedTopic OnNodeAdvertisedTopic = 4;
-                    if (has_onnodeadvertisedtopic()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->onnodeadvertisedtopic());
-                    }
-
-                    // optional .MQCloud.Internal.Protocol.OnNodeRejectedTopic OnNodeRejectedTopic = 5;
-                    if (has_onnoderejectedtopic()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->onnoderejectedtopic());
-                    }
-
-                    // optional .MQCloud.Internal.Protocol.OnNodeSubscribedToTopic OnNodeSubscribedToTopic = 6;
-                    if (has_onnodesubscribedtotopic()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->onnodesubscribedtotopic());
-                    }
-
-                    // optional .MQCloud.Internal.Protocol.OnNodeUnavaliable OnNodeUnavaliable = 7;
-                    if (has_onnodeunavaliable()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->onnodeunavaliable());
-                    }
-
-                    // optional .MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic OnNodeUnsubscribedFromTopic = 8;
-                    if (has_onnodeunsubscribedfromtopic()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->onnodeunsubscribedfromtopic());
-                    }
-
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
-
-            void IncomingEvent::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const IncomingEvent *source = ::google::protobuf::internal::dynamic_cast_if_available<const IncomingEvent *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
-
-            void IncomingEvent::MergeFrom(const IncomingEvent &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_typecode()) {
-                        set_typecode(from.typecode());
-                    }
-                    if (from.has_onconnectionclosed()) {
-                        mutable_onconnectionclosed()->::MQCloud::Internal::Protocol::OnConnectionClosed::MergeFrom(
-                                from.onconnectionclosed());
-                    }
-                    if (from.has_onconnectionestablished()) {
-                        mutable_onconnectionestablished()->::MQCloud::Internal::Protocol::OnConnectionEstablished::MergeFrom(
-                                from.onconnectionestablished());
-                    }
-                    if (from.has_onnodeadvertisedtopic()) {
-                        mutable_onnodeadvertisedtopic()->::MQCloud::Internal::Protocol::OnNodeAdvertisedTopic::MergeFrom(
-                                from.onnodeadvertisedtopic());
-                    }
-                    if (from.has_onnoderejectedtopic()) {
-                        mutable_onnoderejectedtopic()->::MQCloud::Internal::Protocol::OnNodeRejectedTopic::MergeFrom(
-                                from.onnoderejectedtopic());
-                    }
-                    if (from.has_onnodesubscribedtotopic()) {
-                        mutable_onnodesubscribedtotopic()->::MQCloud::Internal::Protocol::OnNodeSubscribedToTopic::MergeFrom(
-                                from.onnodesubscribedtotopic());
-                    }
-                    if (from.has_onnodeunavaliable()) {
-                        mutable_onnodeunavaliable()->::MQCloud::Internal::Protocol::OnNodeUnavaliable::MergeFrom(
-                                from.onnodeunavaliable());
-                    }
-                    if (from.has_onnodeunsubscribedfromtopic()) {
-                        mutable_onnodeunsubscribedfromtopic()->::MQCloud::Internal::Protocol::OnNodeUnsubscribedFromTopic::MergeFrom(
-                                from.onnodeunsubscribedfromtopic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
-
-            void IncomingEvent::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
-
-            void IncomingEvent::CopyFrom(const IncomingEvent &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
-
-            bool IncomingEvent::IsInitialized() const {
-
-                return true;
-            }
-
-            void IncomingEvent::Swap(IncomingEvent * other) {
-                if (other != this) {
-                    std::swap(typecode_, other->typecode_);
-                    std::swap(onconnectionclosed_, other->onconnectionclosed_);
-                    std::swap(onconnectionestablished_, other->onconnectionestablished_);
-                    std::swap(onnodeadvertisedtopic_, other->onnodeadvertisedtopic_);
-                    std::swap(onnoderejectedtopic_, other->onnoderejectedtopic_);
-                    std::swap(onnodesubscribedtotopic_, other->onnodesubscribedtotopic_);
-                    std::swap(onnodeunavaliable_, other->onnodeunavaliable_);
-                    std::swap(onnodeunsubscribedfromtopic_, other->onnodeunsubscribedfromtopic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
-
-            ::google::protobuf::Metadata IncomingEvent::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = IncomingEvent_descriptor_;
-                metadata.reflection = IncomingEvent_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata HeartBeat::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = HeartBeat_descriptor_;
+  metadata.reflection = HeartBeat_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int IncomingOperation::kTypeCodeFieldNumber;
-            const int IncomingOperation::kConnectResponseFieldNumber;
-            const int IncomingOperation::kGetPublisherResponseFieldNumber;
-            const int IncomingOperation::kGetAllPublishersResponseFieldNumber;
-            const int IncomingOperation::kGetSubscriberResponseFieldNumber;
-            const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
-#endif // !_MSC_VER
+const int IncomingEvent::kTypeCodeFieldNumber;
+const int IncomingEvent::kOnConnectionClosedFieldNumber;
+const int IncomingEvent::kOnConnectionEstablishedFieldNumber;
+const int IncomingEvent::kOnNodeAdvertisedTopicFieldNumber;
+const int IncomingEvent::kOnNodeRejectedTopicFieldNumber;
+const int IncomingEvent::kOnNodeSubscribedToTopicFieldNumber;
+const int IncomingEvent::kOnNodeUnavaliableFieldNumber;
+const int IncomingEvent::kOnNodeUnsubscribedFromTopicFieldNumber;
+#endif  // !_MSC_VER
 
+IncomingEvent::IncomingEvent()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.IncomingEvent)
+}
 
-            IncomingOperation::IncomingOperation() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.IncomingOperation)
-            }
+void IncomingEvent::InitAsDefaultInstance() {
+  onconnectionclosed_ = const_cast< ::MQCloud::Internal::Protocol::OnConnectionClosed*>(&::MQCloud::Internal::Protocol::OnConnectionClosed::default_instance());
+  onconnectionestablished_ = const_cast< ::MQCloud::Internal::Protocol::OnConnectionEstablished*>(&::MQCloud::Internal::Protocol::OnConnectionEstablished::default_instance());
+  onnodeadvertisedtopic_ = const_cast< ::MQCloud::Internal::Protocol::OnNodeAdvertisedTopic*>(&::MQCloud::Internal::Protocol::OnNodeAdvertisedTopic::default_instance());
+  onnoderejectedtopic_ = const_cast< ::MQCloud::Internal::Protocol::OnNodeRejectedTopic*>(&::MQCloud::Internal::Protocol::OnNodeRejectedTopic::default_instance());
+  onnodesubscribedtotopic_ = const_cast< ::MQCloud::Internal::Protocol::OnNodeSubscribedToTopic*>(&::MQCloud::Internal::Protocol::OnNodeSubscribedToTopic::default_instance());
+  onnodeunavaliable_ = const_cast< ::MQCloud::Internal::Protocol::OnNodeUnavaliable*>(&::MQCloud::Internal::Protocol::OnNodeUnavaliable::default_instance());
+  onnodeunsubscribedfromtopic_ = const_cast< ::MQCloud::Internal::Protocol::OnNodeUnsubscribedFromTopic*>(&::MQCloud::Internal::Protocol::OnNodeUnsubscribedFromTopic::default_instance());
+}
 
-            void IncomingOperation::InitAsDefaultInstance() {
-                connectresponse_           = const_cast<::MQCloud::Internal::Protocol::ConnectResponse *>(&::MQCloud::Internal::Protocol::ConnectResponse::default_instance());
-                getpublisherresponse_      = const_cast<::MQCloud::Internal::Protocol::GetPublisherResponse *>(&::MQCloud::Internal::Protocol::GetPublisherResponse::default_instance());
-                getallpublishersresponse_  = const_cast<::MQCloud::Internal::Protocol::GetAllPublishersResponse *>(&::MQCloud::Internal::Protocol::GetAllPublishersResponse::default_instance());
-                getsubscriberresponse_     = const_cast<::MQCloud::Internal::Protocol::GetSubscriberResponse *>(&::MQCloud::Internal::Protocol::GetSubscriberResponse::default_instance());
-                getallsubscribersresponse_ = const_cast<::MQCloud::Internal::Protocol::GetAllSubscribersResponse *>(&::MQCloud::Internal::Protocol::GetAllSubscribersResponse::default_instance());
-            }
+IncomingEvent::IncomingEvent(const IncomingEvent& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.IncomingEvent)
+}
 
-            IncomingOperation::IncomingOperation(const IncomingOperation &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.IncomingOperation)
-            }
+void IncomingEvent::SharedCtor() {
+  _cached_size_ = 0;
+  typecode_ = 0;
+  onconnectionclosed_ = NULL;
+  onconnectionestablished_ = NULL;
+  onnodeadvertisedtopic_ = NULL;
+  onnoderejectedtopic_ = NULL;
+  onnodesubscribedtotopic_ = NULL;
+  onnodeunavaliable_ = NULL;
+  onnodeunsubscribedfromtopic_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void IncomingOperation::SharedCtor() {
-                _cached_size_              = 0;
-                typecode_                  = 0;
-                connectresponse_           = NULL;
-                getpublisherresponse_      = NULL;
-                getallpublishersresponse_  = NULL;
-                getsubscriberresponse_     = NULL;
-                getallsubscribersresponse_ = NULL;
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+IncomingEvent::~IncomingEvent() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.IncomingEvent)
+  SharedDtor();
+}
 
-            IncomingOperation::~IncomingOperation() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.IncomingOperation)
-                SharedDtor();
-            }
+void IncomingEvent::SharedDtor() {
+  if (this != default_instance_) {
+    delete onconnectionclosed_;
+    delete onconnectionestablished_;
+    delete onnodeadvertisedtopic_;
+    delete onnoderejectedtopic_;
+    delete onnodesubscribedtotopic_;
+    delete onnodeunavaliable_;
+    delete onnodeunsubscribedfromtopic_;
+  }
+}
 
-            void IncomingOperation::SharedDtor() {
-                if (this != default_instance_) {
-                    delete connectresponse_;
-                    delete getpublisherresponse_;
-                    delete getallpublishersresponse_;
-                    delete getsubscriberresponse_;
-                    delete getallsubscribersresponse_;
-                }
-            }
+void IncomingEvent::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* IncomingEvent::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return IncomingEvent_descriptor_;
+}
 
-            void IncomingOperation::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const IncomingEvent& IncomingEvent::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *IncomingOperation::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return IncomingOperation_descriptor_;
-            }
+IncomingEvent* IncomingEvent::default_instance_ = NULL;
 
-            const IncomingOperation &IncomingOperation::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+IncomingEvent* IncomingEvent::New() const {
+  return new IncomingEvent;
+}
 
-            IncomingOperation *IncomingOperation::default_instance_ = NULL;
+void IncomingEvent::Clear() {
+  if (_has_bits_[0 / 32] & 255) {
+    typecode_ = 0;
+    if (has_onconnectionclosed()) {
+      if (onconnectionclosed_ != NULL) onconnectionclosed_->::MQCloud::Internal::Protocol::OnConnectionClosed::Clear();
+    }
+    if (has_onconnectionestablished()) {
+      if (onconnectionestablished_ != NULL) onconnectionestablished_->::MQCloud::Internal::Protocol::OnConnectionEstablished::Clear();
+    }
+    if (has_onnodeadvertisedtopic()) {
+      if (onnodeadvertisedtopic_ != NULL) onnodeadvertisedtopic_->::MQCloud::Internal::Protocol::OnNodeAdvertisedTopic::Clear();
+    }
+    if (has_onnoderejectedtopic()) {
+      if (onnoderejectedtopic_ != NULL) onnoderejectedtopic_->::MQCloud::Internal::Protocol::OnNodeRejectedTopic::Clear();
+    }
+    if (has_onnodesubscribedtotopic()) {
+      if (onnodesubscribedtotopic_ != NULL) onnodesubscribedtotopic_->::MQCloud::Internal::Protocol::OnNodeSubscribedToTopic::Clear();
+    }
+    if (has_onnodeunavaliable()) {
+      if (onnodeunavaliable_ != NULL) onnodeunavaliable_->::MQCloud::Internal::Protocol::OnNodeUnavaliable::Clear();
+    }
+    if (has_onnodeunsubscribedfromtopic()) {
+      if (onnodeunsubscribedfromtopic_ != NULL) onnodeunsubscribedfromtopic_->::MQCloud::Internal::Protocol::OnNodeUnsubscribedFromTopic::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            IncomingOperation *IncomingOperation::New() const {
-                return new IncomingOperation;
-            }
-
-            void IncomingOperation::Clear() {
-                if (_has_bits_[0 / 32] & 63) {
-                    typecode_ = 0;
-                    if (has_connectresponse()) {
-                        if (connectresponse_ != NULL)
-                            connectresponse_->::MQCloud::Internal::Protocol::ConnectResponse::Clear();
-                    }
-                    if (has_getpublisherresponse()) {
-                        if (getpublisherresponse_ != NULL)
-                            getpublisherresponse_->::MQCloud::Internal::Protocol::GetPublisherResponse::Clear();
-                    }
-                    if (has_getallpublishersresponse()) {
-                        if (getallpublishersresponse_ != NULL)
-                            getallpublishersresponse_->::MQCloud::Internal::Protocol::GetAllPublishersResponse::Clear();
-                    }
-                    if (has_getsubscriberresponse()) {
-                        if (getsubscriberresponse_ != NULL)
-                            getsubscriberresponse_->::MQCloud::Internal::Protocol::GetSubscriberResponse::Clear();
-                    }
-                    if (has_getallsubscribersresponse()) {
-                        if (getallsubscribersresponse_ != NULL)
-                            getallsubscribersresponse_->::MQCloud::Internal::Protocol::GetAllSubscribersResponse::Clear();
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool IncomingOperation::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool IncomingEvent::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.IncomingOperation)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
-                        case 1: {
-                            if (tag == 8) {
-                                int value;
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<int,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                                        input, &value)));
-                                if (::MQCloud::Internal::Protocol::IncomingOperationType_IsValid(value)) {
-                                    set_typecode(
-                                            static_cast<::MQCloud::Internal::Protocol::IncomingOperationType>(value));
-                                } else {
-                                    mutable_unknown_fields()->AddVarint(1, value);
-                                }
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_ConnectResponse;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.IncomingEvent)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
+      case 1: {
+        if (tag == 8) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::MQCloud::Internal::Protocol::IncomingEventType_IsValid(value)) {
+            set_typecode(static_cast< ::MQCloud::Internal::Protocol::IncomingEventType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_OnConnectionClosed;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.ConnectResponse ConnectResponse = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_ConnectResponse:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_connectresponse()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_GetPublisherResponse;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.OnConnectionClosed OnConnectionClosed = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_OnConnectionClosed:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_onconnectionclosed()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_OnConnectionEstablished;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.GetPublisherResponse GetPublisherResponse = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_GetPublisherResponse:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_getpublisherresponse()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(34))
-                                goto parse_GetAllPublishersResponse;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.OnConnectionEstablished OnConnectionEstablished = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_OnConnectionEstablished:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_onconnectionestablished()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(34)) goto parse_OnNodeAdvertisedTopic;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.GetAllPublishersResponse GetAllPublishersResponse = 4;
-                        case 4: {
-                            if (tag == 34) {
-                                parse_GetAllPublishersResponse:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_getallpublishersresponse()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(42))
-                                goto parse_GetSubscriberResponse;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.OnNodeAdvertisedTopic OnNodeAdvertisedTopic = 4;
+      case 4: {
+        if (tag == 34) {
+         parse_OnNodeAdvertisedTopic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_onnodeadvertisedtopic()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(42)) goto parse_OnNodeRejectedTopic;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.GetSubscriberResponse GetSubscriberResponse = 5;
-                        case 5: {
-                            if (tag == 42) {
-                                parse_GetSubscriberResponse:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_getsubscriberresponse()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(50))
-                                goto parse_GetAllSubscribersResponse;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.OnNodeRejectedTopic OnNodeRejectedTopic = 5;
+      case 5: {
+        if (tag == 42) {
+         parse_OnNodeRejectedTopic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_onnoderejectedtopic()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(50)) goto parse_OnNodeSubscribedToTopic;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.GetAllSubscribersResponse GetAllSubscribersResponse = 6;
-                        case 6: {
-                            if (tag == 50) {
-                                parse_GetAllSubscribersResponse:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_getallsubscribersresponse()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.OnNodeSubscribedToTopic OnNodeSubscribedToTopic = 6;
+      case 6: {
+        if (tag == 50) {
+         parse_OnNodeSubscribedToTopic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_onnodesubscribedtotopic()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(58)) goto parse_OnNodeUnavaliable;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.IncomingOperation)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.IncomingOperation)
-                return false;
+      // optional .MQCloud.Internal.Protocol.OnNodeUnavaliable OnNodeUnavaliable = 7;
+      case 7: {
+        if (tag == 58) {
+         parse_OnNodeUnavaliable:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_onnodeunavaliable()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(66)) goto parse_OnNodeUnsubscribedFromTopic;
+        break;
+      }
+
+      // optional .MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic OnNodeUnsubscribedFromTopic = 8;
+      case 8: {
+        if (tag == 66) {
+         parse_OnNodeUnsubscribedFromTopic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_onnodeunsubscribedfromtopic()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.IncomingEvent)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.IncomingEvent)
+  return false;
 #undef DO_
-            }
+}
 
-            void IncomingOperation::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.IncomingOperation)
-                // optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
-                if (has_typecode()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteEnum(1, this->typecode(), output);
-                }
+void IncomingEvent::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.IncomingEvent)
+  // optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
+  if (has_typecode()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->typecode(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.ConnectResponse ConnectResponse = 2;
-                if (has_connectresponse()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, this->connectresponse(),
-                                                                                           output);
-                }
+  // optional .MQCloud.Internal.Protocol.OnConnectionClosed OnConnectionClosed = 2;
+  if (has_onconnectionclosed()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->onconnectionclosed(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetPublisherResponse GetPublisherResponse = 3;
-                if (has_getpublisherresponse()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(3,
-                                                                                           this->getpublisherresponse(),
-                                                                                           output);
-                }
+  // optional .MQCloud.Internal.Protocol.OnConnectionEstablished OnConnectionEstablished = 3;
+  if (has_onconnectionestablished()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->onconnectionestablished(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetAllPublishersResponse GetAllPublishersResponse = 4;
-                if (has_getallpublishersresponse()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(4,
-                                                                                           this->getallpublishersresponse(),
-                                                                                           output);
-                }
+  // optional .MQCloud.Internal.Protocol.OnNodeAdvertisedTopic OnNodeAdvertisedTopic = 4;
+  if (has_onnodeadvertisedtopic()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->onnodeadvertisedtopic(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetSubscriberResponse GetSubscriberResponse = 5;
-                if (has_getsubscriberresponse()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(5,
-                                                                                           this->getsubscriberresponse(),
-                                                                                           output);
-                }
+  // optional .MQCloud.Internal.Protocol.OnNodeRejectedTopic OnNodeRejectedTopic = 5;
+  if (has_onnoderejectedtopic()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->onnoderejectedtopic(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetAllSubscribersResponse GetAllSubscribersResponse = 6;
-                if (has_getallsubscribersresponse()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(6,
-                                                                                           this->getallsubscribersresponse(),
-                                                                                           output);
-                }
+  // optional .MQCloud.Internal.Protocol.OnNodeSubscribedToTopic OnNodeSubscribedToTopic = 6;
+  if (has_onnodesubscribedtotopic()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->onnodesubscribedtotopic(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.IncomingOperation)
-            }
+  // optional .MQCloud.Internal.Protocol.OnNodeUnavaliable OnNodeUnavaliable = 7;
+  if (has_onnodeunavaliable()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, this->onnodeunavaliable(), output);
+  }
 
-            ::google::protobuf::uint8 *IncomingOperation::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.IncomingOperation)
-                // optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
-                if (has_typecode()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(1, this->typecode(),
-                                                                                            target);
-                }
+  // optional .MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic OnNodeUnsubscribedFromTopic = 8;
+  if (has_onnodeunsubscribedfromtopic()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, this->onnodeunsubscribedfromtopic(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.ConnectResponse ConnectResponse = 2;
-                if (has_connectresponse()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(2,
-                                                                                                        this->connectresponse(),
-                                                                                                        target);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.IncomingEvent)
+}
 
-                // optional .MQCloud.Internal.Protocol.GetPublisherResponse GetPublisherResponse = 3;
-                if (has_getpublisherresponse()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(3,
-                                                                                                        this->getpublisherresponse(),
-                                                                                                        target);
-                }
+::google::protobuf::uint8* IncomingEvent::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.IncomingEvent)
+  // optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
+  if (has_typecode()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->typecode(), target);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetAllPublishersResponse GetAllPublishersResponse = 4;
-                if (has_getallpublishersresponse()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(4,
-                                                                                                        this->getallpublishersresponse(),
-                                                                                                        target);
-                }
+  // optional .MQCloud.Internal.Protocol.OnConnectionClosed OnConnectionClosed = 2;
+  if (has_onconnectionclosed()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->onconnectionclosed(), target);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetSubscriberResponse GetSubscriberResponse = 5;
-                if (has_getsubscriberresponse()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(5,
-                                                                                                        this->getsubscriberresponse(),
-                                                                                                        target);
-                }
+  // optional .MQCloud.Internal.Protocol.OnConnectionEstablished OnConnectionEstablished = 3;
+  if (has_onconnectionestablished()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->onconnectionestablished(), target);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetAllSubscribersResponse GetAllSubscribersResponse = 6;
-                if (has_getallsubscribersresponse()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(6,
-                                                                                                        this->getallsubscribersresponse(),
-                                                                                                        target);
-                }
+  // optional .MQCloud.Internal.Protocol.OnNodeAdvertisedTopic OnNodeAdvertisedTopic = 4;
+  if (has_onnodeadvertisedtopic()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->onnodeadvertisedtopic(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.IncomingOperation)
-                return target;
-            }
+  // optional .MQCloud.Internal.Protocol.OnNodeRejectedTopic OnNodeRejectedTopic = 5;
+  if (has_onnoderejectedtopic()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->onnoderejectedtopic(), target);
+  }
 
-            int IncomingOperation::ByteSize() const {
-                int total_size = 0;
+  // optional .MQCloud.Internal.Protocol.OnNodeSubscribedToTopic OnNodeSubscribedToTopic = 6;
+  if (has_onnodesubscribedtotopic()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->onnodesubscribedtotopic(), target);
+  }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
-                    if (has_typecode()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::EnumSize(this->typecode());
-                    }
+  // optional .MQCloud.Internal.Protocol.OnNodeUnavaliable OnNodeUnavaliable = 7;
+  if (has_onnodeunavaliable()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        7, this->onnodeunavaliable(), target);
+  }
 
-                    // optional .MQCloud.Internal.Protocol.ConnectResponse ConnectResponse = 2;
-                    if (has_connectresponse()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->connectresponse());
-                    }
+  // optional .MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic OnNodeUnsubscribedFromTopic = 8;
+  if (has_onnodeunsubscribedfromtopic()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        8, this->onnodeunsubscribedfromtopic(), target);
+  }
 
-                    // optional .MQCloud.Internal.Protocol.GetPublisherResponse GetPublisherResponse = 3;
-                    if (has_getpublisherresponse()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->getpublisherresponse());
-                    }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.IncomingEvent)
+  return target;
+}
 
-                    // optional .MQCloud.Internal.Protocol.GetAllPublishersResponse GetAllPublishersResponse = 4;
-                    if (has_getallpublishersresponse()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->getallpublishersresponse());
-                    }
+int IncomingEvent::ByteSize() const {
+  int total_size = 0;
 
-                    // optional .MQCloud.Internal.Protocol.GetSubscriberResponse GetSubscriberResponse = 5;
-                    if (has_getsubscriberresponse()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->getsubscriberresponse());
-                    }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .MQCloud.Internal.Protocol.IncomingEventType TypeCode = 1 [default = IncomingEventTypeOnConnectionClosed];
+    if (has_typecode()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->typecode());
+    }
 
-                    // optional .MQCloud.Internal.Protocol.GetAllSubscribersResponse GetAllSubscribersResponse = 6;
-                    if (has_getallsubscribersresponse()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->getallsubscribersresponse());
-                    }
+    // optional .MQCloud.Internal.Protocol.OnConnectionClosed OnConnectionClosed = 2;
+    if (has_onconnectionclosed()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->onconnectionclosed());
+    }
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+    // optional .MQCloud.Internal.Protocol.OnConnectionEstablished OnConnectionEstablished = 3;
+    if (has_onconnectionestablished()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->onconnectionestablished());
+    }
 
-            void IncomingOperation::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const IncomingOperation *source = ::google::protobuf::internal::dynamic_cast_if_available<const IncomingOperation *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+    // optional .MQCloud.Internal.Protocol.OnNodeAdvertisedTopic OnNodeAdvertisedTopic = 4;
+    if (has_onnodeadvertisedtopic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->onnodeadvertisedtopic());
+    }
 
-            void IncomingOperation::MergeFrom(const IncomingOperation &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_typecode()) {
-                        set_typecode(from.typecode());
-                    }
-                    if (from.has_connectresponse()) {
-                        mutable_connectresponse()->::MQCloud::Internal::Protocol::ConnectResponse::MergeFrom(
-                                from.connectresponse());
-                    }
-                    if (from.has_getpublisherresponse()) {
-                        mutable_getpublisherresponse()->::MQCloud::Internal::Protocol::GetPublisherResponse::MergeFrom(
-                                from.getpublisherresponse());
-                    }
-                    if (from.has_getallpublishersresponse()) {
-                        mutable_getallpublishersresponse()->::MQCloud::Internal::Protocol::GetAllPublishersResponse::MergeFrom(
-                                from.getallpublishersresponse());
-                    }
-                    if (from.has_getsubscriberresponse()) {
-                        mutable_getsubscriberresponse()->::MQCloud::Internal::Protocol::GetSubscriberResponse::MergeFrom(
-                                from.getsubscriberresponse());
-                    }
-                    if (from.has_getallsubscribersresponse()) {
-                        mutable_getallsubscribersresponse()->::MQCloud::Internal::Protocol::GetAllSubscribersResponse::MergeFrom(
-                                from.getallsubscribersresponse());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+    // optional .MQCloud.Internal.Protocol.OnNodeRejectedTopic OnNodeRejectedTopic = 5;
+    if (has_onnoderejectedtopic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->onnoderejectedtopic());
+    }
 
-            void IncomingOperation::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+    // optional .MQCloud.Internal.Protocol.OnNodeSubscribedToTopic OnNodeSubscribedToTopic = 6;
+    if (has_onnodesubscribedtotopic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->onnodesubscribedtotopic());
+    }
 
-            void IncomingOperation::CopyFrom(const IncomingOperation &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+    // optional .MQCloud.Internal.Protocol.OnNodeUnavaliable OnNodeUnavaliable = 7;
+    if (has_onnodeunavaliable()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->onnodeunavaliable());
+    }
 
-            bool IncomingOperation::IsInitialized() const {
+    // optional .MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic OnNodeUnsubscribedFromTopic = 8;
+    if (has_onnodeunsubscribedfromtopic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->onnodeunsubscribedfromtopic());
+    }
 
-                return true;
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void IncomingOperation::Swap(IncomingOperation * other) {
-                if (other != this) {
-                    std::swap(typecode_, other->typecode_);
-                    std::swap(connectresponse_, other->connectresponse_);
-                    std::swap(getpublisherresponse_, other->getpublisherresponse_);
-                    std::swap(getallpublishersresponse_, other->getallpublishersresponse_);
-                    std::swap(getsubscriberresponse_, other->getsubscriberresponse_);
-                    std::swap(getallsubscribersresponse_, other->getallsubscribersresponse_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void IncomingEvent::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const IncomingEvent* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const IncomingEvent*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            ::google::protobuf::Metadata IncomingOperation::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = IncomingOperation_descriptor_;
-                metadata.reflection = IncomingOperation_reflection_;
-                return metadata;
-            }
+void IncomingEvent::MergeFrom(const IncomingEvent& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_typecode()) {
+      set_typecode(from.typecode());
+    }
+    if (from.has_onconnectionclosed()) {
+      mutable_onconnectionclosed()->::MQCloud::Internal::Protocol::OnConnectionClosed::MergeFrom(from.onconnectionclosed());
+    }
+    if (from.has_onconnectionestablished()) {
+      mutable_onconnectionestablished()->::MQCloud::Internal::Protocol::OnConnectionEstablished::MergeFrom(from.onconnectionestablished());
+    }
+    if (from.has_onnodeadvertisedtopic()) {
+      mutable_onnodeadvertisedtopic()->::MQCloud::Internal::Protocol::OnNodeAdvertisedTopic::MergeFrom(from.onnodeadvertisedtopic());
+    }
+    if (from.has_onnoderejectedtopic()) {
+      mutable_onnoderejectedtopic()->::MQCloud::Internal::Protocol::OnNodeRejectedTopic::MergeFrom(from.onnoderejectedtopic());
+    }
+    if (from.has_onnodesubscribedtotopic()) {
+      mutable_onnodesubscribedtotopic()->::MQCloud::Internal::Protocol::OnNodeSubscribedToTopic::MergeFrom(from.onnodesubscribedtotopic());
+    }
+    if (from.has_onnodeunavaliable()) {
+      mutable_onnodeunavaliable()->::MQCloud::Internal::Protocol::OnNodeUnavaliable::MergeFrom(from.onnodeunavaliable());
+    }
+    if (from.has_onnodeunsubscribedfromtopic()) {
+      mutable_onnodeunsubscribedfromtopic()->::MQCloud::Internal::Protocol::OnNodeUnsubscribedFromTopic::MergeFrom(from.onnodeunsubscribedfromtopic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void IncomingEvent::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void IncomingEvent::CopyFrom(const IncomingEvent& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool IncomingEvent::IsInitialized() const {
+
+  return true;
+}
+
+void IncomingEvent::Swap(IncomingEvent* other) {
+  if (other != this) {
+    std::swap(typecode_, other->typecode_);
+    std::swap(onconnectionclosed_, other->onconnectionclosed_);
+    std::swap(onconnectionestablished_, other->onconnectionestablished_);
+    std::swap(onnodeadvertisedtopic_, other->onnodeadvertisedtopic_);
+    std::swap(onnoderejectedtopic_, other->onnoderejectedtopic_);
+    std::swap(onnodesubscribedtotopic_, other->onnodesubscribedtotopic_);
+    std::swap(onnodeunavaliable_, other->onnodeunavaliable_);
+    std::swap(onnodeunsubscribedfromtopic_, other->onnodeunsubscribedfromtopic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata IncomingEvent::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = IncomingEvent_descriptor_;
+  metadata.reflection = IncomingEvent_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int OnConnectionClosed::kFromNodeFieldNumber;
-            const int OnConnectionClosed::kToNodeFieldNumber;
-#endif // !_MSC_VER
+const int IncomingOperation::kTypeCodeFieldNumber;
+const int IncomingOperation::kConnectResponseFieldNumber;
+const int IncomingOperation::kGetPublisherResponseFieldNumber;
+const int IncomingOperation::kGetAllPublishersResponseFieldNumber;
+const int IncomingOperation::kGetSubscriberResponseFieldNumber;
+const int IncomingOperation::kGetAllSubscribersResponseFieldNumber;
+#endif  // !_MSC_VER
 
+IncomingOperation::IncomingOperation()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.IncomingOperation)
+}
 
-            OnConnectionClosed::OnConnectionClosed() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnConnectionClosed)
-            }
+void IncomingOperation::InitAsDefaultInstance() {
+  connectresponse_ = const_cast< ::MQCloud::Internal::Protocol::ConnectResponse*>(&::MQCloud::Internal::Protocol::ConnectResponse::default_instance());
+  getpublisherresponse_ = const_cast< ::MQCloud::Internal::Protocol::GetPublisherResponse*>(&::MQCloud::Internal::Protocol::GetPublisherResponse::default_instance());
+  getallpublishersresponse_ = const_cast< ::MQCloud::Internal::Protocol::GetAllPublishersResponse*>(&::MQCloud::Internal::Protocol::GetAllPublishersResponse::default_instance());
+  getsubscriberresponse_ = const_cast< ::MQCloud::Internal::Protocol::GetSubscriberResponse*>(&::MQCloud::Internal::Protocol::GetSubscriberResponse::default_instance());
+  getallsubscribersresponse_ = const_cast< ::MQCloud::Internal::Protocol::GetAllSubscribersResponse*>(&::MQCloud::Internal::Protocol::GetAllSubscribersResponse::default_instance());
+}
 
-            void OnConnectionClosed::InitAsDefaultInstance() {
-            }
+IncomingOperation::IncomingOperation(const IncomingOperation& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.IncomingOperation)
+}
 
-            OnConnectionClosed::OnConnectionClosed(const OnConnectionClosed &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnConnectionClosed)
-            }
+void IncomingOperation::SharedCtor() {
+  _cached_size_ = 0;
+  typecode_ = 0;
+  connectresponse_ = NULL;
+  getpublisherresponse_ = NULL;
+  getallpublishersresponse_ = NULL;
+  getsubscriberresponse_ = NULL;
+  getallsubscribersresponse_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void OnConnectionClosed::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                fromnode_     = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                tonode_       = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+IncomingOperation::~IncomingOperation() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.IncomingOperation)
+  SharedDtor();
+}
 
-            OnConnectionClosed::~OnConnectionClosed() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnConnectionClosed)
-                SharedDtor();
-            }
+void IncomingOperation::SharedDtor() {
+  if (this != default_instance_) {
+    delete connectresponse_;
+    delete getpublisherresponse_;
+    delete getallpublishersresponse_;
+    delete getsubscriberresponse_;
+    delete getallsubscribersresponse_;
+  }
+}
 
-            void OnConnectionClosed::SharedDtor() {
-                if (fromnode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete fromnode_;
-                }
-                if (tonode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete tonode_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void IncomingOperation::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* IncomingOperation::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return IncomingOperation_descriptor_;
+}
 
-            void OnConnectionClosed::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const IncomingOperation& IncomingOperation::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *OnConnectionClosed::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OnConnectionClosed_descriptor_;
-            }
+IncomingOperation* IncomingOperation::default_instance_ = NULL;
 
-            const OnConnectionClosed &OnConnectionClosed::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+IncomingOperation* IncomingOperation::New() const {
+  return new IncomingOperation;
+}
 
-            OnConnectionClosed *OnConnectionClosed::default_instance_ = NULL;
+void IncomingOperation::Clear() {
+  if (_has_bits_[0 / 32] & 63) {
+    typecode_ = 0;
+    if (has_connectresponse()) {
+      if (connectresponse_ != NULL) connectresponse_->::MQCloud::Internal::Protocol::ConnectResponse::Clear();
+    }
+    if (has_getpublisherresponse()) {
+      if (getpublisherresponse_ != NULL) getpublisherresponse_->::MQCloud::Internal::Protocol::GetPublisherResponse::Clear();
+    }
+    if (has_getallpublishersresponse()) {
+      if (getallpublishersresponse_ != NULL) getallpublishersresponse_->::MQCloud::Internal::Protocol::GetAllPublishersResponse::Clear();
+    }
+    if (has_getsubscriberresponse()) {
+      if (getsubscriberresponse_ != NULL) getsubscriberresponse_->::MQCloud::Internal::Protocol::GetSubscriberResponse::Clear();
+    }
+    if (has_getallsubscribersresponse()) {
+      if (getallsubscribersresponse_ != NULL) getallsubscribersresponse_->::MQCloud::Internal::Protocol::GetAllSubscribersResponse::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            OnConnectionClosed *OnConnectionClosed::New() const {
-                return new OnConnectionClosed;
-            }
-
-            void OnConnectionClosed::Clear() {
-                if (_has_bits_[0 / 32] & 3) {
-                    if (has_fromnode()) {
-                        if (fromnode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            fromnode_->clear();
-                        }
-                    }
-                    if (has_tonode()) {
-                        if (tonode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            tonode_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool OnConnectionClosed::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool IncomingOperation::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnConnectionClosed)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string FromNode = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_fromnode()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->fromnode().data(), this->fromnode().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "fromnode");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_ToNode;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.IncomingOperation)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
+      case 1: {
+        if (tag == 8) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::MQCloud::Internal::Protocol::IncomingOperationType_IsValid(value)) {
+            set_typecode(static_cast< ::MQCloud::Internal::Protocol::IncomingOperationType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_ConnectResponse;
+        break;
+      }
 
-                            // optional string ToNode = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_ToNode:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_tonode()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->tonode().data(), this->tonode().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "tonode");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.ConnectResponse ConnectResponse = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_ConnectResponse:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_connectresponse()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_GetPublisherResponse;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnConnectionClosed)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnConnectionClosed)
-                return false;
+      // optional .MQCloud.Internal.Protocol.GetPublisherResponse GetPublisherResponse = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_GetPublisherResponse:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_getpublisherresponse()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(34)) goto parse_GetAllPublishersResponse;
+        break;
+      }
+
+      // optional .MQCloud.Internal.Protocol.GetAllPublishersResponse GetAllPublishersResponse = 4;
+      case 4: {
+        if (tag == 34) {
+         parse_GetAllPublishersResponse:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_getallpublishersresponse()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(42)) goto parse_GetSubscriberResponse;
+        break;
+      }
+
+      // optional .MQCloud.Internal.Protocol.GetSubscriberResponse GetSubscriberResponse = 5;
+      case 5: {
+        if (tag == 42) {
+         parse_GetSubscriberResponse:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_getsubscriberresponse()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(50)) goto parse_GetAllSubscribersResponse;
+        break;
+      }
+
+      // optional .MQCloud.Internal.Protocol.GetAllSubscribersResponse GetAllSubscribersResponse = 6;
+      case 6: {
+        if (tag == 50) {
+         parse_GetAllSubscribersResponse:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_getallsubscribersresponse()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.IncomingOperation)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.IncomingOperation)
+  return false;
 #undef DO_
-            }
+}
 
-            void OnConnectionClosed::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnConnectionClosed)
-                // optional string FromNode = 1;
-                if (has_fromnode()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->fromnode().data(),
-                                                                                         this->fromnode().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "fromnode");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->fromnode(), output);
-                }
+void IncomingOperation::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.IncomingOperation)
+  // optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
+  if (has_typecode()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->typecode(), output);
+  }
 
-                // optional string ToNode = 2;
-                if (has_tonode()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->tonode().data(),
-                                                                                         this->tonode().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "tonode");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->tonode(), output);
-                }
+  // optional .MQCloud.Internal.Protocol.ConnectResponse ConnectResponse = 2;
+  if (has_connectresponse()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->connectresponse(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnConnectionClosed)
-            }
+  // optional .MQCloud.Internal.Protocol.GetPublisherResponse GetPublisherResponse = 3;
+  if (has_getpublisherresponse()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->getpublisherresponse(), output);
+  }
 
-            ::google::protobuf::uint8 *OnConnectionClosed::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnConnectionClosed)
-                // optional string FromNode = 1;
-                if (has_fromnode()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->fromnode().data(),
-                                                                                         this->fromnode().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "fromnode");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->fromnode(),
-                                                                                              target);
-                }
+  // optional .MQCloud.Internal.Protocol.GetAllPublishersResponse GetAllPublishersResponse = 4;
+  if (has_getallpublishersresponse()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->getallpublishersresponse(), output);
+  }
 
-                // optional string ToNode = 2;
-                if (has_tonode()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->tonode().data(),
-                                                                                         this->tonode().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "tonode");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->tonode(),
-                                                                                              target);
-                }
+  // optional .MQCloud.Internal.Protocol.GetSubscriberResponse GetSubscriberResponse = 5;
+  if (has_getsubscriberresponse()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->getsubscriberresponse(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnConnectionClosed)
-                return target;
-            }
+  // optional .MQCloud.Internal.Protocol.GetAllSubscribersResponse GetAllSubscribersResponse = 6;
+  if (has_getallsubscribersresponse()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->getallsubscribersresponse(), output);
+  }
 
-            int OnConnectionClosed::ByteSize() const {
-                int total_size = 0;
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.IncomingOperation)
+}
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string FromNode = 1;
-                    if (has_fromnode()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->fromnode());
-                    }
+::google::protobuf::uint8* IncomingOperation::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.IncomingOperation)
+  // optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
+  if (has_typecode()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->typecode(), target);
+  }
 
-                    // optional string ToNode = 2;
-                    if (has_tonode()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->tonode());
-                    }
+  // optional .MQCloud.Internal.Protocol.ConnectResponse ConnectResponse = 2;
+  if (has_connectresponse()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->connectresponse(), target);
+  }
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  // optional .MQCloud.Internal.Protocol.GetPublisherResponse GetPublisherResponse = 3;
+  if (has_getpublisherresponse()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->getpublisherresponse(), target);
+  }
 
-            void OnConnectionClosed::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const OnConnectionClosed *source = ::google::protobuf::internal::dynamic_cast_if_available<const OnConnectionClosed *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+  // optional .MQCloud.Internal.Protocol.GetAllPublishersResponse GetAllPublishersResponse = 4;
+  if (has_getallpublishersresponse()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->getallpublishersresponse(), target);
+  }
 
-            void OnConnectionClosed::MergeFrom(const OnConnectionClosed &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_fromnode()) {
-                        set_fromnode(from.fromnode());
-                    }
-                    if (from.has_tonode()) {
-                        set_tonode(from.tonode());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+  // optional .MQCloud.Internal.Protocol.GetSubscriberResponse GetSubscriberResponse = 5;
+  if (has_getsubscriberresponse()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->getsubscriberresponse(), target);
+  }
 
-            void OnConnectionClosed::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  // optional .MQCloud.Internal.Protocol.GetAllSubscribersResponse GetAllSubscribersResponse = 6;
+  if (has_getallsubscribersresponse()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->getallsubscribersresponse(), target);
+  }
 
-            void OnConnectionClosed::CopyFrom(const OnConnectionClosed &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.IncomingOperation)
+  return target;
+}
 
-            bool OnConnectionClosed::IsInitialized() const {
+int IncomingOperation::ByteSize() const {
+  int total_size = 0;
 
-                return true;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .MQCloud.Internal.Protocol.IncomingOperationType TypeCode = 1 [default = IncomingOperationTypeConnectRequest];
+    if (has_typecode()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->typecode());
+    }
 
-            void OnConnectionClosed::Swap(OnConnectionClosed * other) {
-                if (other != this) {
-                    std::swap(fromnode_, other->fromnode_);
-                    std::swap(tonode_, other->tonode_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+    // optional .MQCloud.Internal.Protocol.ConnectResponse ConnectResponse = 2;
+    if (has_connectresponse()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->connectresponse());
+    }
 
-            ::google::protobuf::Metadata OnConnectionClosed::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = OnConnectionClosed_descriptor_;
-                metadata.reflection = OnConnectionClosed_reflection_;
-                return metadata;
-            }
+    // optional .MQCloud.Internal.Protocol.GetPublisherResponse GetPublisherResponse = 3;
+    if (has_getpublisherresponse()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->getpublisherresponse());
+    }
+
+    // optional .MQCloud.Internal.Protocol.GetAllPublishersResponse GetAllPublishersResponse = 4;
+    if (has_getallpublishersresponse()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->getallpublishersresponse());
+    }
+
+    // optional .MQCloud.Internal.Protocol.GetSubscriberResponse GetSubscriberResponse = 5;
+    if (has_getsubscriberresponse()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->getsubscriberresponse());
+    }
+
+    // optional .MQCloud.Internal.Protocol.GetAllSubscribersResponse GetAllSubscribersResponse = 6;
+    if (has_getallsubscribersresponse()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->getallsubscribersresponse());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void IncomingOperation::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const IncomingOperation* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const IncomingOperation*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void IncomingOperation::MergeFrom(const IncomingOperation& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_typecode()) {
+      set_typecode(from.typecode());
+    }
+    if (from.has_connectresponse()) {
+      mutable_connectresponse()->::MQCloud::Internal::Protocol::ConnectResponse::MergeFrom(from.connectresponse());
+    }
+    if (from.has_getpublisherresponse()) {
+      mutable_getpublisherresponse()->::MQCloud::Internal::Protocol::GetPublisherResponse::MergeFrom(from.getpublisherresponse());
+    }
+    if (from.has_getallpublishersresponse()) {
+      mutable_getallpublishersresponse()->::MQCloud::Internal::Protocol::GetAllPublishersResponse::MergeFrom(from.getallpublishersresponse());
+    }
+    if (from.has_getsubscriberresponse()) {
+      mutable_getsubscriberresponse()->::MQCloud::Internal::Protocol::GetSubscriberResponse::MergeFrom(from.getsubscriberresponse());
+    }
+    if (from.has_getallsubscribersresponse()) {
+      mutable_getallsubscribersresponse()->::MQCloud::Internal::Protocol::GetAllSubscribersResponse::MergeFrom(from.getallsubscribersresponse());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void IncomingOperation::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void IncomingOperation::CopyFrom(const IncomingOperation& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool IncomingOperation::IsInitialized() const {
+
+  return true;
+}
+
+void IncomingOperation::Swap(IncomingOperation* other) {
+  if (other != this) {
+    std::swap(typecode_, other->typecode_);
+    std::swap(connectresponse_, other->connectresponse_);
+    std::swap(getpublisherresponse_, other->getpublisherresponse_);
+    std::swap(getallpublishersresponse_, other->getallpublishersresponse_);
+    std::swap(getsubscriberresponse_, other->getsubscriberresponse_);
+    std::swap(getallsubscribersresponse_, other->getallsubscribersresponse_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata IncomingOperation::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = IncomingOperation_descriptor_;
+  metadata.reflection = IncomingOperation_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int OnConnectionEstablished::kFromNodeFieldNumber;
-            const int OnConnectionEstablished::kToNodeFieldNumber;
-#endif // !_MSC_VER
+const int OnConnectionClosed::kFromNodeFieldNumber;
+const int OnConnectionClosed::kToNodeFieldNumber;
+#endif  // !_MSC_VER
 
+OnConnectionClosed::OnConnectionClosed()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnConnectionClosed)
+}
 
-            OnConnectionEstablished::OnConnectionEstablished() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnConnectionEstablished)
-            }
+void OnConnectionClosed::InitAsDefaultInstance() {
+}
 
-            void OnConnectionEstablished::InitAsDefaultInstance() {
-            }
+OnConnectionClosed::OnConnectionClosed(const OnConnectionClosed& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnConnectionClosed)
+}
 
-            OnConnectionEstablished::OnConnectionEstablished(const OnConnectionEstablished &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnConnectionEstablished)
-            }
+void OnConnectionClosed::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  fromnode_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  tonode_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void OnConnectionEstablished::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                fromnode_     = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                tonode_       = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+OnConnectionClosed::~OnConnectionClosed() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnConnectionClosed)
+  SharedDtor();
+}
 
-            OnConnectionEstablished::~OnConnectionEstablished() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnConnectionEstablished)
-                SharedDtor();
-            }
+void OnConnectionClosed::SharedDtor() {
+  if (fromnode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete fromnode_;
+  }
+  if (tonode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete tonode_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void OnConnectionEstablished::SharedDtor() {
-                if (fromnode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete fromnode_;
-                }
-                if (tonode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete tonode_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void OnConnectionClosed::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OnConnectionClosed::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OnConnectionClosed_descriptor_;
+}
 
-            void OnConnectionEstablished::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const OnConnectionClosed& OnConnectionClosed::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *OnConnectionEstablished::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OnConnectionEstablished_descriptor_;
-            }
+OnConnectionClosed* OnConnectionClosed::default_instance_ = NULL;
 
-            const OnConnectionEstablished &OnConnectionEstablished::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+OnConnectionClosed* OnConnectionClosed::New() const {
+  return new OnConnectionClosed;
+}
 
-            OnConnectionEstablished *OnConnectionEstablished::default_instance_ = NULL;
+void OnConnectionClosed::Clear() {
+  if (_has_bits_[0 / 32] & 3) {
+    if (has_fromnode()) {
+      if (fromnode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        fromnode_->clear();
+      }
+    }
+    if (has_tonode()) {
+      if (tonode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        tonode_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            OnConnectionEstablished *OnConnectionEstablished::New() const {
-                return new OnConnectionEstablished;
-            }
-
-            void OnConnectionEstablished::Clear() {
-                if (_has_bits_[0 / 32] & 3) {
-                    if (has_fromnode()) {
-                        if (fromnode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            fromnode_->clear();
-                        }
-                    }
-                    if (has_tonode()) {
-                        if (tonode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            tonode_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool OnConnectionEstablished::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool OnConnectionClosed::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnConnectionEstablished)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string FromNode = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_fromnode()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->fromnode().data(), this->fromnode().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "fromnode");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_ToNode;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnConnectionClosed)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string FromNode = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_fromnode()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->fromnode().data(), this->fromnode().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "fromnode");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_ToNode;
+        break;
+      }
 
-                            // optional string ToNode = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_ToNode:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_tonode()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->tonode().data(), this->tonode().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "tonode");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string ToNode = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_ToNode:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_tonode()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->tonode().data(), this->tonode().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "tonode");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnConnectionEstablished)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnConnectionEstablished)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnConnectionClosed)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnConnectionClosed)
+  return false;
 #undef DO_
-            }
+}
 
-            void OnConnectionEstablished::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnConnectionEstablished)
-                // optional string FromNode = 1;
-                if (has_fromnode()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->fromnode().data(),
-                                                                                         this->fromnode().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "fromnode");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->fromnode(), output);
-                }
+void OnConnectionClosed::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnConnectionClosed)
+  // optional string FromNode = 1;
+  if (has_fromnode()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->fromnode().data(), this->fromnode().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "fromnode");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->fromnode(), output);
+  }
 
-                // optional string ToNode = 2;
-                if (has_tonode()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->tonode().data(),
-                                                                                         this->tonode().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "tonode");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->tonode(), output);
-                }
+  // optional string ToNode = 2;
+  if (has_tonode()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->tonode().data(), this->tonode().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "tonode");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->tonode(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnConnectionEstablished)
-            }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnConnectionClosed)
+}
 
-            ::google::protobuf::uint8 *OnConnectionEstablished::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnConnectionEstablished)
-                // optional string FromNode = 1;
-                if (has_fromnode()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->fromnode().data(),
-                                                                                         this->fromnode().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "fromnode");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->fromnode(),
-                                                                                              target);
-                }
+::google::protobuf::uint8* OnConnectionClosed::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnConnectionClosed)
+  // optional string FromNode = 1;
+  if (has_fromnode()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->fromnode().data(), this->fromnode().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "fromnode");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->fromnode(), target);
+  }
 
-                // optional string ToNode = 2;
-                if (has_tonode()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->tonode().data(),
-                                                                                         this->tonode().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "tonode");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->tonode(),
-                                                                                              target);
-                }
+  // optional string ToNode = 2;
+  if (has_tonode()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->tonode().data(), this->tonode().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "tonode");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->tonode(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnConnectionEstablished)
-                return target;
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnConnectionClosed)
+  return target;
+}
 
-            int OnConnectionEstablished::ByteSize() const {
-                int total_size = 0;
+int OnConnectionClosed::ByteSize() const {
+  int total_size = 0;
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string FromNode = 1;
-                    if (has_fromnode()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->fromnode());
-                    }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string FromNode = 1;
+    if (has_fromnode()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->fromnode());
+    }
 
-                    // optional string ToNode = 2;
-                    if (has_tonode()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->tonode());
-                    }
+    // optional string ToNode = 2;
+    if (has_tonode()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->tonode());
+    }
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void OnConnectionEstablished::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const OnConnectionEstablished *source = ::google::protobuf::internal::dynamic_cast_if_available<const OnConnectionEstablished *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void OnConnectionClosed::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const OnConnectionClosed* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const OnConnectionClosed*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            void OnConnectionEstablished::MergeFrom(const OnConnectionEstablished &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_fromnode()) {
-                        set_fromnode(from.fromnode());
-                    }
-                    if (from.has_tonode()) {
-                        set_tonode(from.tonode());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+void OnConnectionClosed::MergeFrom(const OnConnectionClosed& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_fromnode()) {
+      set_fromnode(from.fromnode());
+    }
+    if (from.has_tonode()) {
+      set_tonode(from.tonode());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-            void OnConnectionEstablished::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void OnConnectionClosed::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void OnConnectionEstablished::CopyFrom(const OnConnectionEstablished &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void OnConnectionClosed::CopyFrom(const OnConnectionClosed& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            bool OnConnectionEstablished::IsInitialized() const {
+bool OnConnectionClosed::IsInitialized() const {
 
-                return true;
-            }
+  return true;
+}
 
-            void OnConnectionEstablished::Swap(OnConnectionEstablished * other) {
-                if (other != this) {
-                    std::swap(fromnode_, other->fromnode_);
-                    std::swap(tonode_, other->tonode_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void OnConnectionClosed::Swap(OnConnectionClosed* other) {
+  if (other != this) {
+    std::swap(fromnode_, other->fromnode_);
+    std::swap(tonode_, other->tonode_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            ::google::protobuf::Metadata OnConnectionEstablished::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = OnConnectionEstablished_descriptor_;
-                metadata.reflection = OnConnectionEstablished_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata OnConnectionClosed::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OnConnectionClosed_descriptor_;
+  metadata.reflection = OnConnectionClosed_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int OnNodeAdvertisedTopic::kNodeFieldNumber;
-            const int OnNodeAdvertisedTopic::kPatternFieldNumber;
-            const int OnNodeAdvertisedTopic::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int OnConnectionEstablished::kFromNodeFieldNumber;
+const int OnConnectionEstablished::kToNodeFieldNumber;
+#endif  // !_MSC_VER
 
+OnConnectionEstablished::OnConnectionEstablished()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnConnectionEstablished)
+}
 
-            OnNodeAdvertisedTopic::OnNodeAdvertisedTopic() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
-            }
+void OnConnectionEstablished::InitAsDefaultInstance() {
+}
 
-            void OnNodeAdvertisedTopic::InitAsDefaultInstance() {
-            }
+OnConnectionEstablished::OnConnectionEstablished(const OnConnectionEstablished& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnConnectionEstablished)
+}
 
-            OnNodeAdvertisedTopic::OnNodeAdvertisedTopic(const OnNodeAdvertisedTopic &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
-            }
+void OnConnectionEstablished::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  fromnode_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  tonode_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void OnNodeAdvertisedTopic::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                node_         = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+OnConnectionEstablished::~OnConnectionEstablished() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnConnectionEstablished)
+  SharedDtor();
+}
 
-            OnNodeAdvertisedTopic::~OnNodeAdvertisedTopic() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
-                SharedDtor();
-            }
+void OnConnectionEstablished::SharedDtor() {
+  if (fromnode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete fromnode_;
+  }
+  if (tonode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete tonode_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void OnNodeAdvertisedTopic::SharedDtor() {
-                if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete node_;
-                }
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void OnConnectionEstablished::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OnConnectionEstablished::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OnConnectionEstablished_descriptor_;
+}
 
-            void OnNodeAdvertisedTopic::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const OnConnectionEstablished& OnConnectionEstablished::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *OnNodeAdvertisedTopic::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OnNodeAdvertisedTopic_descriptor_;
-            }
+OnConnectionEstablished* OnConnectionEstablished::default_instance_ = NULL;
 
-            const OnNodeAdvertisedTopic &OnNodeAdvertisedTopic::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+OnConnectionEstablished* OnConnectionEstablished::New() const {
+  return new OnConnectionEstablished;
+}
 
-            OnNodeAdvertisedTopic *OnNodeAdvertisedTopic::default_instance_ = NULL;
+void OnConnectionEstablished::Clear() {
+  if (_has_bits_[0 / 32] & 3) {
+    if (has_fromnode()) {
+      if (fromnode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        fromnode_->clear();
+      }
+    }
+    if (has_tonode()) {
+      if (tonode_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        tonode_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            OnNodeAdvertisedTopic *OnNodeAdvertisedTopic::New() const {
-                return new OnNodeAdvertisedTopic;
-            }
-
-            void OnNodeAdvertisedTopic::Clear() {
-                if (_has_bits_[0 / 32] & 7) {
-                    if (has_node()) {
-                        if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            node_->clear();
-                        }
-                    }
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool OnNodeAdvertisedTopic::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool OnConnectionEstablished::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string Node = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_node()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->node().data(), this->node().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "node");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Pattern;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnConnectionEstablished)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string FromNode = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_fromnode()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->fromnode().data(), this->fromnode().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "fromnode");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_ToNode;
+        break;
+      }
 
-                            // optional string Pattern = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Pattern:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Topic;
-                            break;
-                        }
+      // optional string ToNode = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_ToNode:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_tonode()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->tonode().data(), this->tonode().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "tonode");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                            // optional string Topic = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
-
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnConnectionEstablished)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnConnectionEstablished)
+  return false;
 #undef DO_
-            }
+}
 
-            void OnNodeAdvertisedTopic::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->node(), output);
-                }
+void OnConnectionEstablished::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnConnectionEstablished)
+  // optional string FromNode = 1;
+  if (has_fromnode()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->fromnode().data(), this->fromnode().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "fromnode");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->fromnode(), output);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->pattern(), output);
-                }
+  // optional string ToNode = 2;
+  if (has_tonode()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->tonode().data(), this->tonode().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "tonode");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->tonode(), output);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(3, this->topic(), output);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnConnectionEstablished)
+}
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
-            }
+::google::protobuf::uint8* OnConnectionEstablished::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnConnectionEstablished)
+  // optional string FromNode = 1;
+  if (has_fromnode()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->fromnode().data(), this->fromnode().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "fromnode");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->fromnode(), target);
+  }
 
-            ::google::protobuf::uint8 *OnNodeAdvertisedTopic::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->node(), target);
-                }
+  // optional string ToNode = 2;
+  if (has_tonode()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->tonode().data(), this->tonode().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "tonode");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->tonode(), target);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->pattern(),
-                                                                                              target);
-                }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnConnectionEstablished)
+  return target;
+}
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(3, this->topic(), target);
-                }
+int OnConnectionEstablished::ByteSize() const {
+  int total_size = 0;
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
-                return target;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string FromNode = 1;
+    if (has_fromnode()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->fromnode());
+    }
 
-            int OnNodeAdvertisedTopic::ByteSize() const {
-                int total_size = 0;
+    // optional string ToNode = 2;
+    if (has_tonode()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->tonode());
+    }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string Node = 1;
-                    if (has_node()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->node());
-                    }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-                    // optional string Pattern = 2;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+void OnConnectionEstablished::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const OnConnectionEstablished* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const OnConnectionEstablished*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-                    // optional string Topic = 3;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+void OnConnectionEstablished::MergeFrom(const OnConnectionEstablished& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_fromnode()) {
+      set_fromnode(from.fromnode());
+    }
+    if (from.has_tonode()) {
+      set_tonode(from.tonode());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+void OnConnectionEstablished::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void OnNodeAdvertisedTopic::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const OnNodeAdvertisedTopic *source = ::google::protobuf::internal::dynamic_cast_if_available<const OnNodeAdvertisedTopic *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void OnConnectionEstablished::CopyFrom(const OnConnectionEstablished& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void OnNodeAdvertisedTopic::MergeFrom(const OnNodeAdvertisedTopic &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_node()) {
-                        set_node(from.node());
-                    }
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+bool OnConnectionEstablished::IsInitialized() const {
 
-            void OnNodeAdvertisedTopic::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  return true;
+}
 
-            void OnNodeAdvertisedTopic::CopyFrom(const OnNodeAdvertisedTopic &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void OnConnectionEstablished::Swap(OnConnectionEstablished* other) {
+  if (other != this) {
+    std::swap(fromnode_, other->fromnode_);
+    std::swap(tonode_, other->tonode_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            bool OnNodeAdvertisedTopic::IsInitialized() const {
-
-                return true;
-            }
-
-            void OnNodeAdvertisedTopic::Swap(OnNodeAdvertisedTopic * other) {
-                if (other != this) {
-                    std::swap(node_, other->node_);
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
-
-            ::google::protobuf::Metadata OnNodeAdvertisedTopic::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = OnNodeAdvertisedTopic_descriptor_;
-                metadata.reflection = OnNodeAdvertisedTopic_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata OnConnectionEstablished::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OnConnectionEstablished_descriptor_;
+  metadata.reflection = OnConnectionEstablished_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int OnNodeRejectedTopic::kNodeFieldNumber;
-            const int OnNodeRejectedTopic::kPatternFieldNumber;
-            const int OnNodeRejectedTopic::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int OnNodeAdvertisedTopic::kNodeFieldNumber;
+const int OnNodeAdvertisedTopic::kPatternFieldNumber;
+const int OnNodeAdvertisedTopic::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+OnNodeAdvertisedTopic::OnNodeAdvertisedTopic()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
+}
 
-            OnNodeRejectedTopic::OnNodeRejectedTopic() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
-            }
+void OnNodeAdvertisedTopic::InitAsDefaultInstance() {
+}
 
-            void OnNodeRejectedTopic::InitAsDefaultInstance() {
-            }
+OnNodeAdvertisedTopic::OnNodeAdvertisedTopic(const OnNodeAdvertisedTopic& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
+}
 
-            OnNodeRejectedTopic::OnNodeRejectedTopic(const OnNodeRejectedTopic &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
-            }
+void OnNodeAdvertisedTopic::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  node_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void OnNodeRejectedTopic::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                node_         = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+OnNodeAdvertisedTopic::~OnNodeAdvertisedTopic() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
+  SharedDtor();
+}
 
-            OnNodeRejectedTopic::~OnNodeRejectedTopic() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
-                SharedDtor();
-            }
+void OnNodeAdvertisedTopic::SharedDtor() {
+  if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete node_;
+  }
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void OnNodeRejectedTopic::SharedDtor() {
-                if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete node_;
-                }
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void OnNodeAdvertisedTopic::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OnNodeAdvertisedTopic::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OnNodeAdvertisedTopic_descriptor_;
+}
 
-            void OnNodeRejectedTopic::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const OnNodeAdvertisedTopic& OnNodeAdvertisedTopic::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *OnNodeRejectedTopic::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OnNodeRejectedTopic_descriptor_;
-            }
+OnNodeAdvertisedTopic* OnNodeAdvertisedTopic::default_instance_ = NULL;
 
-            const OnNodeRejectedTopic &OnNodeRejectedTopic::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+OnNodeAdvertisedTopic* OnNodeAdvertisedTopic::New() const {
+  return new OnNodeAdvertisedTopic;
+}
 
-            OnNodeRejectedTopic *OnNodeRejectedTopic::default_instance_ = NULL;
+void OnNodeAdvertisedTopic::Clear() {
+  if (_has_bits_[0 / 32] & 7) {
+    if (has_node()) {
+      if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        node_->clear();
+      }
+    }
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            OnNodeRejectedTopic *OnNodeRejectedTopic::New() const {
-                return new OnNodeRejectedTopic;
-            }
-
-            void OnNodeRejectedTopic::Clear() {
-                if (_has_bits_[0 / 32] & 7) {
-                    if (has_node()) {
-                        if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            node_->clear();
-                        }
-                    }
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool OnNodeRejectedTopic::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool OnNodeAdvertisedTopic::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string Node = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_node()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->node().data(), this->node().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "node");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Pattern;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string Node = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_node()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->node().data(), this->node().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "node");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Pattern;
+        break;
+      }
 
-                            // optional string Pattern = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Pattern:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Topic;
-                            break;
-                        }
+      // optional string Pattern = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Pattern:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_Topic;
+        break;
+      }
 
-                            // optional string Topic = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string Topic = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
+  return false;
 #undef DO_
-            }
+}
 
-            void OnNodeRejectedTopic::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->node(), output);
-                }
+void OnNodeAdvertisedTopic::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->node(), output);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->pattern(), output);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->pattern(), output);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(3, this->topic(), output);
-                }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->topic(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
-            }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
+}
 
-            ::google::protobuf::uint8 *OnNodeRejectedTopic::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->node(), target);
-                }
+::google::protobuf::uint8* OnNodeAdvertisedTopic::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->node(), target);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->pattern(),
-                                                                                              target);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->pattern(), target);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(3, this->topic(), target);
-                }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->topic(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
-                return target;
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnNodeAdvertisedTopic)
+  return target;
+}
 
-            int OnNodeRejectedTopic::ByteSize() const {
-                int total_size = 0;
+int OnNodeAdvertisedTopic::ByteSize() const {
+  int total_size = 0;
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string Node = 1;
-                    if (has_node()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->node());
-                    }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string Node = 1;
+    if (has_node()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->node());
+    }
 
-                    // optional string Pattern = 2;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+    // optional string Pattern = 2;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-                    // optional string Topic = 3;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+    // optional string Topic = 3;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void OnNodeRejectedTopic::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const OnNodeRejectedTopic *source = ::google::protobuf::internal::dynamic_cast_if_available<const OnNodeRejectedTopic *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void OnNodeAdvertisedTopic::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const OnNodeAdvertisedTopic* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const OnNodeAdvertisedTopic*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            void OnNodeRejectedTopic::MergeFrom(const OnNodeRejectedTopic &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_node()) {
-                        set_node(from.node());
-                    }
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+void OnNodeAdvertisedTopic::MergeFrom(const OnNodeAdvertisedTopic& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_node()) {
+      set_node(from.node());
+    }
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-            void OnNodeRejectedTopic::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void OnNodeAdvertisedTopic::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void OnNodeRejectedTopic::CopyFrom(const OnNodeRejectedTopic &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void OnNodeAdvertisedTopic::CopyFrom(const OnNodeAdvertisedTopic& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            bool OnNodeRejectedTopic::IsInitialized() const {
+bool OnNodeAdvertisedTopic::IsInitialized() const {
 
-                return true;
-            }
+  return true;
+}
 
-            void OnNodeRejectedTopic::Swap(OnNodeRejectedTopic * other) {
-                if (other != this) {
-                    std::swap(node_, other->node_);
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void OnNodeAdvertisedTopic::Swap(OnNodeAdvertisedTopic* other) {
+  if (other != this) {
+    std::swap(node_, other->node_);
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            ::google::protobuf::Metadata OnNodeRejectedTopic::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = OnNodeRejectedTopic_descriptor_;
-                metadata.reflection = OnNodeRejectedTopic_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata OnNodeAdvertisedTopic::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OnNodeAdvertisedTopic_descriptor_;
+  metadata.reflection = OnNodeAdvertisedTopic_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int OnNodeSubscribedToTopic::kNodeFieldNumber;
-            const int OnNodeSubscribedToTopic::kPatternFieldNumber;
-            const int OnNodeSubscribedToTopic::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int OnNodeRejectedTopic::kNodeFieldNumber;
+const int OnNodeRejectedTopic::kPatternFieldNumber;
+const int OnNodeRejectedTopic::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+OnNodeRejectedTopic::OnNodeRejectedTopic()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
+}
 
-            OnNodeSubscribedToTopic::OnNodeSubscribedToTopic() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
-            }
+void OnNodeRejectedTopic::InitAsDefaultInstance() {
+}
 
-            void OnNodeSubscribedToTopic::InitAsDefaultInstance() {
-            }
+OnNodeRejectedTopic::OnNodeRejectedTopic(const OnNodeRejectedTopic& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
+}
 
-            OnNodeSubscribedToTopic::OnNodeSubscribedToTopic(const OnNodeSubscribedToTopic &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
-            }
+void OnNodeRejectedTopic::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  node_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void OnNodeSubscribedToTopic::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                node_         = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+OnNodeRejectedTopic::~OnNodeRejectedTopic() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
+  SharedDtor();
+}
 
-            OnNodeSubscribedToTopic::~OnNodeSubscribedToTopic() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
-                SharedDtor();
-            }
+void OnNodeRejectedTopic::SharedDtor() {
+  if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete node_;
+  }
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void OnNodeSubscribedToTopic::SharedDtor() {
-                if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete node_;
-                }
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void OnNodeRejectedTopic::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OnNodeRejectedTopic::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OnNodeRejectedTopic_descriptor_;
+}
 
-            void OnNodeSubscribedToTopic::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const OnNodeRejectedTopic& OnNodeRejectedTopic::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *OnNodeSubscribedToTopic::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OnNodeSubscribedToTopic_descriptor_;
-            }
+OnNodeRejectedTopic* OnNodeRejectedTopic::default_instance_ = NULL;
 
-            const OnNodeSubscribedToTopic &OnNodeSubscribedToTopic::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+OnNodeRejectedTopic* OnNodeRejectedTopic::New() const {
+  return new OnNodeRejectedTopic;
+}
 
-            OnNodeSubscribedToTopic *OnNodeSubscribedToTopic::default_instance_ = NULL;
+void OnNodeRejectedTopic::Clear() {
+  if (_has_bits_[0 / 32] & 7) {
+    if (has_node()) {
+      if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        node_->clear();
+      }
+    }
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            OnNodeSubscribedToTopic *OnNodeSubscribedToTopic::New() const {
-                return new OnNodeSubscribedToTopic;
-            }
-
-            void OnNodeSubscribedToTopic::Clear() {
-                if (_has_bits_[0 / 32] & 7) {
-                    if (has_node()) {
-                        if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            node_->clear();
-                        }
-                    }
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool OnNodeSubscribedToTopic::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool OnNodeRejectedTopic::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string Node = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_node()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->node().data(), this->node().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "node");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Pattern;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string Node = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_node()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->node().data(), this->node().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "node");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Pattern;
+        break;
+      }
 
-                            // optional string Pattern = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Pattern:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Topic;
-                            break;
-                        }
+      // optional string Pattern = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Pattern:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_Topic;
+        break;
+      }
 
-                            // optional string Topic = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string Topic = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
+  return false;
 #undef DO_
-            }
+}
 
-            void OnNodeSubscribedToTopic::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->node(), output);
-                }
+void OnNodeRejectedTopic::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->node(), output);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->pattern(), output);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->pattern(), output);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(3, this->topic(), output);
-                }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->topic(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
-            }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
+}
 
-            ::google::protobuf::uint8 *OnNodeSubscribedToTopic::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->node(), target);
-                }
+::google::protobuf::uint8* OnNodeRejectedTopic::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->node(), target);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->pattern(),
-                                                                                              target);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->pattern(), target);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(3, this->topic(), target);
-                }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->topic(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
-                return target;
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnNodeRejectedTopic)
+  return target;
+}
 
-            int OnNodeSubscribedToTopic::ByteSize() const {
-                int total_size = 0;
+int OnNodeRejectedTopic::ByteSize() const {
+  int total_size = 0;
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string Node = 1;
-                    if (has_node()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->node());
-                    }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string Node = 1;
+    if (has_node()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->node());
+    }
 
-                    // optional string Pattern = 2;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+    // optional string Pattern = 2;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-                    // optional string Topic = 3;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+    // optional string Topic = 3;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void OnNodeSubscribedToTopic::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const OnNodeSubscribedToTopic *source = ::google::protobuf::internal::dynamic_cast_if_available<const OnNodeSubscribedToTopic *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void OnNodeRejectedTopic::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const OnNodeRejectedTopic* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const OnNodeRejectedTopic*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            void OnNodeSubscribedToTopic::MergeFrom(const OnNodeSubscribedToTopic &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_node()) {
-                        set_node(from.node());
-                    }
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+void OnNodeRejectedTopic::MergeFrom(const OnNodeRejectedTopic& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_node()) {
+      set_node(from.node());
+    }
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-            void OnNodeSubscribedToTopic::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void OnNodeRejectedTopic::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void OnNodeSubscribedToTopic::CopyFrom(const OnNodeSubscribedToTopic &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void OnNodeRejectedTopic::CopyFrom(const OnNodeRejectedTopic& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            bool OnNodeSubscribedToTopic::IsInitialized() const {
+bool OnNodeRejectedTopic::IsInitialized() const {
 
-                return true;
-            }
+  return true;
+}
 
-            void OnNodeSubscribedToTopic::Swap(OnNodeSubscribedToTopic * other) {
-                if (other != this) {
-                    std::swap(node_, other->node_);
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void OnNodeRejectedTopic::Swap(OnNodeRejectedTopic* other) {
+  if (other != this) {
+    std::swap(node_, other->node_);
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            ::google::protobuf::Metadata OnNodeSubscribedToTopic::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = OnNodeSubscribedToTopic_descriptor_;
-                metadata.reflection = OnNodeSubscribedToTopic_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata OnNodeRejectedTopic::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OnNodeRejectedTopic_descriptor_;
+  metadata.reflection = OnNodeRejectedTopic_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int OnNodeUnavaliable::kNodeFieldNumber;
-            const int OnNodeUnavaliable::kPatternFieldNumber;
-            const int OnNodeUnavaliable::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int OnNodeSubscribedToTopic::kNodeFieldNumber;
+const int OnNodeSubscribedToTopic::kPatternFieldNumber;
+const int OnNodeSubscribedToTopic::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+OnNodeSubscribedToTopic::OnNodeSubscribedToTopic()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
+}
 
-            OnNodeUnavaliable::OnNodeUnavaliable() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnNodeUnavaliable)
-            }
+void OnNodeSubscribedToTopic::InitAsDefaultInstance() {
+}
 
-            void OnNodeUnavaliable::InitAsDefaultInstance() {
-            }
+OnNodeSubscribedToTopic::OnNodeSubscribedToTopic(const OnNodeSubscribedToTopic& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
+}
 
-            OnNodeUnavaliable::OnNodeUnavaliable(const OnNodeUnavaliable &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnNodeUnavaliable)
-            }
+void OnNodeSubscribedToTopic::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  node_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void OnNodeUnavaliable::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                node_         = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+OnNodeSubscribedToTopic::~OnNodeSubscribedToTopic() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
+  SharedDtor();
+}
 
-            OnNodeUnavaliable::~OnNodeUnavaliable() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnNodeUnavaliable)
-                SharedDtor();
-            }
+void OnNodeSubscribedToTopic::SharedDtor() {
+  if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete node_;
+  }
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void OnNodeUnavaliable::SharedDtor() {
-                if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete node_;
-                }
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void OnNodeSubscribedToTopic::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OnNodeSubscribedToTopic::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OnNodeSubscribedToTopic_descriptor_;
+}
 
-            void OnNodeUnavaliable::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const OnNodeSubscribedToTopic& OnNodeSubscribedToTopic::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *OnNodeUnavaliable::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OnNodeUnavaliable_descriptor_;
-            }
+OnNodeSubscribedToTopic* OnNodeSubscribedToTopic::default_instance_ = NULL;
 
-            const OnNodeUnavaliable &OnNodeUnavaliable::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+OnNodeSubscribedToTopic* OnNodeSubscribedToTopic::New() const {
+  return new OnNodeSubscribedToTopic;
+}
 
-            OnNodeUnavaliable *OnNodeUnavaliable::default_instance_ = NULL;
+void OnNodeSubscribedToTopic::Clear() {
+  if (_has_bits_[0 / 32] & 7) {
+    if (has_node()) {
+      if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        node_->clear();
+      }
+    }
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            OnNodeUnavaliable *OnNodeUnavaliable::New() const {
-                return new OnNodeUnavaliable;
-            }
-
-            void OnNodeUnavaliable::Clear() {
-                if (_has_bits_[0 / 32] & 7) {
-                    if (has_node()) {
-                        if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            node_->clear();
-                        }
-                    }
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool OnNodeUnavaliable::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool OnNodeSubscribedToTopic::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeUnavaliable)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string Node = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_node()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->node().data(), this->node().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "node");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Pattern;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string Node = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_node()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->node().data(), this->node().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "node");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Pattern;
+        break;
+      }
 
-                            // optional string Pattern = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Pattern:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Topic;
-                            break;
-                        }
+      // optional string Pattern = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Pattern:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_Topic;
+        break;
+      }
 
-                            // optional string Topic = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string Topic = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnNodeUnavaliable)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnNodeUnavaliable)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
+  return false;
 #undef DO_
-            }
+}
 
-            void OnNodeUnavaliable::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeUnavaliable)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->node(), output);
-                }
+void OnNodeSubscribedToTopic::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->node(), output);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->pattern(), output);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->pattern(), output);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(3, this->topic(), output);
-                }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->topic(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeUnavaliable)
-            }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
+}
 
-            ::google::protobuf::uint8 *OnNodeUnavaliable::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeUnavaliable)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->node(), target);
-                }
+::google::protobuf::uint8* OnNodeSubscribedToTopic::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->node(), target);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->pattern(),
-                                                                                              target);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->pattern(), target);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(3, this->topic(), target);
-                }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->topic(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnNodeUnavaliable)
-                return target;
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnNodeSubscribedToTopic)
+  return target;
+}
 
-            int OnNodeUnavaliable::ByteSize() const {
-                int total_size = 0;
+int OnNodeSubscribedToTopic::ByteSize() const {
+  int total_size = 0;
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string Node = 1;
-                    if (has_node()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->node());
-                    }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string Node = 1;
+    if (has_node()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->node());
+    }
 
-                    // optional string Pattern = 2;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+    // optional string Pattern = 2;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-                    // optional string Topic = 3;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+    // optional string Topic = 3;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void OnNodeUnavaliable::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const OnNodeUnavaliable *source = ::google::protobuf::internal::dynamic_cast_if_available<const OnNodeUnavaliable *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void OnNodeSubscribedToTopic::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const OnNodeSubscribedToTopic* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const OnNodeSubscribedToTopic*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            void OnNodeUnavaliable::MergeFrom(const OnNodeUnavaliable &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_node()) {
-                        set_node(from.node());
-                    }
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+void OnNodeSubscribedToTopic::MergeFrom(const OnNodeSubscribedToTopic& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_node()) {
+      set_node(from.node());
+    }
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-            void OnNodeUnavaliable::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void OnNodeSubscribedToTopic::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void OnNodeUnavaliable::CopyFrom(const OnNodeUnavaliable &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void OnNodeSubscribedToTopic::CopyFrom(const OnNodeSubscribedToTopic& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            bool OnNodeUnavaliable::IsInitialized() const {
+bool OnNodeSubscribedToTopic::IsInitialized() const {
 
-                return true;
-            }
+  return true;
+}
 
-            void OnNodeUnavaliable::Swap(OnNodeUnavaliable * other) {
-                if (other != this) {
-                    std::swap(node_, other->node_);
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void OnNodeSubscribedToTopic::Swap(OnNodeSubscribedToTopic* other) {
+  if (other != this) {
+    std::swap(node_, other->node_);
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            ::google::protobuf::Metadata OnNodeUnavaliable::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = OnNodeUnavaliable_descriptor_;
-                metadata.reflection = OnNodeUnavaliable_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata OnNodeSubscribedToTopic::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OnNodeSubscribedToTopic_descriptor_;
+  metadata.reflection = OnNodeSubscribedToTopic_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int OnNodeUnsubscribedFromTopic::kNodeFieldNumber;
-            const int OnNodeUnsubscribedFromTopic::kPatternFieldNumber;
-            const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int OnNodeUnavaliable::kNodeFieldNumber;
+#endif  // !_MSC_VER
 
+OnNodeUnavaliable::OnNodeUnavaliable()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnNodeUnavaliable)
+}
 
-            OnNodeUnsubscribedFromTopic::OnNodeUnsubscribedFromTopic() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
-            }
+void OnNodeUnavaliable::InitAsDefaultInstance() {
+}
 
-            void OnNodeUnsubscribedFromTopic::InitAsDefaultInstance() {
-            }
+OnNodeUnavaliable::OnNodeUnavaliable(const OnNodeUnavaliable& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnNodeUnavaliable)
+}
 
-            OnNodeUnsubscribedFromTopic::OnNodeUnsubscribedFromTopic(const OnNodeUnsubscribedFromTopic &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
-            }
+void OnNodeUnavaliable::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  node_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void OnNodeUnsubscribedFromTopic::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                node_         = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+OnNodeUnavaliable::~OnNodeUnavaliable() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnNodeUnavaliable)
+  SharedDtor();
+}
 
-            OnNodeUnsubscribedFromTopic::~OnNodeUnsubscribedFromTopic() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
-                SharedDtor();
-            }
+void OnNodeUnavaliable::SharedDtor() {
+  if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete node_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void OnNodeUnsubscribedFromTopic::SharedDtor() {
-                if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete node_;
-                }
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void OnNodeUnavaliable::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OnNodeUnavaliable::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OnNodeUnavaliable_descriptor_;
+}
 
-            void OnNodeUnsubscribedFromTopic::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const OnNodeUnavaliable& OnNodeUnavaliable::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *OnNodeUnsubscribedFromTopic::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OnNodeUnsubscribedFromTopic_descriptor_;
-            }
+OnNodeUnavaliable* OnNodeUnavaliable::default_instance_ = NULL;
 
-            const OnNodeUnsubscribedFromTopic &OnNodeUnsubscribedFromTopic::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+OnNodeUnavaliable* OnNodeUnavaliable::New() const {
+  return new OnNodeUnavaliable;
+}
 
-            OnNodeUnsubscribedFromTopic *OnNodeUnsubscribedFromTopic::default_instance_ = NULL;
+void OnNodeUnavaliable::Clear() {
+  if (has_node()) {
+    if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+      node_->clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            OnNodeUnsubscribedFromTopic *OnNodeUnsubscribedFromTopic::New() const {
-                return new OnNodeUnsubscribedFromTopic;
-            }
-
-            void OnNodeUnsubscribedFromTopic::Clear() {
-                if (_has_bits_[0 / 32] & 7) {
-                    if (has_node()) {
-                        if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            node_->clear();
-                        }
-                    }
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool OnNodeUnsubscribedFromTopic::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool OnNodeUnavaliable::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string Node = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_node()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->node().data(), this->node().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "node");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Pattern;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeUnavaliable)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string Node = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_node()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->node().data(), this->node().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "node");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                            // optional string Pattern = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Pattern:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Topic;
-                            break;
-                        }
-
-                            // optional string Topic = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
-
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnNodeUnavaliable)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnNodeUnavaliable)
+  return false;
 #undef DO_
-            }
+}
 
-            void OnNodeUnsubscribedFromTopic::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->node(), output);
-                }
+void OnNodeUnavaliable::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeUnavaliable)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->node(), output);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->pattern(), output);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeUnavaliable)
+}
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(3, this->topic(), output);
-                }
+::google::protobuf::uint8* OnNodeUnavaliable::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeUnavaliable)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->node(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnNodeUnavaliable)
+  return target;
+}
 
-            ::google::protobuf::uint8 *OnNodeUnsubscribedFromTopic::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->node(), target);
-                }
+int OnNodeUnavaliable::ByteSize() const {
+  int total_size = 0;
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->pattern(),
-                                                                                              target);
-                }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string Node = 1;
+    if (has_node()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->node());
+    }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(3, this->topic(), target);
-                }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
-                return target;
-            }
+void OnNodeUnavaliable::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const OnNodeUnavaliable* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const OnNodeUnavaliable*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            int OnNodeUnsubscribedFromTopic::ByteSize() const {
-                int total_size = 0;
+void OnNodeUnavaliable::MergeFrom(const OnNodeUnavaliable& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_node()) {
+      set_node(from.node());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string Node = 1;
-                    if (has_node()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->node());
-                    }
+void OnNodeUnavaliable::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-                    // optional string Pattern = 2;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+void OnNodeUnavaliable::CopyFrom(const OnNodeUnavaliable& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-                    // optional string Topic = 3;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+bool OnNodeUnavaliable::IsInitialized() const {
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  return true;
+}
 
-            void OnNodeUnsubscribedFromTopic::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const OnNodeUnsubscribedFromTopic *source = ::google::protobuf::internal::dynamic_cast_if_available<
-                        const OnNodeUnsubscribedFromTopic *>(&from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void OnNodeUnavaliable::Swap(OnNodeUnavaliable* other) {
+  if (other != this) {
+    std::swap(node_, other->node_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            void OnNodeUnsubscribedFromTopic::MergeFrom(const OnNodeUnsubscribedFromTopic &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_node()) {
-                        set_node(from.node());
-                    }
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
-
-            void OnNodeUnsubscribedFromTopic::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
-
-            void OnNodeUnsubscribedFromTopic::CopyFrom(const OnNodeUnsubscribedFromTopic &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
-
-            bool OnNodeUnsubscribedFromTopic::IsInitialized() const {
-
-                return true;
-            }
-
-            void OnNodeUnsubscribedFromTopic::Swap(OnNodeUnsubscribedFromTopic * other) {
-                if (other != this) {
-                    std::swap(node_, other->node_);
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
-
-            ::google::protobuf::Metadata OnNodeUnsubscribedFromTopic::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = OnNodeUnsubscribedFromTopic_descriptor_;
-                metadata.reflection = OnNodeUnsubscribedFromTopic_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata OnNodeUnavaliable::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OnNodeUnavaliable_descriptor_;
+  metadata.reflection = OnNodeUnavaliable_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int OutgoingEvent::kTypeCodeFieldNumber;
-            const int OutgoingEvent::kAdvertizeTopicFieldNumber;
-            const int OutgoingEvent::kDisconnectFieldNumber;
-            const int OutgoingEvent::kRejectTopicFieldNumber;
-            const int OutgoingEvent::kReportNodeUnavaliableFieldNumber;
-            const int OutgoingEvent::kSubscribeFieldNumber;
-            const int OutgoingEvent::kUnSubscribeFieldNumber;
-#endif // !_MSC_VER
+const int OnNodeUnsubscribedFromTopic::kNodeFieldNumber;
+const int OnNodeUnsubscribedFromTopic::kPatternFieldNumber;
+const int OnNodeUnsubscribedFromTopic::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+OnNodeUnsubscribedFromTopic::OnNodeUnsubscribedFromTopic()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
+}
 
-            OutgoingEvent::OutgoingEvent() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OutgoingEvent)
-            }
+void OnNodeUnsubscribedFromTopic::InitAsDefaultInstance() {
+}
 
-            void OutgoingEvent::InitAsDefaultInstance() {
-                advertizetopic_        = const_cast<::MQCloud::Internal::Protocol::AdvertizeTopic *>(&::MQCloud::Internal::Protocol::AdvertizeTopic::default_instance());
-                disconnect_            = const_cast<::MQCloud::Internal::Protocol::Disconnect *>(&::MQCloud::Internal::Protocol::Disconnect::default_instance());
-                rejecttopic_           = const_cast<::MQCloud::Internal::Protocol::RejectTopic *>(&::MQCloud::Internal::Protocol::RejectTopic::default_instance());
-                reportnodeunavaliable_ = const_cast<::MQCloud::Internal::Protocol::ReportNodeUnavaliable *>(&::MQCloud::Internal::Protocol::ReportNodeUnavaliable::default_instance());
-                subscribe_             = const_cast<::MQCloud::Internal::Protocol::Subscribe *>(&::MQCloud::Internal::Protocol::Subscribe::default_instance());
-                unsubscribe_           = const_cast<::MQCloud::Internal::Protocol::UnSubscribe *>(&::MQCloud::Internal::Protocol::UnSubscribe::default_instance());
-            }
+OnNodeUnsubscribedFromTopic::OnNodeUnsubscribedFromTopic(const OnNodeUnsubscribedFromTopic& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
+}
 
-            OutgoingEvent::OutgoingEvent(const OutgoingEvent &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OutgoingEvent)
-            }
+void OnNodeUnsubscribedFromTopic::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  node_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void OutgoingEvent::SharedCtor() {
-                _cached_size_          = 0;
-                typecode_              = 0;
-                advertizetopic_        = NULL;
-                disconnect_            = NULL;
-                rejecttopic_           = NULL;
-                reportnodeunavaliable_ = NULL;
-                subscribe_             = NULL;
-                unsubscribe_           = NULL;
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+OnNodeUnsubscribedFromTopic::~OnNodeUnsubscribedFromTopic() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
+  SharedDtor();
+}
 
-            OutgoingEvent::~OutgoingEvent() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OutgoingEvent)
-                SharedDtor();
-            }
+void OnNodeUnsubscribedFromTopic::SharedDtor() {
+  if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete node_;
+  }
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void OutgoingEvent::SharedDtor() {
-                if (this != default_instance_) {
-                    delete advertizetopic_;
-                    delete disconnect_;
-                    delete rejecttopic_;
-                    delete reportnodeunavaliable_;
-                    delete subscribe_;
-                    delete unsubscribe_;
-                }
-            }
+void OnNodeUnsubscribedFromTopic::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OnNodeUnsubscribedFromTopic::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OnNodeUnsubscribedFromTopic_descriptor_;
+}
 
-            void OutgoingEvent::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const OnNodeUnsubscribedFromTopic& OnNodeUnsubscribedFromTopic::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *OutgoingEvent::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OutgoingEvent_descriptor_;
-            }
+OnNodeUnsubscribedFromTopic* OnNodeUnsubscribedFromTopic::default_instance_ = NULL;
 
-            const OutgoingEvent &OutgoingEvent::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+OnNodeUnsubscribedFromTopic* OnNodeUnsubscribedFromTopic::New() const {
+  return new OnNodeUnsubscribedFromTopic;
+}
 
-            OutgoingEvent *OutgoingEvent::default_instance_ = NULL;
+void OnNodeUnsubscribedFromTopic::Clear() {
+  if (_has_bits_[0 / 32] & 7) {
+    if (has_node()) {
+      if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        node_->clear();
+      }
+    }
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            OutgoingEvent *OutgoingEvent::New() const {
-                return new OutgoingEvent;
-            }
-
-            void OutgoingEvent::Clear() {
-                if (_has_bits_[0 / 32] & 127) {
-                    typecode_ = 0;
-                    if (has_advertizetopic()) {
-                        if (advertizetopic_ != NULL)
-                            advertizetopic_->::MQCloud::Internal::Protocol::AdvertizeTopic::Clear();
-                    }
-                    if (has_disconnect()) {
-                        if (disconnect_ != NULL)
-                            disconnect_->::MQCloud::Internal::Protocol::Disconnect::Clear();
-                    }
-                    if (has_rejecttopic()) {
-                        if (rejecttopic_ != NULL)
-                            rejecttopic_->::MQCloud::Internal::Protocol::RejectTopic::Clear();
-                    }
-                    if (has_reportnodeunavaliable()) {
-                        if (reportnodeunavaliable_ != NULL)
-                            reportnodeunavaliable_->::MQCloud::Internal::Protocol::ReportNodeUnavaliable::Clear();
-                    }
-                    if (has_subscribe()) {
-                        if (subscribe_ != NULL)
-                            subscribe_->::MQCloud::Internal::Protocol::Subscribe::Clear();
-                    }
-                    if (has_unsubscribe()) {
-                        if (unsubscribe_ != NULL)
-                            unsubscribe_->::MQCloud::Internal::Protocol::UnSubscribe::Clear();
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool OutgoingEvent::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool OnNodeUnsubscribedFromTopic::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OutgoingEvent)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
-                        case 1: {
-                            if (tag == 8) {
-                                int value;
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<int,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                                        input, &value)));
-                                if (::MQCloud::Internal::Protocol::OutgoingEventType_IsValid(value)) {
-                                    set_typecode(static_cast<::MQCloud::Internal::Protocol::OutgoingEventType>(value));
-                                } else {
-                                    mutable_unknown_fields()->AddVarint(1, value);
-                                }
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_AdvertizeTopic;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string Node = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_node()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->node().data(), this->node().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "node");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Pattern;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.AdvertizeTopic AdvertizeTopic = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_AdvertizeTopic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_advertizetopic()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Disconnect;
-                            break;
-                        }
+      // optional string Pattern = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Pattern:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_Topic;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.Disconnect Disconnect = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Disconnect:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_disconnect()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(34))
-                                goto parse_RejectTopic;
-                            break;
-                        }
+      // optional string Topic = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.RejectTopic RejectTopic = 4;
-                        case 4: {
-                            if (tag == 34) {
-                                parse_RejectTopic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_rejecttopic()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(42))
-                                goto parse_ReportNodeUnavaliable;
-                            break;
-                        }
-
-                            // optional .MQCloud.Internal.Protocol.ReportNodeUnavaliable ReportNodeUnavaliable = 5;
-                        case 5: {
-                            if (tag == 42) {
-                                parse_ReportNodeUnavaliable:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_reportnodeunavaliable()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(50))
-                                goto parse_Subscribe;
-                            break;
-                        }
-
-                            // optional .MQCloud.Internal.Protocol.Subscribe Subscribe = 6;
-                        case 6: {
-                            if (tag == 50) {
-                                parse_Subscribe:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_subscribe()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(58))
-                                goto parse_UnSubscribe;
-                            break;
-                        }
-
-                            // optional .MQCloud.Internal.Protocol.UnSubscribe UnSubscribe = 7;
-                        case 7: {
-                            if (tag == 58) {
-                                parse_UnSubscribe:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_unsubscribe()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
-
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OutgoingEvent)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OutgoingEvent)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
+  return false;
 #undef DO_
-            }
+}
 
-            void OutgoingEvent::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OutgoingEvent)
-                // optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
-                if (has_typecode()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteEnum(1, this->typecode(), output);
-                }
+void OnNodeUnsubscribedFromTopic::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->node(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.AdvertizeTopic AdvertizeTopic = 2;
-                if (has_advertizetopic()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, this->advertizetopic(),
-                                                                                           output);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->pattern(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.Disconnect Disconnect = 3;
-                if (has_disconnect()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(3, this->disconnect(),
-                                                                                           output);
-                }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->topic(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.RejectTopic RejectTopic = 4;
-                if (has_rejecttopic()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(4, this->rejecttopic(),
-                                                                                           output);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
+}
 
-                // optional .MQCloud.Internal.Protocol.ReportNodeUnavaliable ReportNodeUnavaliable = 5;
-                if (has_reportnodeunavaliable()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(5,
-                                                                                           this->reportnodeunavaliable(),
-                                                                                           output);
-                }
+::google::protobuf::uint8* OnNodeUnsubscribedFromTopic::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->node(), target);
+  }
 
-                // optional .MQCloud.Internal.Protocol.Subscribe Subscribe = 6;
-                if (has_subscribe()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(6, this->subscribe(),
-                                                                                           output);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->pattern(), target);
+  }
 
-                // optional .MQCloud.Internal.Protocol.UnSubscribe UnSubscribe = 7;
-                if (has_unsubscribe()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(7, this->unsubscribe(),
-                                                                                           output);
-                }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->topic(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OutgoingEvent)
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OnNodeUnsubscribedFromTopic)
+  return target;
+}
 
-            ::google::protobuf::uint8 *OutgoingEvent::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OutgoingEvent)
-                // optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
-                if (has_typecode()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(1, this->typecode(),
-                                                                                            target);
-                }
+int OnNodeUnsubscribedFromTopic::ByteSize() const {
+  int total_size = 0;
 
-                // optional .MQCloud.Internal.Protocol.AdvertizeTopic AdvertizeTopic = 2;
-                if (has_advertizetopic()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(2,
-                                                                                                        this->advertizetopic(),
-                                                                                                        target);
-                }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string Node = 1;
+    if (has_node()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->node());
+    }
 
-                // optional .MQCloud.Internal.Protocol.Disconnect Disconnect = 3;
-                if (has_disconnect()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(3,
-                                                                                                        this->disconnect(),
-                                                                                                        target);
-                }
+    // optional string Pattern = 2;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-                // optional .MQCloud.Internal.Protocol.RejectTopic RejectTopic = 4;
-                if (has_rejecttopic()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(4,
-                                                                                                        this->rejecttopic(),
-                                                                                                        target);
-                }
+    // optional string Topic = 3;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-                // optional .MQCloud.Internal.Protocol.ReportNodeUnavaliable ReportNodeUnavaliable = 5;
-                if (has_reportnodeunavaliable()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(5,
-                                                                                                        this->reportnodeunavaliable(),
-                                                                                                        target);
-                }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-                // optional .MQCloud.Internal.Protocol.Subscribe Subscribe = 6;
-                if (has_subscribe()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(6,
-                                                                                                        this->subscribe(),
-                                                                                                        target);
-                }
+void OnNodeUnsubscribedFromTopic::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const OnNodeUnsubscribedFromTopic* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const OnNodeUnsubscribedFromTopic*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-                // optional .MQCloud.Internal.Protocol.UnSubscribe UnSubscribe = 7;
-                if (has_unsubscribe()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(7,
-                                                                                                        this->unsubscribe(),
-                                                                                                        target);
-                }
+void OnNodeUnsubscribedFromTopic::MergeFrom(const OnNodeUnsubscribedFromTopic& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_node()) {
+      set_node(from.node());
+    }
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OutgoingEvent)
-                return target;
-            }
+void OnNodeUnsubscribedFromTopic::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            int OutgoingEvent::ByteSize() const {
-                int total_size = 0;
+void OnNodeUnsubscribedFromTopic::CopyFrom(const OnNodeUnsubscribedFromTopic& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
-                    if (has_typecode()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::EnumSize(this->typecode());
-                    }
+bool OnNodeUnsubscribedFromTopic::IsInitialized() const {
 
-                    // optional .MQCloud.Internal.Protocol.AdvertizeTopic AdvertizeTopic = 2;
-                    if (has_advertizetopic()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->advertizetopic());
-                    }
+  return true;
+}
 
-                    // optional .MQCloud.Internal.Protocol.Disconnect Disconnect = 3;
-                    if (has_disconnect()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->disconnect());
-                    }
+void OnNodeUnsubscribedFromTopic::Swap(OnNodeUnsubscribedFromTopic* other) {
+  if (other != this) {
+    std::swap(node_, other->node_);
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-                    // optional .MQCloud.Internal.Protocol.RejectTopic RejectTopic = 4;
-                    if (has_rejecttopic()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->rejecttopic());
-                    }
-
-                    // optional .MQCloud.Internal.Protocol.ReportNodeUnavaliable ReportNodeUnavaliable = 5;
-                    if (has_reportnodeunavaliable()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->reportnodeunavaliable());
-                    }
-
-                    // optional .MQCloud.Internal.Protocol.Subscribe Subscribe = 6;
-                    if (has_subscribe()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->subscribe());
-                    }
-
-                    // optional .MQCloud.Internal.Protocol.UnSubscribe UnSubscribe = 7;
-                    if (has_unsubscribe()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->unsubscribe());
-                    }
-
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
-
-            void OutgoingEvent::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const OutgoingEvent *source = ::google::protobuf::internal::dynamic_cast_if_available<const OutgoingEvent *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
-
-            void OutgoingEvent::MergeFrom(const OutgoingEvent &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_typecode()) {
-                        set_typecode(from.typecode());
-                    }
-                    if (from.has_advertizetopic()) {
-                        mutable_advertizetopic()->::MQCloud::Internal::Protocol::AdvertizeTopic::MergeFrom(
-                                from.advertizetopic());
-                    }
-                    if (from.has_disconnect()) {
-                        mutable_disconnect()->::MQCloud::Internal::Protocol::Disconnect::MergeFrom(from.disconnect());
-                    }
-                    if (from.has_rejecttopic()) {
-                        mutable_rejecttopic()->::MQCloud::Internal::Protocol::RejectTopic::MergeFrom(
-                                from.rejecttopic());
-                    }
-                    if (from.has_reportnodeunavaliable()) {
-                        mutable_reportnodeunavaliable()->::MQCloud::Internal::Protocol::ReportNodeUnavaliable::MergeFrom(
-                                from.reportnodeunavaliable());
-                    }
-                    if (from.has_subscribe()) {
-                        mutable_subscribe()->::MQCloud::Internal::Protocol::Subscribe::MergeFrom(from.subscribe());
-                    }
-                    if (from.has_unsubscribe()) {
-                        mutable_unsubscribe()->::MQCloud::Internal::Protocol::UnSubscribe::MergeFrom(
-                                from.unsubscribe());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
-
-            void OutgoingEvent::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
-
-            void OutgoingEvent::CopyFrom(const OutgoingEvent &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
-
-            bool OutgoingEvent::IsInitialized() const {
-
-                return true;
-            }
-
-            void OutgoingEvent::Swap(OutgoingEvent * other) {
-                if (other != this) {
-                    std::swap(typecode_, other->typecode_);
-                    std::swap(advertizetopic_, other->advertizetopic_);
-                    std::swap(disconnect_, other->disconnect_);
-                    std::swap(rejecttopic_, other->rejecttopic_);
-                    std::swap(reportnodeunavaliable_, other->reportnodeunavaliable_);
-                    std::swap(subscribe_, other->subscribe_);
-                    std::swap(unsubscribe_, other->unsubscribe_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
-
-            ::google::protobuf::Metadata OutgoingEvent::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = OutgoingEvent_descriptor_;
-                metadata.reflection = OutgoingEvent_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata OnNodeUnsubscribedFromTopic::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OnNodeUnsubscribedFromTopic_descriptor_;
+  metadata.reflection = OnNodeUnsubscribedFromTopic_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int OutgoingOperation::kTypeCodeFieldNumber;
-            const int OutgoingOperation::kConnectRequestFieldNumber;
-            const int OutgoingOperation::kGetPublisherRequestFieldNumber;
-            const int OutgoingOperation::kGetAllPublishersRequestFieldNumber;
-            const int OutgoingOperation::kGetSubscriberRequestFieldNumber;
-            const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
-#endif // !_MSC_VER
+const int OutgoingEvent::kTypeCodeFieldNumber;
+const int OutgoingEvent::kAdvertizeTopicFieldNumber;
+const int OutgoingEvent::kDisconnectFieldNumber;
+const int OutgoingEvent::kRejectTopicFieldNumber;
+const int OutgoingEvent::kReportNodeUnavaliableFieldNumber;
+const int OutgoingEvent::kSubscribeFieldNumber;
+const int OutgoingEvent::kUnSubscribeFieldNumber;
+#endif  // !_MSC_VER
 
+OutgoingEvent::OutgoingEvent()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OutgoingEvent)
+}
 
-            OutgoingOperation::OutgoingOperation() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OutgoingOperation)
-            }
+void OutgoingEvent::InitAsDefaultInstance() {
+  advertizetopic_ = const_cast< ::MQCloud::Internal::Protocol::AdvertizeTopic*>(&::MQCloud::Internal::Protocol::AdvertizeTopic::default_instance());
+  disconnect_ = const_cast< ::MQCloud::Internal::Protocol::Disconnect*>(&::MQCloud::Internal::Protocol::Disconnect::default_instance());
+  rejecttopic_ = const_cast< ::MQCloud::Internal::Protocol::RejectTopic*>(&::MQCloud::Internal::Protocol::RejectTopic::default_instance());
+  reportnodeunavaliable_ = const_cast< ::MQCloud::Internal::Protocol::ReportNodeUnavaliable*>(&::MQCloud::Internal::Protocol::ReportNodeUnavaliable::default_instance());
+  subscribe_ = const_cast< ::MQCloud::Internal::Protocol::Subscribe*>(&::MQCloud::Internal::Protocol::Subscribe::default_instance());
+  unsubscribe_ = const_cast< ::MQCloud::Internal::Protocol::UnSubscribe*>(&::MQCloud::Internal::Protocol::UnSubscribe::default_instance());
+}
 
-            void OutgoingOperation::InitAsDefaultInstance() {
-                connectrequest_           = const_cast<::MQCloud::Internal::Protocol::ConnectRequest *>(&::MQCloud::Internal::Protocol::ConnectRequest::default_instance());
-                getpublisherrequest_      = const_cast<::MQCloud::Internal::Protocol::GetPublisherRequest *>(&::MQCloud::Internal::Protocol::GetPublisherRequest::default_instance());
-                getallpublishersrequest_  = const_cast<::MQCloud::Internal::Protocol::GetAllPublishersRequest *>(&::MQCloud::Internal::Protocol::GetAllPublishersRequest::default_instance());
-                getsubscriberrequest_     = const_cast<::MQCloud::Internal::Protocol::GetSubscriberRequest *>(&::MQCloud::Internal::Protocol::GetSubscriberRequest::default_instance());
-                getallsubscribersrequest_ = const_cast<::MQCloud::Internal::Protocol::GetAllSubscribersRequest *>(&::MQCloud::Internal::Protocol::GetAllSubscribersRequest::default_instance());
-            }
+OutgoingEvent::OutgoingEvent(const OutgoingEvent& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OutgoingEvent)
+}
 
-            OutgoingOperation::OutgoingOperation(const OutgoingOperation &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OutgoingOperation)
-            }
+void OutgoingEvent::SharedCtor() {
+  _cached_size_ = 0;
+  typecode_ = 0;
+  advertizetopic_ = NULL;
+  disconnect_ = NULL;
+  rejecttopic_ = NULL;
+  reportnodeunavaliable_ = NULL;
+  subscribe_ = NULL;
+  unsubscribe_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void OutgoingOperation::SharedCtor() {
-                _cached_size_             = 0;
-                typecode_                 = 0;
-                connectrequest_           = NULL;
-                getpublisherrequest_      = NULL;
-                getallpublishersrequest_  = NULL;
-                getsubscriberrequest_     = NULL;
-                getallsubscribersrequest_ = NULL;
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+OutgoingEvent::~OutgoingEvent() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OutgoingEvent)
+  SharedDtor();
+}
 
-            OutgoingOperation::~OutgoingOperation() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OutgoingOperation)
-                SharedDtor();
-            }
+void OutgoingEvent::SharedDtor() {
+  if (this != default_instance_) {
+    delete advertizetopic_;
+    delete disconnect_;
+    delete rejecttopic_;
+    delete reportnodeunavaliable_;
+    delete subscribe_;
+    delete unsubscribe_;
+  }
+}
 
-            void OutgoingOperation::SharedDtor() {
-                if (this != default_instance_) {
-                    delete connectrequest_;
-                    delete getpublisherrequest_;
-                    delete getallpublishersrequest_;
-                    delete getsubscriberrequest_;
-                    delete getallsubscribersrequest_;
-                }
-            }
+void OutgoingEvent::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OutgoingEvent::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OutgoingEvent_descriptor_;
+}
 
-            void OutgoingOperation::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const OutgoingEvent& OutgoingEvent::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *OutgoingOperation::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return OutgoingOperation_descriptor_;
-            }
+OutgoingEvent* OutgoingEvent::default_instance_ = NULL;
 
-            const OutgoingOperation &OutgoingOperation::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+OutgoingEvent* OutgoingEvent::New() const {
+  return new OutgoingEvent;
+}
 
-            OutgoingOperation *OutgoingOperation::default_instance_ = NULL;
+void OutgoingEvent::Clear() {
+  if (_has_bits_[0 / 32] & 127) {
+    typecode_ = 0;
+    if (has_advertizetopic()) {
+      if (advertizetopic_ != NULL) advertizetopic_->::MQCloud::Internal::Protocol::AdvertizeTopic::Clear();
+    }
+    if (has_disconnect()) {
+      if (disconnect_ != NULL) disconnect_->::MQCloud::Internal::Protocol::Disconnect::Clear();
+    }
+    if (has_rejecttopic()) {
+      if (rejecttopic_ != NULL) rejecttopic_->::MQCloud::Internal::Protocol::RejectTopic::Clear();
+    }
+    if (has_reportnodeunavaliable()) {
+      if (reportnodeunavaliable_ != NULL) reportnodeunavaliable_->::MQCloud::Internal::Protocol::ReportNodeUnavaliable::Clear();
+    }
+    if (has_subscribe()) {
+      if (subscribe_ != NULL) subscribe_->::MQCloud::Internal::Protocol::Subscribe::Clear();
+    }
+    if (has_unsubscribe()) {
+      if (unsubscribe_ != NULL) unsubscribe_->::MQCloud::Internal::Protocol::UnSubscribe::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            OutgoingOperation *OutgoingOperation::New() const {
-                return new OutgoingOperation;
-            }
-
-            void OutgoingOperation::Clear() {
-                if (_has_bits_[0 / 32] & 63) {
-                    typecode_ = 0;
-                    if (has_connectrequest()) {
-                        if (connectrequest_ != NULL)
-                            connectrequest_->::MQCloud::Internal::Protocol::ConnectRequest::Clear();
-                    }
-                    if (has_getpublisherrequest()) {
-                        if (getpublisherrequest_ != NULL)
-                            getpublisherrequest_->::MQCloud::Internal::Protocol::GetPublisherRequest::Clear();
-                    }
-                    if (has_getallpublishersrequest()) {
-                        if (getallpublishersrequest_ != NULL)
-                            getallpublishersrequest_->::MQCloud::Internal::Protocol::GetAllPublishersRequest::Clear();
-                    }
-                    if (has_getsubscriberrequest()) {
-                        if (getsubscriberrequest_ != NULL)
-                            getsubscriberrequest_->::MQCloud::Internal::Protocol::GetSubscriberRequest::Clear();
-                    }
-                    if (has_getallsubscribersrequest()) {
-                        if (getallsubscribersrequest_ != NULL)
-                            getallsubscribersrequest_->::MQCloud::Internal::Protocol::GetAllSubscribersRequest::Clear();
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool OutgoingOperation::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool OutgoingEvent::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OutgoingOperation)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
-                        case 1: {
-                            if (tag == 8) {
-                                int value;
-                                DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<int,
-                                                                                                 ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                                        input, &value)));
-                                if (::MQCloud::Internal::Protocol::OutgoingOperationType_IsValid(value)) {
-                                    set_typecode(
-                                            static_cast<::MQCloud::Internal::Protocol::OutgoingOperationType>(value));
-                                } else {
-                                    mutable_unknown_fields()->AddVarint(1, value);
-                                }
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_ConnectRequest;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OutgoingEvent)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
+      case 1: {
+        if (tag == 8) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::MQCloud::Internal::Protocol::OutgoingEventType_IsValid(value)) {
+            set_typecode(static_cast< ::MQCloud::Internal::Protocol::OutgoingEventType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_AdvertizeTopic;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.ConnectRequest ConnectRequest = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_ConnectRequest:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_connectrequest()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_GetPublisherRequest;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.AdvertizeTopic AdvertizeTopic = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_AdvertizeTopic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_advertizetopic()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_Disconnect;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.GetPublisherRequest GetPublisherRequest = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_GetPublisherRequest:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_getpublisherrequest()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(34))
-                                goto parse_GetAllPublishersRequest;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.Disconnect Disconnect = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_Disconnect:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_disconnect()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(34)) goto parse_RejectTopic;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.GetAllPublishersRequest GetAllPublishersRequest = 4;
-                        case 4: {
-                            if (tag == 34) {
-                                parse_GetAllPublishersRequest:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_getallpublishersrequest()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(42))
-                                goto parse_GetSubscriberRequest;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.RejectTopic RejectTopic = 4;
+      case 4: {
+        if (tag == 34) {
+         parse_RejectTopic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_rejecttopic()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(42)) goto parse_ReportNodeUnavaliable;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.GetSubscriberRequest GetSubscriberRequest = 5;
-                        case 5: {
-                            if (tag == 42) {
-                                parse_GetSubscriberRequest:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_getsubscriberrequest()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(50))
-                                goto parse_GetAllSubscribersRequest;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.ReportNodeUnavaliable ReportNodeUnavaliable = 5;
+      case 5: {
+        if (tag == 42) {
+         parse_ReportNodeUnavaliable:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_reportnodeunavaliable()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(50)) goto parse_Subscribe;
+        break;
+      }
 
-                            // optional .MQCloud.Internal.Protocol.GetAllSubscribersRequest GetAllSubscribersRequest = 6;
-                        case 6: {
-                            if (tag == 50) {
-                                parse_GetAllSubscribersRequest:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(input,
-                                                                                                       mutable_getallsubscribersrequest()));
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.Subscribe Subscribe = 6;
+      case 6: {
+        if (tag == 50) {
+         parse_Subscribe:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_subscribe()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(58)) goto parse_UnSubscribe;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OutgoingOperation)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OutgoingOperation)
-                return false;
+      // optional .MQCloud.Internal.Protocol.UnSubscribe UnSubscribe = 7;
+      case 7: {
+        if (tag == 58) {
+         parse_UnSubscribe:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_unsubscribe()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OutgoingEvent)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OutgoingEvent)
+  return false;
 #undef DO_
-            }
+}
 
-            void OutgoingOperation::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OutgoingOperation)
-                // optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
-                if (has_typecode()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteEnum(1, this->typecode(), output);
-                }
+void OutgoingEvent::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OutgoingEvent)
+  // optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
+  if (has_typecode()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->typecode(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.ConnectRequest ConnectRequest = 2;
-                if (has_connectrequest()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, this->connectrequest(),
-                                                                                           output);
-                }
+  // optional .MQCloud.Internal.Protocol.AdvertizeTopic AdvertizeTopic = 2;
+  if (has_advertizetopic()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->advertizetopic(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetPublisherRequest GetPublisherRequest = 3;
-                if (has_getpublisherrequest()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(3,
-                                                                                           this->getpublisherrequest(),
-                                                                                           output);
-                }
+  // optional .MQCloud.Internal.Protocol.Disconnect Disconnect = 3;
+  if (has_disconnect()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->disconnect(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetAllPublishersRequest GetAllPublishersRequest = 4;
-                if (has_getallpublishersrequest()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(4,
-                                                                                           this->getallpublishersrequest(),
-                                                                                           output);
-                }
+  // optional .MQCloud.Internal.Protocol.RejectTopic RejectTopic = 4;
+  if (has_rejecttopic()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->rejecttopic(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetSubscriberRequest GetSubscriberRequest = 5;
-                if (has_getsubscriberrequest()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(5,
-                                                                                           this->getsubscriberrequest(),
-                                                                                           output);
-                }
+  // optional .MQCloud.Internal.Protocol.ReportNodeUnavaliable ReportNodeUnavaliable = 5;
+  if (has_reportnodeunavaliable()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->reportnodeunavaliable(), output);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetAllSubscribersRequest GetAllSubscribersRequest = 6;
-                if (has_getallsubscribersrequest()) {
-                    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(6,
-                                                                                           this->getallsubscribersrequest(),
-                                                                                           output);
-                }
+  // optional .MQCloud.Internal.Protocol.Subscribe Subscribe = 6;
+  if (has_subscribe()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->subscribe(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OutgoingOperation)
-            }
+  // optional .MQCloud.Internal.Protocol.UnSubscribe UnSubscribe = 7;
+  if (has_unsubscribe()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, this->unsubscribe(), output);
+  }
 
-            ::google::protobuf::uint8 *OutgoingOperation::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OutgoingOperation)
-                // optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
-                if (has_typecode()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(1, this->typecode(),
-                                                                                            target);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OutgoingEvent)
+}
 
-                // optional .MQCloud.Internal.Protocol.ConnectRequest ConnectRequest = 2;
-                if (has_connectrequest()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(2,
-                                                                                                        this->connectrequest(),
-                                                                                                        target);
-                }
+::google::protobuf::uint8* OutgoingEvent::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OutgoingEvent)
+  // optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
+  if (has_typecode()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->typecode(), target);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetPublisherRequest GetPublisherRequest = 3;
-                if (has_getpublisherrequest()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(3,
-                                                                                                        this->getpublisherrequest(),
-                                                                                                        target);
-                }
+  // optional .MQCloud.Internal.Protocol.AdvertizeTopic AdvertizeTopic = 2;
+  if (has_advertizetopic()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->advertizetopic(), target);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetAllPublishersRequest GetAllPublishersRequest = 4;
-                if (has_getallpublishersrequest()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(4,
-                                                                                                        this->getallpublishersrequest(),
-                                                                                                        target);
-                }
+  // optional .MQCloud.Internal.Protocol.Disconnect Disconnect = 3;
+  if (has_disconnect()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->disconnect(), target);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetSubscriberRequest GetSubscriberRequest = 5;
-                if (has_getsubscriberrequest()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(5,
-                                                                                                        this->getsubscriberrequest(),
-                                                                                                        target);
-                }
+  // optional .MQCloud.Internal.Protocol.RejectTopic RejectTopic = 4;
+  if (has_rejecttopic()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->rejecttopic(), target);
+  }
 
-                // optional .MQCloud.Internal.Protocol.GetAllSubscribersRequest GetAllSubscribersRequest = 6;
-                if (has_getallsubscribersrequest()) {
-                    target = ::google::protobuf::internal::WireFormatLite::WriteMessageNoVirtualToArray(6,
-                                                                                                        this->getallsubscribersrequest(),
-                                                                                                        target);
-                }
+  // optional .MQCloud.Internal.Protocol.ReportNodeUnavaliable ReportNodeUnavaliable = 5;
+  if (has_reportnodeunavaliable()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->reportnodeunavaliable(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OutgoingOperation)
-                return target;
-            }
+  // optional .MQCloud.Internal.Protocol.Subscribe Subscribe = 6;
+  if (has_subscribe()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->subscribe(), target);
+  }
 
-            int OutgoingOperation::ByteSize() const {
-                int total_size = 0;
+  // optional .MQCloud.Internal.Protocol.UnSubscribe UnSubscribe = 7;
+  if (has_unsubscribe()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        7, this->unsubscribe(), target);
+  }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
-                    if (has_typecode()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::EnumSize(this->typecode());
-                    }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OutgoingEvent)
+  return target;
+}
 
-                    // optional .MQCloud.Internal.Protocol.ConnectRequest ConnectRequest = 2;
-                    if (has_connectrequest()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->connectrequest());
-                    }
+int OutgoingEvent::ByteSize() const {
+  int total_size = 0;
 
-                    // optional .MQCloud.Internal.Protocol.GetPublisherRequest GetPublisherRequest = 3;
-                    if (has_getpublisherrequest()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->getpublisherrequest());
-                    }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .MQCloud.Internal.Protocol.OutgoingEventType TypeCode = 1 [default = OutgoingEventTypeAdvertizeTopic];
+    if (has_typecode()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->typecode());
+    }
 
-                    // optional .MQCloud.Internal.Protocol.GetAllPublishersRequest GetAllPublishersRequest = 4;
-                    if (has_getallpublishersrequest()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->getallpublishersrequest());
-                    }
+    // optional .MQCloud.Internal.Protocol.AdvertizeTopic AdvertizeTopic = 2;
+    if (has_advertizetopic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->advertizetopic());
+    }
 
-                    // optional .MQCloud.Internal.Protocol.GetSubscriberRequest GetSubscriberRequest = 5;
-                    if (has_getsubscriberrequest()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->getsubscriberrequest());
-                    }
+    // optional .MQCloud.Internal.Protocol.Disconnect Disconnect = 3;
+    if (has_disconnect()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->disconnect());
+    }
 
-                    // optional .MQCloud.Internal.Protocol.GetAllSubscribersRequest GetAllSubscribersRequest = 6;
-                    if (has_getallsubscribersrequest()) {
-                        total_size += 1
-                                      + ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-                                              this->getallsubscribersrequest());
-                    }
+    // optional .MQCloud.Internal.Protocol.RejectTopic RejectTopic = 4;
+    if (has_rejecttopic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->rejecttopic());
+    }
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+    // optional .MQCloud.Internal.Protocol.ReportNodeUnavaliable ReportNodeUnavaliable = 5;
+    if (has_reportnodeunavaliable()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->reportnodeunavaliable());
+    }
 
-            void OutgoingOperation::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const OutgoingOperation *source = ::google::protobuf::internal::dynamic_cast_if_available<const OutgoingOperation *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+    // optional .MQCloud.Internal.Protocol.Subscribe Subscribe = 6;
+    if (has_subscribe()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->subscribe());
+    }
 
-            void OutgoingOperation::MergeFrom(const OutgoingOperation &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_typecode()) {
-                        set_typecode(from.typecode());
-                    }
-                    if (from.has_connectrequest()) {
-                        mutable_connectrequest()->::MQCloud::Internal::Protocol::ConnectRequest::MergeFrom(
-                                from.connectrequest());
-                    }
-                    if (from.has_getpublisherrequest()) {
-                        mutable_getpublisherrequest()->::MQCloud::Internal::Protocol::GetPublisherRequest::MergeFrom(
-                                from.getpublisherrequest());
-                    }
-                    if (from.has_getallpublishersrequest()) {
-                        mutable_getallpublishersrequest()->::MQCloud::Internal::Protocol::GetAllPublishersRequest::MergeFrom(
-                                from.getallpublishersrequest());
-                    }
-                    if (from.has_getsubscriberrequest()) {
-                        mutable_getsubscriberrequest()->::MQCloud::Internal::Protocol::GetSubscriberRequest::MergeFrom(
-                                from.getsubscriberrequest());
-                    }
-                    if (from.has_getallsubscribersrequest()) {
-                        mutable_getallsubscribersrequest()->::MQCloud::Internal::Protocol::GetAllSubscribersRequest::MergeFrom(
-                                from.getallsubscribersrequest());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+    // optional .MQCloud.Internal.Protocol.UnSubscribe UnSubscribe = 7;
+    if (has_unsubscribe()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->unsubscribe());
+    }
 
-            void OutgoingOperation::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void OutgoingOperation::CopyFrom(const OutgoingOperation &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void OutgoingEvent::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const OutgoingEvent* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const OutgoingEvent*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            bool OutgoingOperation::IsInitialized() const {
+void OutgoingEvent::MergeFrom(const OutgoingEvent& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_typecode()) {
+      set_typecode(from.typecode());
+    }
+    if (from.has_advertizetopic()) {
+      mutable_advertizetopic()->::MQCloud::Internal::Protocol::AdvertizeTopic::MergeFrom(from.advertizetopic());
+    }
+    if (from.has_disconnect()) {
+      mutable_disconnect()->::MQCloud::Internal::Protocol::Disconnect::MergeFrom(from.disconnect());
+    }
+    if (from.has_rejecttopic()) {
+      mutable_rejecttopic()->::MQCloud::Internal::Protocol::RejectTopic::MergeFrom(from.rejecttopic());
+    }
+    if (from.has_reportnodeunavaliable()) {
+      mutable_reportnodeunavaliable()->::MQCloud::Internal::Protocol::ReportNodeUnavaliable::MergeFrom(from.reportnodeunavaliable());
+    }
+    if (from.has_subscribe()) {
+      mutable_subscribe()->::MQCloud::Internal::Protocol::Subscribe::MergeFrom(from.subscribe());
+    }
+    if (from.has_unsubscribe()) {
+      mutable_unsubscribe()->::MQCloud::Internal::Protocol::UnSubscribe::MergeFrom(from.unsubscribe());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                return true;
-            }
+void OutgoingEvent::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void OutgoingOperation::Swap(OutgoingOperation * other) {
-                if (other != this) {
-                    std::swap(typecode_, other->typecode_);
-                    std::swap(connectrequest_, other->connectrequest_);
-                    std::swap(getpublisherrequest_, other->getpublisherrequest_);
-                    std::swap(getallpublishersrequest_, other->getallpublishersrequest_);
-                    std::swap(getsubscriberrequest_, other->getsubscriberrequest_);
-                    std::swap(getallsubscribersrequest_, other->getallsubscribersrequest_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void OutgoingEvent::CopyFrom(const OutgoingEvent& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            ::google::protobuf::Metadata OutgoingOperation::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = OutgoingOperation_descriptor_;
-                metadata.reflection = OutgoingOperation_reflection_;
-                return metadata;
-            }
+bool OutgoingEvent::IsInitialized() const {
+
+  return true;
+}
+
+void OutgoingEvent::Swap(OutgoingEvent* other) {
+  if (other != this) {
+    std::swap(typecode_, other->typecode_);
+    std::swap(advertizetopic_, other->advertizetopic_);
+    std::swap(disconnect_, other->disconnect_);
+    std::swap(rejecttopic_, other->rejecttopic_);
+    std::swap(reportnodeunavaliable_, other->reportnodeunavaliable_);
+    std::swap(subscribe_, other->subscribe_);
+    std::swap(unsubscribe_, other->unsubscribe_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata OutgoingEvent::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OutgoingEvent_descriptor_;
+  metadata.reflection = OutgoingEvent_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int RejectTopic::kPatternFieldNumber;
-            const int RejectTopic::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int OutgoingOperation::kTypeCodeFieldNumber;
+const int OutgoingOperation::kConnectRequestFieldNumber;
+const int OutgoingOperation::kGetPublisherRequestFieldNumber;
+const int OutgoingOperation::kGetAllPublishersRequestFieldNumber;
+const int OutgoingOperation::kGetSubscriberRequestFieldNumber;
+const int OutgoingOperation::kGetAllSubscribersRequestFieldNumber;
+#endif  // !_MSC_VER
 
+OutgoingOperation::OutgoingOperation()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.OutgoingOperation)
+}
 
-            RejectTopic::RejectTopic() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.RejectTopic)
-            }
+void OutgoingOperation::InitAsDefaultInstance() {
+  connectrequest_ = const_cast< ::MQCloud::Internal::Protocol::ConnectRequest*>(&::MQCloud::Internal::Protocol::ConnectRequest::default_instance());
+  getpublisherrequest_ = const_cast< ::MQCloud::Internal::Protocol::GetPublisherRequest*>(&::MQCloud::Internal::Protocol::GetPublisherRequest::default_instance());
+  getallpublishersrequest_ = const_cast< ::MQCloud::Internal::Protocol::GetAllPublishersRequest*>(&::MQCloud::Internal::Protocol::GetAllPublishersRequest::default_instance());
+  getsubscriberrequest_ = const_cast< ::MQCloud::Internal::Protocol::GetSubscriberRequest*>(&::MQCloud::Internal::Protocol::GetSubscriberRequest::default_instance());
+  getallsubscribersrequest_ = const_cast< ::MQCloud::Internal::Protocol::GetAllSubscribersRequest*>(&::MQCloud::Internal::Protocol::GetAllSubscribersRequest::default_instance());
+}
 
-            void RejectTopic::InitAsDefaultInstance() {
-            }
+OutgoingOperation::OutgoingOperation(const OutgoingOperation& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.OutgoingOperation)
+}
 
-            RejectTopic::RejectTopic(const RejectTopic &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.RejectTopic)
-            }
+void OutgoingOperation::SharedCtor() {
+  _cached_size_ = 0;
+  typecode_ = 0;
+  connectrequest_ = NULL;
+  getpublisherrequest_ = NULL;
+  getallpublishersrequest_ = NULL;
+  getsubscriberrequest_ = NULL;
+  getallsubscribersrequest_ = NULL;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void RejectTopic::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+OutgoingOperation::~OutgoingOperation() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.OutgoingOperation)
+  SharedDtor();
+}
 
-            RejectTopic::~RejectTopic() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.RejectTopic)
-                SharedDtor();
-            }
+void OutgoingOperation::SharedDtor() {
+  if (this != default_instance_) {
+    delete connectrequest_;
+    delete getpublisherrequest_;
+    delete getallpublishersrequest_;
+    delete getsubscriberrequest_;
+    delete getallsubscribersrequest_;
+  }
+}
 
-            void RejectTopic::SharedDtor() {
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void OutgoingOperation::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* OutgoingOperation::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return OutgoingOperation_descriptor_;
+}
 
-            void RejectTopic::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const OutgoingOperation& OutgoingOperation::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *RejectTopic::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return RejectTopic_descriptor_;
-            }
+OutgoingOperation* OutgoingOperation::default_instance_ = NULL;
 
-            const RejectTopic &RejectTopic::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+OutgoingOperation* OutgoingOperation::New() const {
+  return new OutgoingOperation;
+}
 
-            RejectTopic *RejectTopic::default_instance_ = NULL;
+void OutgoingOperation::Clear() {
+  if (_has_bits_[0 / 32] & 63) {
+    typecode_ = 0;
+    if (has_connectrequest()) {
+      if (connectrequest_ != NULL) connectrequest_->::MQCloud::Internal::Protocol::ConnectRequest::Clear();
+    }
+    if (has_getpublisherrequest()) {
+      if (getpublisherrequest_ != NULL) getpublisherrequest_->::MQCloud::Internal::Protocol::GetPublisherRequest::Clear();
+    }
+    if (has_getallpublishersrequest()) {
+      if (getallpublishersrequest_ != NULL) getallpublishersrequest_->::MQCloud::Internal::Protocol::GetAllPublishersRequest::Clear();
+    }
+    if (has_getsubscriberrequest()) {
+      if (getsubscriberrequest_ != NULL) getsubscriberrequest_->::MQCloud::Internal::Protocol::GetSubscriberRequest::Clear();
+    }
+    if (has_getallsubscribersrequest()) {
+      if (getallsubscribersrequest_ != NULL) getallsubscribersrequest_->::MQCloud::Internal::Protocol::GetAllSubscribersRequest::Clear();
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            RejectTopic *RejectTopic::New() const {
-                return new RejectTopic;
-            }
-
-            void RejectTopic::Clear() {
-                if (_has_bits_[0 / 32] & 3) {
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool RejectTopic::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool OutgoingOperation::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.RejectTopic)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string Pattern = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Topic;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.OutgoingOperation)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
+      case 1: {
+        if (tag == 8) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::MQCloud::Internal::Protocol::OutgoingOperationType_IsValid(value)) {
+            set_typecode(static_cast< ::MQCloud::Internal::Protocol::OutgoingOperationType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_ConnectRequest;
+        break;
+      }
 
-                            // optional string Topic = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional .MQCloud.Internal.Protocol.ConnectRequest ConnectRequest = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_ConnectRequest:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_connectrequest()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_GetPublisherRequest;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.RejectTopic)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.RejectTopic)
-                return false;
+      // optional .MQCloud.Internal.Protocol.GetPublisherRequest GetPublisherRequest = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_GetPublisherRequest:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_getpublisherrequest()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(34)) goto parse_GetAllPublishersRequest;
+        break;
+      }
+
+      // optional .MQCloud.Internal.Protocol.GetAllPublishersRequest GetAllPublishersRequest = 4;
+      case 4: {
+        if (tag == 34) {
+         parse_GetAllPublishersRequest:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_getallpublishersrequest()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(42)) goto parse_GetSubscriberRequest;
+        break;
+      }
+
+      // optional .MQCloud.Internal.Protocol.GetSubscriberRequest GetSubscriberRequest = 5;
+      case 5: {
+        if (tag == 42) {
+         parse_GetSubscriberRequest:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_getsubscriberrequest()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(50)) goto parse_GetAllSubscribersRequest;
+        break;
+      }
+
+      // optional .MQCloud.Internal.Protocol.GetAllSubscribersRequest GetAllSubscribersRequest = 6;
+      case 6: {
+        if (tag == 50) {
+         parse_GetAllSubscribersRequest:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_getallsubscribersrequest()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.OutgoingOperation)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.OutgoingOperation)
+  return false;
 #undef DO_
-            }
+}
 
-            void RejectTopic::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.RejectTopic)
-                // optional string Pattern = 1;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->pattern(), output);
-                }
+void OutgoingOperation::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.OutgoingOperation)
+  // optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
+  if (has_typecode()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->typecode(), output);
+  }
 
-                // optional string Topic = 2;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->topic(), output);
-                }
+  // optional .MQCloud.Internal.Protocol.ConnectRequest ConnectRequest = 2;
+  if (has_connectrequest()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->connectrequest(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.RejectTopic)
-            }
+  // optional .MQCloud.Internal.Protocol.GetPublisherRequest GetPublisherRequest = 3;
+  if (has_getpublisherrequest()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->getpublisherrequest(), output);
+  }
 
-            ::google::protobuf::uint8 *RejectTopic::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.RejectTopic)
-                // optional string Pattern = 1;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->pattern(),
-                                                                                              target);
-                }
+  // optional .MQCloud.Internal.Protocol.GetAllPublishersRequest GetAllPublishersRequest = 4;
+  if (has_getallpublishersrequest()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->getallpublishersrequest(), output);
+  }
 
-                // optional string Topic = 2;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->topic(), target);
-                }
+  // optional .MQCloud.Internal.Protocol.GetSubscriberRequest GetSubscriberRequest = 5;
+  if (has_getsubscriberrequest()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->getsubscriberrequest(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.RejectTopic)
-                return target;
-            }
+  // optional .MQCloud.Internal.Protocol.GetAllSubscribersRequest GetAllSubscribersRequest = 6;
+  if (has_getallsubscribersrequest()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->getallsubscribersrequest(), output);
+  }
 
-            int RejectTopic::ByteSize() const {
-                int total_size = 0;
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.OutgoingOperation)
+}
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string Pattern = 1;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+::google::protobuf::uint8* OutgoingOperation::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.OutgoingOperation)
+  // optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
+  if (has_typecode()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->typecode(), target);
+  }
 
-                    // optional string Topic = 2;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+  // optional .MQCloud.Internal.Protocol.ConnectRequest ConnectRequest = 2;
+  if (has_connectrequest()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->connectrequest(), target);
+  }
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  // optional .MQCloud.Internal.Protocol.GetPublisherRequest GetPublisherRequest = 3;
+  if (has_getpublisherrequest()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->getpublisherrequest(), target);
+  }
 
-            void RejectTopic::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const RejectTopic *source = ::google::protobuf::internal::dynamic_cast_if_available<const RejectTopic *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+  // optional .MQCloud.Internal.Protocol.GetAllPublishersRequest GetAllPublishersRequest = 4;
+  if (has_getallpublishersrequest()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->getallpublishersrequest(), target);
+  }
 
-            void RejectTopic::MergeFrom(const RejectTopic &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+  // optional .MQCloud.Internal.Protocol.GetSubscriberRequest GetSubscriberRequest = 5;
+  if (has_getsubscriberrequest()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        5, this->getsubscriberrequest(), target);
+  }
 
-            void RejectTopic::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  // optional .MQCloud.Internal.Protocol.GetAllSubscribersRequest GetAllSubscribersRequest = 6;
+  if (has_getallsubscribersrequest()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        6, this->getallsubscribersrequest(), target);
+  }
 
-            void RejectTopic::CopyFrom(const RejectTopic &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.OutgoingOperation)
+  return target;
+}
 
-            bool RejectTopic::IsInitialized() const {
+int OutgoingOperation::ByteSize() const {
+  int total_size = 0;
 
-                return true;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .MQCloud.Internal.Protocol.OutgoingOperationType TypeCode = 1 [default = OutgoingOperationTypeConnectRequest];
+    if (has_typecode()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->typecode());
+    }
 
-            void RejectTopic::Swap(RejectTopic * other) {
-                if (other != this) {
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+    // optional .MQCloud.Internal.Protocol.ConnectRequest ConnectRequest = 2;
+    if (has_connectrequest()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->connectrequest());
+    }
 
-            ::google::protobuf::Metadata RejectTopic::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = RejectTopic_descriptor_;
-                metadata.reflection = RejectTopic_reflection_;
-                return metadata;
-            }
+    // optional .MQCloud.Internal.Protocol.GetPublisherRequest GetPublisherRequest = 3;
+    if (has_getpublisherrequest()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->getpublisherrequest());
+    }
+
+    // optional .MQCloud.Internal.Protocol.GetAllPublishersRequest GetAllPublishersRequest = 4;
+    if (has_getallpublishersrequest()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->getallpublishersrequest());
+    }
+
+    // optional .MQCloud.Internal.Protocol.GetSubscriberRequest GetSubscriberRequest = 5;
+    if (has_getsubscriberrequest()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->getsubscriberrequest());
+    }
+
+    // optional .MQCloud.Internal.Protocol.GetAllSubscribersRequest GetAllSubscribersRequest = 6;
+    if (has_getallsubscribersrequest()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->getallsubscribersrequest());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void OutgoingOperation::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const OutgoingOperation* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const OutgoingOperation*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void OutgoingOperation::MergeFrom(const OutgoingOperation& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_typecode()) {
+      set_typecode(from.typecode());
+    }
+    if (from.has_connectrequest()) {
+      mutable_connectrequest()->::MQCloud::Internal::Protocol::ConnectRequest::MergeFrom(from.connectrequest());
+    }
+    if (from.has_getpublisherrequest()) {
+      mutable_getpublisherrequest()->::MQCloud::Internal::Protocol::GetPublisherRequest::MergeFrom(from.getpublisherrequest());
+    }
+    if (from.has_getallpublishersrequest()) {
+      mutable_getallpublishersrequest()->::MQCloud::Internal::Protocol::GetAllPublishersRequest::MergeFrom(from.getallpublishersrequest());
+    }
+    if (from.has_getsubscriberrequest()) {
+      mutable_getsubscriberrequest()->::MQCloud::Internal::Protocol::GetSubscriberRequest::MergeFrom(from.getsubscriberrequest());
+    }
+    if (from.has_getallsubscribersrequest()) {
+      mutable_getallsubscribersrequest()->::MQCloud::Internal::Protocol::GetAllSubscribersRequest::MergeFrom(from.getallsubscribersrequest());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void OutgoingOperation::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void OutgoingOperation::CopyFrom(const OutgoingOperation& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool OutgoingOperation::IsInitialized() const {
+
+  return true;
+}
+
+void OutgoingOperation::Swap(OutgoingOperation* other) {
+  if (other != this) {
+    std::swap(typecode_, other->typecode_);
+    std::swap(connectrequest_, other->connectrequest_);
+    std::swap(getpublisherrequest_, other->getpublisherrequest_);
+    std::swap(getallpublishersrequest_, other->getallpublishersrequest_);
+    std::swap(getsubscriberrequest_, other->getsubscriberrequest_);
+    std::swap(getallsubscribersrequest_, other->getallsubscribersrequest_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata OutgoingOperation::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = OutgoingOperation_descriptor_;
+  metadata.reflection = OutgoingOperation_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int ReportNodeUnavaliable::kNodeFieldNumber;
-            const int ReportNodeUnavaliable::kPatternFieldNumber;
-            const int ReportNodeUnavaliable::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int RejectTopic::kPatternFieldNumber;
+const int RejectTopic::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+RejectTopic::RejectTopic()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.RejectTopic)
+}
 
-            ReportNodeUnavaliable::ReportNodeUnavaliable() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
-            }
+void RejectTopic::InitAsDefaultInstance() {
+}
 
-            void ReportNodeUnavaliable::InitAsDefaultInstance() {
-            }
+RejectTopic::RejectTopic(const RejectTopic& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.RejectTopic)
+}
 
-            ReportNodeUnavaliable::ReportNodeUnavaliable(const ReportNodeUnavaliable &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
-            }
+void RejectTopic::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void ReportNodeUnavaliable::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                node_         = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+RejectTopic::~RejectTopic() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.RejectTopic)
+  SharedDtor();
+}
 
-            ReportNodeUnavaliable::~ReportNodeUnavaliable() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
-                SharedDtor();
-            }
+void RejectTopic::SharedDtor() {
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void ReportNodeUnavaliable::SharedDtor() {
-                if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete node_;
-                }
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void RejectTopic::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* RejectTopic::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return RejectTopic_descriptor_;
+}
 
-            void ReportNodeUnavaliable::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const RejectTopic& RejectTopic::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *ReportNodeUnavaliable::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return ReportNodeUnavaliable_descriptor_;
-            }
+RejectTopic* RejectTopic::default_instance_ = NULL;
 
-            const ReportNodeUnavaliable &ReportNodeUnavaliable::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+RejectTopic* RejectTopic::New() const {
+  return new RejectTopic;
+}
 
-            ReportNodeUnavaliable *ReportNodeUnavaliable::default_instance_ = NULL;
+void RejectTopic::Clear() {
+  if (_has_bits_[0 / 32] & 3) {
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            ReportNodeUnavaliable *ReportNodeUnavaliable::New() const {
-                return new ReportNodeUnavaliable;
-            }
-
-            void ReportNodeUnavaliable::Clear() {
-                if (_has_bits_[0 / 32] & 7) {
-                    if (has_node()) {
-                        if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            node_->clear();
-                        }
-                    }
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool ReportNodeUnavaliable::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool RejectTopic::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string Node = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_node()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->node().data(), this->node().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "node");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Pattern;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.RejectTopic)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string Pattern = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Topic;
+        break;
+      }
 
-                            // optional string Pattern = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Pattern:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(26))
-                                goto parse_Topic;
-                            break;
-                        }
+      // optional string Topic = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                            // optional string Topic = 3;
-                        case 3: {
-                            if (tag == 26) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
-
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.RejectTopic)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.RejectTopic)
+  return false;
 #undef DO_
-            }
+}
 
-            void ReportNodeUnavaliable::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->node(), output);
-                }
+void RejectTopic::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.RejectTopic)
+  // optional string Pattern = 1;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->pattern(), output);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->pattern(), output);
-                }
+  // optional string Topic = 2;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->topic(), output);
+  }
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(3, this->topic(), output);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.RejectTopic)
+}
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
-            }
+::google::protobuf::uint8* RejectTopic::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.RejectTopic)
+  // optional string Pattern = 1;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->pattern(), target);
+  }
 
-            ::google::protobuf::uint8 *ReportNodeUnavaliable::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
-                // optional string Node = 1;
-                if (has_node()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->node().data(),
-                                                                                         this->node().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "node");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->node(), target);
-                }
+  // optional string Topic = 2;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->topic(), target);
+  }
 
-                // optional string Pattern = 2;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->pattern(),
-                                                                                              target);
-                }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.RejectTopic)
+  return target;
+}
 
-                // optional string Topic = 3;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(3, this->topic(), target);
-                }
+int RejectTopic::ByteSize() const {
+  int total_size = 0;
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
-                return target;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string Pattern = 1;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-            int ReportNodeUnavaliable::ByteSize() const {
-                int total_size = 0;
+    // optional string Topic = 2;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string Node = 1;
-                    if (has_node()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->node());
-                    }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-                    // optional string Pattern = 2;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+void RejectTopic::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const RejectTopic* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const RejectTopic*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-                    // optional string Topic = 3;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+void RejectTopic::MergeFrom(const RejectTopic& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+void RejectTopic::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void ReportNodeUnavaliable::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const ReportNodeUnavaliable *source = ::google::protobuf::internal::dynamic_cast_if_available<const ReportNodeUnavaliable *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void RejectTopic::CopyFrom(const RejectTopic& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void ReportNodeUnavaliable::MergeFrom(const ReportNodeUnavaliable &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_node()) {
-                        set_node(from.node());
-                    }
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+bool RejectTopic::IsInitialized() const {
 
-            void ReportNodeUnavaliable::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  return true;
+}
 
-            void ReportNodeUnavaliable::CopyFrom(const ReportNodeUnavaliable &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void RejectTopic::Swap(RejectTopic* other) {
+  if (other != this) {
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            bool ReportNodeUnavaliable::IsInitialized() const {
-
-                return true;
-            }
-
-            void ReportNodeUnavaliable::Swap(ReportNodeUnavaliable * other) {
-                if (other != this) {
-                    std::swap(node_, other->node_);
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
-
-            ::google::protobuf::Metadata ReportNodeUnavaliable::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = ReportNodeUnavaliable_descriptor_;
-                metadata.reflection = ReportNodeUnavaliable_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata RejectTopic::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = RejectTopic_descriptor_;
+  metadata.reflection = RejectTopic_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int Subscribe::kPatternFieldNumber;
-            const int Subscribe::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int ReportNodeUnavaliable::kNodeFieldNumber;
+const int ReportNodeUnavaliable::kPatternFieldNumber;
+const int ReportNodeUnavaliable::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+ReportNodeUnavaliable::ReportNodeUnavaliable()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
+}
 
-            Subscribe::Subscribe() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.Subscribe)
-            }
+void ReportNodeUnavaliable::InitAsDefaultInstance() {
+}
 
-            void Subscribe::InitAsDefaultInstance() {
-            }
+ReportNodeUnavaliable::ReportNodeUnavaliable(const ReportNodeUnavaliable& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
+}
 
-            Subscribe::Subscribe(const Subscribe &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.Subscribe)
-            }
+void ReportNodeUnavaliable::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  node_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void Subscribe::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+ReportNodeUnavaliable::~ReportNodeUnavaliable() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
+  SharedDtor();
+}
 
-            Subscribe::~Subscribe() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.Subscribe)
-                SharedDtor();
-            }
+void ReportNodeUnavaliable::SharedDtor() {
+  if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete node_;
+  }
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void Subscribe::SharedDtor() {
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void ReportNodeUnavaliable::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ReportNodeUnavaliable::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ReportNodeUnavaliable_descriptor_;
+}
 
-            void Subscribe::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const ReportNodeUnavaliable& ReportNodeUnavaliable::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *Subscribe::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return Subscribe_descriptor_;
-            }
+ReportNodeUnavaliable* ReportNodeUnavaliable::default_instance_ = NULL;
 
-            const Subscribe &Subscribe::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+ReportNodeUnavaliable* ReportNodeUnavaliable::New() const {
+  return new ReportNodeUnavaliable;
+}
 
-            Subscribe *Subscribe::default_instance_ = NULL;
+void ReportNodeUnavaliable::Clear() {
+  if (_has_bits_[0 / 32] & 7) {
+    if (has_node()) {
+      if (node_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        node_->clear();
+      }
+    }
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            Subscribe *Subscribe::New() const {
-                return new Subscribe;
-            }
-
-            void Subscribe::Clear() {
-                if (_has_bits_[0 / 32] & 3) {
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool Subscribe::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool ReportNodeUnavaliable::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.Subscribe)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string Pattern = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Topic;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string Node = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_node()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->node().data(), this->node().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "node");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Pattern;
+        break;
+      }
 
-                            // optional string Topic = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string Pattern = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Pattern:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_Topic;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.Subscribe)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.Subscribe)
-                return false;
+      // optional string Topic = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
+  return false;
 #undef DO_
-            }
+}
 
-            void Subscribe::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.Subscribe)
-                // optional string Pattern = 1;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->pattern(), output);
-                }
+void ReportNodeUnavaliable::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->node(), output);
+  }
 
-                // optional string Topic = 2;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->topic(), output);
-                }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->pattern(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.Subscribe)
-            }
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->topic(), output);
+  }
 
-            ::google::protobuf::uint8 *Subscribe::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.Subscribe)
-                // optional string Pattern = 1;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->pattern(),
-                                                                                              target);
-                }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
+}
 
-                // optional string Topic = 2;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->topic(), target);
-                }
+::google::protobuf::uint8* ReportNodeUnavaliable::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
+  // optional string Node = 1;
+  if (has_node()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->node().data(), this->node().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "node");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->node(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.Subscribe)
-                return target;
-            }
+  // optional string Pattern = 2;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->pattern(), target);
+  }
 
-            int Subscribe::ByteSize() const {
-                int total_size = 0;
+  // optional string Topic = 3;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->topic(), target);
+  }
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string Pattern = 1;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.ReportNodeUnavaliable)
+  return target;
+}
 
-                    // optional string Topic = 2;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+int ReportNodeUnavaliable::ByteSize() const {
+  int total_size = 0;
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string Node = 1;
+    if (has_node()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->node());
+    }
 
-            void Subscribe::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const Subscribe *source = ::google::protobuf::internal::dynamic_cast_if_available<const Subscribe *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+    // optional string Pattern = 2;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-            void Subscribe::MergeFrom(const Subscribe &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+    // optional string Topic = 3;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-            void Subscribe::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void Subscribe::CopyFrom(const Subscribe &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void ReportNodeUnavaliable::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ReportNodeUnavaliable* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ReportNodeUnavaliable*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            bool Subscribe::IsInitialized() const {
+void ReportNodeUnavaliable::MergeFrom(const ReportNodeUnavaliable& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_node()) {
+      set_node(from.node());
+    }
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-                return true;
-            }
+void ReportNodeUnavaliable::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void Subscribe::Swap(Subscribe * other) {
-                if (other != this) {
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void ReportNodeUnavaliable::CopyFrom(const ReportNodeUnavaliable& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            ::google::protobuf::Metadata Subscribe::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = Subscribe_descriptor_;
-                metadata.reflection = Subscribe_reflection_;
-                return metadata;
-            }
+bool ReportNodeUnavaliable::IsInitialized() const {
+
+  return true;
+}
+
+void ReportNodeUnavaliable::Swap(ReportNodeUnavaliable* other) {
+  if (other != this) {
+    std::swap(node_, other->node_);
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ReportNodeUnavaliable::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ReportNodeUnavaliable_descriptor_;
+  metadata.reflection = ReportNodeUnavaliable_reflection_;
+  return metadata;
+}
 
 
-            // ===================================================================
+// ===================================================================
 
 #ifndef _MSC_VER
-            const int UnSubscribe::kPatternFieldNumber;
-            const int UnSubscribe::kTopicFieldNumber;
-#endif // !_MSC_VER
+const int Subscribe::kPatternFieldNumber;
+const int Subscribe::kTopicFieldNumber;
+#endif  // !_MSC_VER
 
+Subscribe::Subscribe()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.Subscribe)
+}
 
-            UnSubscribe::UnSubscribe() :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.UnSubscribe)
-            }
+void Subscribe::InitAsDefaultInstance() {
+}
 
-            void UnSubscribe::InitAsDefaultInstance() {
-            }
+Subscribe::Subscribe(const Subscribe& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.Subscribe)
+}
 
-            UnSubscribe::UnSubscribe(const UnSubscribe &from) :
-                    ::google::protobuf::Message() {
-                SharedCtor();
-                MergeFrom(from);
-                // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.UnSubscribe)
-            }
+void Subscribe::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
 
-            void UnSubscribe::SharedCtor() {
-                ::google::protobuf::internal::GetEmptyString();
-                _cached_size_ = 0;
-                pattern_      = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                topic_        = const_cast<::std::string *>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-            }
+Subscribe::~Subscribe() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.Subscribe)
+  SharedDtor();
+}
 
-            UnSubscribe::~UnSubscribe() {
-                // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.UnSubscribe)
-                SharedDtor();
-            }
+void Subscribe::SharedDtor() {
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
 
-            void UnSubscribe::SharedDtor() {
-                if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete pattern_;
-                }
-                if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                    delete topic_;
-                }
-                if (this != default_instance_) {
-                }
-            }
+void Subscribe::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Subscribe::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return Subscribe_descriptor_;
+}
 
-            void UnSubscribe::SetCachedSize(int size) const {
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-            }
+const Subscribe& Subscribe::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
 
-            const ::google::protobuf::Descriptor *UnSubscribe::descriptor() {
-                protobuf_AssignDescriptorsOnce();
-                return UnSubscribe_descriptor_;
-            }
+Subscribe* Subscribe::default_instance_ = NULL;
 
-            const UnSubscribe &UnSubscribe::default_instance() {
-                if (default_instance_ == NULL)
-                    protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
-                return *default_instance_;
-            }
+Subscribe* Subscribe::New() const {
+  return new Subscribe;
+}
 
-            UnSubscribe *UnSubscribe::default_instance_ = NULL;
+void Subscribe::Clear() {
+  if (_has_bits_[0 / 32] & 3) {
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
 
-            UnSubscribe *UnSubscribe::New() const {
-                return new UnSubscribe;
-            }
-
-            void UnSubscribe::Clear() {
-                if (_has_bits_[0 / 32] & 3) {
-                    if (has_pattern()) {
-                        if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            pattern_->clear();
-                        }
-                    }
-                    if (has_topic()) {
-                        if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-                            topic_->clear();
-                        }
-                    }
-                }
-                ::memset(_has_bits_, 0, sizeof(_has_bits_));
-                mutable_unknown_fields()->Clear();
-            }
-
-            bool UnSubscribe::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream *input) {
+bool Subscribe::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-                ::google::protobuf::uint32 tag;
-                // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.UnSubscribe)
-                for (; ;) {
-                    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-                    tag = p.first;
-                    if (!p.second)
-                        goto handle_unusual;
-                    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-                        // optional string Pattern = 1;
-                        case 1: {
-                            if (tag == 10) {
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_pattern()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->pattern().data(), this->pattern().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "pattern");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectTag(18))
-                                goto parse_Topic;
-                            break;
-                        }
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.Subscribe)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string Pattern = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Topic;
+        break;
+      }
 
-                            // optional string Topic = 2;
-                        case 2: {
-                            if (tag == 18) {
-                                parse_Topic:
-                                DO_(::google::protobuf::internal::WireFormatLite::ReadString(input,
-                                                                                             this->mutable_topic()));
-                                ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-                                        this->topic().data(), this->topic().length(),
-                                        ::google::protobuf::internal::WireFormat::PARSE, "topic");
-                            } else {
-                                goto handle_unusual;
-                            }
-                            if (input->ExpectAtEnd())
-                                goto success;
-                            break;
-                        }
+      // optional string Topic = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
 
-                        default: {
-                            handle_unusual:
-                            if (tag == 0
-                                || ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                                   == ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-                                goto success;
-                            }
-                            DO_(::google::protobuf::internal::WireFormat::SkipField(input, tag,
-                                                                                    mutable_unknown_fields()));
-                            break;
-                        }
-                    }
-                }
-                success:
-                // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.UnSubscribe)
-                return true;
-                failure:
-                // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.UnSubscribe)
-                return false;
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.Subscribe)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.Subscribe)
+  return false;
 #undef DO_
-            }
+}
 
-            void UnSubscribe::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream *output) const {
-                // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.UnSubscribe)
-                // optional string Pattern = 1;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(1, this->pattern(), output);
-                }
+void Subscribe::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.Subscribe)
+  // optional string Pattern = 1;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->pattern(), output);
+  }
 
-                // optional string Topic = 2;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(2, this->topic(), output);
-                }
+  // optional string Topic = 2;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->topic(), output);
+  }
 
-                if (!unknown_fields().empty()) {
-                    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(unknown_fields(), output);
-                }
-                // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.UnSubscribe)
-            }
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.Subscribe)
+}
 
-            ::google::protobuf::uint8 *UnSubscribe::SerializeWithCachedSizesToArray(::google::protobuf::uint8 *target) const {
-                // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.UnSubscribe)
-                // optional string Pattern = 1;
-                if (has_pattern()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->pattern().data(),
-                                                                                         this->pattern().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "pattern");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(1, this->pattern(),
-                                                                                              target);
-                }
+::google::protobuf::uint8* Subscribe::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.Subscribe)
+  // optional string Pattern = 1;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->pattern(), target);
+  }
 
-                // optional string Topic = 2;
-                if (has_topic()) {
-                    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(this->topic().data(),
-                                                                                         this->topic().length(),
-                                                                                         ::google::protobuf::internal::WireFormat::SERIALIZE,
-                                                                                         "topic");
-                    target = ::google::protobuf::internal::WireFormatLite::WriteStringToArray(2, this->topic(), target);
-                }
+  // optional string Topic = 2;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->topic(), target);
+  }
 
-                if (!unknown_fields().empty()) {
-                    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(unknown_fields(),
-                                                                                                     target);
-                }
-                // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.UnSubscribe)
-                return target;
-            }
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.Subscribe)
+  return target;
+}
 
-            int UnSubscribe::ByteSize() const {
-                int total_size = 0;
+int Subscribe::ByteSize() const {
+  int total_size = 0;
 
-                if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    // optional string Pattern = 1;
-                    if (has_pattern()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->pattern());
-                    }
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string Pattern = 1;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
 
-                    // optional string Topic = 2;
-                    if (has_topic()) {
-                        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(this->topic());
-                    }
+    // optional string Topic = 2;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
 
-                }
-                if (!unknown_fields().empty()) {
-                    total_size += ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(unknown_fields());
-                }
-                GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-                _cached_size_ = total_size;
-                GOOGLE_SAFE_CONCURRENT_WRITES_END();
-                return total_size;
-            }
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
 
-            void UnSubscribe::MergeFrom(const ::google::protobuf::Message &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                const UnSubscribe *source = ::google::protobuf::internal::dynamic_cast_if_available<const UnSubscribe *>(
-                        &from);
-                if (source == NULL) {
-                    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-                } else {
-                    MergeFrom(*source);
-                }
-            }
+void Subscribe::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const Subscribe* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const Subscribe*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
 
-            void UnSubscribe::MergeFrom(const UnSubscribe &from) {
-                GOOGLE_CHECK_NE(&from, this);
-                if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-                    if (from.has_pattern()) {
-                        set_pattern(from.pattern());
-                    }
-                    if (from.has_topic()) {
-                        set_topic(from.topic());
-                    }
-                }
-                mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-            }
+void Subscribe::MergeFrom(const Subscribe& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
 
-            void UnSubscribe::CopyFrom(const ::google::protobuf::Message &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void Subscribe::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            void UnSubscribe::CopyFrom(const UnSubscribe &from) {
-                if (&from == this)
-                    return;
-                Clear();
-                MergeFrom(from);
-            }
+void Subscribe::CopyFrom(const Subscribe& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
-            bool UnSubscribe::IsInitialized() const {
+bool Subscribe::IsInitialized() const {
 
-                return true;
-            }
+  return true;
+}
 
-            void UnSubscribe::Swap(UnSubscribe * other) {
-                if (other != this) {
-                    std::swap(pattern_, other->pattern_);
-                    std::swap(topic_, other->topic_);
-                    std::swap(_has_bits_[0], other->_has_bits_[0]);
-                    _unknown_fields_.Swap(&other->_unknown_fields_);
-                    std::swap(_cached_size_, other->_cached_size_);
-                }
-            }
+void Subscribe::Swap(Subscribe* other) {
+  if (other != this) {
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
 
-            ::google::protobuf::Metadata UnSubscribe::GetMetadata() const {
-                protobuf_AssignDescriptorsOnce();
-                ::google::protobuf::Metadata metadata;
-                metadata.descriptor = UnSubscribe_descriptor_;
-                metadata.reflection = UnSubscribe_reflection_;
-                return metadata;
-            }
+::google::protobuf::Metadata Subscribe::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = Subscribe_descriptor_;
+  metadata.reflection = Subscribe_reflection_;
+  return metadata;
+}
 
 
-            // @@protoc_insertion_point(namespace_scope)
-        } // namespace Protocol
-    } // namespace Internal
-} // namespace MQCloud
+// ===================================================================
+
+#ifndef _MSC_VER
+const int UnSubscribe::kPatternFieldNumber;
+const int UnSubscribe::kTopicFieldNumber;
+#endif  // !_MSC_VER
+
+UnSubscribe::UnSubscribe()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:MQCloud.Internal.Protocol.UnSubscribe)
+}
+
+void UnSubscribe::InitAsDefaultInstance() {
+}
+
+UnSubscribe::UnSubscribe(const UnSubscribe& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:MQCloud.Internal.Protocol.UnSubscribe)
+}
+
+void UnSubscribe::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  pattern_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+UnSubscribe::~UnSubscribe() {
+  // @@protoc_insertion_point(destructor:MQCloud.Internal.Protocol.UnSubscribe)
+  SharedDtor();
+}
+
+void UnSubscribe::SharedDtor() {
+  if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete pattern_;
+  }
+  if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete topic_;
+  }
+  if (this != default_instance_) {
+  }
+}
+
+void UnSubscribe::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* UnSubscribe::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return UnSubscribe_descriptor_;
+}
+
+const UnSubscribe& UnSubscribe::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MQCloud_2eInternal_2eProtocol_2eproto();
+  return *default_instance_;
+}
+
+UnSubscribe* UnSubscribe::default_instance_ = NULL;
+
+UnSubscribe* UnSubscribe::New() const {
+  return new UnSubscribe;
+}
+
+void UnSubscribe::Clear() {
+  if (_has_bits_[0 / 32] & 3) {
+    if (has_pattern()) {
+      if (pattern_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        pattern_->clear();
+      }
+    }
+    if (has_topic()) {
+      if (topic_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        topic_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool UnSubscribe::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:MQCloud.Internal.Protocol.UnSubscribe)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional string Pattern = 1;
+      case 1: {
+        if (tag == 10) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pattern()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->pattern().data(), this->pattern().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "pattern");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_Topic;
+        break;
+      }
+
+      // optional string Topic = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_Topic:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->topic().data(), this->topic().length(),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "topic");
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:MQCloud.Internal.Protocol.UnSubscribe)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:MQCloud.Internal.Protocol.UnSubscribe)
+  return false;
+#undef DO_
+}
+
+void UnSubscribe::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:MQCloud.Internal.Protocol.UnSubscribe)
+  // optional string Pattern = 1;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->pattern(), output);
+  }
+
+  // optional string Topic = 2;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->topic(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:MQCloud.Internal.Protocol.UnSubscribe)
+}
+
+::google::protobuf::uint8* UnSubscribe::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:MQCloud.Internal.Protocol.UnSubscribe)
+  // optional string Pattern = 1;
+  if (has_pattern()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->pattern().data(), this->pattern().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "pattern");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->pattern(), target);
+  }
+
+  // optional string Topic = 2;
+  if (has_topic()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->topic().data(), this->topic().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->topic(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:MQCloud.Internal.Protocol.UnSubscribe)
+  return target;
+}
+
+int UnSubscribe::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional string Pattern = 1;
+    if (has_pattern()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->pattern());
+    }
+
+    // optional string Topic = 2;
+    if (has_topic()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->topic());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void UnSubscribe::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const UnSubscribe* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const UnSubscribe*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void UnSubscribe::MergeFrom(const UnSubscribe& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_pattern()) {
+      set_pattern(from.pattern());
+    }
+    if (from.has_topic()) {
+      set_topic(from.topic());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void UnSubscribe::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void UnSubscribe::CopyFrom(const UnSubscribe& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UnSubscribe::IsInitialized() const {
+
+  return true;
+}
+
+void UnSubscribe::Swap(UnSubscribe* other) {
+  if (other != this) {
+    std::swap(pattern_, other->pattern_);
+    std::swap(topic_, other->topic_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata UnSubscribe::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = UnSubscribe_descriptor_;
+  metadata.reflection = UnSubscribe_reflection_;
+  return metadata;
+}
+
+
+// @@protoc_insertion_point(namespace_scope)
+
+}  // namespace Protocol
+}  // namespace Internal
+}  // namespace MQCloud
 
 // @@protoc_insertion_point(global_scope)
-

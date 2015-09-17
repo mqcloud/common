@@ -20,7 +20,7 @@ std::string MQCloud::API::GetName() {
     return frontEnd->GetName();
 }
 
-std::shared_ptr<FrontEnd> MQCloud::API::GetFrontEnd() {
+std::shared_ptr<MQCloud::FrontEnd> MQCloud::API::GetFrontEnd() {
     return frontEnd;
 }
 
