@@ -15,11 +15,11 @@ namespace MQCloud {
             int                                            HeartBeatRate;
 
             std::shared_ptr<BackEndConfiguration>          ctx;
-            std::shared_ptr<Socket>                        Out;
+            std::shared_ptr<OutputSocketDecorator>                        Out;
             std::shared_ptr<Socket>                        subscribingSocket;
             std::string                                    serviceId;
 
-            tbb::concurrent_hash_map<std::string, std::shared_ptr<SocketConnection>> subscribtionCnnections;
+            tbb::concurrent_hash_map<std::string, std::shared_ptr<InputSocketDecorator>> subscribtionCnnections;
 
             std::shared_ptr<GeneralMessageHandler>         inHandler;
             std::shared_ptr<StaticResponseHandler>         patternTopicPairHandler;

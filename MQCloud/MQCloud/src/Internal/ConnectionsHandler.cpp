@@ -18,7 +18,7 @@ void MQCloud::Internal::ConnectionsHandler::SetServiceId(const std::string &id) 
 
 void MQCloud::Internal::ConnectionsHandler::PublishMessage(Message &m) {
     m.serviceId = serviceId;
-    ctx->publishingSocket->PublishMessage(Out, m);
+    Out->PublishMessage(m);
 }
 
 void MQCloud::Internal::ConnectionsHandler::AddOnMesageHandler(const std::string &pattern,
@@ -33,7 +33,7 @@ void MQCloud::Internal::ConnectionsHandler::AddOnMesageHandler(std::shared_ptr<O
 
 void MQCloud::Internal::ConnectionsHandler::ConnectToNode(const std::string & addr) {
     auto                  connection        = ctx->subscriberSocket
-                                                 ->ConnectSubscribingSocket(subscribingSocket, addr,
+                                                 ->ConnectSubscribingSocket(addr,
                                                                             inHandler);
     auto                  id                = connection->SocketId;
     std::weak_ptr<Socket> weekConnectionPtr = connection;
@@ -51,7 +51,7 @@ void MQCloud::Internal::ConnectionsHandler::ConnectToNode(const std::string & ad
     connection->AddDisconnectHandler(handler);
     connection->Connect();
 
-    tbb::concurrent_hash_map<int, std::shared_ptr<SocketConnection>>::accessor instance;
+    tbb::concurrent_hash_map<std::string, std::shared_ptr<InputSocketDecorator>>::accessor instance;
 
     subscribtionCnnections.insert(instance, id);
     instance->second = connection;
@@ -59,7 +59,7 @@ void MQCloud::Internal::ConnectionsHandler::ConnectToNode(const std::string & ad
 
 void MQCloud::Internal::ConnectionsHandler::ConnectToExchangeNode(const std::string &addr, std::shared_ptr<OnError> onError) {
     auto                  connection        = ctx->subscriberSocket
-                                                 ->ConnectSubscribingSocket(subscribingSocket, addr,
+                                                 ->ConnectSubscribingSocket(addr,
                                                                             inHandler);
     auto                  id                = connection->SocketId;
     std::weak_ptr<Socket> weekConnectionPtr = connection;
@@ -79,7 +79,7 @@ void MQCloud::Internal::ConnectionsHandler::ConnectToExchangeNode(const std::str
     connection->AddDisconnectHandler(handler);
     connection->Connect();
 
-    tbb::concurrent_hash_map<int, std::shared_ptr<SocketConnection>>::accessor instance;
+    tbb::concurrent_hash_map<int, std::shared_ptr<InputSocketDecorator>>::accessor instance;
 
     subscribtionCnnections.insert(instance, id);
     instance->second = connection;
@@ -111,7 +111,7 @@ MQCloud::Internal::ConnectionsHandler::ConnectionsHandler(std::shared_ptr<BackEn
     Out->AddDisconnectHandler(OnDisconnected);
     Out->Connect();
 
-    subscribingSocket = ctx->subscriberSocket->CreateSubscribingSocket();
+    subscribingSocket = ctx->subscriberSocket;
     subscribingSocket->AddDisconnectHandler(OnDisconnected);
 
     AddOnMesageHandler(patternTopicPairHandler);

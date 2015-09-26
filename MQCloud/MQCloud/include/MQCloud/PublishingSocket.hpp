@@ -6,21 +6,10 @@
 
 namespace MQCloud {
     // Publish socket (one to many)
-    struct PublishingSocket {
-        /*
-    ment to be sync
-    @return connection Publishing socket
-    */
-        virtual std::shared_ptr<Socket> CreatePublishingSocket() = 0;
+    struct PublishingSocketFactory {
+        virtual std::shared_ptr<OutputSocketDecorator> CreatePublishingSocket();
 
-        /*
-    ment to be sync
-    @param connection socket which shall send message
-    @param message
-    */
-        virtual void PublishMessage(std::shared_ptr<Socket> socket, const Message &msg) = 0;
-
-        virtual ~PublishingSocket(){}
+        virtual ~PublishingSocketFactory(){}
     };
 }
 #endif // !COREPUBLISHINGSOCKET_HPP
