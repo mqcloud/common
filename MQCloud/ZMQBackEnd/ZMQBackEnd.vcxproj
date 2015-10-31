@@ -75,9 +75,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\MQCloud\ZMQBackEnd\Message.pb.h" />
     <ClInclude Include="include\MQCloud\ZMQBackEnd\ZMQBackEnd.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\MQCloud\ZMQBackEnd\Message.pb.cc" />
     <ClCompile Include="src\MQCloud\ZMQBackEnd\ZMQBackEnd.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

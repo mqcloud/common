@@ -7,7 +7,7 @@
 
 namespace MQCloud {
     struct SubscriberSocketFactory {
-        virtual std::shared_ptr<InputSocketDecorator> ConnectSubscribingSocket(const std::string &addr,
+        virtual std::shared_ptr<IInputSocket> ConnectSubscribingSocket(const std::string &addr,
                                                                            std::shared_ptr<OnMessageAction> action) = 0;
 
         virtual ~SubscriberSocketFactory(){}

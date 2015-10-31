@@ -7,11 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExchangeNode", "ExchangeNod
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQCloudTest", "MQCloudTest\MQCloudTest.vcxproj", "{5502AB82-8155-4F44-9AEC-06D9C3C80437}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZeroMQBackEnd", "ZeroMQBack\ZeroMQBack.vcxproj", "{4D862A61-4DC8-4F0B-A2D6-31B0A8440294}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCPP", "ZeroMQBack\ZeroMQBack.vcxproj", "{4D862A61-4DC8-4F0B-A2D6-31B0A8440294}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodesManager", "NodesManager\NodesManager.csproj", "{FD0D318C-5FB8-4409-B587-365937ED79AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroMQBackEndCSharp", "ZeroMQBack\Sharp\ZeroMQBackEndCSharp\ZeroMQBackEndCSharp.csproj", "{145515AE-E478-4564-B24E-3AC116CDECA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSharp", "ZeroMQBack\Sharp\ZeroMQBackEndCSharp\TestSharp.csproj", "{145515AE-E478-4564-B24E-3AC116CDECA6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZMQBackEnd", "ZMQBackEnd\ZMQBackEnd.vcxproj", "{EAC56196-5E76-4BB7-88A4-97FBB206414F}"
 EndProject

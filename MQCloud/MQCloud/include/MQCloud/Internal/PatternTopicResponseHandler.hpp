@@ -1,7 +1,7 @@
 #include <MQCloud/Delegates.hpp>
 #include <mutex>
 #include <memory>
-#include <map>
+#include <unordered_map>
 
 
 #ifndef PATTERNTOPICRESPONSEHANDLER_HPP
@@ -12,39 +12,45 @@ namespace MQCloud {
         // For user on request handling
         struct StaticResponseHandler :
                 OnMessageAction {
-            std::map<std::string, std::shared_ptr<OnMessageAction>> handlers;
+            std::unordered_map<std::string,  std::unordered_map<std::string, std::shared_ptr<OnMessageAction>>> handlers;
             std::mutex                                              mutex;
 
             virtual void OnAction(const Message &m) {
-                auto id = m.PatternName + ">";
-                id += m.topic;
-
                 std::unique_lock<std::mutex> lockHandlers(mutex);
                 lockHandlers.lock();
-                auto it = handlers.find(id);
-                if (it != handlers.end()) {
-                    auto action = it->second;
-                    lockHandlers.unlock();
-                    action->OnAction(m);
-                }
+                auto it_pattern = handlers.find(m.PatternName);
+                if (it_pattern != handlers.end()) {
+					auto it_topic = it_pattern->second.find(m.PatternName);
+					if (it_topic != it_pattern->second.end()) {
+						auto action = it_topic->second;
+						lockHandlers.unlock();
+						action->OnAction(m);
+					} else {
+						lockHandlers.unlock();
+					}
+                } else {
+					lockHandlers.unlock();
+				}
             }
 
             void AddHandler(const std::string &pattern,
                             const std::string &topic,
                             std::shared_ptr<OnMessageAction> handler) {
-                auto id = pattern + ">" + topic;
-
                 std::lock_guard<std::mutex> lockHandlers(mutex);
-                handlers[id] = handler;
+                handlers[pattern][topic] = handler;
             }
 
             void RemoveHandler(const std::string &pattern, const std::string &topic) {
-                auto id                        = pattern + ">" + topic;
-
                 std::lock_guard<std::mutex> lockHandlers(mutex);
-                auto                        it = handlers.find(id);
-                if (it != handlers.end()) {
-                    handlers.erase(it);
+                auto                        it_pattern = handlers.find(pattern);
+                if (it_pattern != handlers.end()) {
+					auto it_topic = it_pattern->second.find(topic);
+					if(it_topic != it_pattern->second.end()) {
+						it_pattern->second.erase(it_topic);
+						if(it_pattern->second.size() == 0) {
+							handlers.erase(it_pattern);
+						}
+					}
                 }
             }
         };

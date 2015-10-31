@@ -28,16 +28,24 @@ namespace MQCloud {
                 const std::string &pattern,
                 const std::string &patternData) :
                 topic(topic), data(data), serviceId(serviceId), PatternName(pattern), PatternData(patternData) {
-            SetMessageId();
-        }
+					SetMessageId();
+		}
 
-        Message(const int &id,
+        Message( int id,
                 const std::string &data,
                 const std::string &topic,
                 const std::string &pattern,
                 const std::string &patternData) :
-                topic(topic), data(data), serviceId(serviceId), PatternName(pattern), PatternData(patternData), id(id) {
-        }
+                topic(topic), data(data), serviceId(serviceId), PatternName(pattern), PatternData(patternData), id(id) {}
+		
+		Message( int id,
+                const std::string &data,
+                const std::string &topic,
+                const std::string &pattern,
+                const std::string &patternData,
+				const MessageState State, 
+				const std::string &ErrorData) :
+                topic(topic), data(data), serviceId(serviceId), PatternName(pattern), PatternData(patternData), id(id), State(State), ErrorData(ErrorData) { }
 
         int GetMessageId() const {
             return id;

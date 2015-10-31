@@ -14,9 +14,15 @@
     <ClInclude Include="include\MQCloud\ZMQBackEnd\ZMQBackEnd.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\MQCloud\ZMQBackEnd\Message.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MQCloud\ZMQBackEnd\ZMQBackEnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MQCloud\ZMQBackEnd\Message.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

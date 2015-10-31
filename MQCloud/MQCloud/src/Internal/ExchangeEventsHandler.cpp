@@ -3,7 +3,7 @@
 //
 #include <MQCloud/Internal/ExchangeEventsHandler.hpp>
 
-void virtual MQCloud::Internal::ExchangeEventsHandler::OnAction(const UserMessage &m) {
+void MQCloud::Internal::ExchangeEventsHandler::OnAction(const UserMessage &m) {
     Protocol::IncomingEvent incomingEvent;
     incomingEvent.ParseFromString(m.GetData());
 
