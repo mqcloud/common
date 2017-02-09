@@ -1,0 +1,30 @@
+\tikzstyle{every state}=     [draw=black!95,very thick,fill=white!20]%
+\begin{scope}
+  \pgfsetstrokecolor{black}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (8.0bp,79.0bp) -- (8.0bp,415.0bp) -- (123.0bp,415.0bp) -- (123.0bp,79.0bp) -- cycle;
+  \draw (65.5bp,403.5bp) node {$Subgraph A$};
+\end{scope}
+  \node (A) at (83.0bp,366.0bp) [state] {$A$};
+  \node (C) at (80.0bp,192.0bp) [state] {$C$};
+  \node (B) at (63.0bp,279.0bp) [transitionV, label=$\sin(x)$] {$$};
+  \node (E) at (190.0bp,18.0bp) [state] {$E$};
+  \node (D) at (84.0bp,105.0bp) [state] {$D$};
+  \node (F) at (170.0bp,192.0bp) [state,accepting] {$F$};
+  \node (APA) at (162.0bp,279.0bp) [state] {$APA$};
+  \draw [->] (C) to[bend left] node[auto] {$5$} (F);
+  \draw [->] (F) to[bend left] node[auto] {$8$} (B);
+  \draw [->] (B) to[bend left] node[auto] {$$} (C);
+  \draw [->] (B) to[bend left] node[auto] {$4$} (C);
+  \draw [->] (B) to[loop above] node[auto] {$3$} (B);
+  \draw [->,-o] (B) to[bend left] node[auto] {$1$} (A);
+  \draw [->] (A) to[bend left] node[auto] {$$} (APA);
+  \draw [->] (F) to[bend left] node[auto] {$7$} (D);
+  \draw [->] (A) to[bend left] node[auto] {$7$} (D);
+  \draw [->] (A) to[bend left] node[auto] {$$} (B);
+  \draw [->] (A) to[bend left] node[auto] {$2$} (B);
+  \draw [->] (D) to[bend left] node[auto] {$2$} (E);
+  \draw [->] (C) to[bend left] node[auto] {$$} (D);
+  \draw [->] (E) to[bend left] node[auto] {$1,6$} (A);
+%
