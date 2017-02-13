@@ -5,15 +5,11 @@ using System.Collections.Generic;
 namespace MQCloud.MathModeling {
     public sealed class Factory<T> where T : class, new() {
         public static ConcurrentDictionary<string, T> Arena = new ConcurrentDictionary<string,T>();
-        private static int _id = 0;
-        public T Generate(Type T2) {
-            string elementTypeName = Console.ReadLine();
-            Type elementType = Type.GetType(elementTypeName);
-            Type[] types = new Type[] { elementType };
+        private static int _id;
 
-            Type listType = typeof(List<>);
-            Type genericType = listType.MakeGenericType(types);
-            T result = (T) Activator.CreateInstance(genericType);
+        // Adds a new  T2
+        public T Generate(Type T2) {
+            var result = T2.GetGenericInstanceOf<T>();
             var id = (++_id).ToString();
             if(!Arena.TryAdd(id, result)) {
                 result = Generate(T2);

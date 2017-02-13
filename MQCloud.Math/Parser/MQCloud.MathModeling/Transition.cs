@@ -16,7 +16,7 @@ namespace MQCloud.MathModeling {
         }
 
         private Action<Place> _process;
-        private Func<Place, List<Token>> _result;
+        private Func<Place, List<Token>> _result = place => place.Tokens;
         private bool _once = false;
         private OrderChecker _orderChecker;
 
@@ -101,5 +101,10 @@ namespace MQCloud.MathModeling {
             AddIn(place).AddOut(place);
             return this;
         }
+
+        public ITransition GetTransition() {
+            return this;
+        }
+        
     }
 }

@@ -19,5 +19,7 @@ namespace MQCloud.MathModeling {
         ITransitionService AddOrderChecker(OrderChecker check);
 
         ITransitionService AddInOut(Place place);
+
+        ITransition GetTransition();
     }
 }

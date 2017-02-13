@@ -9,6 +9,9 @@ namespace MQCloud.MathModeling {
         public static List<TransitionItem> Get<T>(int count = 1) {
             return new RequirementsBuilder().Add<T>(count).Get();
         }
+        public static List<TransitionItem> Get(Type T, int count = 1) {
+            return new RequirementsBuilder().Add(T, count).Get();
+        }
 
         private List<TransitionItem> Contents;
         

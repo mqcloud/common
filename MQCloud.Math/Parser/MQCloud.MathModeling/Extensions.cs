@@ -4,6 +4,8 @@ using System.Linq;
 
 namespace MQCloud.MathModeling {
     public static class Extensions {
+        //todo move into place interface
+        // Put tokens of type T into this place
         public static Place SetTokens<T>(this Place p, int count) where T : Token, new() {
             p.Tokens.AddRange(Enumerable.Repeat<T>(new T() {
                 Type = typeof(T)
@@ -11,6 +13,7 @@ namespace MQCloud.MathModeling {
             return p;
         }
 
+        // For each element in the collection do the action
         public static IEnumerable<T> ForEach<T>(this IEnumerable<T> collection, Action<T> action) {
             foreach (var item in collection) {
                 action(item);
@@ -18,14 +21,16 @@ namespace MQCloud.MathModeling {
             return collection;
         }
 
-        public static Type GetInstance<T>(this Type genericArgument) {
-            string elementTypeName = Console.ReadLine();
-            Type elementType = Type.GetType(elementTypeName);
-            Type[] types = new Type[] { elementType };
-
-            Type listType = typeof(List<>);
-            Type genericType = listType.MakeGenericType(types);
-            T result = (T)Activator.CreateInstance(genericType);
+        // Create an instance of type T<this>
+        public static T GetGenericInstanceOf<T>(this Type genericArgument) {
+            var baseType = typeof(T);
+            var genericType = baseType.MakeGenericType(genericArgument);
+            var result = (T)Activator.CreateInstance(genericType);
+            return result;
+        }
+        
+        public static T GetInstance<T>(this Type type) {
+            var result = (T)Activator.CreateInstance(type);
             return result;
         }
     }

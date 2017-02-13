@@ -190,6 +190,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReqRep.cs" />
+    <Compile Include="RequestResponse.cs" />
     <Compile Include="RequirementsBuilder.cs" />
     <Compile Include="Transition.cs" />
     <Compile Include="TransitionItem.cs" />
