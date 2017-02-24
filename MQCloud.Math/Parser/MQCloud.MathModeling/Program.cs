@@ -1,12 +1,20 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Xml;
 using Graphviz4Net.Dot.AntlrParser;
+using MQCloud.MathModeling.Demo.Logic;
+using MQCloud.MathModeling.Immitation.Runtime;
 
 namespace MQCloud.MathModeling {
     class Program {
-        static void Main( string[] args ) {
+        static void Main(string[] args) {
+            var attakLogic = new AttakLogic();
+            attakLogic.ApproachTarget();
+            attakLogic.AttakTarget();
+            Simulation.Run();
+        }
+
+        /*
             var parser = AntlrParserAdapter<string>.GetParser();
 
             var f = "a->b";//File.ReadAllText("C:\\Users\\Oleg\\Desktop\\Диплом\\test-out.dot");
@@ -37,7 +45,7 @@ namespace MQCloud.MathModeling {
 
             Console.ReadLine();
         }
+        */
     }
 
-    //class
 }
